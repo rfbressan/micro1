@@ -435,9 +435,9 @@ md"""
 !!! correct "Definição 4.6 (Taxa marginal de substituição)"
 	A **taxa marginal de substituição (TMS)** mede a taxa à qual o indivíduo está propenso a substituir um bem por outro.
 
-	Mais precisamente, a TMS é o negativo da inclinação de uma curva de indiferença $U_1$ em um determinado ponto:
+	Mais precisamente, a TMS de $y$ por $x$, $\text{TMS}_{x,y}$, é o negativo da inclinação de uma curva de indiferença $U_1$ em um determinado ponto:
 
-	$$\text{TMS} \equiv - \left.\frac{dy}{dx}\right|_{U=U_1}\tag{2}$$
+	$$\text{TMS}_{x, y} \equiv - \left.\frac{dy}{dx}\right|_{U=U_1}\tag{2}$$
 
 	onde a notação indica que a inclinação é calculada ao longo da curva de indiferença $U_1$.
 """
@@ -458,7 +458,7 @@ md"""
 >
 > 1. Calcule a taxa marginal de substituição para este indivíduo.
 >
-> 2. Qual é a taxa marginal de substituição no ponto (5,20)? E no ponto (20,5)? Como interpretar os resultados economicamente?
+> 2. Qual é a taxa marginal de substituição de $y$ por $x$ no ponto (5,20)? E no ponto (20,5)? Como interpretar os resultados economicamente?
 >
 > 3. Mostre que a taxa marginal de substituição é decrescente.
 >
@@ -482,7 +482,7 @@ $$U_x dx + U_y dy = 1dk$$
 * Como estamos interessados nas mudanças feitas em $x$ e $y$ de forma a manter o nível de satisfação constante, então, $dk = 0$. Portanto:
 $$U_x dx + U_y dy = 0$$
 * Logo, temos que:
-$$\text{TMS} = -\left.\frac{dy}{dx}\right|_{U(x,y) = k} = \frac{U_x}{U_y}\tag{3}$$
+$$\text{TMS}_{x, y} = -\left.\frac{dy}{dx}\right|_{U(x,y) = k} = \frac{U_x}{U_y}\tag{3}$$
 "
 
 # ╔═╡ 394c2549-30d1-47bb-8136-477b9e659727
@@ -556,6 +556,8 @@ $$U(x,y) = x^\alpha y^\beta, \qquad 0<\alpha,\beta<1\tag{4}$$
 
 $$U(x,y) = x^\delta y^{1-\delta},\tag{5}$$
 onde $\delta = \frac{\alpha}{\alpha + \beta}$ e $1-\delta = \frac{\beta}{\alpha + \beta}$.
+
+* Preferências estritamente convexas e estritamente monotônicas
 "
 
 # ╔═╡ 4162d44e-0cab-4d73-913b-547688d722c1
@@ -592,6 +594,7 @@ $$U(x,y) = \alpha x + \beta y, \qquad \alpha, \beta>0\tag{6}$$
 * A linearidade das curvas de indiferença motiva a denominação de bens substitutos para descrever a relação entre $x$ e $y$
 * Uma pessoa com esse tipo de preferências está disposta a abrir mão da mesma quantidade do bem $y$ para adquirir uma unidade adicional de $x$, não importa quanto de $x$ esteja sendo consumido
 * ⚠️ Note que, neste caso, a TMS é constante e o princípio de taxa marginal de substituição decrescente não se aplica
+* Preferências são convexas (mas não estritamente convexas) e fortemente monótonas
 "
 
 # ╔═╡ fd22fe93-b0a2-467b-a4fb-ff810f011d52
@@ -618,6 +621,8 @@ $$U(x,y) = \min\{\alpha x, \beta y\}, \qquad \alpha, \beta>0\tag{7}$$
 * Neste caso, as curvas de indiferença tem um formato de L e a razão da quantidade consumida de $y$ com relação ao bem $x$ é constante e igual a:
 $$\frac{y}{x} = \frac{\alpha}{\beta}$$
 * Indicando que nenhum dos bens especificados na função utilidade será consumido de maneira supérflua quando $\alpha x = \beta y$
+* Preferências são convexas (mas não estritamente convexas) e fracamente monótonas
+* TMS não existe na quina, é infinita acima da quina ou zero à direita da quina
 "
 
 # ╔═╡ e3fb0987-3a7b-4c3f-95ef-ce855bd481db
@@ -663,11 +668,31 @@ begin
 	plot(ces1, ces2, layout = ces_plot, title=L"δ = 1")	
 end
 
-# ╔═╡ dc263289-b50c-4f49-9991-cb3c344b03f1
-md"""
-!!! warning ""
-	⚠️ Em construção
-"""
+# ╔═╡ 23211c53-5475-442e-b1f3-0cf94c58f38a
+begin		
+	ces_cobb = 0.1
+	ces_xcobb = range(0, 10, length=200)	
+	ces_plotcobb = @layout [a b]
+	ces1cobb = surface(
+	  ces_xcobb, ces_xcobb, (x, y)-> (x^ces_cobb + y^ces_cobb)^(1/ces_cobb), c=:bone_1, legend=:none, 
+	  nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(40,20)
+	)
+	ces2cobb = contour(ces_xcobb, ces_xcobb, (x, y)-> (x^ces_cobb + y^ces_cobb)^(1/ces_cobb), c=:bone_1, legend=:none, levels = [2000, 3000, 4000, 5000, 6000], clabels=true)	
+	plot(ces1cobb, ces2cobb, layout = ces_plotcobb, title=L"δ = 0.1")	
+end
+
+# ╔═╡ cd857e39-4177-4e53-9389-12a2d4468154
+begin		
+	ces_l = -50
+	ces_xl = range(0, 20, length=200)	
+	ces_plotl = @layout [a b]
+	ces1l = surface(
+	  ces_xl, ces_xl, (x, y)-> (x^ces_l + y^ces_l)^(1/ces_l), c=:bone_1, legend=:none, 
+	  nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(40,20)
+	)
+	ces2l = contour(ces_xl, ces_xl, (x, y)-> (x^ces_l + y^ces_l)^(1/ces_l), c=:bone_1, legend=:none, levels = [2, 4, 6, 8, 10, 12], clabels=true)	
+	plot(ces1l, ces2l, layout = ces_plotl, title=L"δ = -50")	
+end
 
 # ╔═╡ b514f905-7bb6-4c47-9aa4-388859cfed4e
 md"
@@ -701,7 +726,7 @@ PLUTO_MANIFEST_TOML_CONTENTS = """
 
 julia_version = "1.8.5"
 manifest_format = "2.0"
-project_hash = "e9be83a6c7fd21f04cfc4051871fb477d5cc6cf9"
+project_hash = "9d8e0b5eb44ada63f68e061ff9afa8d2a96e47f7"
 
 [[deps.AbstractPlutoDingetjes]]
 deps = ["Pkg"]
@@ -1738,7 +1763,8 @@ version = "1.4.1+0"
 # ╟─813ac96d-fab3-47d0-95ad-fb0f2662af74
 # ╟─91f75eed-a603-4748-a4ad-c5782b882c86
 # ╟─1aba0df0-c7c6-4ee0-8da5-6e79155729dd
-# ╟─dc263289-b50c-4f49-9991-cb3c344b03f1
+# ╟─23211c53-5475-442e-b1f3-0cf94c58f38a
+# ╟─cd857e39-4177-4e53-9389-12a2d4468154
 # ╟─b514f905-7bb6-4c47-9aa4-388859cfed4e
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
