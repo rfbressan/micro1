@@ -269,7 +269,7 @@ md"
 md"
 * As $n+1$ equações que representam as condições necessárias de primeira ordem para um máximo interior são dadas por:
 $$\begin{eqnarray} \frac{\partial\mathcal{L}}{\partial x_1} &=& \frac{\partial U}{\partial x_1} - \lambda p_1 &=& 0 \\ \frac{\partial\mathcal{L}}{\partial x_2} &=& \frac{\partial U}{\partial x_2} - \lambda p_2 &=& 0  \\ \vdots &=& \ddots &\vdots& \\ 
-\frac{\partial\mathcal{L}}{\partial x_n} &=& \frac{\partial U}{\partial x_n} - \lambda p_n &=& 0 \\ \frac{\partial\mathcal{L}}{\partial \lambda} &=& I - p_1 x_1 - \dots - p_n x_n &=& 0\end{eqnarray}$$
+\frac{\partial\mathcal{L}}{\partial x_n} &=& \frac{\partial U}{\partial x_n} - \lambda p_n &=& 0 \\ \frac{\partial\mathcal{L}}{\partial \lambda} &=& I - p_1 x_1 - \dots - p_n x_n &=& 0\end{eqnarray} \tag{1}\label{aula5_eq1}$$
 * Esse sistema de $n + 1$ equações pode, em princípio, ser solucionado para $x_1, \dots, x_n$ e $\lambda$
 * Lembre-se que as CPOs são condições necessárias, mas não suficientes, para garantir que a solução seja, de fato, um ponto de máximo local
 * As condições suficientes de segunda ordem para assegurar que os pontos críticos obtidos são, de fato, pontos interiores de máximo local são relativamente complexos
@@ -317,7 +317,7 @@ $$p_i = \frac{\partial U/\partial x_i}{\lambda}$$
 
 # ╔═╡ db61aa0e-cb1b-4c36-a8ef-646b5164181c
 md"
-## Exercícios
+#### Exercícios
 "
 
 # ╔═╡ 48653eb6-0780-4768-9155-fc549a8cbce2
@@ -355,6 +355,109 @@ md"""
 > Quais as quantidades consumidas ótimas para este problema de maximização de utilidade?
 """
 
+# ╔═╡ 4394c5d4-6bce-448d-8850-d0241dd99c47
+md"
+---
+### Funções de demanda Marshallianas
+"
+
+# ╔═╡ 9ac4c35b-5d70-489d-9316-68ed54a88066
+md"
+* As condições de primeira ordem associados ao problema de otimização com restrições do problema primal do consumidor ($\ref{aula5_eq1}$) permitem encontrar os valores ótimos de $x_1, \dots, x_n$ através da solução do sistema de $n + 1$ equações em $n + 1$ variáveis
+* De maneira mais geral, estes valores ótimos serão funções dos preços unitários de todos os bens e da renda monetária do invidíduo.
+* Isto é:
+$$\begin{eqnarray}x_1^* &=& x_1(p_1, p_2, \dots, p_n, I), \\ x_2^* &=& x_2(p_1, p_2, \dots, p_n, I), \\ &\vdots& \\ x_n^* &=& x_n(p_1, p_2, \dots, p_n, I).\end{eqnarray}\tag{2}\label{aula5_eq2}$$
+"
+
+# ╔═╡ bcb7fca2-cf76-426b-8d04-bb5bf29f0eda
+md"""
+!!! info "Funções de demanda Marshallianas"
+	Ao conjunto de funções de demanda ($\ref{aula5_eq2}$) damos o nome de **demandas Marshallianas**, para diferenciá-las das demandas Hicksianas.
+
+	Ambas serão estudadas em maior profundidade nas próximas aulas.
+"""
+
+# ╔═╡ f2922433-e514-4292-ba9e-e1cb0326eaaf
+md"
+---
+### Função de utilidade indireta
+"
+
+# ╔═╡ d7d4b0b8-b048-469c-bc01-e0070a0592d9
+md"
+* O conjunto de funções de demandas Marshallianas ($\ref{aula5_eq2}$) mostra qual a escolha ótima de consumo quando os preços são $p_1, \dots, p_n$ e a renda $I$
+* Se substituirmos os valores ótimos de $x$ na função utilidade original $U(x_1, \dots, x_n)$, obtemos:
+$$\begin{eqnarray}\text{utilidade máxima} &=& U[x_1^*(p_1, \dots, p_n, I), \dots, x_n^*(p_1, \dots, p_n, I)] \\ &=& V(p_1, \dots, p_n, I)\end{eqnarray}\tag{3}\label{eq3}$$
+* Dado o objetivo do consumidor em maximizar sua utilidade, dada sua restrição orçamentária, o nível ótimo de utilidade atingível dependerá **indiretamente** dos preços dos bens e da renda monetária à disposição deste consumidor
+* Esta dependência é observada pela **função de utilidade indireta** $V$
+* Mudanças nos preços dos bens e/ou na renda alteram o nível de utilidade que pode ser obtido
+"
+
+# ╔═╡ 06f4c379-032a-4c60-ae53-29615bf97d0c
+md"""
+!!! warning "Função valor"
+	A **função valor** de um problema de otimização nos dá o valor atingido pela função objetivo em uma solução, escrita em função apenas dos parâmetros do problema.
+"""
+
+# ╔═╡ c80533f8-c8ac-4608-8a7f-0eb3e00a35af
+md"
+* Note, então, que a função de utilidade indireta é um exemplo de uma função valor
+* Essa função soluciona todas as variáveis endógenas em um problema de otimização deixando o valor ótimo obtido como uma função apenas das variáveis exógenas
+* Tal abordagem nos permite explorar como mudanças nas variáveis exógenas afetam o resultado final, sem precisarmos refazer o problema de otimização original
+"
+
+# ╔═╡ 30c13f5e-ddc5-4a3c-8b48-a65692c3b04b
+md"""
+!!! danger "Observação"
+	⚠️ É importante ressaltar, no entanto, que a dependência de $x_i$ em $p_1, \dots, p_n$ e $I$ (e não diretamente nas quantidades consumidas dos outros bens) não implica que a escolha de consumo de um bem qualquer não dependa da escolha de consumo dos outros bens❕❕
+
+	Significa, apenas, que as escolhas de $x_j (j \neq i)$ estão implicitamente incorporadas na solução, e foram substituídas pelos seus preços e pela renda
+"""
+
+# ╔═╡ 3188dc71-ee6b-4a33-95ab-46e3cca25a31
+md"
+#### Exemplos
+"
+
+# ╔═╡ 870e3808-970e-4a13-8a27-0d4f9ce79059
+md"
+> **Exemplo 1.** Função do tipo Cobb-Douglas
+>
+> Obtenha as funções de demanda Marshallianas e a função de utilidade indireta para a seguinte função de utilidade do tipo Cobb-Douglas:
+>
+> $$U(x, y) = x^{0,5}y^{0,5}$$
+>
+> considerando a restrição orçamentária: $p_x x+ p_y y = I$.
+>
+> Calcule o nível de utilidade máximo quando $p_x = 1, p_y = 4, I = 8$.
+"
+
+# ╔═╡ cc3e07db-bb9a-4be0-a643-031ebe8fe0f2
+md"
+> **Exemplo 2.** Bens complementares
+>
+> Obtenha as funções de demanda Marshallianas e a função de utilidade indireta para a seguinte função utilidade de bens complementares:
+>
+> $$U(x, y) = \min\{x, 4y\}$$
+>
+> considerando a restrição orçamentária: $p_x x+ p_y y = I$.
+>
+> Calcule o nível de utilidade máximo quando $p_x = 1, p_y = 4, I = 8$.
+"
+
+# ╔═╡ 5891e9e1-aafb-4ed2-9509-f3a38ec808dd
+md"
+> **Exemplo 3.** Função do tipo Cobb-Douglas
+>
+> Obtenha as funções de demanda Marshallianas e a função de utilidade indireta para a seguinte função de utilidade do tipo Cobb-Douglas:
+>
+> $$U(x, y) = x^\alpha y^{1-\alpha}, \qquad \alpha \in (0,1)$$
+>
+> considerando a restrição orçamentária: $p_x x+ p_y y = I$.
+>
+> Mostre que a fração da renda consumida em cada bem é constante.
+"
+
 # ╔═╡ 7e506a6c-53f0-4de7-8c38-a3fc8504a63e
 md"
 ## 📚 Bibliografia
@@ -383,7 +486,7 @@ PLUTO_MANIFEST_TOML_CONTENTS = """
 
 julia_version = "1.8.5"
 manifest_format = "2.0"
-project_hash = "e9be83a6c7fd21f04cfc4051871fb477d5cc6cf9"
+project_hash = "70f75929b5ad01b42d4cd7f638c3d19b05d428b6"
 
 [[deps.AbstractPlutoDingetjes]]
 deps = ["Pkg"]
@@ -1385,6 +1488,18 @@ version = "1.4.1+0"
 # ╟─48653eb6-0780-4768-9155-fc549a8cbce2
 # ╟─3ed55005-75f8-4365-8f5d-cbbd0630baa9
 # ╟─4a54711d-709e-4725-aacb-814e4b98f4af
+# ╟─4394c5d4-6bce-448d-8850-d0241dd99c47
+# ╟─9ac4c35b-5d70-489d-9316-68ed54a88066
+# ╟─bcb7fca2-cf76-426b-8d04-bb5bf29f0eda
+# ╟─f2922433-e514-4292-ba9e-e1cb0326eaaf
+# ╟─d7d4b0b8-b048-469c-bc01-e0070a0592d9
+# ╟─06f4c379-032a-4c60-ae53-29615bf97d0c
+# ╟─c80533f8-c8ac-4608-8a7f-0eb3e00a35af
+# ╟─30c13f5e-ddc5-4a3c-8b48-a65692c3b04b
+# ╟─3188dc71-ee6b-4a33-95ab-46e3cca25a31
+# ╟─870e3808-970e-4a13-8a27-0d4f9ce79059
+# ╟─cc3e07db-bb9a-4be0-a643-031ebe8fe0f2
+# ╟─5891e9e1-aafb-4ed2-9509-f3a38ec808dd
 # ╟─7e506a6c-53f0-4de7-8c38-a3fc8504a63e
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
