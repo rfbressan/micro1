@@ -84,7 +84,7 @@ md"
 
 # ╔═╡ 0c46862e-3704-4b2e-97eb-150f9d4b02d1
 begin			
-	exemplo1 = range(0, 8, length=200)	
+	exemplo1 = range(0, 8, length=100)	
 	contour(exemplo1, exemplo1, (x, y)-> x^0.5 * y^0.5, c=:lightgray, legend=:none, levels = [1, 3, 4, 5, 6], clabels=true)
 	contour!(exemplo1, exemplo1, (x, y)-> x^0.5 * y^0.5, c=:indianred, legend=:none, levels = [2], clabels=true, title=L"U(x,y) = x^{0.5} y^{0.5}, \quad s.r. \quad x + 4y = 8")
 	plot!(exemplo1, x-> 2 - 0.25x, fill=true, alpha=0.3, c=:navyblue)
@@ -376,7 +376,68 @@ md"
 "
 
 # ╔═╡ 564fb9da-aef6-4a73-9b2a-51d13cc06088
+md"""
+Princípio da tributação do tipo _lump-sum_
+$(Resource("https://raw.githubusercontent.com/pvfonseca/micro1/main/notas/figures/aula5_fig3.PNG", :width=>800))
+"""
 
+# ╔═╡ 31565a71-572a-4b64-bb8a-6406aed41afe
+md"
+* Suponha que, inicialmente, o consumidor disponha de uma renda $I$ e a cesta de consumo ótima seja $(x^*, y^*)$
+* Um imposto sobre o bem $x$ elevaria seu preço, rotacionando a restrição orçamentária ''para dentro''
+* A este novo preço, a escolha ótima que maximiza a utilidade é $(x_1, y_1)$
+* A arredação de impostos seria dada por $\tau x_1$, sendo $\tau$ a alíquota de imposto sobre o bem $x$
+"
+
+# ╔═╡ c3970b12-94cc-4bd4-af42-293da333eaf1
+md"
+* Suponha, agora, que a incidência do imposto seja sobre a renda, de forma a manter a arrecadação total
+* Neste caso, a restrição orçamentária é deslocada para baixo, para o novo nível de renda $I'$
+* Como $I = (p_x + \tau)x_1 + p_y y_1$, temos que $I' = I-\tau x_1 = p_x x_1 + p_y y_1$, que mostra que a restrição orçamentária com imposto de renda também passa pelo ponto $(x_1, y_1)$
+* Porém, a utilidade obtida sob um imposto de renda ($U_2$) é superior àquela obtida com um imposto incidindo sobre o preço do bem $x$ ($U_1$)
+▶️ **A perda de utilidade do imposto de renda é menor que a perda observada com um imposto sobre o preço do bem $x$**
+"
+
+# ╔═╡ 481d062d-f860-4246-b019-28505544aae1
+md"
+### Exemplos
+"
+
+# ╔═╡ 29a5d391-6685-41e8-8f16-64e51791a64b
+md"
+> **1. Função utilidade do tipo Cobb-Douglas**
+>
+> Considere que a relação de preferências de um indivíduo seja representada pela seguinte função utilidade do tipo Cobb-Douglas:
+>
+> $$U(x,y) = x^{0,5}y^{0,5},$$
+>
+> considerando a restrição orçamentária: $p_x x + p_y y = I.$
+>
+> (a) Calcule o nível de utilidade máximo quando $p_x = 1, p_y = 4$ e $I = 8$.
+>
+> (b) Suponha, agora, um imposto de \$1 sobre $p_x$. Mostre que o nível de utilidade, neste caso, é menor que a utilidade obtida sob um imposto de renda que preserve a quantidade total arrecadada.
+"
+
+# ╔═╡ b29d3607-2a2b-4f28-8b5c-52fe693acffe
+md"
+> **2. Função utilidade de bens complementares**
+>
+> Considere que a relação de preferências de um indivíduo seja representada pela seguinte função utilidade de bens complementares:
+>
+> $$U(x,y) = \min\{x, 4y\},$$
+>
+> considerando a restrição orçamentária: $p_x x + p_y y = I.$
+>
+> (a) Calcule o nível de utilidade máximo quando $p_x = 1, p_y = 4$ e $I = 8$.
+>
+> (b) Suponha, agora, um imposto de \$1 sobre $p_x$. Mostre que o nível de utilidade, neste caso, é igual à utilidade obtida sob um imposto de renda que preserve a quantidade total arrecadada.
+"
+
+# ╔═╡ bff111d9-346f-4be6-93a2-f266ea85b4a1
+md"""
+!!! warning "Princípio do lump-sum: bens complementares"
+	Neste caso, o princípio do _lump-sum_ não é válido pois o consumidor consome proporções fixas dos dois bens e, portanto, o imposto não irá distorcer as escolhas deste agente.
+"""
 
 # ╔═╡ 7e506a6c-53f0-4de7-8c38-a3fc8504a63e
 md"
@@ -1412,7 +1473,13 @@ version = "1.4.1+0"
 # ╟─5891e9e1-aafb-4ed2-9509-f3a38ec808dd
 # ╟─069a29a2-e11d-4cc7-b039-3587cb931251
 # ╟─42edc3ce-f00a-4c46-ae72-292bf079f57b
-# ╠═564fb9da-aef6-4a73-9b2a-51d13cc06088
+# ╟─564fb9da-aef6-4a73-9b2a-51d13cc06088
+# ╟─31565a71-572a-4b64-bb8a-6406aed41afe
+# ╟─c3970b12-94cc-4bd4-af42-293da333eaf1
+# ╟─481d062d-f860-4246-b019-28505544aae1
+# ╟─29a5d391-6685-41e8-8f16-64e51791a64b
+# ╟─b29d3607-2a2b-4f28-8b5c-52fe693acffe
+# ╟─bff111d9-346f-4be6-93a2-f266ea85b4a1
 # ╟─7e506a6c-53f0-4de7-8c38-a3fc8504a63e
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
