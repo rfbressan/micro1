@@ -599,13 +599,13 @@ $$U(x,y) = \alpha x + \beta y, \qquad \alpha, \beta>0\tag{6}$$
 
 # ╔═╡ fd22fe93-b0a2-467b-a4fb-ff810f011d52
 begin		
-	sub_x = range(0, 10, length=200)	
+	sub_x = range(0, 5, length=100)	
 	sub_plot = @layout [a b]
 	sub1 = surface(
-	  sub_x, sub_x, (x, y)-> x + y, c=:bone_1, legend=:none, 
-	  nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(40,20)
+	  sub_x, sub_x, (x, y)-> x + y, c=:thermal, legend=:none, 
+	  nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(40,30,30)
 	)
-	sub2 = contour(sub_x, sub_x, (x, y)-> x + y, c=:bone_1, legend=:none, levels = [2, 4, 6, 8, 10], clabels=true)	
+	sub2 = contour(sub_x, sub_x, (x, y)-> x + y, c=:thermal, legend=:none, levels = [2, 3, 4, 5, 6, 7, 8, 9, 10], clabels=true, fill=false)	
 	plot(sub1, sub2, layout = sub_plot)	
 end
 
@@ -627,13 +627,13 @@ $$\frac{y}{x} = \frac{\alpha}{\beta}$$
 
 # ╔═╡ e3fb0987-3a7b-4c3f-95ef-ce855bd481db
 begin		
-	comp_x = range(0, 10, length=200)	
+	comp_x = range(0, 5, length=100)	
 	comp_plot = @layout [a b]
 	comp1 = surface(
-	  comp_x, comp_x, (x, y)-> min(x,y), c=:bone_1, legend=:none, 
-	  nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(40,20)
+	  comp_x, comp_x, (x, y)-> min(x,y), c=:roma, legend=:none, 
+	  nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(45,45)
 	)
-	comp2 = contour(comp_x, comp_x, (x, y)-> min(x,y), c=:bone_1, legend=:none, levels = [1, 3, 5, 7, 9], clabels=true)	
+	comp2 = contour(comp_x, comp_x, (x, y)-> min(x,y), c=:bone, legend=:none, levels = 8, clabels=false, fill=true, alpha=0.4)	
 	plot(comp1, comp2, layout = comp_plot)	
 end
 
@@ -658,41 +658,160 @@ $$U(x,y) = \frac{x^\delta}{\delta} + \frac{y^\delta}{\delta}$$
 # ╔═╡ 1aba0df0-c7c6-4ee0-8da5-6e79155729dd
 begin		
 	ces_δ1 = 1
-	ces_x = range(0, 20, length=200)	
+	ces_x = range(0, 5, length=100)	
 	ces_plot = @layout [a b]
 	ces1 = surface(
-	  ces_x, ces_x, (x, y)-> x^ces_δ1/ces_δ1 + y^ces_δ1/ces_δ1, c=:bone_1, legend=:none, 
-	  nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(40,20)
+	  ces_x, ces_x, (x, y)-> x^ces_δ1/ces_δ1 + y^ces_δ1/ces_δ1, c=:roma, legend=:none, 
+	  nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(45,45)
 	)
-	ces2 = contour(ces_x, ces_x, (x, y)-> x^ces_δ1/ces_δ1 + y^ces_δ1, c=:bone_1, legend=:none, levels = [10, 14, 18, 20, 24], clabels=true)	
+	ces2 = contour(ces_x, ces_x, (x, y)-> x^ces_δ1/ces_δ1 + y^ces_δ1, c=:bone, legend=:none, levels = 8, clabels=false, fill=true, alpha=0.3)	
 	plot(ces1, ces2, layout = ces_plot, title=L"δ = 1")	
 end
 
 # ╔═╡ 23211c53-5475-442e-b1f3-0cf94c58f38a
 begin		
 	ces_cobb = 0.1
-	ces_xcobb = range(0, 10, length=200)	
+	ces_xcobb = range(0, 5, length=45)	
 	ces_plotcobb = @layout [a b]
 	ces1cobb = surface(
-	  ces_xcobb, ces_xcobb, (x, y)-> (x^ces_cobb + y^ces_cobb)^(1/ces_cobb), c=:bone_1, legend=:none, 
-	  nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(40,20)
+	  ces_xcobb, ces_xcobb, (x, y)-> (x^ces_cobb + y^ces_cobb)^(1/ces_cobb), c=:roma, legend=:none, 
+	  nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(45,30)
 	)
-	ces2cobb = contour(ces_xcobb, ces_xcobb, (x, y)-> (x^ces_cobb + y^ces_cobb)^(1/ces_cobb), c=:bone_1, legend=:none, levels = [2000, 3000, 4000, 5000, 6000], clabels=true)	
+	ces2cobb = contour(ces_xcobb, ces_xcobb, (x, y)-> (x^ces_cobb + y^ces_cobb)^(1/ces_cobb), c=:thermal, legend=:none, levels = 10, clabels=false, fill=true, alpha=0.4)	
 	plot(ces1cobb, ces2cobb, layout = ces_plotcobb, title=L"δ = 0.1")	
 end
 
 # ╔═╡ cd857e39-4177-4e53-9389-12a2d4468154
 begin		
 	ces_l = -50
-	ces_xl = range(0, 20, length=200)	
+	ces_xl = range(0, 5, length=100)	
 	ces_plotl = @layout [a b]
 	ces1l = surface(
-	  ces_xl, ces_xl, (x, y)-> (x^ces_l + y^ces_l)^(1/ces_l), c=:bone_1, legend=:none, 
-	  nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(40,20)
+	  ces_xl, ces_xl, (x, y)-> (x^ces_l + y^ces_l)^(1/ces_l), c=:roma, legend=:none, 
+	  nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(45,45)
 	)
-	ces2l = contour(ces_xl, ces_xl, (x, y)-> (x^ces_l + y^ces_l)^(1/ces_l), c=:bone_1, legend=:none, levels = [2, 4, 6, 8, 10, 12], clabels=true)	
+	ces2l = contour(ces_xl, ces_xl, (x, y)-> (x^ces_l + y^ces_l)^(1/ces_l), c=:bone, legend=:none, levels = 10, clabels=false, fill=true, alpha=0.4)	
 	plot(ces1l, ces2l, layout = ces_plotl, title=L"δ = -50")	
 end
+
+# ╔═╡ c57e60fe-f578-421c-b9d0-ce65b6e0599e
+md"
+### Função quasi-linear
+"
+
+# ╔═╡ 89781173-14a3-4db2-8f27-ed4f3deb2339
+md"
+* Uma função utilidade quasi-linear é definida pela seguinte forma funcional:
+$$U(x, y) =  v(x) + y$$
+* Abaixo ilustramos o gráfico e as curvas de indiferença associadas a função utilidade quasi-linear com a seguinte forma funcional específica:
+$$U(x, y) = \ln(1 + x) + y$$
+"
+
+# ╔═╡ 89d61705-0fc9-445f-8e36-3a7cdd84191c
+begin		
+	ql_x = range(0, 5, length=100)	
+	ql_plotl = @layout [a b]
+	ql = surface(
+	  ql_x, ql_x, (x, y)-> log(1 + x) + y, c=:roma, legend=:none, 
+	  nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(45,30)
+	)
+	ql2 = contour(ql_x, ql_x, (x, y)-> log(1+x) + y, c=:bone, legend=:none, levels = 10, clabels=false, fill=true, alpha=0.4)	
+	plot(ql, ql2, layout = ql_plotl)	
+end
+
+# ╔═╡ e8e2392e-60ba-4687-9ba6-2a0252a0ce0f
+md"
+## Preferências homotéticas e não-homotéticas
+"
+
+# ╔═╡ 6dc2605f-1aa1-4d8a-96b8-7b846be8aa40
+md"
+* Uma função utilidade é **homotética** se sua taxa marginal de substituição depende apenas da *razão* entre as quantidades de bens, e não de suas quantidades totais
+* A importância de funções utilidade homotéticas é que suas curvas de indiferença são similares
+* A inclinação das curvas depende apenas da razão entre os bens, e não do quão distante as curvas estão da origem
+* As curvas de indiferença associadas a utilidades mais altas são cópias das de utilidades mais baixas
+* Portanto, podemos estudar o comportamento de um indivíduo que tenha preferências homotéticas olhando apenas uma curva de indiferença (ou um número pequeno)
+* Sem nos preocupar que o resultado altere drasticamente para diferentes níveis de utilidade
+"
+
+# ╔═╡ afcb1930-d7b1-4b12-b4be-88b9d53a5bee
+md"""
+> 1. Mostre que as quatro funções utilidade estudadas anteriormente exibem preferências homotéticas:
+> 
+> (a) Função Cobb-Douglas
+>
+> (b) Bens substitutos
+>
+> (c) Bens complementares
+>
+> (d) Função de elasticidade de substituição constante
+"""
+
+# ╔═╡ 9d033013-7b5e-4233-8eae-b6caf884cc6b
+md"""
+!!! hint "Respostas"
+	(a) Função Cobb-Douglas: $U(x,y) = x^\alpha y^\beta$
+
+	$$\text{TMS} = \frac{\alpha y}{\beta x}$$
+
+	(b) Bens substitutos: $U(x,y) = \alpha x + \beta y$
+
+	$$\text{TMS} = \frac{\alpha}{\beta}$$
+
+	(c) Bens complementares: $U(x,y) = \min\{\alpha x + \beta y\}$
+
+	$$\text{TMS} = \begin{cases} \infty, &\quad& \alpha x< \beta y \\ \text{indefinida}, &\quad& \alpha x = \beta y \\ 0, &\quad& \alpha x > \beta y\end{cases}$$
+
+	(d) Função CES: $U(x,y) = \left[x^\delta + y^\delta\right]^{\frac{1}{\delta}}$
+
+	$$\text{TMS} = \left(\frac{y}{x}\right)^{1-\delta}$$
+"""
+
+# ╔═╡ cbe05382-5bbc-4021-8a8e-864abebc28b0
+md"""
+> 2. Mostre que a função utilidade quasi-linear abaixo não exibe preferências homotéticas:
+>
+> $$U(x,y) = x + \ln y$$
+"""
+
+# ╔═╡ d67dffd4-bd85-4703-86f8-f430359944fc
+md"""
+!!! hint "Resposta"
+	$$\text{TMS} = y$$
+"""
+
+# ╔═╡ 2d955598-f428-4b93-9125-ec27d379c1b0
+begin			
+	q_linear = range(0, 20, length=100)	
+	contour(q_linear, q_linear, (x, y)-> x + log(y), c=:roma, legend=:none, levels = 10, clabels=false, title=L"U(x,y) = x + \ln y", fill=true, alpha=0.4)	
+end
+
+# ╔═╡ 0897295b-11bd-4c8d-b913-c3c636106738
+md"
+* Note que no caso da função utilidade quasi-linear, a TMS diminui à medida que a quantidade escolhida de $y$ diminui, mas é independente da quantidade consumida de $x$
+* Como $x$ tem uma utilidade marginal constante, a disposição de um indivíduo a abrir mão de $y$ para adquirir uma unidade adicional de $x$ depende, apenas, do quanto de $y$ possui
+* Ao contrário do caso homotético, quando as quantidades de $x$ e $y$ dobram, a TMS também dobra (ao invés de permanecer invariante)
+"
+
+# ╔═╡ 1c4d0148-7cf0-4e0f-9a76-f754c4a2ecda
+md"
+## Superfície de indiferença
+"
+
+# ╔═╡ bfceef2c-24a8-458b-8034-7a9f595dc971
+md"
+* Se o indivíduo deriva utilidade do consumo de $n$ bens, sua função utilidade por ser representada como:
+$$U(x_1, \dots, x_n)$$
+* Portanto, a equação:
+$$U(x_1, \dots, x_n) = k,$$
+neste caso, define uma **superfície de indiferença** $n$-dimensional
+* Continuaremos assumindo que a superfície de indiferença é convexa
+* Isto é, cestas de consumo mais balanceadas são preferíveis às cestas não-balanceadas
+* Portanto, assume-se que a função utilidade é quasi-côncava
+* Podemos estudar as trocas voluntárias que um indivíduo esteja disposto a fazer entre dois bens quaisquer ($x_1$ e $x_2$) usando o teorema da função implícita para obter a TMS:
+$$\text{TMS}_{x_1, x_2} = -\left.\frac{dx_2}{dx_1}\right|_{U(x_1, \dots, x_n) = k} = \frac{U_1(x_1, \dots, x_n)}{U_2(x_1, \dots, x_n)}$$
+* A disposição de um indivíduo em trocar $x_2$ por $x_1$ depende não só da quantidade desses bens mas, também, das quantidades de todos os outros bens
+"
 
 # ╔═╡ b514f905-7bb6-4c47-9aa4-388859cfed4e
 md"
@@ -1765,6 +1884,19 @@ version = "1.4.1+0"
 # ╟─1aba0df0-c7c6-4ee0-8da5-6e79155729dd
 # ╟─23211c53-5475-442e-b1f3-0cf94c58f38a
 # ╟─cd857e39-4177-4e53-9389-12a2d4468154
+# ╟─c57e60fe-f578-421c-b9d0-ce65b6e0599e
+# ╟─89781173-14a3-4db2-8f27-ed4f3deb2339
+# ╟─89d61705-0fc9-445f-8e36-3a7cdd84191c
+# ╟─e8e2392e-60ba-4687-9ba6-2a0252a0ce0f
+# ╟─6dc2605f-1aa1-4d8a-96b8-7b846be8aa40
+# ╟─afcb1930-d7b1-4b12-b4be-88b9d53a5bee
+# ╟─9d033013-7b5e-4233-8eae-b6caf884cc6b
+# ╟─cbe05382-5bbc-4021-8a8e-864abebc28b0
+# ╟─d67dffd4-bd85-4703-86f8-f430359944fc
+# ╟─2d955598-f428-4b93-9125-ec27d379c1b0
+# ╟─0897295b-11bd-4c8d-b913-c3c636106738
+# ╟─1c4d0148-7cf0-4e0f-9a76-f754c4a2ecda
+# ╟─bfceef2c-24a8-458b-8034-7a9f595dc971
 # ╟─b514f905-7bb6-4c47-9aa4-388859cfed4e
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002

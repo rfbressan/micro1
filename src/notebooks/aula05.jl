@@ -41,102 +41,6 @@ md"""
 	O texto que segue não tem a menor pretensão de originalidade. Ele serve apenas como registro dos principais princípios, conceitos e técnicas analíticas que são trabalhados em sala de aula.
 """
 
-# ╔═╡ d1cad20f-c42a-49a1-a1f2-cff70bf76e36
-md"
-## Preferências homotéticas e não-homotéticas
-"
-
-# ╔═╡ fe91484f-bb2a-43a0-a1d3-8d6b6df5d425
-md"
-* Uma função utilidade é **homotética** se sua taxa marginal de substituição depende apenas da *razão* entre as quantidades de bens, e não de suas quantidades totais
-* A importância de funções utilidade homotéticas é que suas curvas de indiferença são similares
-* A inclinação das curvas depende apenas da razão entre os bens, e não do quão distante as curvas estão da origem
-* As curvas de indiferença associadas a utilidades mais altas são cópias das de utilidades mais baixas
-* Portanto, podemos estudar o comportamento de um indivíduo que tenha preferências homotéticas olhando apenas uma curva de indiferença (ou um número pequeno)
-* Sem nos preocupar que o resultado altere drasticamente para diferentes níveis de utilidade
-"
-
-# ╔═╡ 95df5ae5-2e41-49e7-ab1a-44629664f128
-md"""
-> 1. Mostre que as quatro funções utilidade estudadas anteriormente exibem preferências homotéticas:
-> 
-> (a) Função Cobb-Douglas
->
-> (b) Bens substitutos
->
-> (c) Bens complementares
->
-> (d) Função de elasticidade de substituição constante
-"""
-
-# ╔═╡ ef1fa357-a4ec-4bcc-a56a-2b5481ef0e6c
-md"""
-!!! hint "Respostas"
-	(a) Função Cobb-Douglas: $U(x,y) = x^\alpha y^\beta$
-
-	$$\text{TMS} = \frac{\alpha y}{\beta x}$$
-
-	(b) Bens substitutos: $U(x,y) = \alpha x + \beta y$
-
-	$$\text{TMS} = \frac{\alpha}{\beta}$$
-
-	(c) Bens complementares: $U(x,y) = \min\{\alpha x + \beta y\}$
-
-	$$\text{TMS} = \begin{cases} \infty, &\quad& \alpha x< \beta y \\ \text{indefinida}, &\quad& \alpha x = \beta y \\ 0, &\quad& \alpha x > \beta y\end{cases}$$
-
-	(d) Função CES: $U(x,y) = \left[x^\delta + y^\delta\right]^{\frac{1}{\delta}}$
-
-	$$\text{TMS} = \left(\frac{y}{x}\right)^{1-\delta}$$
-"""
-
-# ╔═╡ f73cce85-91a0-4489-8334-20383228ed0f
-md"""
-> 2. Mostre que a função utilidade quasi-linear abaixo não exibe preferências homotéticas:
->
-> $$U(x,y) = x + \ln y$$
-"""
-
-# ╔═╡ e50f4ea5-c6d9-4dff-9568-e247e0386c77
-md"""
-!!! hint "Resposta"
-	$$\text{TMS} = y$$
-"""
-
-# ╔═╡ 99450dfe-4296-4fd5-8c86-15eb51cb23bc
-begin			
-	q_linear = range(0, 20, length=200)	
-	contour(q_linear, q_linear, (x, y)-> x + log(y), c=:thermal, legend=:none, levels = 6, clabels=false, title=L"U(x,y) = x + \ln y")
-	vline!([0], lw=0.5, lc=:black, label=:none)
-	hline!([0], lw=0.5, lc=:black, label=:none)
-end
-
-# ╔═╡ e849e114-6382-44d5-8546-9643f775d2e5
-md"
-* Note que no caso da função utilidade quasi-linear, a TMS diminui à medida que a quantidade escolhida de $y$ diminui, mas é independente da quantidade consumida de $x$
-* Como $x$ tem uma utilidade marginal constante, a disposição de um indivíduo a abrir mão de $y$ para adquirir uma unidade adicional de $x$ depende, apenas, do quanto de $y$ possui
-* Ao contrário do caso homotético, quando as quantidades de $x$ e $y$ dobram, a TMS também dobra (ao invés de permanecer invariante)
-"
-
-# ╔═╡ 269f1f06-9de2-432a-90fc-b57bb9a6962e
-md"
-## Superfície de indiferença
-"
-
-# ╔═╡ 4138367e-0a54-48e1-9e13-a28dcf5b021a
-md"
-* Se o indivíduo deriva utilidade do consumo de $n$ bens, sua função utilidade por ser representada como:
-$$U(x_1, \dots, x_n)$$
-* Portanto, a equação:
-$$U(x_1, \dots, x_n) = k,$$
-neste caso, define uma **superfície de indiferença** $n$-dimensional
-* Continuaremos assumindo que a superfície de indiferença é convexa
-* Isto é, cestas de consumo mais balanceadas são preferíveis às cestas não-balanceadas
-* Portanto, assume-se que a função utilidade é quasi-côncava
-* Podemos estudar as trocas voluntárias que um indivíduo esteja disposto a fazer entre dois bens quaisquer ($x_1$ e $x_2$) usando o teorema da função implícita para obter a TMS:
-$$\text{TMS}_{x_1, x_2} = -\left.\frac{dx_2}{dx_1}\right|_{U(x_1, \dots, x_n) = k} = \frac{U_1(x_1, \dots, x_n)}{U_2(x_1, \dots, x_n)}$$
-* A disposição de um indivíduo em trocar $x_2$ por $x_1$ depende não só da quantidade desses bens mas, também, das quantidades de todos os outros bens
-"
-
 # ╔═╡ 3f1278a2-5494-4fb0-bf6e-ceadf02ee438
 md"
 ## Maximização de utilidade e escolha
@@ -357,8 +261,7 @@ md"""
 
 # ╔═╡ 4394c5d4-6bce-448d-8850-d0241dd99c47
 md"
----
-### Funções de demanda Marshallianas
+## Funções de demanda Marshallianas
 "
 
 # ╔═╡ 9ac4c35b-5d70-489d-9316-68ed54a88066
@@ -379,8 +282,7 @@ md"""
 
 # ╔═╡ f2922433-e514-4292-ba9e-e1cb0326eaaf
 md"
----
-### Função de utilidade indireta
+## Função de utilidade indireta
 "
 
 # ╔═╡ d7d4b0b8-b048-469c-bc01-e0070a0592d9
@@ -416,7 +318,7 @@ md"""
 
 # ╔═╡ 3188dc71-ee6b-4a33-95ab-46e3cca25a31
 md"
-#### Exemplos
+### Exemplos
 "
 
 # ╔═╡ 870e3808-970e-4a13-8a27-0d4f9ce79059
@@ -457,6 +359,24 @@ md"
 >
 > Mostre que a fração da renda consumida em cada bem é constante.
 "
+
+# ╔═╡ 069a29a2-e11d-4cc7-b039-3587cb931251
+md"
+## Aplicação: princípio do _lump-sum_
+"
+
+# ╔═╡ 42edc3ce-f00a-4c46-ae72-292bf079f57b
+md"
+* Muitos _insights_ da análise econômica têm origem no reconhecimento de que a utilidade depende, em última instância, da renda dos indivíduos e dos preços com que se deparam
+* Um dos mais importantes é o **princípio do _lump-sum_** que ilustra a superioridade dos impostos sobre a renda (poder de compra) em relação aos impostos sobre bens específicos
+* Uma ideia relacionada é que transferências de renda para pessoas de baixa renda elevarão mais a utilidade (o bem-estar) do que a utilização da mesma quantidade de renda para subsidiar bens específicos
+* A intuição por trás destes resultados deriva diretamente da hipótese de maximização de utilidade: um imposto ou subsídio sobre a renda deixa o indivíduo livre para decidir como alocar sua renda da melhor maneira que considerar
+* Por outro lado, impostos ou subsídios sobre bens específicos alteram o poder de compra dos indivíduos e distorcem suas escolhas em razão dos preços aritificiais incorporados nesses esquemas
+* Por isso, impostos de renda e subsídios gerais devem ser preferidos se a eficiência for um critério importante de política social
+"
+
+# ╔═╡ 564fb9da-aef6-4a73-9b2a-51d13cc06088
+
 
 # ╔═╡ 7e506a6c-53f0-4de7-8c38-a3fc8504a63e
 md"
@@ -1453,16 +1373,6 @@ version = "1.4.1+0"
 # ╟─29adb679-9ea6-4356-bc9a-8aa4e0485e99
 # ╟─81d9e1e2-6e94-4695-8aaa-be619ec2c856
 # ╟─542203b2-b74f-49b5-8aea-bf031f63fc1e
-# ╟─d1cad20f-c42a-49a1-a1f2-cff70bf76e36
-# ╟─fe91484f-bb2a-43a0-a1d3-8d6b6df5d425
-# ╟─95df5ae5-2e41-49e7-ab1a-44629664f128
-# ╟─ef1fa357-a4ec-4bcc-a56a-2b5481ef0e6c
-# ╟─f73cce85-91a0-4489-8334-20383228ed0f
-# ╟─e50f4ea5-c6d9-4dff-9568-e247e0386c77
-# ╟─99450dfe-4296-4fd5-8c86-15eb51cb23bc
-# ╟─e849e114-6382-44d5-8546-9643f775d2e5
-# ╟─269f1f06-9de2-432a-90fc-b57bb9a6962e
-# ╟─4138367e-0a54-48e1-9e13-a28dcf5b021a
 # ╟─3f1278a2-5494-4fb0-bf6e-ceadf02ee438
 # ╟─4d21d00c-3459-482e-bc7e-56c933fa260d
 # ╟─dd58f6d0-6341-4ee9-89f6-93c9a772a58b
@@ -1500,6 +1410,9 @@ version = "1.4.1+0"
 # ╟─870e3808-970e-4a13-8a27-0d4f9ce79059
 # ╟─cc3e07db-bb9a-4be0-a643-031ebe8fe0f2
 # ╟─5891e9e1-aafb-4ed2-9509-f3a38ec808dd
+# ╟─069a29a2-e11d-4cc7-b039-3587cb931251
+# ╟─42edc3ce-f00a-4c46-ae72-292bf079f57b
+# ╠═564fb9da-aef6-4a73-9b2a-51d13cc06088
 # ╟─7e506a6c-53f0-4de7-8c38-a3fc8504a63e
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
