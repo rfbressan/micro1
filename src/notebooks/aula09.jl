@@ -4,7 +4,7 @@
 using Markdown
 using InteractiveUtils
 
-# ╔═╡ dbcc7c40-e4ad-11ed-2747-0f5f7ec4f73e
+# ╔═╡ 836f9920-e7d6-11ed-2456-876d32ae94d9
 begin
 	using PlutoUI
 	using Plots
@@ -15,342 +15,305 @@ begin
 	gr(size=(800,600), lw = 2, fontfamily = "Computer Modern", grid=true, tickfontsize = 12, guidefontsize=16, framestyle=:box, margin=3mm, right_margin=7mm, guidefonthalign=:right, guidefontvalign=:top)	
 end
 
-# ╔═╡ f9026120-7592-44d1-aa81-003696c89418
+# ╔═╡ f4b51941-ba7a-47e7-8f83-6598b7a66d2b
 PlutoUI.TableOfContents(title="Sumário", indent=true)
 
-# ╔═╡ 054444c6-6031-42d6-9094-ca7f0a8d4821
+# ╔═╡ 85d28e69-ed8d-4076-98d4-7da62267c975
 html"<button onclick=present()>Apresentação</button>"
 
-# ╔═╡ 61608327-7b1d-4309-9795-2c2669054899
+# ╔═╡ 41bed4e9-65fb-4313-a9ed-e962615780e9
 md"""
-# Efeitos renda e substituição $~~~$ $(Resource("https://www1.udesc.br/imagens/id_submenu/899/cor_horizontal_rgb.jpg", :width => 150))
+# Elasticidades da demanda $~~~~~~$ $(Resource("https://www1.udesc.br/imagens/id_submenu/899/cor_horizontal_rgb.jpg", :width => 150))
 """
 
-# ╔═╡ 19740052-846e-458b-9f92-1f4760820857
+# ╔═╡ e9f811f7-7026-43df-8190-e1fd93f5e15b
 md"
 * **Disciplina:** 23MICI - Microeconomia I
 * **Docente:** [Paulo Victor da Fonseca](https://pvfonseca.github.io)
 * **Contato:** [paulo.fonseca@udesc.br](mailto:paulo.fonseca@udesc.br)
 "
 
-# ╔═╡ 11cc4a51-f5f1-45e8-bff5-0db755fe8ee5
+# ╔═╡ 3396ad16-9b74-4942-a6cd-cd712e394338
 md"""
 !!! danger "Aviso"
 	O texto que segue não tem a menor pretensão de originalidade. Ele serve apenas como registro dos principais princípios, conceitos e técnicas analíticas que são trabalhados em sala de aula.
 """
 
-# ╔═╡ 0bfa4842-961c-4351-922a-9b8b6d222c67
+# ╔═╡ 749d2c30-ce1b-48d1-944f-28d29b68efa5
 md"
-## Curva de demanda individual
+## Introdução
 "
 
-# ╔═╡ 3d564ffb-555c-45cf-95ba-63fa367f98e2
+# ╔═╡ 77745d49-4671-4821-ab9a-b1f3b48c7220
 md"
-* Para simplificar análise, consideraremos caso de apenas dois bens
-* Função de demanda Marshalliana (não-compensada) para o bem $x$ é dada por:
-
-$$x^* = x(p_x, p_y, I)$$
-
-* A **curva de demanda** derivada por essa função traz a relação entre $x$ e $p_x$, mantendo $p_y, I$ e relação de preferências constantes:
-
-$$x^* = x(p_x, \bar{p_y}, \bar{I})$$
+* Até agora não demos atenção à forma com que variáveis usadas em microeconomia são mensuradas
+* Talvez a consequência mais importante de escolher unidades de mensuração é que as derivadas parciais geralmente utilizadas para resumir o comportamento dos agentes econômicos refletirão a escolha dessas unidades
+* Por exemplo, se $q$ representa a quantidade de gasolina demandada por todos os consumidores brasileiros durante um determinado ano (medida em bilhões de galões) e $p$ representa o preço em reais de cada galão, então, $\partial q/\partial p$ medirá a variação (em bilhões de galões por ano) para uma mudança de um real por galão no preço
+* **A magnitude numérica dessa derivada depende de como $p$ e $q$ são medidos**
+* Se optássemos por medir o consumo em milhões de galões por ano, isso multiplicaria o tamanho da derivada por 1.000, ao passo que a medida em centavos por galão reduziria a derivada por um fator de 100
+* A dependência da magnitude das derivadas parciais à unidade de mensuração utilizada impõe um problema
+* Embora muitas teorias econômicas façam predições acerca do sinal algébrico (direção) de derivadas parciais, quaisquer previsões sobre a magnitude numérica dessas derivadas seria contingente em como escolhemos mensurar as variáveis
+* Fazer comparações entre estudos poderia ser praticamente impossível
+* Especialmente dada a grande variedade de sistemas de mensuração ao redor do mundo
+* Por esse motivo, adotamos uma maneira diferente e livre de unidades de medida para medir impactos quantitativos
 "
 
-# ╔═╡ 7b73e72d-c6bb-4a62-ab0a-60fcd03a9282
+# ╔═╡ 0741634b-71bf-4a15-bf78-fad6f63d24b9
 md"
-* Assumiremos que as quantidades ótimas consumidas de $x$ aumentam à medida que $p_x$ diminui
-* Hipótese de acordo com a conclusão geral de que, exceto no caso de paradoxo de Giffen, $\partial x^*/\partial p_x < 0$
+* Usamos o conceito de **elasticidade** para resumir praticamente todos os impactos quantitativos de interesse
+* Como essas mensurações concentram-se no efeito proporcional de uma mudança em uma variável sobre outra, elas são livres de unidades de mensuração
+* Isto é, as unidades são _canceladas_ quando a elasticidade é calculada
 "
 
-# ╔═╡ 6d17f799-38c9-4fef-9997-718ab5492637
+# ╔═╡ 60aed4aa-f331-4f01-8c15-0d4da937eeb1
 md"""
-!!! correct "Definição 7.1 - Curva de demanda individual"
-	Uma **curva de demanda individual** mostra a relação entre o preço de um bem e a quantidade consumida deste mesmo bem por um indivíduo, assumindo que todos os outros determinantes da demanda sejam mantidos constantes
+!!! correct "Definição 9.1 - Elasticidade"
+	Seja $y$ uma função de $x$, então, a **elasticidade de $y$ com relação a $x$**, que denotamos por $e_{y,x}$ é definida por:
+
+	$$e_{y,z} \equiv \frac{\Delta y/y}{\Delta x/x} = \frac{\Delta y}{\Delta x}\frac{x}{y} = \frac{dy(x)}{dx}\frac{x}{y}$$
 """
 
-# ╔═╡ e51c1523-3e23-44b5-ae70-3c7a8416fe9b
+# ╔═╡ e55b74c2-55ff-4e28-8873-5f188aff3cfa
+md"
+## Elasticidades da demanda Marshalliana
+"
+
+# ╔═╡ 7eafc13e-2b31-4eae-a1ae-707cae38f566
 md"""
-Derivação da curva de demanda individual
-$(Resource("https://raw.githubusercontent.com/pvfonseca/micro1/main/notas/figures/aula8_fig1.PNG", :width=>800))
-Fonte: Nicholson e Snyder (2019)
+!!! correct "Definição 9.2 - Elasticidades da demanda Marshalliana"
+	Seja $x(p_x, p_y, I)$ uma função de demanda Marshalliana, temos as seguintes definições:
+
+	1. **Elasticidade-preço da demanda** $(e_{x, p_x})$: mede a variação proporcional na quantidade demandada de $x$ em resposta a uma variação proporcional no próprio preço do bem $x$. Formalmente:
+
+	$$e_{x, p_x} \equiv \frac{\Delta x/x}{\Delta p_x/p_x} = \frac{\Delta x}{\Delta p_x}\frac{p_x}{x} = \frac{\partial x(p_x, p_y, I)}{\partial p_x}\frac{p_x}{x}$$
+
+	2. **Elasticidade-renda da demanda** $(e_{x, I})$: mede a variação proporcional na quantidade demandada de um bem $x$ em resposta a uma variação proporcional na renda. Formalmente:
+
+	$$e_{x, I} \equiv \frac{\Delta x/x}{\Delta I/I} = \frac{\Delta x}{\Delta I}\frac{I}{x} = \frac{\partial x(p_x, p_y, I)}{\partial I}\frac{I}{x}$$
+
+	3. **Elasticidade-preço cruzado da demanda** $(e_{x, p_y})$: mede a variação proporcional na quantidade demandada de $x$ em resposta a uma variação proporcional no de um outro bem $y$. Formalmente:
+
+	$$e_{x, p_y} \equiv \frac{\Delta x/x}{\Delta p_y/p_y} = \frac{\Delta x}{\Delta p_y}\frac{p_y}{x} = \frac{\partial x(p_x, p_y, I)}{\partial p_y}\frac{p_y}{x}$$
 """
 
-# ╔═╡ d4b35f2d-0784-4a2f-912a-f01858c80603
+# ╔═╡ 8b5015b7-6159-4a94-a349-5baa9d518336
 md"
-* Na derivação da curva de demanda, os seguintes fatores foram mantidos constantes:
-    1. renda do indivíduo
-    2. preços dos outros bens
-    3. preferências do indivíduo
-* Se qualquer um desses fatores for alterado, a curva de demanda deslocar-se-á para uma nova posição
-* Um aumento da renda deslocaria a curva de demanda para cima, caso $\partial x/\partial I>0$
-* Uma alteração no preço de outro bem, $p_y$ por exemplo, pode deslocar a curva de demanda tanto para baixo quanto para cima, a depender de como os bens $x$ e $y$ estão relacionados
-* Por fim, a curva de demanda também será deslocada se as preferências do indivíduo pelo bem $x$ forem alteradas
+### Elasticidade-preço da demanda
 "
 
-# ╔═╡ c527a303-262a-4314-9b24-d930e0be2564
+# ╔═╡ 5f016967-dd34-4f07-bafa-a8ca85deb570
+md"
+* Além de fornecer uma maneira conveniente de resumir como os agentes econômicos respondem a variações de preços, a **elasticidade-preço da demanda** é, também, um conceito central na teoria de como firmas reagem às curvas de demanda com as quais se deparam
+* Se $e_{x, p_x} = -1$, variações em $x$ e $p_x$ são proporcionalmente da mesma magnitude - **elasticidade unitária**
+* Se $e_{x, p_x} < -1$, as variações nas quantidades demandadas são proporcionalmente maiores que as variações nos preços - **demanda elástica**
+* Se $e_{x, p_x} > -1$, as variações nas quantidades demandadas são proporcionalmente menores que as variações nos preços - **demanda inelástica**
+"
+
+# ╔═╡ a53ef7ac-251b-44d3-9967-8ec5e272967d
 md"""
-!!! warning "Observações importantes"
-	* Curva de demanda é apenas uma representação gráfica bidimensional da verdadeira função de demanda Marshalliana, e será estável apenas se os outros fatores forem mantidos constantes
-	* Distinção entre **deslocamento ao longo da curva de demanda** (causado por variações em $p_x$) e **deslocamento da curva de demanda** (causado por variações na renda, preços de outros bens e/ou preferências)
-	* Tradiconalmente, o termo _aumento da demanda_ refere-se a deslocamentos para cima da curva de demanda
-	* O termo _aumento da quantidade demandada_, por sua vez, refere-se a movimentos ao longo da curva de demanda causados por uma queda em $p_x$
+* A elasticidade-preço da demanda determina como variações no preço, _ceteris paribus_, afeta o gasto total em um bem:
+
+$$\frac{\partial (xp_x)}{\partial p_x} = p_x\frac{\partial x}{\partial p_x} + x = x(e_{x, p_x} + 1)$$
 """
 
-# ╔═╡ 875224fa-fda9-451b-a89b-a03d9fad5d01
-md"
-## Curva de demanda compensada (Hicksiana)
-"
-
-# ╔═╡ f44132a9-3730-4dcf-a78b-00d54fe714c6
-md"
-* Na figura que vimos anteriormente, o nível de utilidade do indivíduo variava ao longo da curva de demanda
-* Um decrescimento do preço $p_x$ levava a aumentos no nível de utilidade (de $U_1$ para $U_2$ e $U_3$)
-* Isso acontece devido à hipótese de que a renda nominal e os preços de outros bens são mantidos constantes
-* Portanto, uma queda em $p_x$ representa um ganho de satisfação (utilidade) para este indivíduo, dado que o poder de compra real aumenta
-* Uma abordagem alternativa consiste em manter a renda real (ou utilidade) constante, ao examinarmos os efeitos de variações no preço $p_x$
-"
-
-# ╔═╡ a1a17863-933d-469f-a3c4-a6ec5b691b65
+# ╔═╡ 9886a52c-0927-42fe-92ea-0d434c581f7e
 md"""
-Derivação da curva de demanda compensada (Hicksiana)
-$(Resource("https://raw.githubusercontent.com/pvfonseca/micro1/main/notas/figures/aula8_fig2.PNG", :width=>800))
-Fonte: Nicholson e Snyder (2019)
+!!! warning "Elasticidade-preço e gasto total"
+	1. Se a demanda é inelástica, preço e gasto total movem-se na mesma direção. Este é o caso, e.g., da demanda pela maioria dos produtos agrícolas. Variações nos preços de determinadas safras, que podem ser decorrentes das condições climáticas, geralmente fazem com que o gasto total nessas safras se desloque na mesma direção
+
+	2. Se a demanda é elástica, as reações a uma variação de preço são tão granges que o efeito sobre o gasto total é revertido
+
+	3. No caso de elasticidade unitária, o gasto total é constante, não importando como o preço varie
 """
 
-# ╔═╡ 637528d2-9f4d-412c-847a-298ae19ac798
+# ╔═╡ 0a85b95e-2d15-44df-8e4d-674179ef7ad0
 md"
-* A curva de demanda compensada é derivada mantendo-se a utilidade constante e o preço $p_x$ é sucessivamente reduzido
-* À medida que $p_x$ decresce, a renda nominal do indivíduo também decresce e, portanto, impede-se aumentos no nível de utilidade
-* Em outras palavras, os efeitos de uma variação de preços no poder de compra são **compensados** para restringir o indivíduo a manter o mesmo nível de utilidade
-* Portanto, _as reações a mudanças de preços incluem apenas os efeitos substituição_
-* No caso de aumento do preço $p_x$, a compensação de renda seria positiva para manter o consumidor sobre a mesma curva de indiferença
+## Elasticidades-preço compensadas
 "
 
-# ╔═╡ eea85aca-ab7c-4a1c-bd3e-902feef4a421
+# ╔═╡ d579d5e4-ff43-40c0-beb7-ee73304d8037
 md"""
-!!! correct "Definição 7.2 - Curva de demanda compensada (Hicksiana)"
-	Uma **curva de demanda compensada (Hicksiana)** evidencia a relação entre o preço de um bem e a quantidade ótima consumida sob a hipótese de que os preços dos outros bens e a utilidade do invidíduo são mantidos constantes
+!!! correct "Definição 9.3 - Elasticidades-preço compensadas"
+	Seja $x^c(p_x, p_y, U)$ uma função de demanda compensada, temos as seguintes definições:
 
-	Portanto, _a curva de demanda compensada ilustra apenas os efeitos substituição_
+	1. **Elasticidade-preço da demanda compensada** $(e_{x^c,p_x})$: mede a variação proporcional compensada na quantidade demandada de um bem $x$ em resposta a uma variação proporcional no preço do próprio bem $p_x$. Formalmente:
 
-	Matematicamente, a curva de demanda compensada é uma representação gráfica bidimensional da **função de demanda compensada**:
+	$$e_{x^c, p_x} \equiv \frac{\Delta x^c/x^c}{\Delta p_x/p_x} = \frac{\Delta x^c}{\Delta p_x}\frac{p_x}{x^c} = \frac{\partial x^c(p_x, p_y, U)}{\partial p_x}\frac{p_x}{x^c}$$
 
-	$$x^c = x^c(p_x, \bar{p_y}, \bar{U})$$
+	2. **Elasticidade-preço cruzado da demanda compensada** $(e_{x^c,p_y})$: mede a variação proporcional compensada na quantidade demandada de um bem $x$ em resposta a uma variação proporcional no preço de outro bem $p_y$. Formalmente:
+
+	$$e_{x^c, p_y} \equiv \frac{\Delta x^c/x^c}{\Delta p_y/p_y} = \frac{\Delta x^c}{\Delta p_y}\frac{p_y}{x^c} = \frac{\partial x^c(p_x, p_y, U)}{\partial p_y}\frac{p_y}{x^c}$$
 """
 
-# ╔═╡ 57e05fdd-0a63-41ed-8722-3d1316e7bbc7
+# ╔═╡ 9304ff48-5d6b-445f-8ae5-aa06d83db350
+md"
+* Se essas elasticidades-preço compensadas diferem muito de suas equivalentes Marshallianas dependerá da importância dos efeitos renda na demanda total pelo bem $x$
+* Pela equação de Slutsky, temos que:
+
+$$\frac{\partial x}{\partial p_x} = \frac{\partial x^c}{\partial p_x} - x\frac{\partial x}{\partial I}$$
+
+* Portanto:
+
+$$e_{x, p_x} = \frac{p_x}{x}{\partial x}{\partial p_x} = \frac{p_x}{x}\frac{\partial x^c}{\partial p_x} - \frac{p_x}{x}x\frac{\partial x}{\partial I} = e_{x^c, p_x} - s_x e_{x, I},$$
+
+onde $s_x \equiv xp_x/I$ é a fração total da renda alocada na aquisição do bem $x$
+
+* Portanto, as elasticidades-preço das demandas compensada e não-compensada serão semelhantes sempre que uma das seguintes condições for satisfeita:
+
+    1. A porção da renda destinada ao bem $x$, $s_x$, for pequena
+
+    2. A elasticidade-renda da demanda para o bem $x$, $e_{x,I}$, for pequena
+
+* Qualquer uma dessas duas condições reduz a importância do efeito renda como componente da elasticidade-preço da demanda Marshalliana
+
+* Se $s_x$ é pequeno, o poder aquisitivo de um consumidor não será muito impactado por uma variação de preço
+
+* Mesmo que um bem tenha um peso grande sobre o orçamento, se a demanda deste bem não for muito sensível a variações no poder de compra, o efeito renda terá uma influência relativamente pequena sobre a elasticidade de demanda
+
+* Portanto, em muitas situações, podemos utilizar os dois conceitos - situações em que os efeitos substituição constituem o componente mais importante das reações a variações nos preços
+"
+
+# ╔═╡ 947c9318-cbea-4e09-bd99-f826997b23b2
+md"
+## Relações entre elasticidades da demanda
+"
+
+# ╔═╡ d97f0323-9fdf-4bfd-a970-b922ee4656ce
 md"""
-$(Resource("https://upload.wikimedia.org/wikipedia/commons/2/26/John_Hicks_1972.jpg", width=>300))
-[Sir John Richard Hicks](https://en.wikipedia.org/wiki/John_Hicks) - Nobel de Economia em 1972
+!!! info "Homogeneidade"
+	* A homogeneidade das funções de demanda pode ser expressa em termos de elasticidade
+	* Como qualquer aumento proporcional em todos os preços e renda deixa a quantidade demandada inalterada, a adição líquida de todas as elasticidades-preço com a elasticidade-renda para um bem específico devem somar zero
+	* Pelo **teorema de Euler**, obtemos a seguinte expressão:
+
+	$$0 = p_x\frac{\partial x}{\partial p_x} + p_y\frac{\partial x}{\partial p_y} + I\frac{\partial x}{\partial I}$$
+
+	* Dividindo essa expressão por $x$, obtemos:
+
+	$$0 = e_{x, p_x} + e_{x, p_y} + e_{x, I}$$
 """
 
-# ╔═╡ 8e9a638c-5f82-4b45-8211-230f71e668df
-md"
-### Lema de Shephard
-"
-
-# ╔═╡ c9434519-c20d-4554-8be5-35920abf9ed9
-md"
-* Muitos fatos acerca das funções de demanda compensada podem ser provados utilizando um resultado da teoria da dualidade conhecido como **lema de Shephard**
-* Considere o problema dual de minimização de gastos, cuja função Lagrangeana associada é:
-
-$$\mathcal{L}(x, y; \mu) = p_x x + p_y y + \mu[U(x, y) - \bar{U}]$$
-
-* A solução do problema dual de minimização de gastos nos dá a função dispêndio $E(p_x, p_y, \bar{U})$
-* Como a função dispêndio é uma função-valor, podemos aplicar o [**Teorema do envelope**](https://pt.frwiki.wiki/wiki/Th%C3%A9or%C3%A8me_de_l%27enveloppe)
-"
-
-# ╔═╡ f52d8b2b-a7b4-4c23-b050-bce88d564a2a
+# ╔═╡ e8a0d6b2-7fe2-4b5f-9a82-1c857478e185
 md"""
-!!! info "Teorema do Envelope ✉️"
-	Seja $y^* = f(x_1^*, \dots, x_n^*; a)$ a função valor de $x$ que maximiza a função objetivo sujeito ao conjunto restrição
-
-	Se a função valor $y^*$ e os valores ótimos de $x^*$ são diferenciáveis, então:
-
-	$$\frac{\partial y^*}{\partial a} = \frac{\partial \mathcal{L}}{\partial a}(x_1^*, \dots, x_n^*; a)$$
+$(Resource("https://upload.wikimedia.org/wikipedia/commons/6/60/Leonhard_Euler_2.jpg", width => 300))
+[Leonhard Euler (1707-1783)](https://pt.wikipedia.org/wiki/Leonhard_Euler)
 """
 
-# ╔═╡ bc2c81be-47e3-4e32-b587-b89e9f045d6f
-md"
-* Portanto, aplicando o teorema do envelope com relação a $p_x$, temos:
-
-$$\frac{\partial E(p_x, p_y, U)}{\partial p_x} = \frac{\partial \mathcal{L}}{\partial p_x} = x^c(p_x, p_y, U)$$
-
-* Ou seja, a função de demanda compensada (Hicksiana) de um bem pode ser obtida diferenciando-se a função dispêndio com relação ao preço deste bem
-* Esta equação nos diz que variações no preço de um bem irão ter um impacto sobre os gastos mínimos deste indivíduo em uma proporção aproximadamente igual à quantidade demandada deste bem
-"
-
-# ╔═╡ d0792c7c-b9a3-477a-8071-7ba0243674f2
-md"
-* Vimos anteriormente que a função dispêndio é côncava nos preços:
-
-$$\frac{\partial^2 E(p_x, p_y, U)}{\partial p_x^2} < 0$$
-
-* Pelo lema de Shephard podemos, então, calcular a inclinação da curva de demanda compensada:
-
-$$\frac{\partial^2 E(p_x, p_y, V)}{\partial p_x^2} = \frac{\partial x^c(p_x, p_y, V)}{\partial p_x} < 0$$
-"
-
-# ╔═╡ 18351a39-d7bf-44b4-a3c7-4508bdbf97f2
+# ╔═╡ 7b2d514c-8946-4abd-8305-1650bc0b38ad
 md"""
-!!! danger "Inclinação da curva de demanda compensada"
-	Portanto, a curva de demanda compensada é, necessariamente, negativamente inclinada
+!!! warning "Teorema de Euler"
+	**Função homogênea de grau $k$**. Seja $f$ uma função de $n$ variáveis reais definida em um domínio $\mathcal{D}$. O conjunto $\mathcal{D}$ é um **cone$$ se sempre que $(x_1, x_2, \dots, x_n) \in \mathcal{D}$ e $t > 0$, também temos que $(tx_1, tx_2, \dots, tx_n) \in \mathcal{D}$. Quando $\mathcal{D}$ é um cone, dizemos que a função $f$ é homogênea de grau $k$ em $\mathcal{D}$ se:
 
-	A ambiguidade que verifica-se no caso das curvas de demanda Marhallianas não é observada neste caso
+	$$f(tx_1, tx_2, \dots, tx_n) = t^kf(x_1, x_2, \dots, x_n), \qquad \forall t>0$$
 
-	Isso deve-se ao fato de curvas de demanda compensada refletirem apenas os efeitos substituição e a hipótese de quase-concavidade assegura que a inclinação desta curva de demanda é sempre negativa
+	Uma propriedade útil de funções homogêneas pode ser obtida ao diferenciarmos a equação anterior com relação ao fator de proporcionalidade $t$
+
+	Com isso, obtemos o **teorema de Euler** para funções homogêneas
+
+	**Teorema de Euler**. Seja $f$ uma função diferenciável de $n$ variáveis reais definida em um cone aberto $\mathcal{D}$. Então, $f$ é homogênea de grau $k$ se, e somente se, a seguinte equação é válida para todo $(x_1, x_2, \dots, x_n) \in \mathcal{D}$:
+
+	$$kf(x_1, x_2, \dots, x_n) = \sum_{i = 1}^n x_i f_i(x_1, x_2, \dots, x_n),$$
+
+	onde $f_i(x_1, \dots, x_n) \equiv \frac{\partial f(x_1, \dots, x_n)}{\partial x_i}$
 """
 
-# ╔═╡ ba68b6d8-3d00-4e0d-a923-2f6d0812224e
+# ╔═╡ e696d441-6e16-460e-aed9-f78dd0b77399
 md"
-### Relação entre curvas de demanda compensada e não-compensada
+* Portanto, as elasticidades da demanda para qualquer bem não podem seguir um padrão completamente flexível
+* Elas devem apresentar algum tipo de consistência interna que reflete a abordagem de maximização de utilidade na qual a teoria da demanda é baseada
 "
 
-# ╔═╡ 515ead98-a3d5-40e3-b522-658ed1243b37
+# ╔═╡ 29c2a147-a888-45a2-b7a7-103bd2548575
 md"""
-Relação entre curvas de demanda compensada e não-compensada
-$(Resource("https://raw.githubusercontent.com/pvfonseca/micro1/main/notas/figures/aula8_fig3.PNG", :width=>800))
-Fonte: Nicholson e Snyder (2019)
+!!! info "Agregação de Engel"
+	A **lei de Engel** nos diz que a fração da renda alocada em alimentação diminui à medida que a renda aumenta
+
+	Em termos de elasticidade, a lei de Engel é uma afirmação da regularidade empírica de que a elasticidade-renda da demanda para bens alimentícios é, geralmente, inferior a 1 (em valor absoluto)
+
+	Portanto, a elasticidade-renda de todos os itens não-alimentícios deve superar a unidade
+
+	Se um indivíduo tem um aumento em seu poder de compra, esperamos que os gastos com alimentação aumentem em uma proporção menor. Como essa renda deve ser despendida em outros bens, no total, esses outros gastos devem aumentar proporcionalmente mais rápido que a renda
+
+	Formalmente, podemos diferenciar a restrição orçamentária com relação à renda, mantendo os preços constantes:
+
+	$$1 = p_x\frac{\partial x}{\partial I} + p_y\frac{\partial y}{\partial I}$$
+
+	Portanto:
+
+	$$1 = p_x \frac{\partial x}{\partial I}\frac{xI}{xI} + p_y\frac{\partial y}{\partial I}\frac{yI}{yI} = s_xe_{x,I} + s_ye_{y,I}$$
+
+	Ou seja, a média ponderada das elasticidades-renda de todos os bens que uma pessoa adquire deve ser igual a 1
+
+	Se um indivíduo gastou um quarto de sua renda com alimentação, e a elasticidade-renda da demanda por bens alimentícios for igual a 0,5, então, a elasticidade-renda da demanda para os demais gastos deve ser:
+
+	$$\frac{[1 - 0,25 \times 0,5]}{0,75} \approx 1,17$$
+
+	Como alimentação é uma **necessidade** importante, todo o restante é, de certa forma, um _luxo_
 """
 
-# ╔═╡ 0a4c237e-a030-41e4-a390-ab54b1b13225
-md"
-* Ao nível de preços $p_x^{''}$ as curvas de demanda Hicksiana e Marshalliana se interceptam
-* A esse preço, a renda do indivíduo é exatamente aquela suficiente para atingir o nível de utilidade $\bar{U}$ 
-* Portanto, uma quantidade $x''$ é demandada de acordo com os dois conceitos
-* Para preços abaixo deste valor, o poder de compra do consumidor deve ser reduzido para que o mesmo nível de utilidade continue sendo atingido e, portanto, se assumirmos que $x$ seja uma bem normal, uma quantidade menor do bem $x$ é demandada sob a ótica Hicksiana quando comparada à curva de demanda Marshalliana
-* Por outro lado, para preços acima de $p_x^{''}$, a compensação de renda é positiva (indivíduo precisa de maior poder de compra para manter o mesmo nível de utilidade). Se $x$ é um bem normal, uma quantidade maior de $x$ é demandada ao longo de $x^c(\bullet)$ do que ao longo da curva de demanda $x(\bullet)$
-"
-
-# ╔═╡ bfacb49e-b548-4cd1-9fc8-0f7acbb971a7
+# ╔═╡ 29068c1a-1682-4c18-8d08-0b650afddcf7
 md"""
-!!! warning ""
-	De maneira geral, para **bens normais a curva de demanda compensada é menos responsiva a variações de preços do que a curva de demanda não-compensada**
-
-	Isto deve-se ao fato de que a curva de demanda Marshalliana reflete tanto o efeito substituição quanto o efeito renda frente a variações de preços, enquanto a demanda Hicksiana reflete apenas os efeitos substituição
+$(Resource("https://upload.wikimedia.org/wikipedia/commons/4/4e/Ernst_Engel.jpg", width=>300))
+[Ernst Engel (1821-1896)](https://en.wikipedia.org/wiki/Ernst_Engel)
 """
 
-# ╔═╡ 1bf5db96-c1b7-49aa-b077-f27ebcef0cab
-md"
-> **Exercício.** Considere a seguinte função utilidade:
+# ╔═╡ 597ed274-8e36-46ae-9748-6e989a3d4e19
+md"""
+!!! warning "Lei de Engel"
+	A lei de Engel é uma relação econômica proposta pelo estatístico alemão Ernst Engel em 1857
+
+	Ela diz que um aumento na renda de uma família diminui a proporção da renda que é gasta em produtos alimentícios, mesmo que o total dos gastos com alimentação esteja aumentando
+
+	Em outras palavras, a elasticidade-renda da demanda de bens alimentícios está (em valores absolutos) entre 0 e 1
+
+	De acordo com a lei de Engel, famílias de baixa renda alocarão uma fração de sua renda em alimentação muito maior do que famílias de níveis intermediários ou elevados de renda
+
+	A lei de Engel pode ser usada como um indicador para padrões de vida em vários países. Para isso, uma medida chamada **coeficiente de Engel** é utilizada
+"""
+
+# ╔═╡ e94d89e0-9aad-45e1-8965-0f3df27d6646
+md"""
+$(Resource("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/EngelsLaw.svg/800px-EngelsLaw.svg.png", width=>400))
+[Lei de Engel](https://en.wikipedia.org/wiki/Engel%27s_law)
+"""
+
+# ╔═╡ 8979e83d-0d32-4882-94f1-d47ea861023a
+md"""
+!!! info "Agregação de Cournot"
+	O economista francês do século XIX Antoine Cournot estava interessado, entre outras coisas, em saber como variações em um único preço poderiam afetar a demanda para todos os bens
+
+	Diferenciando a restrição orçamentária com relação a $p_x$, obtemos:
+
+	$$0 = p_x\frac{\partial x}{\partial p_x} + x + p_y\frac{\partial y}{\partial p_x}$$
+
+	Multiplicando a expressão anterior por $p_x/I$:
+
+	$$\begin{align}0 &= p_x\frac{\partial x}{\partial p_x}\frac{p_x}{I}\frac{x}{x} + x\frac{p_x}{I} + p_y\frac{\partial y}{\partial p_x}\frac{p_x}{I}\frac{y}{y} \\ &= s_xe_{x,p_x} + s_x + s_ye_{y,p_x}\end{align}$$
+
+	Portanto, o resultado final de Cournot é:
+
+	$$s_xe_{x,p_x} + s_ye_{y,p_x} = -s_x$$
+
+	**A restrição orçamentária impõe alguns limites sobre o grau em que a elasticidade-preço cruzada pode ser positiva**
+"""
+
+# ╔═╡ 2033f009-47b7-47b4-bd71-2c7a829476a6
+md"""
+$(Resource("https://upload.wikimedia.org/wikipedia/commons/8/81/Antoine_Augustin_Cournot.jpg", width=>300))
+[Antoine Augustin Cournot (1801-1877)](https://pt.wikipedia.org/wiki/Cournot)
+"""
+
+# ╔═╡ ac6141ec-3589-496c-87dc-d4a4e560935a
+md"""
+> **Exercícios.** Para cada uma das seguintes funções utilidade, verifique homogeneidade, lei de Engel e lei de Cournot:
 >
-> $$U(x,y) = x^{0,5}y^{0,5}$$
+> (a) Função utilidade Cobb-Douglas: $U(x,y) = x^\alpha y^{1-\alpha}$
 >
-> 1. Obtenha as funções de demanda Marshallianas
+> (b) Função utilidade CES: $U(x,y) = x^{0,5} + y^{0,5}$
 >
-> 2. Obtenha as funções de demanda Hicksianas via lema de Shephard
->
-> 3. Calcule as quantidades ótimas demandadas, sob as duas óticas, quando $p_x = 1, p_y = 4, I = 8, \bar{U} = 2$
->
-> 4. Suponha que $p_x$ aumente para 4, compare as demandas Hicksianas e Marshallianas neste caso
-"
-
-# ╔═╡ dfb209ca-3bfa-4a4a-8249-303fe83dec5c
-md"
-## Equação de Slutsky: análise formal dos efeitos de variação de preços
-"
-
-# ╔═╡ 18978325-066e-4f0c-9999-d681d6cd6284
-md"
-* Até agora nos concentramos em análises gráficas para descrever o comportamento do consumidor em resposta a variações nos preços
-* Nosso objetivo, agora, é desenvolver uma abordagem formal para examinar a derivada parcial $\partial x/\partial p_x$
-* Ou seja, como uma variação no preço de um bem afeta a quantidade adquirida deste mesmo bem, _ceteris paribus_, para a curva de demanda Marshalliana tradicional
-* Adotaremos uma abordagem indireta fundamentada no conceito de dualidade dos problemas de otimização
-* Ver: [A one line proof of the Slutsky equation - Phillip Cook (1972)](http://cc.kangwon.ac.kr/~kimoon/me/me-132/cook-proof-1972.pdf)
-"
-
-# ╔═╡ afd4b70c-b396-4b82-98ae-52f92ee1d2e3
-md"
-* Por definição, temos:
-
-$$x^c(p_x, p_y, U) = x\left(p_x, p_y, E(p_x, p_y, U)\right)$$
-
-* Esta identidade foi observada na figura anterior
-* Portanto, temos que:
-
-$$\frac{\partial x^c}{\partial p_x} = \frac{\partial x}{\partial p_x} + \frac{\partial x}{\partial E}\frac{\partial E}{\partial p_x}$$
-
-* Rearranjando os termos:
-
-$$\frac{\partial x}{\partial p_x} = \frac{\partial x^c}{\partial p_x} - \frac{\partial x}{\partial E}\frac{\partial E}{\partial p_x}\tag{equação de Slutsky}$$
-
-* Ou seja, o efeito de uma variação do preço $p_x$ sobre a demanda Marshalliana de $x$ pode ser decomposto em dois termos
-
-* O primeiro termo, $\partial x^c/\partial p_x$ nos dá a inclinação da curva de demanda compensada
-
-* Essa inclinação representa movimentos alo longo de uma curva de indiferença, exatamente o que chamamos anteriormente de **efeito substituição**
-
-* O primeiro termo do lado direito desta equação é uma representação matemática deste efeito
-
-* O segundo termo, $- \frac{\partial x}{\partial E}\frac{\partial E}{\partial p_x}$, reflete o modo com que variações em $p_x$ afetam a demanda pelo bem $x$ via mudanças no poder de compra do consumidor
-
-* Portanto, este termo representa o **efeito renda**
-
-* O sinal negativo reflete a relação inversa entre mudanças nos preços e variações no poder de compra
-
-* Por exemplo, um aumento de $p_x$ aumenta o nível de dispêndio necessário para manter a utilidade constante ($\partial E/\partial p_x > 0$)
-
-* Mas como a renda nominal é mantida constante na demanda Marshalliana, esse nível extra de dispêndio não está disponível
-
-* Portanto, os gastos com o bem $x$ devem ser reduzidos para ser compatível com essa redução do poder de compra
-
-* A magnitude desta redução nos gastos é dada por $\partial x/\partial E$
-"
-
-# ╔═╡ c5b60dbb-6968-4385-88c1-45ee19d8f955
-md"""
-$(Resource("https://upload.wikimedia.org/wikipedia/en/1/1a/Eugen_slutsky_photo.jpg", width=>300))
-[Eugen Slutsky (1880-1948)](https://en.wikipedia.org/wiki/Eugen_Slutsky) - economista e estatístico russo
+> (c) Função utilidade CES: $U(x,y) = -x^{-1} - y^{-1}$
 """
 
-# ╔═╡ 69d3173d-f7cd-44b9-9711-ba66c91209bd
-md"
-* Podemos reescrever o efeito substituição da seguinte forma:
-
-$$\text{efeito substituição} = \frac{\partial x^c}{p_x} = \left.\frac{\partial x}{\partial p_x}\right|_{U = \text{constante}},$$
-para indicar movimentos ao longo da curva de indiferença
-
-* Para o efeito renda:
-
-$$\text{efeito renda} = -\frac{\partial x}{\partial E}\frac{\partial E}{\partial p_x} = -\frac{\partial x}{\partial I}\frac{\partial E}{\partial p_x}$$
-dado que mudanças na renda $I$ ou nos gastos mínimos $E$ são idênticas para a função $x(p_x, p_y, I)$
-
-* Usando o Lema de Shephard:
-
-$$\text{efeito renda} = -x^c\frac{\partial x}{\partial I}$$
-
-* Portanto, a **equação de Slutsky** pode ser reescrita da seguinte forma:
-$$\begin{align}\frac{\partial x(p_x, p_y, I)}{\partial p_x} &= \text{efeito substituição} + \text{efeito renda} \\ &= \left.\frac{\partial x}{\partial p_x}\right|_{U = \text{constante}} - x\frac{\partial x}{\partial I}\end{align}$$
-
-* Na expressão acima usamos o fato de que $x(p_x, p_y, I) = x^c(p_x, p_y, V)$ avaliados no ponto de máximo
-
-* A equação de Slutsky possibilita um tratamento mais definitivo a respeito da direção e magnitude dos efeitos renda e substituição
-"
-
-# ╔═╡ 49bebd11-cd7b-41fb-9b19-3a9afda84798
-md"""
-!!! info "Efeitos renda e substituição"
-	1. O **efeito substituição** (e a inclinação da curva de demanda compensada) é sempre negativo. Resultado que deriva diretamente da quase-concavidade das funções utilidade (TMS decrescente) e da concavidade da função dispêndio
-
-	2. O sinal do **efeito renda** depende do sinal do termo $\partial x/\partial I$.
-	    - Se $x$ é um bem normal o termo é positivo e, então, o efeito renda é negativo: preço e quantidade demandada sempre se movem em direções opostas
-	    - Se $x$ é um bem inferior, então, $\partial x/\partial I < 0$ e, portanto, os dois termos da equação de Slutsky possuem sinais algébricos distintos. Neste caso, o efeito total de uma variação de preços é ambíguo - depende das magnitudes relativas de ambos os efeitos. É teoricamente possível que, para o caso de bens inferiores, o efeito renda domine o efeito substituição, levando ao paradoxo de Giffen ($\partial x/\partial p_x > 0$)
-"""
-
-# ╔═╡ da22d0c0-8743-4d03-9904-cd152f1e68d1
-md"
-> **Exercício.** No exercício anterior, vimos que a demanda Marshalliana para o bem $x$ era:
->
-> $$x(p_x, p_y, I) = \frac{0,5I}{p_x}$$
->
-> a demanda compensada, por sua vez, era:
->
-> $$x^c(p_x, p_y, U) = p_x^{-0,5}p_y^{0,5}U$$
->
-> Mostre que o efeito total de uma variação de preços sobre a demanda Marshalliana é igual à soma do efeito renda e efeito substituição
-"
-
-# ╔═╡ 010af395-5929-4102-928d-32b6f021d1d8
+# ╔═╡ 502a0435-91cd-4a36-91b2-1412c8de6f12
 md"
 ## 📚 Bibliografia
 
@@ -380,7 +343,7 @@ PLUTO_MANIFEST_TOML_CONTENTS = """
 
 julia_version = "1.8.5"
 manifest_format = "2.0"
-project_hash = "378f739220c3378e596c6ed6d9090ffcfe2c72b8"
+project_hash = "e9be83a6c7fd21f04cfc4051871fb477d5cc6cf9"
 
 [[deps.AbstractPlutoDingetjes]]
 deps = ["Pkg"]
@@ -422,10 +385,10 @@ uuid = "d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4"
 version = "1.15.7"
 
 [[deps.ChangesOfVariables]]
-deps = ["ChainRulesCore", "LinearAlgebra", "Test"]
-git-tree-sha1 = "485193efd2176b88e6622a39a246f8c5b600e74e"
+deps = ["LinearAlgebra", "Test"]
+git-tree-sha1 = "f84967c4497e0e1955f9a582c232b02847c5f589"
 uuid = "9e997f8a-9a97-42d5-a9f1-ce6bfc15e2c0"
-version = "0.1.6"
+version = "0.1.7"
 
 [[deps.CodecZlib]]
 deps = ["TranscodingStreams", "Zlib_jll"]
@@ -467,6 +430,12 @@ version = "4.6.1"
 deps = ["Artifacts", "Libdl"]
 uuid = "e66e0078-7015-5450-92f7-15fbd957f2ae"
 version = "1.0.1+0"
+
+[[deps.ConcurrentUtilities]]
+deps = ["Serialization", "Sockets"]
+git-tree-sha1 = "b306df2650947e9eb100ec125ff8c65ca2053d30"
+uuid = "f0e56b4a-5159-44fe-b623-3e5288b988bb"
+version = "2.1.1"
 
 [[deps.Contour]]
 git-tree-sha1 = "d05d9e7b7aedff4e5b51a029dced05cfb6125781"
@@ -562,15 +531,15 @@ version = "3.3.8+0"
 
 [[deps.GR]]
 deps = ["Artifacts", "Base64", "DelimitedFiles", "Downloads", "GR_jll", "HTTP", "JSON", "Libdl", "LinearAlgebra", "Pkg", "Preferences", "Printf", "Random", "Serialization", "Sockets", "TOML", "Tar", "Test", "UUIDs", "p7zip_jll"]
-git-tree-sha1 = "db730189e3d250d97515a91886de7e33aa8833e6"
+git-tree-sha1 = "efaac003187ccc71ace6c755b197284cd4811bfe"
 uuid = "28b8d3ca-fb5f-59d9-8090-bfdbd6d07a71"
-version = "0.72.2"
+version = "0.72.4"
 
 [[deps.GR_jll]]
 deps = ["Artifacts", "Bzip2_jll", "Cairo_jll", "FFMPEG_jll", "Fontconfig_jll", "GLFW_jll", "JLLWrappers", "JpegTurbo_jll", "Libdl", "Libtiff_jll", "Pixman_jll", "Qt5Base_jll", "Zlib_jll", "libpng_jll"]
-git-tree-sha1 = "47a2efe07729dd508a032e2f56c46c517481052a"
+git-tree-sha1 = "4486ff47de4c18cb511a0da420efebb314556316"
 uuid = "d2c73de3-f751-5644-a686-071e5b155ba9"
-version = "0.72.2+0"
+version = "0.72.4+0"
 
 [[deps.Gettext_jll]]
 deps = ["Artifacts", "CompilerSupportLibraries_jll", "JLLWrappers", "Libdl", "Libiconv_jll", "Pkg", "XML2_jll"]
@@ -596,10 +565,10 @@ uuid = "42e2da0e-8278-4e71-bc24-59509adca0fe"
 version = "1.0.2"
 
 [[deps.HTTP]]
-deps = ["Base64", "CodecZlib", "Dates", "IniFile", "Logging", "LoggingExtras", "MbedTLS", "NetworkOptions", "OpenSSL", "Random", "SimpleBufferStream", "Sockets", "URIs", "UUIDs"]
-git-tree-sha1 = "37e4657cd56b11abe3d10cd4a1ec5fbdb4180263"
+deps = ["Base64", "CodecZlib", "ConcurrentUtilities", "Dates", "Logging", "LoggingExtras", "MbedTLS", "NetworkOptions", "OpenSSL", "Random", "SimpleBufferStream", "Sockets", "URIs", "UUIDs"]
+git-tree-sha1 = "69182f9a2d6add3736b7a06ab6416aafdeec2196"
 uuid = "cd3eb016-35fb-5094-929b-558a96fad6f3"
-version = "1.7.4"
+version = "1.8.0"
 
 [[deps.HarfBuzz_jll]]
 deps = ["Artifacts", "Cairo_jll", "Fontconfig_jll", "FreeType2_jll", "Glib_jll", "Graphite2_jll", "JLLWrappers", "Libdl", "Libffi_jll", "Pkg"]
@@ -625,20 +594,15 @@ git-tree-sha1 = "f7be53659ab06ddc986428d3a9dcc95f6fa6705a"
 uuid = "b5f81e59-6552-4d32-b1f0-c071b021bf89"
 version = "0.2.2"
 
-[[deps.IniFile]]
-git-tree-sha1 = "f550e6e32074c939295eb5ea6de31849ac2c9625"
-uuid = "83e8ac13-25f8-5344-8a64-a9f2b223428f"
-version = "0.5.1"
-
 [[deps.InteractiveUtils]]
 deps = ["Markdown"]
 uuid = "b77e0a4c-d291-57a0-90e8-8db25a27a240"
 
 [[deps.InverseFunctions]]
 deps = ["Test"]
-git-tree-sha1 = "49510dfcb407e572524ba94aeae2fced1f3feb0f"
+git-tree-sha1 = "6667aadd1cdee2c6cd068128b3d226ebc4fb0c67"
 uuid = "3587e190-3f89-42d0-90ee-14403ec27112"
-version = "0.1.8"
+version = "0.1.9"
 
 [[deps.IrrationalConstants]]
 git-tree-sha1 = "630b497eafcc20001bba38a4651b327dcfc491d2"
@@ -939,9 +903,9 @@ version = "0.7.50"
 
 [[deps.PrecompileTools]]
 deps = ["Preferences"]
-git-tree-sha1 = "bc2bda41d798c2e66e7c44a11007bb329b15941b"
+git-tree-sha1 = "2e47054ffe7d0a8872e977c0d09eb4b3d162ebde"
 uuid = "aea7be01-6a6a-4083-8856-8a6e6704d82a"
-version = "1.0.1"
+version = "1.0.2"
 
 [[deps.Preferences]]
 deps = ["TOML"]
@@ -968,16 +932,16 @@ deps = ["SHA", "Serialization"]
 uuid = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 
 [[deps.RecipesBase]]
-deps = ["SnoopPrecompile"]
-git-tree-sha1 = "261dddd3b862bd2c940cf6ca4d1c8fe593e457c8"
+deps = ["PrecompileTools"]
+git-tree-sha1 = "5c3d09cc4f31f5fc6af001c250bf1278733100ff"
 uuid = "3cdcf5f2-1ef4-517c-9805-6587b60abb01"
-version = "1.3.3"
+version = "1.3.4"
 
 [[deps.RecipesPipeline]]
-deps = ["Dates", "NaNMath", "PlotUtils", "RecipesBase", "SnoopPrecompile"]
-git-tree-sha1 = "e974477be88cb5e3040009f3767611bc6357846f"
+deps = ["Dates", "NaNMath", "PlotUtils", "PrecompileTools", "RecipesBase"]
+git-tree-sha1 = "45cf9fd0ca5839d06ef333c8201714e888486342"
 uuid = "01d81517-befc-4cb6-b9ec-a95719d0359c"
-version = "0.6.11"
+version = "0.6.12"
 
 [[deps.Reexport]]
 git-tree-sha1 = "45e428421666073eab6f2da5c9d310d99bb12f9b"
@@ -1347,43 +1311,37 @@ version = "1.4.1+0"
 """
 
 # ╔═╡ Cell order:
-# ╟─dbcc7c40-e4ad-11ed-2747-0f5f7ec4f73e
-# ╟─f9026120-7592-44d1-aa81-003696c89418
-# ╟─054444c6-6031-42d6-9094-ca7f0a8d4821
-# ╟─61608327-7b1d-4309-9795-2c2669054899
-# ╟─19740052-846e-458b-9f92-1f4760820857
-# ╟─11cc4a51-f5f1-45e8-bff5-0db755fe8ee5
-# ╟─0bfa4842-961c-4351-922a-9b8b6d222c67
-# ╟─3d564ffb-555c-45cf-95ba-63fa367f98e2
-# ╟─7b73e72d-c6bb-4a62-ab0a-60fcd03a9282
-# ╟─6d17f799-38c9-4fef-9997-718ab5492637
-# ╟─e51c1523-3e23-44b5-ae70-3c7a8416fe9b
-# ╟─d4b35f2d-0784-4a2f-912a-f01858c80603
-# ╟─c527a303-262a-4314-9b24-d930e0be2564
-# ╟─875224fa-fda9-451b-a89b-a03d9fad5d01
-# ╟─f44132a9-3730-4dcf-a78b-00d54fe714c6
-# ╟─a1a17863-933d-469f-a3c4-a6ec5b691b65
-# ╟─637528d2-9f4d-412c-847a-298ae19ac798
-# ╟─eea85aca-ab7c-4a1c-bd3e-902feef4a421
-# ╟─57e05fdd-0a63-41ed-8722-3d1316e7bbc7
-# ╟─8e9a638c-5f82-4b45-8211-230f71e668df
-# ╟─c9434519-c20d-4554-8be5-35920abf9ed9
-# ╟─f52d8b2b-a7b4-4c23-b050-bce88d564a2a
-# ╟─bc2c81be-47e3-4e32-b587-b89e9f045d6f
-# ╟─d0792c7c-b9a3-477a-8071-7ba0243674f2
-# ╟─18351a39-d7bf-44b4-a3c7-4508bdbf97f2
-# ╟─ba68b6d8-3d00-4e0d-a923-2f6d0812224e
-# ╟─515ead98-a3d5-40e3-b522-658ed1243b37
-# ╟─0a4c237e-a030-41e4-a390-ab54b1b13225
-# ╟─bfacb49e-b548-4cd1-9fc8-0f7acbb971a7
-# ╟─1bf5db96-c1b7-49aa-b077-f27ebcef0cab
-# ╟─dfb209ca-3bfa-4a4a-8249-303fe83dec5c
-# ╟─18978325-066e-4f0c-9999-d681d6cd6284
-# ╟─afd4b70c-b396-4b82-98ae-52f92ee1d2e3
-# ╟─c5b60dbb-6968-4385-88c1-45ee19d8f955
-# ╟─69d3173d-f7cd-44b9-9711-ba66c91209bd
-# ╟─49bebd11-cd7b-41fb-9b19-3a9afda84798
-# ╟─da22d0c0-8743-4d03-9904-cd152f1e68d1
-# ╟─010af395-5929-4102-928d-32b6f021d1d8
+# ╟─836f9920-e7d6-11ed-2456-876d32ae94d9
+# ╟─f4b51941-ba7a-47e7-8f83-6598b7a66d2b
+# ╟─85d28e69-ed8d-4076-98d4-7da62267c975
+# ╟─41bed4e9-65fb-4313-a9ed-e962615780e9
+# ╟─e9f811f7-7026-43df-8190-e1fd93f5e15b
+# ╟─3396ad16-9b74-4942-a6cd-cd712e394338
+# ╟─749d2c30-ce1b-48d1-944f-28d29b68efa5
+# ╟─77745d49-4671-4821-ab9a-b1f3b48c7220
+# ╟─0741634b-71bf-4a15-bf78-fad6f63d24b9
+# ╟─60aed4aa-f331-4f01-8c15-0d4da937eeb1
+# ╟─e55b74c2-55ff-4e28-8873-5f188aff3cfa
+# ╟─7eafc13e-2b31-4eae-a1ae-707cae38f566
+# ╟─8b5015b7-6159-4a94-a349-5baa9d518336
+# ╟─5f016967-dd34-4f07-bafa-a8ca85deb570
+# ╟─a53ef7ac-251b-44d3-9967-8ec5e272967d
+# ╟─9886a52c-0927-42fe-92ea-0d434c581f7e
+# ╟─0a85b95e-2d15-44df-8e4d-674179ef7ad0
+# ╟─d579d5e4-ff43-40c0-beb7-ee73304d8037
+# ╟─9304ff48-5d6b-445f-8ae5-aa06d83db350
+# ╟─947c9318-cbea-4e09-bd99-f826997b23b2
+# ╟─d97f0323-9fdf-4bfd-a970-b922ee4656ce
+# ╟─e8a0d6b2-7fe2-4b5f-9a82-1c857478e185
+# ╟─7b2d514c-8946-4abd-8305-1650bc0b38ad
+# ╟─e696d441-6e16-460e-aed9-f78dd0b77399
+# ╟─29c2a147-a888-45a2-b7a7-103bd2548575
+# ╟─29068c1a-1682-4c18-8d08-0b650afddcf7
+# ╟─597ed274-8e36-46ae-9748-6e989a3d4e19
+# ╟─e94d89e0-9aad-45e1-8965-0f3df27d6646
+# ╟─8979e83d-0d32-4882-94f1-d47ea861023a
+# ╟─2033f009-47b7-47b4-bd71-2c7a829476a6
+# ╟─ac6141ec-3589-496c-87dc-d4a4e560935a
+# ╟─502a0435-91cd-4a36-91b2-1412c8de6f12
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
