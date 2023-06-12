@@ -1,0 +1,13 @@
+name: reta_orcamentaria
+title: reta_orcamentaria
+username:
+account: rfbressan
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 9294581
+bundleId: 7335966
+url: https://rfbressan.shinyapps.io/reta_orcamentaria/
+when: 1686598699.4508
+lastSyncTime: 1686598699.45081
+asMultiple: FALSE
+asStatic: FALSE

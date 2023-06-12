@@ -1,0 +1,249 @@
+---
+title: "Conceitos Iniciais"
+title-slide-attributes:
+  data-background-image: http://econtutorials.com/wp-content/uploads/2015/03/udemy-image-1.jpg
+  data-background-size: contain
+  data-background-opacity: "0.7"
+center-title-slide: false
+author: "Rafael Bressan"
+logo: "img/UdescEsag.jpeg"
+format: 
+  revealjs:
+    theme: [default, udesc.scss] 
+    code-fold: true
+    chalkboard: true
+    incremental: true
+    width: 1600
+    height: 900
+from: markdown+emoji # list of emojis: https://gist.github.com/rxaviers/7360908
+fontsize: "2.2em"
+editor: visual
+jupyter: python3
+---
+
+## Introdução
+
+-   A disciplina de Microeconomia I tem como foco a **tomada de decisão no nível individual**.
+
+-   Como é tradicional em microeconomia, faremos distinção entre dois conjuntos de agentes: **consumidores e firmas individuais**.
+
+-   Duas abordagens principais
+
+## Introdução
+
+-   **Abordagem baseada nas preferências**: agente tomador de decisão possui uma relação de preferência sobre o conjunto de escolhas.
+
+    -   Descrição dos "gostos" dos indivíduos.
+    -   Imposição de hipóteses de racionalidade.
+    -   Análise das implicações para comportamento individual.
+
+## Introdução
+
+-   **Abordagem baseada nas escolhas**: foca diretamente no comportamento de escolhas do agente, impondo algumas restrições de consistência.
+
+    -   Imposição de critérios de consistência sobre as escolhas observadas.
+
+    -   Interpretação das escolhas observadas como preferências reveladas.
+
+## Noções primitivas
+
+Existem quatro blocos fundamentais para qualquer modelo de escolha do consumidor: - Conjunto (campo) de escolha - Conjunto factível (viável) - Relação de preferências - Hipótese comportamental
+
+## Conjunto consumo
+
+Noção primitiva: `bem ou mercadoria`
+
+Um bem ou mercadoria será tudo o que pode ser armazenado ou consumido: bens físicos, serviços, trabalho ou lazer, etc.
+
+::: callout-tip
+### Definição - Cesta de consumo
+
+Uma **cesta de consumo** é um vetor $x \in \mathbb{R}^n$ com a quantidade de cada um dos $n$ bens existentes denotado por $x = \begin{bmatrix}x_1 & x_2 & \dots & x_n \end{bmatrix}$
+:::
+
+-   Note que aqui estamos adotando a hipótese de que todos os bens são perfeitamente divisíveis.
+-   Elementos negativos na cesta de consumo, normalmente, representam débitos ou saídas líquidas de bens.
+
+## Conjunto consumo
+
+::: callout-tip
+### Definição - Conjunto consumo
+
+O **conjunto consumo** $X \subset \mathbb{R}^n$ é o campo de escolha do consumidor, formado por todas as cestas de consumo que o consumidor pode conceber.
+:::
+
+::: {.callout-warning title="Atenção!"}
+Note que o conjunto consumo enumera, apenas, as possibilidades que o consumidor gostaria de consumir, e não o que realmente é possível de ser consumido.
+:::
+
+## Conjunto Factível
+
+-   No entanto, sabemos que em muitas situações, o universo de escolhas dos consumidores está sujeito a restrições que são comuns a todos os agentes.
+
+-   Exemplos:
+
+    -   **Restrições físicas**: não é possível consumir mais que 24h de lazer por dia
+    -   **Bens indivisíveis**: situação em que o primeiro bem (coca-cola) é perfeitamente divisível, enquanto o segundo (casa) está disponível apenas em quantidades inteiras não-negativas.
+    -   **Quantidade mínima de consumo**: consumidor necessita de, no mínimo, 4 unidades de pães/dia para assegurar sua sobrevivência.
+
+## Conjunto Factível
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+
+plt.axhline(24, color='orange', alpha=0.3)
+plt.fill_betweenx(np.arange(0, 25), 0, 2, color='orange', alpha=0.3)
+plt.yticks(range(0, 30, 24))
+plt.ylim(0, 30)
+plt.xlabel("Coca-cola")
+plt.ylabel("Horas de lazer")
+plt.scatter(1.98, 22, marker='o', s=25, edgecolor='black', facecolor='lightblue')
+plt.text(1.98, 20, "X", ha='center', fontsize=18)
+plt.text(1.3, 25, "Restrição Física", fontsize=18, color='darkblue')
+
+plt.show()
+```
+
+## Conjunto Factível
+
+```{python}
+fig, ax = plt.subplots()
+ax.hlines([1, 2, 3], xmin=0, xmax=1, lw=1, colors="black")
+ax.set_ylim(0, 3.5)
+ax.set_xlim(0, 1)
+ax.set_yticks(range(4))
+ax.set_xticks([])
+ax.set_xlabel("Coca-cola")
+ax.set_ylabel("Casas")
+ax.scatter(0.9, 2.1, s=550, color="lightblue", alpha=0.5)
+ax.annotate("X", (0.9, 2), ha="center", fontsize=18)
+ax.arrow(0.9, 2.33, -0.07, 0.67, color="darkblue", length_includes_head=True,
+head_width=0.01, head_length=0.065)
+ax.arrow(0.9, 1.87, -0.07, -0.87, color="darkblue", length_includes_head=True,
+head_width=0.01, head_length=0.065)
+
+plt.show()
+```
+
+## Conjunto Factível
+
+```{python}
+fig, ax = plt.subplots()
+ax.fill([4, 10, 10, 0, 0], [0, 0, 10, 10, 4], color="orange", alpha=0.3)
+ax.plot([4, 0], [0, 4], lw=2, color="orange")
+ax.set_xlim(0, 9)
+ax.set_ylim(0, 9)
+ax.set_xlabel("Pão Integral")
+ax.set_ylabel("Pão Francês")
+# ax.axhline(0, color="black", lw=1, ls="dashed")
+# ax.axvline(0, color="black", lw=1, ls="dashed")
+ax.scatter(8.7, 8.6, marker="o", s=550, color="lightblue", alpha=0.5)
+ax.annotate("X", (8.8, 8.9), fontsize=18, ha="right", va="top")
+
+plt.show()
+```
+
+## Conjunto Factível
+
+Ao longo do curso, assumiremos um conjunto consumo igual ao espaço de mercadorias (que restringiremos ao ortante não-negativo) $X = \mathbb{R}_+^n.$
+
+::: {.callout-warning title="Observação"}
+Em muitos dos casos, para possibilitar a análise gráfica, adotaremos a hipótese de dois bens, i.e., o espaço de mercadorias é igual ao $\mathbb{R}_+^2$.
+:::
+
+-   Esta hipótese não é tão restritiva. Podemos agregar todos os outros bens em um **bem composto**.
+
+## Conjunto Orçamentário
+
+::: callout-tip
+### Definição - Conjunto orçamentário competitivo (ou Walrasiano)
+
+O conjunto orçamentário competitivo (ou Walrasiano) é o subconjunto $\mathcal{B}$ do espaço de mercadorias $X$ formado pelas cestas de consumo que um consumidor pode **efetivamente adquirir** ao se deparar com um vetor de preços $\textbf{p} \in \mathbb{R}^n$ tendo uma renda $I \in \mathbb{R}_+$.
+:::
+
+Formalmente:
+
+$$\mathcal{B}(\textbf{p},I) = \{\textbf{x} \in X \mid \textbf{p} \cdot \textbf{x} \leq I\}.$$
+
+-   Note que $\textbf{p} \cdot \textbf{x} \equiv \sum_{i=1}^n p_i x_i$.
+-   Quando o consumidor gasta toda a sua renda, $I=\textbf{p} \cdot \textbf{x}$ e esta equação é conhecida como **restrição orçamentária** do consumidor
+
+## Conjunto Orçamentário
+
+O conjunto orçamentário define um conjunto factível de consumo de todas as cestas que custam exatamente a renda do consumidor ou menos.
+
+```{python}
+plt.fill([0, 25, 0], [0, 0, 25], color='lightblue', lw=2, alpha=0.8)
+# plt.scatter([7.5], [10], marker='o', s=50, color='white', edgecolors='lightblue')
+plt.text(7.5, 10, r'$\mathcal{B}(\mathbf{p}, I)$', fontsize=18, ha='center')
+plt.xlim(0, 28)
+plt.ylim(0, 28)
+plt.xlabel(r'$x_1$')
+plt.ylabel(r'$x_2$')
+plt.xticks([0, 25], [r'$0$', r'$I/p_1$'])
+plt.yticks([0, 25], [r'$0$', r'$I/p_2$'])
+plt.show()
+
+```
+
+## Restrição Orçamentária
+
+Caso com dois bens na cesta: $I=p_1x_1+p_2x_2$
+
+-   A inclinação da reta orçamentária informa o valor de troca de mercado entre os dois bens: para se obter uma unidade adicional do bem $1$, temos que abrir mão de $−p_1/p_2$ unidades do bem $2$.
+
+-   A inclinação da reta orçamentária é, portanto, o **custo de oportunidade** do bem $2$ em termos do bem $1$. Mantendo preços e renda constantes.
+
+-   Mostre que a inclinação da reta orçamentária ($n = 2$) é igual a $-p_1/p_2$.
+
+## Restrição Orçamentária
+
+### Solução
+
+Suponha que o consumidor esteja dispendendo toda sua renda consumindo $x_1$ unidades do bem $1$ e $x_2$ unidades do bem $2$:
+
+$$p_1 x_1 + p_2 x_2 = I\tag{a}$$
+
+::: fragment
+Decide aumentar o consumo do bem $1$ em $\Delta x_1$. Abre mão de $\Delta x_2$ do bem $2$, de modo que a reta orçamentária continue válida.
+
+$$p_1(x_1 + \Delta x_1) + p_2(x_2 + \Delta x_2) = I\tag{b}$$
+:::
+
+::: fragment
+Subtraindo (a) de (b), obtemos:
+
+$$p_1 \Delta x_1 + p_2 \Delta x_2 = 0 \Rightarrow \frac{\Delta x_2}{\Delta x_1} = -\frac{p_1}{p_2}. \tag{c}$$
+:::
+
+## 
+
+<iframe src="https://rfbressan.shinyapps.io/reta_orcamentaria/" style="border: 0px solid #AAA; width: 100%; height: 100%"></iframe>
+
+- Qual o efeito sobre o conjunto orçamentário quando os preços unitários e a renda variam?
+
+
+## Restrição Orçamentária
+
+- Considere o conjunto orçamentário definido em (a).
+
+- O que ocorreria caso todos os preços e a renda aumentassem na mesma proporção $\lambda$?
+
+- $(\lambda p_1) x_1 + (\lambda p_2) x_2 = \lambda I$
+
+- Intuitivamente, se todos os preços da economia aumentam (ou diminuem) na mesma proporção, incluindo a renda, então, nada muda no universo de escolhas factíveis.
+
+- Transformar um dos preços da economia em **numerário** (normalizar o preço de um bem em 1). Por exemplo, se adotamos o bem 1 como bem-numerário, temos:
+
+- $x_1 + \frac{p_2}{p_1}x_2 = \frac{I}{p_1}.$
+
+
+## :books: Bibliografia
+
+VARIAN, H. R. Microeconomia: uma abordagem moderna. 9.ed. Rio de Janeiro: Elsevier, 2015. Disponível em: [app.minhabiblioteca.com](https://app.minhabiblioteca.com.br/books/9788595155107)
+
+NICHOLSON, W.; SNYDER C. Teoria microeconômica: Princípios básicos e aplicações. Cengage Learning Brasil, 2019. Disponível em: [app.minhabiblioteca.com](https://app.minhabiblioteca.com.br/#/books/9788522127030/)
+
+JEHLE, G. A.; RENY, P. J. Advanced microeconomic theory. 3.ed. Pearson Education Limited, 2011.
+

@@ -1,0 +1,767 @@
+---
+title: "Preferências e Utilidade"
+title-slide-attributes:
+  data-background-image: http://econtutorials.com/wp-content/uploads/2015/03/udemy-image-1.jpg
+  data-background-size: contain
+  data-background-opacity: "0.7"
+center-title-slide: false
+author: "Rafael Bressan"
+logo: "img/UdescEsag.jpeg"
+format: 
+  revealjs:
+    theme: [default, udesc.scss] 
+    code-fold: true
+    chalkboard: true
+    incremental: true
+from: markdown+emoji # list of emojis: https://gist.github.com/rxaviers/7360908
+fontsize: "2.2em"
+editor: visual
+jupyter: python3
+---
+
+## Introdução
+
+
+* Os processos econômicos são resultados das interações entre as decisões tomadas por inúmeros agentes econômicos
+* Portanto, qualquer teoria econômica deve basear-se em algum modelo que especifique o processo de tomada de decisão desses agentes. Sejam eles agentes individuais, famílias, firmas ou governo
+* Postulados acerca do comportamento com objetivos por parte dos agentes levou, naturalmente, ao desenvolvimento de modelos matemáticos que envolvem a maximização de alguma função que dependa de vários fatores
+"
+
+
+
+!!! warning "Racionalidade limitada"
+	Recentemente, novas teorias tem sido desenvolvidas baseadas em, por exemplo, _racionalidade limitada_ e _satisficing_, como alternativa ao **modelo de escolha racional**.
+
+	A abordagem de racionalidade limitada relaxa a hipótese de comportamento otimizador ou de expectativas modelo-consistentes (ou ambas). Para o aluno interessado, consultar o seguinte [**`link`**](https://plato.stanford.edu/entries/bounded-rationality).
+
+
+* No entanto, a teoria da otimização e o modelo de escolha racional continuam sendo os pilares da análise econômica
+
+
+
+
+!!! info "Modelo de escolha racional"
+	Modelos de escolha racional consistem de dois elementos:
+	* Racionalidade individual: agentes econômicos tomam a **melhor** decisão dadas as oportunidades **percebidas**
+	* Consistência mútua das ações: ações individuais são **mutuamente consistentes** (conhecimento comum de racionalidade e coordenação em um equilíbrio)
+
+	Modelo de escolha racional = otimização + equilíbrio
+
+	O que a racionalidade individual implica?
+	* **Conhecimento do problema**: tomador de decisão tem pleno conhecimento do problema de decisão com que se depara e do conjunto de alternativas do qual tem de escolher
+	* **Preferências claras**: ordenamento completo sobre o conjunto completo de alternativas
+	* **Capacidade de otimizar**: possui as habilidades necessárias para realizar quaisquer cálculos complicados necessários para encontrar sua trajetória ótima de ações. Sua habilidade de calcular é ilimitada e não comete erros
+	* **Indiferença a descrições logicamente equivalentes de alternativas e conjuntos escolhas**: Substituir uma descrição de alternativas por outra que seja "logicamente equivalente" não afeta a escolha
+
+
+
+
+> Na aula anterior estudamos o problema da escassez que um consumidor está sujeito, vimos a definição do conjunto orçamentário Walrasiano
+> 
+> Nosso objetivo, nas próximas aulas, é estudar o objetivo do consumidor
+>
+> A maximização deste objetivo, sujeita à restrição orçamentária, é conhecida como **problema (primal) do consumidor**
+
+
+
+
+---
+### Preferências do consumidor
+* Pressupomos que o consumidor seja capaz de ordenar as cestas de consumo do seu espaço de mercadorias de acordo com suas preferências, comparando-as em pares
+* Ou seja, para quaisquer duas cestas de consumo $\textbf{x}$ e $\textbf{y}$ diferentes, o consumidor é capaz de compará-las: ou $\textbf{x}$ é pelo menos tão boa quanto $\textbf{y}$, ou $\textbf{y}$ é pelo menos tão boa quanto $\textbf{x}$
+* Chamamos essa relação de **preferência**, e a denotamos por $\succeq$
+* Tecnicamente, $\succeq$ é uma relação binária sobre o conjunto consumo
+
+
+
+
+!!! correct "Definição 4.1 (Preferência fraca, estrita e indiferença)"
+	1. **Preferência fraca**: se o consumidor afirma que $\textbf{x} = (x_1, \dots, x_n)$ é pelo menos tão boa quanto a cesta de consumo $\textbf{y} = (y_1, \dots, y_n)$, dizemos que o consumidor **prefere fracamente** $\textbf{x}$ a $\textbf{y}$ e denotamos essa relação por $\textbf{x} \succeq \textbf{y}$
+
+	2. **Indiferença**: se $\textbf{x}$ é pelo menos tão boa quanto $\textbf{y}$, e $\textbf{y}$ é pelo menos tão boa quanto $\textbf{x}$, o consumidor mostra-se **indiferente** entre as duas cestas de consumo. Essa relação de _indiferença_ é denotada por $\textbf{x} \sim \textbf{y}$. Em síntese $\textbf{x} \sim \textbf{y} \Leftrightarrow ((\textbf{x} \succeq \textbf{y})\wedge (\textbf{y}\succeq\textbf{x}))$
+
+	3. **Preferência estrita**: se $\textbf{x}$ é pelo menos tão boa quanto $\textbf{y}$, e não é o caso que $\textbf{y}$ seja pelo menos tão boa quanto $\textbf{x}$, dizemos que $\textbf{x}$ é **estritamente preferida** a $\textbf{y}$, denotado por $\textbf{x} \succ \textbf{y}$. Em síntese $\textbf{x} \succ \textbf{y} \Leftrightarrow ((\textbf{x} \succeq \textbf{y})\wedge \neg(\textbf{y}\succeq\textbf{x}))$
+
+
+
+
+!!! correct "Definição 4.2 (Conjuntos derivados das preferências)"
+	Para um dado $\textbf{x} \in X$, podemos definir:
+
+	* Conjunto de cestas pelo menos tão boas quanto $\textbf{x}$: 
+
+	$\succeq(\textbf{x}) \equiv \{\textbf{y} \in X: \textbf{y} \succeq \textbf{x}\}$
+
+	* Conjunto de cestas que não são melhores $\textbf{x}$: 
+
+	$\preceq(\textbf{x}) \equiv \{\textbf{y} \in X: \textbf{y} \preceq \textbf{x}\}$
+
+	* Conjunto de cestas estritamente melhores que $\textbf{x}$: 
+
+	$\succ(\textbf{x}) \equiv \{\textbf{y} \in X: \textbf{y} \succ \textbf{x}\}$
+
+	* Conjunto de cestas estritamente preteridas a $\textbf{x}$: 
+
+	$\prec(\textbf{x}) \equiv \{\textbf{y} \in X: \textbf{y} \prec \textbf{x}\}$
+
+	* Conjunto de indiferença a $\textbf{x}$: 
+
+	$\sim(\textbf{x}) \equiv \{\textbf{y} \in X: \textbf{y} \sim \textbf{x}\}$
+
+
+
+
+## Axiomas da escolha racional
+
+
+
+
+!!! danger "Axioma 1. Completeza"
+	Para quaisquer cestas de consumo $\textbf{x}$ e $\textbf{y}$ do espaço de mercadorias, temos $\textbf{x} \succeq \textbf{y}$ ou $\textbf{y} \succeq \textbf{x}$ (ou ambos)
+
+
+
+
+* Consequentemente, os consumidores não são paralisados pela indecisão: eles conhecem todas as cestas de bens disponíveis e sempre são capazes de compará-las
+
+
+
+
+!!! danger "Axioma 2. Transitividade"
+	Para quaisquer cestas de consumo $\textbf{x}$, $\textbf{y}$ e $\textbf{z}$ do espaço de mercadorias, se $\textbf{x} \succeq \textbf{y}$ e $\textbf{y} \succeq \textbf{z}$, então $\textbf{x} \succeq \textbf{z}$
+
+
+
+
+* As escolhas de um indivíduo são consistentes internamente
+
+
+
+
+!!! correct "Definição 4.3 (Racionalidade)"
+	Seja $\succeq$ uma relação de preferências, $\succeq$ é dita **racional** se satisfaz os axiomas de completeza e transitividade
+
+
+
+
+Preferências hipotéticas que satisfazem hipóteses de racionalidade
+ $(Resource("https://raw.githubusercontent.com/pvfonseca/micro1/main/notas/figures/aula4_fig1.PNG", :width=>800))
+
+* Neste caso, $X = \mathbb{R}^2_+$
+
+* Axiomas 1 e 2 nos dizem que o consumidor deve colocar *qualquer* ponto de $X$ em alguma das três categorias mutuamente exclusivas, relativa a $\textbf{x}^0$: para qualquer cesta de consumo $\textbf{x}^0$, os três conjuntos $\succ{\textbf{x}^0}, \prec{\textbf{x}^0}, \sim{\textbf{x}^0}$ formam uma *partição* do conjunto consumo
+
+
+
+
+!!! warning "Contra-exemplos"
+	* Nenhuma das duas hipóteses (completude e transitividade) é fraca
+	* Contra-exemplos de preferências não-completas e não-transitivas na lousa
+	* Ver [**`paradoxo de Condorcet`**](https://en.wikipedia.org/wiki/Condorcet_paradox)
+
+
+
+
+* As preferências hipotéticas representadas na figura anterior podem parecer estranhas
+* Possuem apenas a estrutura mais limitada possível e, ainda assim, são inteiramente consistentes com os axiomas de racionalidade
+* Nenhuma das hipóteses, até agora, proíbe as ''irreguladidades'' representadas
+* Estas irregularidades podem ser descartadas com a imposição de hipóteses adicionais sobre as preferências
+
+
+
+
+!!! danger "Axioma 3. Continuidade"
+	Se um indivíduo afirma que $\textbf{x} \succeq \textbf{y}$, então, cestas de consumo ''muito próximas'' a $\textbf{x}$ também são fracamente preferidas a $\textbf{y}$.
+
+	Formalmente, para quaisquer sequências de pares $\{\textbf{x}^n, \textbf{y}^n\}_{n=1}^\infty$, tais que $\textbf{x}^n \succeq \textbf{y}^n$ para qualquer $n \in \mathbb{N}$, $\textbf{x} = \lim_{n\to \infty}\textbf{x}^n$ e $\textbf{y} = \lim_{n\to \infty}\textbf{y}^n$, então, $\textbf{x} \succeq \textbf{y}$
+
+
+
+
+* Se o axioma de continuidade é imposto, não haverá saltos ou mudanças bruscas nas preferências
+
+
+
+
+!!! warning "Preferências contínuas: contra-exemplo"
+	[**`Preferências lexicográficas`**](https://en.wikipedia.org/wiki/Lexicographic_preferences) - ver [Código Eleitoral Brasileiro (Lei 4.737/65) - Art. 110](https://www.planalto.gov.br/ccivil_03/leis/l4737compilado.htm#:~:text=LEI%20N%C2%BA%204.737,%20DE%2015%20DE%20JULHO%20DE%201965.&text=Institui%20o%20C%C3%B3digo%20Eleitoral.,9%20de%20abril%20de%201964.)
+
+
+
+
+!!! danger "Axioma 4. Monotonicidade"
+	Dizemos que a relação de preferências $\succeq$ em $X$ é *monotônica* se $\textbf{x}>>\textbf{y}$ implica que $\textbf{x} \succ \textbf{y}$.
+
+	A relação é *estritamente monotônica* se $\textbf{x} \geq \textbf{y}$ e $\textbf{x} \neq \textbf{y}$ implica que $\textbf{x} \succ \textbf{y}$.
+
+
+
+
+* A hipótese de que as preferências são monotônicas é satisfeita desde que as mercadorias sejam *bens econômicos*, ao invés de *maus econômicos*
+* Mesmo que uma mercadoria seja um mau econômico, podemos ter ainda preferências monótonas
+* Note que se $\succeq$ é monótona, podemos ser indiferentes com relação a um aumento na quantidade de algumas, mas não todas, mercadorias
+* Por outro lado, monotonicidade estrita diz que se $\textbf{x}$ é maior que $\textbf{y}$ para *algum* bem e não é menor para qualquer outra, então, $\textbf{x}$ é estritamente preferida a $\textbf{y}$
+* Preferências monotônicas indicam que o consumidor sempre prefere consumir mais a menos
+
+
+
+
+!!! danger "Axioma 5. Convexidade"
+	Se $\textbf{x}$ e $\textbf{y}$ são cestas de consumo tais que $\textbf{x} \sim \textbf{y}$, então $\lambda\textbf{x} + (1-\lambda)\textbf{y} \succeq \textbf{x}$, $\forall \lambda \in [0, 1]$.
+
+	Isto é, o consumidor prefere fracamente cestas de consumo mais balanceadas, ou seja, as médias são fracamente preferidas aos extremos.
+
+	**Convexidade estrita**: se $\textbf{x}$ e $\textbf{y}$ são cestas de consumo tais que $\textbf{x} \sim \textbf{y}$, então $\lambda\textbf{x} + (1-\lambda)\textbf{y} \succ \textbf{x}$, $\forall \lambda \in (0, 1)$.
+
+	Isto é, o consumidor prefere de maneira estrita cestas de consumo mais balanceadas, ou seja, as médias são estritamente preferidas aos extremos.
+
+
+
+
+## Utilidade
+
+
+
+
+* Consumidores são caracterizados por suas preferências
+* No entanto, do ponto de vista prático, preferências nem sempre são fáceis de manusear e de se extrair inferências econômicas
+* Dados os axiomas de **completeza, transitividade e continuidade**, é possível demonstrar, formalmente, que as pessoas são capazes de rankear todas as situações possíveis da menos desejada para a mais desejada
+* Esse ranking, seguindo a terminologia introduzida no século XIX por Jeremy Bentham, é denominado **utilidade**
+
+$(Resource("https://upload.wikimedia.org/wikipedia/commons/c/c8/Jeremy_Bentham_by_Henry_William_Pickersgill_detail.jpg", :width=>300))
+[Jeremy Bentham (1748 - 1832)](https://pt.wikipedia.org/wiki/Jeremy_Bentham)
+
+
+
+
+!!! correct "Definição 4.4 (Função utilidade)"
+	Uma **função utilidade** é um modo de atribuir um número real a cada cesta de consumo, de maneira que se atribuam às cestas mais preferidas números mais altos do que os atribuídos às cestas menos preferidas.
+
+	Formalmente, é uma função $u: M \to \mathbb{R}$ representando a relação de preferência fraca $\succeq$ sobre o espaço de mercadorias $M$ se para quaisquer cestas de consumo $\textbf{x}$ e $\textbf{y}$ tem-se:
+
+	$$\textbf{x} \succeq \textbf{y} \Leftrightarrow u(\textbf{x}) \geq u(\textbf{y})$$
+
+
+
+
+#### Não-unicidade da função utilidade
+
+
+
+
+* Note que a transformação monotônica positiva de uma função utilidade é uma função utilidade que representa a mesma ordenação de preferências da função utilidade original
+* Formalmente, para qualquer transformação positiva $f: \mathbb{R} \to \mathbb{R}$, a função composta $v(\textbf{x}) = f(u(\textbf{x}))$ é uma nova função utilidade representando a mesma relação de preferências da função utilidade original $u: M \to \mathbb{R}$
+* Lembrando que uma função $f: \mathbb{R} \to \mathbb{R}$ é dita realizar uma **transformação monotônica positiva** se $f(u_1) > f(u_2)$ sempre que $u_1 > u_2$
+* Ou seja, a função $f(\bullet)$ preserva a ordem dos números $u_1$ e $u_2$
+
+
+
+
+* A não-unicidade da função utilidade implica que não faz sentido perguntar ''o quanto a cesta de consumo $\textbf{x}$ é preferível à cesta $\textbf{y}$?''
+* Portanto, os rankings de utilidade são como os rankings de ordenação de restaurantes, hoteis ou filmes (uma, duas ou três estrelas)
+* A não-unicidade também implica que **não é possível comparar utilidades entre pessoas diferentes!!**
+* De maneira similar, não é possível mensurar se uma mudança de uma situação $\textbf{x}$ para uma situação $\textbf{y}$ provê mais utilidade para uma pessoa ou para outra 
+
+
+
+
+#### *Ceteris paribus*
+
+
+
+
+* Como a utilidade se refere à satisfação geral de um consumidor, essa medida é afetada por uma variedade de fatores
+* A utilidade de um consumidor é afetada não apenas pelo seu consumo de bens físicos ou serviços. Mas, também, por atitudes psicológicas, pressões sociais, experiências sociais e o ambiente cultural de maneira geral
+* Apesar de essas influências serem de interesse geral dos economistas, nesta disciplina focaremos exclusivamente nas escolhas entre opções quantificáveis, enquanto mantemos constante os outros fatores que influenciam o comportamento - *ceteris paribus*
+
+
+
+
+#### Bens econômicos
+
+
+
+
+* Assumimos que as preferências de um indivíduo podem ser representadas por uma função utilidade da forma:
+
+$U(x_1, \dots, x_n) \tag{1}$
+onde $x_1, \dots, x_n$ são as quantidades de cada um dos $n$ bens ou serviços que podem ser consumidas em um período de tempo
+
+* Nessa representação, assumimos que as variáveis são **bens econômicos**. Isto é, quaisquer que sejam as quantidades que elas representem, assumimos que uma quantidade maior qualquer de um $x_i$ em particular, durante algum dado período, será preferida a menos
+
+
+
+
+Bens econômicos e implicação de monotonicidade
+$(Resource("https://raw.githubusercontent.com/pvfonseca/micro1/main/notas/figures/aula4_fig2.PNG", :width=>800))
+
+
+
+
+## Curvas de indiferença e TMS
+
+
+
+
+* A maioria das atividades econômicas envolvem trocas voluntárias entre indivíduos
+* Essas trocas voluntárias podem ser melhor estudadas utilizando o conceito de **curvas de indiferença**
+
+
+
+
+!!! correct "Definição 4.5 (Curvas de indiferença)"
+	Uma **curva (superfície) de indiferença** representa um conjunto de cestas de consumo indiferentes entre si. Ou seja, contém todas as combinações de consumo que dão o mesmo nível de satisfação ao indivíduo.
+
+	Formalmente, como já vimos, a curva ou superfície de indiferença de um bem $\textbf{x}$ qualquer, em termos de preferências, é dada por:
+
+	$$\sim(\textbf{x}) \equiv \{\textbf{y}\in\mathbb{R}_+^n| \mathbb{y}\sim\mathbb{x}\}$$
+
+	Em termos de função utilidade:
+
+	$$\sim(\textbf{x}) \equiv \{\mathbb{y}\in \mathbb{R}_+^n| u(\mathbb{y}) = \bar{u}, \text{ onde } u(\textbf{x}) = \bar{u}\}$$
+
+
+
+
+Curvas de indiferença: representação gráfica
+
+
+
+begin			
+	x1 = range(0, 15, length=200)	
+	contour(x1, x1, (x, y)-> x^0.5*y^0.5, c=:bone_1, legend=:none, levels = [1, 2, 3, 4, 5, 6, 7, 8], clabels=true)
+	vline!([0], lw=0.5, lc=:black, label=:none)
+	hline!([0], lw=0.5, lc=:black, label=:none)
+end
+
+
+
+!!! info "Curvas de indiferença: propriedades"
+	1. Implicação do axioma da **transitividade**: curvas de indiferença que representam níveis distintos de utilidade **não** podem se cruzar, ou seja, se $\textbf{x} \succ \textbf{y}$, então $\sim(\textbf{x})\cap\sim(\textbf{y}) = \emptyset$
+
+	2. Implicação do axioma da **monotonicidade**: curvas de indiferença são negativamente inclinadas
+
+	3. Implicação do axioma da **convexidade estrita**: para qualquer cesta de consumo $\textbf{x}$ do espaço de mercadorias, o conjunto fracamente preferido $\succeq(\textbf{x})$ é **convexo**
+
+
+
+
+!!! warning "Conjunto convexo"
+	Lembrando que um conjunto qualquer $S$ é dito **convexo** se para quaisquer $x, y \in S$ temos $\lambda x + (1-\lambda)y \in S$, para todo $\lambda\in[0,1]$.
+
+	Essa definição é equivalente a assumir que a função utilidade é **quasi-côncava**.
+
+
+
+
+Implicação do axioma de transitividade
+$(Resource("https://raw.githubusercontent.com/pvfonseca/micro1/main/notas/figures/aula4_fig3.PNG", :width=>800))
+
+
+
+
+Implicação do axioma de convexidade estrita
+$(Resource("https://raw.githubusercontent.com/pvfonseca/micro1/main/notas/figures/aula4_fig4.PNG", :width=>800))
+
+
+
+
+#### Taxa marginal de substituição
+
+* A inclinação da curva de indiferença, pelo axioma da monotonicidade, é negativa
+
+* Portanto, se um indivíduo é forçado a abrir mão de uma certa quantidade do bem $y$, ele deve ser recompensado por uma certa quantidade de $x$ para manter-se indiferente entre as duas cestas de consumo
+
+
+
+
+!!! correct "Definição 4.6 (Taxa marginal de substituição)"
+	A **taxa marginal de substituição (TMS)** mede a taxa à qual o indivíduo está propenso a substituir um bem por outro.
+
+	Mais precisamente, a TMS de $y$ por $x$, $\text{TMS}_{x,y}$, é o negativo da inclinação de uma curva de indiferença $U_1$ em um determinado ponto:
+
+	$$\text{TMS}_{x, y} \equiv - \left.\frac{dy}{dx}\right|_{U=U_1}\tag{2}$$
+
+	onde a notação indica que a inclinação é calculada ao longo da curva de indiferença $U_1$.
+
+
+
+
+!!! info "Taxa marginal de substituição: propriedades"
+	1. Pelo axioma de **monotonicidade**, as curvas de indiferença são negativamente inclinadas. Portanto, a TMS assim definida é sempre um número positivo. Ou seja, o consumidor só se mantém indiferente se a redução de consumo de um bem for compensada pelo aumento no consumo de outro bem.
+
+	2. Pelo axioma da **convexidade estrita**, vimos que o conjunto fracamente preferido $\succeq(\textbf{x})$ é convexo. Isso é equivalente a dizer que a **taxa marginal de substituição é decrescente**. Ou seja, a taxa à qual um indivíduo com preferências estritamente convexas deseja trocar um bem $x$ por $y$ diminui à medida que aumentamos a quantidade do bem $y$.
+
+
+
+
+> Suponha que um indivíduo derive utilidade do consumo de dois bens $x$ e $y$. E que suas preferências sejam representadas pela seguinte função utilidade:
+>
+> $$U(x,y) = \sqrt{xy}$$
+>
+> 1. Calcule a taxa marginal de substituição para este indivíduo.
+>
+> 2. Qual é a taxa marginal de substituição de $y$ por $x$ no ponto (5,20)? E no ponto (20,5)? Como interpretar os resultados economicamente?
+>
+> 3. Mostre que a taxa marginal de substituição é decrescente.
+>
+> 4. Mostre que uma cesta de consumo balanceada é preferível.
+
+
+
+
+#### Utilidade e TMS
+
+
+
+
+* Suponha que um indivíduo derive utilidade do consumo de dois bens cujas quantidades são dadas por $x$ e $y$
+* As preferências desse consumidor são representadas pela função utilidade $U(x,y)$
+* As combinações de $x$ e $y$ que dão um nível determinado de utilidade a esse agente de $k$ são representadas pelas soluções da função implícita
+$$U(x,y) = k$$
+* Tomando o diferencial total da expressão anterior, obtemos:
+$$U_x dx + U_y dy = 1dk$$
+* Note que $U_x \equiv \frac{\partial U(x,y)}{\partial x}$ e $U_y \equiv \frac{\partial U(x,y)}{\partial y}$ medem o acréscimo na utilidade devido a um aumento marginal no consumo de um bem - **utilidades marginais** dos bens $x$ e $y$
+* Como estamos interessados nas mudanças feitas em $x$ e $y$ de forma a manter o nível de satisfação constante, então, $dk = 0$. Portanto:
+$$U_x dx + U_y dy = 0$$
+* Logo, temos que:
+$$\text{TMS}_{x, y} = -\left.\frac{dy}{dx}\right|_{U(x,y) = k} = \frac{U_x}{U_y}\tag{3}$$
+
+
+
+
+> **Exercício**. Calcule a taxa marginal de substituição das seguintes funções utilidade e verifique se as curvas de indiferença são convexas:
+>
+> 1. $U(x,y) = \sqrt{xy}$
+>
+> 2. $U(x,y) = x + xy + y$
+>
+> 3. $U(x,y) = \sqrt{x^2 + y^2}$
+
+
+
+begin			
+	ex1 = range(0, 15, length=200)	
+	contour(ex1, ex1, (x, y)-> x^0.5*y^0.5, c=:bone_1, legend=:none, levels = [2, 3, 4, 5], clabels=true, title=L"U(x,y)=\sqrt{xy}")
+	vline!([0], lw=0.5, lc=:black, label=:none)
+	hline!([0], lw=0.5, lc=:black, label=:none)
+end
+
+
+begin			
+	ex2 = range(0, 5, length=200)	
+	contour(ex2, ex2, (x, y)-> x + x*y + y, c=:bone_1, legend=:none, levels = [6, 8, 10, 12, 14], clabels=true, title=L"U(x,y)=x + xy + y")
+	vline!([0], lw=0.5, lc=:black, label=:none)
+	hline!([0], lw=0.5, lc=:black, label=:none)
+end
+
+
+begin			
+	ex3 = range(0, 15, length=200)	
+	contour(ex3, ex3, (x, y)-> sqrt(x^2+y^2), c=:bone_1, legend=:none, levels = [6, 8, 10, 12, 14], clabels=true, title=L"U(x,y)=\sqrt{x^2 + y^2}")
+	vline!([0], lw=0.5, lc=:black, label=:none)
+	hline!([0], lw=0.5, lc=:black, label=:none)
+end
+
+
+
+## Funções utilidade para preferências específicas
+
+
+
+
+### Função Cobb-Douglas
+
+
+
+
+!!! info "Função Cobb-Douglas"
+	Em 1928, [Charles Cobb](https://en.wikipedia.org/wiki/Charles_Cobb_(economist)) e [Paul Douglas](https://en.wikipedia.org/wiki/Paul_Douglas) modelaram o crescimento da economia norte-americana de 1899-1922.
+
+	Supondo uma função de produção do tipo:
+
+	$$F(K, L) = A K^{\alpha}L^{1-\alpha}$$
+
+	Por MQO, Cobb e Douglas estimaram a seguinte função de produção para a economia dos EUA no período amostral:
+	
+	$$F(K, L) = 1,01 K^{0,25}L^{0,75}$$
+
+
+
+
+* Para o caso da teoria do consumidor, a função utilidade do tipo Cobb-Douglas apresenta a seguinte forma funcional:
+
+$$U(x,y) = x^\alpha y^\beta, \qquad 0<\alpha,\beta<1\tag{4}$$
+
+* De maneira geral, os parâmetros $\alpha$ e $\beta$ representam a importância relativa dos bens para este indivíduo
+
+* Normalmente, é conveniente normalizar os parâmetros de forma com que $\alpha + \beta = 1$. Neste caso, a função utilidade seria dada por:
+
+$$U(x,y) = x^\delta y^{1-\delta},\tag{5}$$
+onde $\delta = \frac{\alpha}{\alpha + \beta}$ e $1-\delta = \frac{\beta}{\alpha + \beta}$.
+
+* Preferências estritamente convexas e estritamente monotônicas
+
+
+
+begin
+	cobb_delta = @bind δ Slider(0.01:0.1:0.99, default=0.5)	
+
+	
+	Parâmetro $\delta$: $(cobb_delta)
+	
+end
+
+
+begin		
+	cobb_x = range(0, 50, length=200)	
+	cobb_plot = @layout [a b]
+	cobb1 = surface(
+	  cobb_x, cobb_x, (x, y)-> x^δ * y^(1-δ), c=:bone_1, legend=:none, 
+	  nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(40,20)
+	)
+	cobb2 = contour(cobb_x, cobb_x, (x, y)-> x^δ * y^(1-δ), c=:bone_1, legend=:none, levels = [10, 14, 18, 20, 24], clabels=true)	
+	plot(cobb1, cobb2, layout = cobb_plot)	
+end
+
+
+
+### Bens substitutos
+
+
+
+
+* A função utilidade para o caso de bens substitutos é dada por:
+$$U(x,y) = \alpha x + \beta y, \qquad \alpha, \beta>0\tag{6}$$
+* Neste caso, as curvas de indiferença são lineares
+* A linearidade das curvas de indiferença motiva a denominação de bens substitutos para descrever a relação entre $x$ e $y$
+* Uma pessoa com esse tipo de preferências está disposta a abrir mão da mesma quantidade do bem $y$ para adquirir uma unidade adicional de $x$, não importa quanto de $x$ esteja sendo consumido
+* ⚠️ Note que, neste caso, a TMS é constante e o princípio de taxa marginal de substituição decrescente não se aplica
+* Preferências são convexas (mas não estritamente convexas) e fortemente monótonas
+
+
+
+begin		
+	sub_x = range(0, 5, length=100)	
+	sub_plot = @layout [a b]
+	sub1 = surface(
+	  sub_x, sub_x, (x, y)-> x + y, c=:thermal, legend=:none, 
+	  nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(40,30,30)
+	)
+	sub2 = contour(sub_x, sub_x, (x, y)-> x + y, c=:thermal, legend=:none, levels = [2, 3, 4, 5, 6, 7, 8, 9, 10], clabels=true, fill=false)	
+	plot(sub1, sub2, layout = sub_plot)	
+end
+
+
+
+### Bens complementares
+
+
+
+
+* Uma situação oposta à de bens substitutos é ilustrada para o caso de bens complementares, cuja função utilidade é da forma:
+$$U(x,y) = \min\{\alpha x, \beta y\}, \qquad \alpha, \beta>0\tag{7}$$
+* Neste caso, as curvas de indiferença tem um formato de L e a razão da quantidade consumida de $y$ com relação ao bem $x$ é constante e igual a:
+$$\frac{y}{x} = \frac{\alpha}{\beta}$$
+* Indicando que nenhum dos bens especificados na função utilidade será consumido de maneira supérflua quando $\alpha x = \beta y$
+* Preferências são convexas (mas não estritamente convexas) e fracamente monótonas
+* TMS não existe na quina, é infinita acima da quina ou zero à direita da quina
+
+
+
+begin		
+	comp_x = range(0, 5, length=100)	
+	comp_plot = @layout [a b]
+	comp1 = surface(
+	  comp_x, comp_x, (x, y)-> min(x,y), c=:roma, legend=:none, 
+	  nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(45,45)
+	)
+	comp2 = contour(comp_x, comp_x, (x, y)-> min(x,y), c=:bone, legend=:none, levels = 8, clabels=false, fill=true, alpha=0.4)	
+	plot(comp1, comp2, layout = comp_plot)	
+end
+
+
+
+### Função de elasticidade de substituição constante (CES)
+
+
+
+
+* Um problema com as funções utilidade supracitadas é que assumem curvas de indiferença com formas pré-definidas
+* Uma função utilidade que permite vários formatos distintos é a função utilidade de **elasticidade de substituição constante (CES)**:
+$$U(x,y) = \left[x^\delta + y^\delta\right]^{\frac{1}{\delta}}, \qquad \delta \leq 1, \quad \delta\neq 0\tag{8}$$
+* Essa função incorpora as três vistas anteriormente:
+    * Se $\delta = 1$, temos o caso de bens substitutos perfeitos
+    * Se $\delta \to 0$, a CES tende a uma função do tipo Cobb-Douglas
+    * Se $\delta \to -\infty$, a CES tende ao caso de complementares perfeitos
+* Podemos fazer uma transformação monotônica $U^* = U^\delta/\delta$ e obter uma forma mais tratével:
+$$U(x,y) = \frac{x^\delta}{\delta} + \frac{y^\delta}{\delta}$$
+
+
+
+begin		
+	ces_δ1 = 1
+	ces_x = range(0, 5, length=100)	
+	ces_plot = @layout [a b]
+	ces1 = surface(
+	  ces_x, ces_x, (x, y)-> x^ces_δ1/ces_δ1 + y^ces_δ1/ces_δ1, c=:roma, legend=:none, 
+	  nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(45,45)
+	)
+	ces2 = contour(ces_x, ces_x, (x, y)-> x^ces_δ1/ces_δ1 + y^ces_δ1, c=:bone, legend=:none, levels = 8, clabels=false, fill=true, alpha=0.3)	
+	plot(ces1, ces2, layout = ces_plot, title=L"δ = 1")	
+end
+
+
+begin		
+	ces_cobb = 0.1
+	ces_xcobb = range(0, 5, length=45)	
+	ces_plotcobb = @layout [a b]
+	ces1cobb = surface(
+	  ces_xcobb, ces_xcobb, (x, y)-> (x^ces_cobb + y^ces_cobb)^(1/ces_cobb), c=:roma, legend=:none, 
+	  nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(45,30)
+	)
+	ces2cobb = contour(ces_xcobb, ces_xcobb, (x, y)-> (x^ces_cobb + y^ces_cobb)^(1/ces_cobb), c=:thermal, legend=:none, levels = 10, clabels=false, fill=true, alpha=0.4)	
+	plot(ces1cobb, ces2cobb, layout = ces_plotcobb, title=L"δ = 0.1")	
+end
+
+
+begin		
+	ces_l = -50
+	ces_xl = range(0, 5, length=100)	
+	ces_plotl = @layout [a b]
+	ces1l = surface(
+	  ces_xl, ces_xl, (x, y)-> (x^ces_l + y^ces_l)^(1/ces_l), c=:roma, legend=:none, 
+	  nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(45,45)
+	)
+	ces2l = contour(ces_xl, ces_xl, (x, y)-> (x^ces_l + y^ces_l)^(1/ces_l), c=:bone, legend=:none, levels = 10, clabels=false, fill=true, alpha=0.4)	
+	plot(ces1l, ces2l, layout = ces_plotl, title=L"δ = -50")	
+end
+
+
+
+### Função quasi-linear
+
+
+
+
+* Uma função utilidade quasi-linear é definida pela seguinte forma funcional:
+$$U(x, y) =  v(x) + y$$
+* Abaixo ilustramos o gráfico e as curvas de indiferença associadas a função utilidade quasi-linear com a seguinte forma funcional específica:
+$$U(x, y) = \ln(1 + x) + y$$
+
+
+
+begin		
+	ql_x = range(0, 5, length=100)	
+	ql_plotl = @layout [a b]
+	ql = surface(
+	  ql_x, ql_x, (x, y)-> log(1 + x) + y, c=:roma, legend=:none, 
+	  nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(45,30)
+	)
+	ql2 = contour(ql_x, ql_x, (x, y)-> log(1+x) + y, c=:bone, legend=:none, levels = 10, clabels=false, fill=true, alpha=0.4)	
+	plot(ql, ql2, layout = ql_plotl)	
+end
+
+
+
+## Preferências homotéticas e não-homotéticas
+
+
+
+
+* Uma função utilidade é **homotética** se sua taxa marginal de substituição depende apenas da *razão* entre as quantidades de bens, e não de suas quantidades totais
+* A importância de funções utilidade homotéticas é que suas curvas de indiferença são similares
+* A inclinação das curvas depende apenas da razão entre os bens, e não do quão distante as curvas estão da origem
+* As curvas de indiferença associadas a utilidades mais altas são cópias das de utilidades mais baixas
+* Portanto, podemos estudar o comportamento de um indivíduo que tenha preferências homotéticas olhando apenas uma curva de indiferença (ou um número pequeno)
+* Sem nos preocupar que o resultado altere drasticamente para diferentes níveis de utilidade
+
+
+
+
+> 1. Mostre que as quatro funções utilidade estudadas anteriormente exibem preferências homotéticas:
+> 
+> (a) Função Cobb-Douglas
+>
+> (b) Bens substitutos
+>
+> (c) Bens complementares
+>
+> (d) Função de elasticidade de substituição constante
+
+
+
+
+!!! hint "Respostas"
+	(a) Função Cobb-Douglas: $U(x,y) = x^\alpha y^\beta$
+
+	$$\text{TMS} = \frac{\alpha y}{\beta x}$$
+
+	(b) Bens substitutos: $U(x,y) = \alpha x + \beta y$
+
+	$$\text{TMS} = \frac{\alpha}{\beta}$$
+
+	(c) Bens complementares: $U(x,y) = \min\{\alpha x + \beta y\}$
+
+	$$\text{TMS} = \begin{cases} \infty, &\quad& \alpha x< \beta y \\ \text{indefinida}, &\quad& \alpha x = \beta y \\ 0, &\quad& \alpha x > \beta y\end{cases}$$
+
+	(d) Função CES: $U(x,y) = \left[x^\delta + y^\delta\right]^{\frac{1}{\delta}}$
+
+	$$\text{TMS} = \left(\frac{y}{x}\right)^{1-\delta}$$
+
+
+
+
+> 2. Mostre que a função utilidade quasi-linear abaixo não exibe preferências homotéticas:
+>
+> $$U(x,y) = x + \ln y$$
+
+
+
+
+!!! hint "Resposta"
+	$$\text{TMS} = y$$
+
+
+
+begin			
+	q_linear = range(0, 20, length=100)	
+	contour(q_linear, q_linear, (x, y)-> x + log(y), c=:roma, legend=:none, levels = 10, clabels=false, title=L"U(x,y) = x + \ln y", fill=true, alpha=0.4)	
+end
+
+
+
+* Note que no caso da função utilidade quasi-linear, a TMS diminui à medida que a quantidade escolhida de $y$ diminui, mas é independente da quantidade consumida de $x$
+* Como $x$ tem uma utilidade marginal constante, a disposição de um indivíduo a abrir mão de $y$ para adquirir uma unidade adicional de $x$ depende, apenas, do quanto de $y$ possui
+* Ao contrário do caso homotético, quando as quantidades de $x$ e $y$ dobram, a TMS também dobra (ao invés de permanecer invariante)
+
+
+
+
+## Superfície de indiferença
+
+
+
+
+* Se o indivíduo deriva utilidade do consumo de $n$ bens, sua função utilidade por ser representada como:
+$$U(x_1, \dots, x_n)$$
+* Portanto, a equação:
+$$U(x_1, \dots, x_n) = k,$$
+neste caso, define uma **superfície de indiferença** $n$-dimensional
+* Continuaremos assumindo que a superfície de indiferença é convexa
+* Isto é, cestas de consumo mais balanceadas são preferíveis às cestas não-balanceadas
+* Portanto, assume-se que a função utilidade é quasi-côncava
+* Podemos estudar as trocas voluntárias que um indivíduo esteja disposto a fazer entre dois bens quaisquer ($x_1$ e $x_2$) usando o teorema da função implícita para obter a TMS:
+$$\text{TMS}_{x_1, x_2} = -\left.\frac{dx_2}{dx_1}\right|_{U(x_1, \dots, x_n) = k} = \frac{U_1(x_1, \dots, x_n)}{U_2(x_1, \dots, x_n)}$$
+* A disposição de um indivíduo em trocar $x_2$ por $x_1$ depende não só da quantidade desses bens mas, também, das quantidades de todos os outros bens
+
+
+
+
+## 📚 Bibliografia
+
+JEHLE, G. A.; RENY, P. J. Advanced microeconomic theory. 3.ed. Pearson Education Limited, 2011.
+
+MAS-COLELL, A.; WHINSTON, M.D.; GREEN, J.R. Microeconomic Theory. New York, NY: Oxford University Press, 1995.
+
+NICHOLSON, W.; SNYDER C. Teoria microeconômica: Princípios básicos e aplicações. Cengage Learning Brasil, 2019.
