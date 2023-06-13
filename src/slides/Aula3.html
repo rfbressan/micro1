@@ -326,7 +326,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="http://econtutorials.com/wp-content/uploads/2015/03/udemy-image-1.jpg" data-background-opacity="0.7" data-background-size="contain" class="quarto-title-block">
+<section id="title-slide" data-background-image="img/UdescEsag.jpeg" data-background-position="top left" data-background-size="50%" class="quarto-title-block center">
   <h1 class="title">Conceitos Iniciais</h1>
 
 <div class="quarto-title-authors">
@@ -514,7 +514,7 @@ Rafael Bressan
 <p>Caso com dois bens na cesta: <span class="math inline">\(I=p_1x_1+p_2x_2\)</span></p>
 <ul>
 <li class="fragment"><p>A inclinação da reta orçamentária informa o valor de troca de mercado entre os dois bens: para se obter uma unidade adicional do bem <span class="math inline">\(1\)</span>, temos que abrir mão de <span class="math inline">\(−p_1/p_2\)</span> unidades do bem <span class="math inline">\(2\)</span>.</p></li>
-<li class="fragment"><p>A inclinação da reta orçamentária é, portanto, o <strong>custo de oportunidade</strong> do bem <span class="math inline">\(2\)</span> em termos do bem <span class="math inline">\(1\)</span>.</p></li>
+<li class="fragment"><p>A inclinação da reta orçamentária é, portanto, o <strong>custo de oportunidade</strong> do bem <span class="math inline">\(2\)</span> em termos do bem <span class="math inline">\(1\)</span>. Mantendo preços e renda constantes.</p></li>
 <li class="fragment"><p>Mostre que a inclinação da reta orçamentária (<span class="math inline">\(n = 2\)</span>) é igual a <span class="math inline">\(-p_1/p_2\)</span>.</p></li>
 </ul>
 </section>
@@ -545,79 +545,17 @@ Rafael Bressan
 <ul>
 <li class="fragment"><p>Considere o conjunto orçamentário definido em (a).</p></li>
 <li class="fragment"><p>O que ocorreria caso todos os preços e a renda aumentassem na mesma proporção <span class="math inline">\(\lambda\)</span>?</p></li>
-</ul>
-<p><span class="math inline">\((\lambda p_1) x_1 + (\lambda p_2) x_2 = \lambda I\)</span></p>
-<ul>
+<li class="fragment"><p><span class="math inline">\((\lambda p_1) x_1 + (\lambda p_2) x_2 = \lambda I\)</span></p></li>
 <li class="fragment"><p>Intuitivamente, se todos os preços da economia aumentam (ou diminuem) na mesma proporção, incluindo a renda, então, nada muda no universo de escolhas factíveis.</p></li>
 <li class="fragment"><p>Transformar um dos preços da economia em <strong>numerário</strong> (normalizar o preço de um bem em 1). Por exemplo, se adotamos o bem 1 como bem-numerário, temos:</p></li>
+<li class="fragment"><p><span class="math inline">\(x_1 + \frac{p_2}{p_1}x_2 = \frac{I}{p_1}.\)</span></p></li>
 </ul>
-<p><span class="math display">\[x_1 + \frac{p_2}{p_1}x_2 = \frac{I}{p_1}.\]</span></p>
-</section>
-<section id="não-linearidades" class="slide level2">
-<h2>Não-linearidades</h2>
-<p>O hiperplano orçamentário definido em (<span class="math inline">\(\ref{eq2}\)</span>) é linear. Neste caso, descreve um mercado sem custos de transação, racionamentos, alíquotas de impostos sobre a renda ou produtos, descontos por quantidade, pagamentos de hora-extra, etc.</p>
-</section>
-<section id="racionamento" class="slide level2">
-<h2>1. Racionamento</h2>
-<ul>
-<li class="fragment">Suponha uma economia com dois bens onde o governo decide racionar o consumo de um dos bens (sem perda de generalidade, o bem 1).</li>
-<li class="fragment">Cada consumidor pode adquirir, no máximo, <span class="math inline">\(\bar{x_1}\)</span> unidades do bem 1, ainda pagando o preço <span class="math inline">\(p_1\)</span> para qualquer <span class="math inline">\(x_1 \leq \bar{x_1}\)</span>.</li>
-<li class="fragment">Acima de <span class="math inline">\(\bar{x_1}\)</span>, o consumidor não pode mais adquirir este bem.</li>
-<li class="fragment">Duas situações são possíveis:</li>
-</ul>
-<p><span class="math display">\[\begin{cases}
-    \bar{x_1} \geq I/p_1, &amp; \quad \text{não há alterações na reta orçamentária} \\
-    \bar{x_1} \leq I/p_1, &amp; \quad \text{consumo normal até $\bar{x_1}$, a partir deste ponto não é mais possível consumir o bem 1.}
-\end{cases}\]</span></p>
-<ul>
-<li class="fragment">Neste caso, portanto, o conjunto orçamentário passa a ser:</li>
-</ul>
-<p><span class="math display">\[\mathcal{B}(\textbf{p}, I; \bar{x_1}) = \{x \in X| \textbf{p}\cdot \textbf{x} \leq I \quad \text{e} \quad x_1\leq \bar{x_1} \}.\]</span></p>
-<p>begin plot(Shape([(0,0), (5,0), (5,5), (0,10)]), fill=(0, 0.4, :darkorange), lw=0,label=:none) plot!([(0,10), (10,0)], ls=:dash, lw=1, lc=:black, label=:none) plot!([(0,10), (5,5), (5,0)], lw=2, lc=:black, label=“Reta orçamentária”) xlabel!(L”x_1”) ylabel!(L”x_2”) scatter!((2,4), marker=(50,0.4,:white), series_annotations = [text(L”(, I; {x_1})“, :center, 13)], label=:none) end</p>
-</section>
-<section id="taxação-por-nível-de-consumo" class="slide level2">
-<h2>2. Taxação por nível de consumo</h2>
-<ul>
-<li class="fragment">Certos bens possuem preços que variam de acordo com a quantidade consumida (e.g., energia elétrica, água).</li>
-<li class="fragment">Para um pequeno consumo de água, o governo cobra um preço menor por litro consumido que o preço cobrado para consumos maiores.</li>
-<li class="fragment">Motivação: evitar desperdícios, beneficiar a parcela mais pobre da população que tende a consumir menos água em média, etc.</li>
-<li class="fragment">Suponha, então, a seguinte situação:</li>
-</ul>
-<p><span class="math display">\[\begin{cases}
-    x_1 \in [0, \bar{x_1}], &amp; \quad \text{preço} \quad p_1, \\
-    x_1 \in (\bar{x_1}, +\infty), &amp; \quad \text{preço} \quad p_1^{'} &gt; p_1.
-\end{cases}\]</span></p>
-<p>begin plot(Shape([(0,0), (7.5,0), (5,5), (0,10)]), fill=(0, 0.4, :darkorange), lw=0,label=:none) plot!([(0,10), (5,5), (7.5,0)],lw=2,lc=:black,label=“Reta orçamentária”) plot!([(5,0), (5,5)], ls=:dash, lw=1, lc=:black, label=:none) xticks!([0, 5], [“0”, L”{x_1}“]) yticks!([0, 10], [”0”, L”“]) xlabel!(L”x_1”) ylabel!(L”x_2”) quiver!([2.5],[9.2],quiver=([0],[-1.5]), color=:black, lw=0.5, ls=:dash) annotate!([(2.5, 9.5, L”Inclinação = -“)]) quiver!([6.5],[4.7],quiver=([-0.5],[-1.5]), color=:black, lw=0.5, ls=:dash) annotate!([(6.5, 5, L”Inclinação = -“)]) end</p>
-<p><strong>Imposto sobre quantidade:</strong></p>
-<ul>
-<li class="fragment">Suponha que o consumidor tenha de pagar uma quantia <span class="math inline">\(t &gt; 0\)</span> por unidade adquirida do bem 1.</li>
-<li class="fragment">O preço efetivamente pago, portanto, é <span class="math inline">\(p_1 + t\)</span>.</li>
-<li class="fragment">Assim, a nova reta orçamentária é dada por: <span class="math inline">\((p_1 + t)x_1 + p_2x_2 = I\)</span>.</li>
-<li class="fragment">Note que a reta orçamentária torna-se mais íngreme. ”</li>
-</ul>
-<p>begin imposto = <span class="citation" data-cites="bind">@bind</span> t Slider(0:0.5:4, default = 0)</p>
-<pre><code>Imposto sobre quantidade ($t$) = $(imposto)</code></pre>
-<p>end</p>
-<p>begin m = 60 # renda preco1 = 4 # preço do bem 1 preco2 = 4 # preço do bem 2 plot(range(0, stop=15, length = 50), x -&gt; m/preco2 - preco1/preco2 * x, lc=:black, lw=2, label=L”t = 0”) plot!(range(0, stop=15, length = 50), x -&gt; m/preco2 - ((preco1 + t)/preco2) * x, lc=:darkorange, lw=2, ls=:dash, label=“t = $t”) ylims!(0.3, 15) xlabel!(L”x_1”) ylabel!(L”x_2”) xticks!([0, 15, m/(preco1 + t)], [“0”, L”“, L”“]) yticks!([0, m/preco2], [”0”, L”“]) end</p>
-</section>
-<section class="slide level2">
-
-<p><strong>Imposto <em>ad valorem</em>:</strong></p>
-<ul>
-<li class="fragment">Suponha que o consumidor tenha de pagar uma fração <span class="math inline">\(0 &lt; \tau &lt; 1\)</span> sobre o valor de compra do bem 1.</li>
-<li class="fragment">O preço efetivamente pago, portanto, é <span class="math inline">\((1 + \tau)p_1\)</span>.</li>
-<li class="fragment">Assim, a nova reta orçamentária é dada por: <span class="math inline">\((1 + \tau)p_1x_1 + p_2x_2 = I\)</span>.</li>
-<li class="fragment">Note que a reta orçamentária torna-se mais íngreme.</li>
-</ul>
-<p>begin taxa = <span class="citation" data-cites="bind">@bind</span> τ Slider(0:0.1:1, default = 0)</p>
-<pre><code>Imposto _ad valorem_: ($\tau$) = $(taxa)</code></pre>
-<p>end</p>
-<p>begin m0 = 60 # renda preco10 = 4 # preço do bem 1 preco20 = 4 # preço do bem 2 plot(range(0, stop=15, length = 50), x -&gt; m0/preco20 - preco10/preco20 * x, lc=:black, lw=2, label=L”= 0”) plot!(range(0, stop=15, length = 50), x -&gt; m0/preco20 - ((1 + τ)preco10)/preco20 * x, lc=:darkorange, lw=2, ls=:dash, label=L”” * ” = $(τ)“) ylims!(0.3, 15) xlabel!(L”x_1”) ylabel!(L”x_2”) xticks!([0, 15, m0/((1 + τ) * preco10)], [“0”, L”“, L”“]) yticks!([0, m0/preco20], [”0”, L”“]) end</p>
 </section>
 <section id="bibliografia" class="slide level2">
 <h2><span class="emoji" data-emoji="books">📚</span> Bibliografia</h2>
+<p>VARIAN, H. R. Microeconomia: uma abordagem moderna. 9.ed. Rio de Janeiro: Elsevier, 2015. Disponível em: <a href="https://app.minhabiblioteca.com.br/books/9788595155107">app.minhabiblioteca.com</a></p>
+<p>NICHOLSON, W.; SNYDER C. Teoria microeconômica: Princípios básicos e aplicações. Cengage Learning Brasil, 2019. Disponível em: <a href="https://app.minhabiblioteca.com.br/#/books/9788522127030/">app.minhabiblioteca.com</a></p>
 <p>JEHLE, G. A.; RENY, P. J. Advanced microeconomic theory. 3.ed. Pearson Education Limited, 2011.</p>
-<p>MAS-COLELL, A.; WHINSTON, M.D.; GREEN, J.R. Microeconomic Theory. New York, NY: Oxford University Press, 1995.</p>
 
 <img src="img/UdescEsag.jpeg" class="slide-logo r-stretch"><div class="footer footer-default">
 

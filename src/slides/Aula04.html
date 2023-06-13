@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="Aula04_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Aula04_files/libs/quarto-html/tabby.min.js"></script>
+<script src="Aula04_files/libs/quarto-html/popper.min.js"></script>
+<script src="Aula04_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="Aula04_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Aula04_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="Aula04_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="Aula04_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.3.353">
+
+  <meta name="author" content="Rafael Bressan">
+  <title>Preferências e Utilidade</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="Aula04_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="Aula04_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="Aula04_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="Aula04_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="Aula04_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="Aula04_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="Aula04_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="Aula04_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="Aula04_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-image="img/UdescEsag.jpeg" data-background-position="top left" data-background-size="50%" class="quarto-title-block center">
+  <h1 class="title">Preferências e Utilidade</h1>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Rafael Bressan 
+</div>
+</div>
+</div>
+
+</section>
+<section id="introdução" class="slide level2">
+<h2>Introdução</h2>
+<ul>
+<li class="fragment">Os processos econômicos são resultados das <strong>interações</strong> entre as decisões tomadas por inúmeros agentes econômicos</li>
+<li class="fragment">Teoria econômica deve basear-se em algum <strong>modelo</strong> que especifique o processo de <strong>tomada de decisão</strong> desses agentes (indivíduos, famílias, firmas ou governo)</li>
+<li class="fragment">Postulados acerca do comportamento dos agentes levou, naturalmente, ao desenvolvimento de modelos matemáticos que envolvem a maximização de alguma função objetivo que depende de vários fatores <sup>1</sup></li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Recentemente, novas teorias tem sido desenvolvidas baseadas em, por exemplo, <a href="https://plato.stanford.edu/entries/bounded-rationality"><em>racionalidade limitada</em></a> como alternativa ao <strong>modelo de escolha racional</strong>.</p></li></ol></aside></section>
+<section id="escolha-racional" class="slide level2">
+<h2>Escolha Racional</h2>
+<p>No entanto, a teoria da otimização e o <strong>modelo de escolha racional</strong> continuam sendo os pilares da análise econômica</p>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Modelo de escolha racional</strong></p>
+</div>
+<div class="callout-content">
+<p>Modelos de escolha racional consistem de dois elementos:</p>
+<ul>
+<li class="fragment"><p>Racionalidade individual: agentes econômicos tomam a <strong>melhor</strong> decisão dadas as oportunidades <strong>percebidas</strong></p></li>
+<li class="fragment"><p>Consistência mútua das ações: ações individuais são <strong>mutuamente consistentes</strong> (conhecimento comum de racionalidade e coordenação em um equilíbrio)</p></li>
+</ul>
+</div>
+</div>
+</div>
+<ul>
+<li class="fragment">Modelo de escolha racional = otimização + equilíbrio</li>
+</ul>
+</div>
+</section>
+<section id="escolha-racional-1" class="slide level2">
+<h2>Escolha Racional</h2>
+<p>O que a racionalidade individual implica?</p>
+<ul>
+<li class="fragment"><p><strong>Conhecimento do problema</strong>: tomador de decisão tem pleno conhecimento do problema de decisão com que se depara e do conjunto de alternativas do qual tem de escolher</p></li>
+<li class="fragment"><p><strong>Preferências claras</strong>: ordenamento completo sobre o conjunto completo de alternativas</p></li>
+<li class="fragment"><p><strong>Capacidade de otimizar</strong>: possui as habilidades necessárias para realizar quaisquer cálculos complicados necessários para encontrar sua trajetória ótima de ações. Sua habilidade de calcular é ilimitada e não comete erros</p></li>
+<li class="fragment"><p><strong>Indiferença a descrições logicamente equivalentes de alternativas e conjuntos escolhas</strong>: Substituir uma descrição de alternativas por outra que seja “logicamente equivalente” não afeta a escolha</p></li>
+</ul>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<blockquote>
+<p>Na aula anterior estudamos o problema da escassez que um consumidor está sujeito, vimos a definição do conjunto orçamentário Walrasiano</p>
+<p>Nosso objetivo, nas próximas aulas, é estudar o objetivo do consumidor</p>
+<p>A maximização deste objetivo, sujeita à restrição orçamentária, é conhecida como <strong>problema (primal) do consumidor</strong></p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<h3 id="preferências-do-consumidor">Preferências do consumidor</h3>
+<ul>
+<li class="fragment">Pressupomos que o consumidor seja capaz de ordenar as cestas de consumo do seu espaço de mercadorias de acordo com suas preferências, comparando-as em pares</li>
+<li class="fragment">Ou seja, para quaisquer duas cestas de consumo <span class="math inline">\(\textbf{x}\)</span> e <span class="math inline">\(\textbf{y}\)</span> diferentes, o consumidor é capaz de compará-las: ou <span class="math inline">\(\textbf{x}\)</span> é pelo menos tão boa quanto <span class="math inline">\(\textbf{y}\)</span>, ou <span class="math inline">\(\textbf{y}\)</span> é pelo menos tão boa quanto <span class="math inline">\(\textbf{x}\)</span></li>
+<li class="fragment">Chamamos essa relação de <strong>preferência</strong>, e a denotamos por <span class="math inline">\(\succeq\)</span></li>
+<li class="fragment">Tecnicamente, <span class="math inline">\(\succeq\)</span> é uma relação binária sobre o conjunto consumo</li>
+</ul>
+<p>!!! correct “Definição 4.1 (Preferência fraca, estrita e indiferença)” 1. <strong>Preferência fraca</strong>: se o consumidor afirma que <span class="math inline">\(\textbf{x} = (x_1, \dots, x_n)\)</span> é pelo menos tão boa quanto a cesta de consumo <span class="math inline">\(\textbf{y} = (y_1, \dots, y_n)\)</span>, dizemos que o consumidor <strong>prefere fracamente</strong> <span class="math inline">\(\textbf{x}\)</span> a <span class="math inline">\(\textbf{y}\)</span> e denotamos essa relação por <span class="math inline">\(\textbf{x} \succeq \textbf{y}\)</span></p>
+<pre><code>2. **Indiferença**: se $\textbf{x}$ é pelo menos tão boa quanto $\textbf{y}$, e $\textbf{y}$ é pelo menos tão boa quanto $\textbf{x}$, o consumidor mostra-se **indiferente** entre as duas cestas de consumo. Essa relação de _indiferença_ é denotada por $\textbf{x} \sim \textbf{y}$. Em síntese $\textbf{x} \sim \textbf{y} \Leftrightarrow ((\textbf{x} \succeq \textbf{y})\wedge (\textbf{y}\succeq\textbf{x}))$
+
+3. **Preferência estrita**: se $\textbf{x}$ é pelo menos tão boa quanto $\textbf{y}$, e não é o caso que $\textbf{y}$ seja pelo menos tão boa quanto $\textbf{x}$, dizemos que $\textbf{x}$ é **estritamente preferida** a $\textbf{y}$, denotado por $\textbf{x} \succ \textbf{y}$. Em síntese $\textbf{x} \succ \textbf{y} \Leftrightarrow ((\textbf{x} \succeq \textbf{y})\wedge \neg(\textbf{y}\succeq\textbf{x}))$</code></pre>
+<p>!!! correct “Definição 4.2 (Conjuntos derivados das preferências)” Para um dado <span class="math inline">\(\textbf{x} \in X\)</span>, podemos definir:</p>
+<pre><code>* Conjunto de cestas pelo menos tão boas quanto $\textbf{x}$: 
+
+$\succeq(\textbf{x}) \equiv \{\textbf{y} \in X: \textbf{y} \succeq \textbf{x}\}$
+
+* Conjunto de cestas que não são melhores $\textbf{x}$: 
+
+$\preceq(\textbf{x}) \equiv \{\textbf{y} \in X: \textbf{y} \preceq \textbf{x}\}$
+
+* Conjunto de cestas estritamente melhores que $\textbf{x}$: 
+
+$\succ(\textbf{x}) \equiv \{\textbf{y} \in X: \textbf{y} \succ \textbf{x}\}$
+
+* Conjunto de cestas estritamente preteridas a $\textbf{x}$: 
+
+$\prec(\textbf{x}) \equiv \{\textbf{y} \in X: \textbf{y} \prec \textbf{x}\}$
+
+* Conjunto de indiferença a $\textbf{x}$: 
+
+$\sim(\textbf{x}) \equiv \{\textbf{y} \in X: \textbf{y} \sim \textbf{x}\}$</code></pre>
+</section>
+<section id="axiomas-da-escolha-racional" class="slide level2">
+<h2>Axiomas da escolha racional</h2>
+<p>!!! danger “Axioma 1. Completeza” Para quaisquer cestas de consumo <span class="math inline">\(\textbf{x}\)</span> e <span class="math inline">\(\textbf{y}\)</span> do espaço de mercadorias, temos <span class="math inline">\(\textbf{x} \succeq \textbf{y}\)</span> ou <span class="math inline">\(\textbf{y} \succeq \textbf{x}\)</span> (ou ambos)</p>
+<ul>
+<li class="fragment">Consequentemente, os consumidores não são paralisados pela indecisão: eles conhecem todas as cestas de bens disponíveis e sempre são capazes de compará-las</li>
+</ul>
+<p>!!! danger “Axioma 2. Transitividade” Para quaisquer cestas de consumo <span class="math inline">\(\textbf{x}\)</span>, <span class="math inline">\(\textbf{y}\)</span> e <span class="math inline">\(\textbf{z}\)</span> do espaço de mercadorias, se <span class="math inline">\(\textbf{x} \succeq \textbf{y}\)</span> e <span class="math inline">\(\textbf{y} \succeq \textbf{z}\)</span>, então <span class="math inline">\(\textbf{x} \succeq \textbf{z}\)</span></p>
+<ul>
+<li class="fragment">As escolhas de um indivíduo são consistentes internamente</li>
+</ul>
+<p>!!! correct “Definição 4.3 (Racionalidade)” Seja <span class="math inline">\(\succeq\)</span> uma relação de preferências, <span class="math inline">\(\succeq\)</span> é dita <strong>racional</strong> se satisfaz os axiomas de completeza e transitividade</p>
+<p>Preferências hipotéticas que satisfazem hipóteses de racionalidade $(Resource(“https://raw.githubusercontent.com/pvfonseca/micro1/main/notas/figures/aula4_fig1.PNG”, :width=&gt;800))</p>
+<ul>
+<li class="fragment"><p>Neste caso, <span class="math inline">\(X = \mathbb{R}^2_+\)</span></p></li>
+<li class="fragment"><p>Axiomas 1 e 2 nos dizem que o consumidor deve colocar <em>qualquer</em> ponto de <span class="math inline">\(X\)</span> em alguma das três categorias mutuamente exclusivas, relativa a <span class="math inline">\(\textbf{x}^0\)</span>: para qualquer cesta de consumo <span class="math inline">\(\textbf{x}^0\)</span>, os três conjuntos <span class="math inline">\(\succ{\textbf{x}^0}, \prec{\textbf{x}^0}, \sim{\textbf{x}^0}\)</span> formam uma <em>partição</em> do conjunto consumo</p></li>
+</ul>
+<p>!!! warning “Contra-exemplos” * Nenhuma das duas hipóteses (completude e transitividade) é fraca * Contra-exemplos de preferências não-completas e não-transitivas na lousa * Ver <a href="https://en.wikipedia.org/wiki/Condorcet_paradox"><strong><code>paradoxo de Condorcet</code></strong></a></p>
+<ul>
+<li class="fragment">As preferências hipotéticas representadas na figura anterior podem parecer estranhas</li>
+<li class="fragment">Possuem apenas a estrutura mais limitada possível e, ainda assim, são inteiramente consistentes com os axiomas de racionalidade</li>
+<li class="fragment">Nenhuma das hipóteses, até agora, proíbe as ‘’irreguladidades’’ representadas</li>
+<li class="fragment">Estas irregularidades podem ser descartadas com a imposição de hipóteses adicionais sobre as preferências</li>
+</ul>
+<p>!!! danger “Axioma 3. Continuidade” Se um indivíduo afirma que <span class="math inline">\(\textbf{x} \succeq \textbf{y}\)</span>, então, cestas de consumo ‘’muito próximas’’ a <span class="math inline">\(\textbf{x}\)</span> também são fracamente preferidas a <span class="math inline">\(\textbf{y}\)</span>.</p>
+<pre><code>Formalmente, para quaisquer sequências de pares $\{\textbf{x}^n, \textbf{y}^n\}_{n=1}^\infty$, tais que $\textbf{x}^n \succeq \textbf{y}^n$ para qualquer $n \in \mathbb{N}$, $\textbf{x} = \lim_{n\to \infty}\textbf{x}^n$ e $\textbf{y} = \lim_{n\to \infty}\textbf{y}^n$, então, $\textbf{x} \succeq \textbf{y}$</code></pre>
+<ul>
+<li class="fragment">Se o axioma de continuidade é imposto, não haverá saltos ou mudanças bruscas nas preferências</li>
+</ul>
+<p>!!! warning “Preferências contínuas: contra-exemplo” <a href="https://en.wikipedia.org/wiki/Lexicographic_preferences"><strong><code>Preferências lexicográficas</code></strong></a> - ver <a href="https://www.planalto.gov.br/ccivil_03/leis/l4737compilado.htm#:~:text=LEI%20N%C2%BA%204.737,%20DE%2015%20DE%20JULHO%20DE%201965.&amp;text=Institui%20o%20C%C3%B3digo%20Eleitoral.,9%20de%20abril%20de%201964.">Código Eleitoral Brasileiro (Lei 4.737/65) - Art. 110</a></p>
+<p>!!! danger “Axioma 4. Monotonicidade” Dizemos que a relação de preferências <span class="math inline">\(\succeq\)</span> em <span class="math inline">\(X\)</span> é <em>monotônica</em> se <span class="math inline">\(\textbf{x}&gt;&gt;\textbf{y}\)</span> implica que <span class="math inline">\(\textbf{x} \succ \textbf{y}\)</span>.</p>
+<pre><code>A relação é *estritamente monotônica* se $\textbf{x} \geq \textbf{y}$ e $\textbf{x} \neq \textbf{y}$ implica que $\textbf{x} \succ \textbf{y}$.</code></pre>
+<ul>
+<li class="fragment">A hipótese de que as preferências são monotônicas é satisfeita desde que as mercadorias sejam <em>bens econômicos</em>, ao invés de <em>maus econômicos</em></li>
+<li class="fragment">Mesmo que uma mercadoria seja um mau econômico, podemos ter ainda preferências monótonas</li>
+<li class="fragment">Note que se <span class="math inline">\(\succeq\)</span> é monótona, podemos ser indiferentes com relação a um aumento na quantidade de algumas, mas não todas, mercadorias</li>
+<li class="fragment">Por outro lado, monotonicidade estrita diz que se <span class="math inline">\(\textbf{x}\)</span> é maior que <span class="math inline">\(\textbf{y}\)</span> para <em>algum</em> bem e não é menor para qualquer outra, então, <span class="math inline">\(\textbf{x}\)</span> é estritamente preferida a <span class="math inline">\(\textbf{y}\)</span></li>
+<li class="fragment">Preferências monotônicas indicam que o consumidor sempre prefere consumir mais a menos</li>
+</ul>
+<p>!!! danger “Axioma 5. Convexidade” Se <span class="math inline">\(\textbf{x}\)</span> e <span class="math inline">\(\textbf{y}\)</span> são cestas de consumo tais que <span class="math inline">\(\textbf{x} \sim \textbf{y}\)</span>, então <span class="math inline">\(\lambda\textbf{x} + (1-\lambda)\textbf{y} \succeq \textbf{x}\)</span>, <span class="math inline">\(\forall \lambda \in [0, 1]\)</span>.</p>
+<pre><code>Isto é, o consumidor prefere fracamente cestas de consumo mais balanceadas, ou seja, as médias são fracamente preferidas aos extremos.
+
+**Convexidade estrita**: se $\textbf{x}$ e $\textbf{y}$ são cestas de consumo tais que $\textbf{x} \sim \textbf{y}$, então $\lambda\textbf{x} + (1-\lambda)\textbf{y} \succ \textbf{x}$, $\forall \lambda \in (0, 1)$.
+
+Isto é, o consumidor prefere de maneira estrita cestas de consumo mais balanceadas, ou seja, as médias são estritamente preferidas aos extremos.</code></pre>
+</section>
+<section id="utilidade" class="slide level2">
+<h2>Utilidade</h2>
+<ul>
+<li class="fragment">Consumidores são caracterizados por suas preferências</li>
+<li class="fragment">No entanto, do ponto de vista prático, preferências nem sempre são fáceis de manusear e de se extrair inferências econômicas</li>
+<li class="fragment">Dados os axiomas de <strong>completeza, transitividade e continuidade</strong>, é possível demonstrar, formalmente, que as pessoas são capazes de rankear todas as situações possíveis da menos desejada para a mais desejada</li>
+<li class="fragment">Esse ranking, seguindo a terminologia introduzida no século XIX por Jeremy Bentham, é denominado <strong>utilidade</strong></li>
+</ul>
+<p>$(Resource(“https://upload.wikimedia.org/wikipedia/commons/c/c8/Jeremy_Bentham_by_Henry_William_Pickersgill_detail.jpg”, :width=&gt;300)) <a href="https://pt.wikipedia.org/wiki/Jeremy_Bentham">Jeremy Bentham (1748 - 1832)</a></p>
+<p>!!! correct “Definição 4.4 (Função utilidade)” Uma <strong>função utilidade</strong> é um modo de atribuir um número real a cada cesta de consumo, de maneira que se atribuam às cestas mais preferidas números mais altos do que os atribuídos às cestas menos preferidas.</p>
+<pre><code>Formalmente, é uma função $u: M \to \mathbb{R}$ representando a relação de preferência fraca $\succeq$ sobre o espaço de mercadorias $M$ se para quaisquer cestas de consumo $\textbf{x}$ e $\textbf{y}$ tem-se:
+
+$$\textbf{x} \succeq \textbf{y} \Leftrightarrow u(\textbf{x}) \geq u(\textbf{y})$$</code></pre>
+<h4 id="não-unicidade-da-função-utilidade">Não-unicidade da função utilidade</h4>
+<ul>
+<li class="fragment"><p>Note que a transformação monotônica positiva de uma função utilidade é uma função utilidade que representa a mesma ordenação de preferências da função utilidade original</p></li>
+<li class="fragment"><p>Formalmente, para qualquer transformação positiva <span class="math inline">\(f: \mathbb{R} \to \mathbb{R}\)</span>, a função composta <span class="math inline">\(v(\textbf{x}) = f(u(\textbf{x}))\)</span> é uma nova função utilidade representando a mesma relação de preferências da função utilidade original <span class="math inline">\(u: M \to \mathbb{R}\)</span></p></li>
+<li class="fragment"><p>Lembrando que uma função <span class="math inline">\(f: \mathbb{R} \to \mathbb{R}\)</span> é dita realizar uma <strong>transformação monotônica positiva</strong> se <span class="math inline">\(f(u_1) &gt; f(u_2)\)</span> sempre que <span class="math inline">\(u_1 &gt; u_2\)</span></p></li>
+<li class="fragment"><p>Ou seja, a função <span class="math inline">\(f(\bullet)\)</span> preserva a ordem dos números <span class="math inline">\(u_1\)</span> e <span class="math inline">\(u_2\)</span></p></li>
+<li class="fragment"><p>A não-unicidade da função utilidade implica que não faz sentido perguntar ‘’o quanto a cesta de consumo <span class="math inline">\(\textbf{x}\)</span> é preferível à cesta <span class="math inline">\(\textbf{y}\)</span>?’’</p></li>
+<li class="fragment"><p>Portanto, os rankings de utilidade são como os rankings de ordenação de restaurantes, hoteis ou filmes (uma, duas ou três estrelas)</p></li>
+<li class="fragment"><p>A não-unicidade também implica que <strong>não é possível comparar utilidades entre pessoas diferentes!!</strong></p></li>
+<li class="fragment"><p>De maneira similar, não é possível mensurar se uma mudança de uma situação <span class="math inline">\(\textbf{x}\)</span> para uma situação <span class="math inline">\(\textbf{y}\)</span> provê mais utilidade para uma pessoa ou para outra</p></li>
+</ul>
+<h4 id="ceteris-paribus"><em>Ceteris paribus</em></h4>
+<ul>
+<li class="fragment">Como a utilidade se refere à satisfação geral de um consumidor, essa medida é afetada por uma variedade de fatores</li>
+<li class="fragment">A utilidade de um consumidor é afetada não apenas pelo seu consumo de bens físicos ou serviços. Mas, também, por atitudes psicológicas, pressões sociais, experiências sociais e o ambiente cultural de maneira geral</li>
+<li class="fragment">Apesar de essas influências serem de interesse geral dos economistas, nesta disciplina focaremos exclusivamente nas escolhas entre opções quantificáveis, enquanto mantemos constante os outros fatores que influenciam o comportamento - <em>ceteris paribus</em></li>
+</ul>
+<h4 id="bens-econômicos">Bens econômicos</h4>
+<ul>
+<li class="fragment">Assumimos que as preferências de um indivíduo podem ser representadas por uma função utilidade da forma:</li>
+</ul>
+<p><span class="math inline">\(U(x_1, \dots, x_n) \tag{1}\)</span> onde <span class="math inline">\(x_1, \dots, x_n\)</span> são as quantidades de cada um dos <span class="math inline">\(n\)</span> bens ou serviços que podem ser consumidas em um período de tempo</p>
+<ul>
+<li class="fragment">Nessa representação, assumimos que as variáveis são <strong>bens econômicos</strong>. Isto é, quaisquer que sejam as quantidades que elas representem, assumimos que uma quantidade maior qualquer de um <span class="math inline">\(x_i\)</span> em particular, durante algum dado período, será preferida a menos</li>
+</ul>
+<p>Bens econômicos e implicação de monotonicidade $(Resource(“https://raw.githubusercontent.com/pvfonseca/micro1/main/notas/figures/aula4_fig2.PNG”, :width=&gt;800))</p>
+</section>
+<section id="curvas-de-indiferença-e-tms" class="slide level2">
+<h2>Curvas de indiferença e TMS</h2>
+<ul>
+<li class="fragment">A maioria das atividades econômicas envolvem trocas voluntárias entre indivíduos</li>
+<li class="fragment">Essas trocas voluntárias podem ser melhor estudadas utilizando o conceito de <strong>curvas de indiferença</strong></li>
+</ul>
+<p>!!! correct “Definição 4.5 (Curvas de indiferença)” Uma <strong>curva (superfície) de indiferença</strong> representa um conjunto de cestas de consumo indiferentes entre si. Ou seja, contém todas as combinações de consumo que dão o mesmo nível de satisfação ao indivíduo.</p>
+<pre><code>Formalmente, como já vimos, a curva ou superfície de indiferença de um bem $\textbf{x}$ qualquer, em termos de preferências, é dada por:
+
+$$\sim(\textbf{x}) \equiv \{\textbf{y}\in\mathbb{R}_+^n| \mathbb{y}\sim\mathbb{x}\}$$
+
+Em termos de função utilidade:
+
+$$\sim(\textbf{x}) \equiv \{\mathbb{y}\in \mathbb{R}_+^n| u(\mathbb{y}) = \bar{u}, \text{ onde } u(\textbf{x}) = \bar{u}\}$$</code></pre>
+<p>Curvas de indiferença: representação gráfica</p>
+<p>begin<br>
+x1 = range(0, 15, length=200)<br>
+contour(x1, x1, (x, y)-&gt; x^0.5*y^0.5, c=:bone_1, legend=:none, levels = [1, 2, 3, 4, 5, 6, 7, 8], clabels=true) vline!([0], lw=0.5, lc=:black, label=:none) hline!([0], lw=0.5, lc=:black, label=:none) end</p>
+<p>!!! info “Curvas de indiferença: propriedades” 1. Implicação do axioma da <strong>transitividade</strong>: curvas de indiferença que representam níveis distintos de utilidade <strong>não</strong> podem se cruzar, ou seja, se <span class="math inline">\(\textbf{x} \succ \textbf{y}\)</span>, então <span class="math inline">\(\sim(\textbf{x})\cap\sim(\textbf{y}) = \emptyset\)</span></p>
+<pre><code>2. Implicação do axioma da **monotonicidade**: curvas de indiferença são negativamente inclinadas
+
+3. Implicação do axioma da **convexidade estrita**: para qualquer cesta de consumo $\textbf{x}$ do espaço de mercadorias, o conjunto fracamente preferido $\succeq(\textbf{x})$ é **convexo**</code></pre>
+<p>!!! warning “Conjunto convexo” Lembrando que um conjunto qualquer <span class="math inline">\(S\)</span> é dito <strong>convexo</strong> se para quaisquer <span class="math inline">\(x, y \in S\)</span> temos <span class="math inline">\(\lambda x + (1-\lambda)y \in S\)</span>, para todo <span class="math inline">\(\lambda\in[0,1]\)</span>.</p>
+<pre><code>Essa definição é equivalente a assumir que a função utilidade é **quasi-côncava**.</code></pre>
+<p>Implicação do axioma de transitividade $(Resource(“https://raw.githubusercontent.com/pvfonseca/micro1/main/notas/figures/aula4_fig3.PNG”, :width=&gt;800))</p>
+<p>Implicação do axioma de convexidade estrita $(Resource(“https://raw.githubusercontent.com/pvfonseca/micro1/main/notas/figures/aula4_fig4.PNG”, :width=&gt;800))</p>
+<h4 id="taxa-marginal-de-substituição">Taxa marginal de substituição</h4>
+<ul>
+<li class="fragment"><p>A inclinação da curva de indiferença, pelo axioma da monotonicidade, é negativa</p></li>
+<li class="fragment"><p>Portanto, se um indivíduo é forçado a abrir mão de uma certa quantidade do bem <span class="math inline">\(y\)</span>, ele deve ser recompensado por uma certa quantidade de <span class="math inline">\(x\)</span> para manter-se indiferente entre as duas cestas de consumo</p></li>
+</ul>
+<p>!!! correct “Definição 4.6 (Taxa marginal de substituição)” A <strong>taxa marginal de substituição (TMS)</strong> mede a taxa à qual o indivíduo está propenso a substituir um bem por outro.</p>
+<pre><code>Mais precisamente, a TMS de $y$ por $x$, $\text{TMS}_{x,y}$, é o negativo da inclinação de uma curva de indiferença $U_1$ em um determinado ponto:
+
+$$\text{TMS}_{x, y} \equiv - \left.\frac{dy}{dx}\right|_{U=U_1}\tag{2}$$
+
+onde a notação indica que a inclinação é calculada ao longo da curva de indiferença $U_1$.</code></pre>
+<p>!!! info “Taxa marginal de substituição: propriedades” 1. Pelo axioma de <strong>monotonicidade</strong>, as curvas de indiferença são negativamente inclinadas. Portanto, a TMS assim definida é sempre um número positivo. Ou seja, o consumidor só se mantém indiferente se a redução de consumo de um bem for compensada pelo aumento no consumo de outro bem.</p>
+<pre><code>2. Pelo axioma da **convexidade estrita**, vimos que o conjunto fracamente preferido $\succeq(\textbf{x})$ é convexo. Isso é equivalente a dizer que a **taxa marginal de substituição é decrescente**. Ou seja, a taxa à qual um indivíduo com preferências estritamente convexas deseja trocar um bem $x$ por $y$ diminui à medida que aumentamos a quantidade do bem $y$.</code></pre>
+<blockquote>
+<p>Suponha que um indivíduo derive utilidade do consumo de dois bens <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span>. E que suas preferências sejam representadas pela seguinte função utilidade:</p>
+<p><span class="math display">\[U(x,y) = \sqrt{xy}\]</span></p>
+<ol type="1">
+<li class="fragment"><p>Calcule a taxa marginal de substituição para este indivíduo.</p></li>
+<li class="fragment"><p>Qual é a taxa marginal de substituição de <span class="math inline">\(y\)</span> por <span class="math inline">\(x\)</span> no ponto (5,20)? E no ponto (20,5)? Como interpretar os resultados economicamente?</p></li>
+<li class="fragment"><p>Mostre que a taxa marginal de substituição é decrescente.</p></li>
+<li class="fragment"><p>Mostre que uma cesta de consumo balanceada é preferível.</p></li>
+</ol>
+</blockquote>
+<h4 id="utilidade-e-tms">Utilidade e TMS</h4>
+<ul>
+<li class="fragment">Suponha que um indivíduo derive utilidade do consumo de dois bens cujas quantidades são dadas por <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span></li>
+<li class="fragment">As preferências desse consumidor são representadas pela função utilidade <span class="math inline">\(U(x,y)\)</span></li>
+<li class="fragment">As combinações de <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> que dão um nível determinado de utilidade a esse agente de <span class="math inline">\(k\)</span> são representadas pelas soluções da função implícita <span class="math display">\[U(x,y) = k\]</span></li>
+<li class="fragment">Tomando o diferencial total da expressão anterior, obtemos: <span class="math display">\[U_x dx + U_y dy = 1dk\]</span></li>
+<li class="fragment">Note que <span class="math inline">\(U_x \equiv \frac{\partial U(x,y)}{\partial x}\)</span> e <span class="math inline">\(U_y \equiv \frac{\partial U(x,y)}{\partial y}\)</span> medem o acréscimo na utilidade devido a um aumento marginal no consumo de um bem - <strong>utilidades marginais</strong> dos bens <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span></li>
+<li class="fragment">Como estamos interessados nas mudanças feitas em <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> de forma a manter o nível de satisfação constante, então, <span class="math inline">\(dk = 0\)</span>. Portanto: <span class="math display">\[U_x dx + U_y dy = 0\]</span></li>
+<li class="fragment">Logo, temos que: <span class="math display">\[\text{TMS}_{x, y} = -\left.\frac{dy}{dx}\right|_{U(x,y) = k} = \frac{U_x}{U_y}\tag{3}\]</span></li>
+</ul>
+<blockquote>
+<p><strong>Exercício</strong>. Calcule a taxa marginal de substituição das seguintes funções utilidade e verifique se as curvas de indiferença são convexas:</p>
+<ol type="1">
+<li class="fragment"><p><span class="math inline">\(U(x,y) = \sqrt{xy}\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(U(x,y) = x + xy + y\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(U(x,y) = \sqrt{x^2 + y^2}\)</span></p></li>
+</ol>
+</blockquote>
+<p>begin<br>
+ex1 = range(0, 15, length=200)<br>
+contour(ex1, ex1, (x, y)-&gt; x^0.5*y^0.5, c=:bone_1, legend=:none, levels = [2, 3, 4, 5], clabels=true, title=L”U(x,y)=“) vline!([0], lw=0.5, lc=:black, label=:none) hline!([0], lw=0.5, lc=:black, label=:none) end</p>
+<p>begin<br>
+ex2 = range(0, 5, length=200)<br>
+contour(ex2, ex2, (x, y)-&gt; x + x*y + y, c=:bone_1, legend=:none, levels = [6, 8, 10, 12, 14], clabels=true, title=L”U(x,y)=x + xy + y”) vline!([0], lw=0.5, lc=:black, label=:none) hline!([0], lw=0.5, lc=:black, label=:none) end</p>
+<p>begin<br>
+ex3 = range(0, 15, length=200)<br>
+contour(ex3, ex3, (x, y)-&gt; sqrt(x<sup>2+y</sup>2), c=:bone_1, legend=:none, levels = [6, 8, 10, 12, 14], clabels=true, title=L”U(x,y)=“) vline!([0], lw=0.5, lc=:black, label=:none) hline!([0], lw=0.5, lc=:black, label=:none) end</p>
+</section>
+<section id="funções-utilidade-para-preferências-específicas" class="slide level2">
+<h2>Funções utilidade para preferências específicas</h2>
+<h3 id="função-cobb-douglas">Função Cobb-Douglas</h3>
+<p>!!! info “Função Cobb-Douglas” Em 1928, <a href="https://en.wikipedia.org/wiki/Charles_Cobb_(economist)">Charles Cobb</a> e <a href="https://en.wikipedia.org/wiki/Paul_Douglas">Paul Douglas</a> modelaram o crescimento da economia norte-americana de 1899-1922.</p>
+<pre><code>Supondo uma função de produção do tipo:
+
+$$F(K, L) = A K^{\alpha}L^{1-\alpha}$$
+
+Por MQO, Cobb e Douglas estimaram a seguinte função de produção para a economia dos EUA no período amostral:
+
+$$F(K, L) = 1,01 K^{0,25}L^{0,75}$$</code></pre>
+<ul>
+<li class="fragment">Para o caso da teoria do consumidor, a função utilidade do tipo Cobb-Douglas apresenta a seguinte forma funcional:</li>
+</ul>
+<p><span class="math display">\[U(x,y) = x^\alpha y^\beta, \qquad 0&lt;\alpha,\beta&lt;1\tag{4}\]</span></p>
+<ul>
+<li class="fragment"><p>De maneira geral, os parâmetros <span class="math inline">\(\alpha\)</span> e <span class="math inline">\(\beta\)</span> representam a importância relativa dos bens para este indivíduo</p></li>
+<li class="fragment"><p>Normalmente, é conveniente normalizar os parâmetros de forma com que <span class="math inline">\(\alpha + \beta = 1\)</span>. Neste caso, a função utilidade seria dada por:</p></li>
+</ul>
+<p><span class="math display">\[U(x,y) = x^\delta y^{1-\delta},\tag{5}\]</span> onde <span class="math inline">\(\delta = \frac{\alpha}{\alpha + \beta}\)</span> e <span class="math inline">\(1-\delta = \frac{\beta}{\alpha + \beta}\)</span>.</p>
+<ul>
+<li class="fragment">Preferências estritamente convexas e estritamente monotônicas</li>
+</ul>
+<p>begin cobb_delta = <span class="citation" data-cites="bind">@bind</span> δ Slider(0.01:0.1:0.99, default=0.5)</p>
+<pre><code>Parâmetro $\delta$: $(cobb_delta)</code></pre>
+<p>end</p>
+<p>begin<br>
+cobb_x = range(0, 50, length=200)<br>
+cobb_plot = <span class="citation" data-cites="layout">@layout [a b]</span> cobb1 = surface( cobb_x, cobb_x, (x, y)-&gt; x^δ * y^(1-δ), c=:bone_1, legend=:none, nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(40,20) ) cobb2 = contour(cobb_x, cobb_x, (x, y)-&gt; x^δ * y^(1-δ), c=:bone_1, legend=:none, levels = [10, 14, 18, 20, 24], clabels=true)<br>
+plot(cobb1, cobb2, layout = cobb_plot)<br>
+end</p>
+<h3 id="bens-substitutos">Bens substitutos</h3>
+<ul>
+<li class="fragment">A função utilidade para o caso de bens substitutos é dada por: <span class="math display">\[U(x,y) = \alpha x + \beta y, \qquad \alpha, \beta&gt;0\tag{6}\]</span></li>
+<li class="fragment">Neste caso, as curvas de indiferença são lineares</li>
+<li class="fragment">A linearidade das curvas de indiferença motiva a denominação de bens substitutos para descrever a relação entre <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span></li>
+<li class="fragment">Uma pessoa com esse tipo de preferências está disposta a abrir mão da mesma quantidade do bem <span class="math inline">\(y\)</span> para adquirir uma unidade adicional de <span class="math inline">\(x\)</span>, não importa quanto de <span class="math inline">\(x\)</span> esteja sendo consumido</li>
+<li class="fragment"><span class="emoji" data-emoji="warning">⚠️</span> Note que, neste caso, a TMS é constante e o princípio de taxa marginal de substituição decrescente não se aplica</li>
+<li class="fragment">Preferências são convexas (mas não estritamente convexas) e fortemente monótonas</li>
+</ul>
+<p>begin<br>
+sub_x = range(0, 5, length=100) sub_plot = <span class="citation" data-cites="layout">@layout [a b]</span> sub1 = surface( sub_x, sub_x, (x, y)-&gt; x + y, c=:thermal, legend=:none, nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(40,30,30) ) sub2 = contour(sub_x, sub_x, (x, y)-&gt; x + y, c=:thermal, legend=:none, levels = [2, 3, 4, 5, 6, 7, 8, 9, 10], clabels=true, fill=false) plot(sub1, sub2, layout = sub_plot) end</p>
+<h3 id="bens-complementares">Bens complementares</h3>
+<ul>
+<li class="fragment">Uma situação oposta à de bens substitutos é ilustrada para o caso de bens complementares, cuja função utilidade é da forma: <span class="math display">\[U(x,y) = \min\{\alpha x, \beta y\}, \qquad \alpha, \beta&gt;0\tag{7}\]</span></li>
+<li class="fragment">Neste caso, as curvas de indiferença tem um formato de L e a razão da quantidade consumida de <span class="math inline">\(y\)</span> com relação ao bem <span class="math inline">\(x\)</span> é constante e igual a: <span class="math display">\[\frac{y}{x} = \frac{\alpha}{\beta}\]</span></li>
+<li class="fragment">Indicando que nenhum dos bens especificados na função utilidade será consumido de maneira supérflua quando <span class="math inline">\(\alpha x = \beta y\)</span></li>
+<li class="fragment">Preferências são convexas (mas não estritamente convexas) e fracamente monótonas</li>
+<li class="fragment">TMS não existe na quina, é infinita acima da quina ou zero à direita da quina</li>
+</ul>
+<p>begin<br>
+comp_x = range(0, 5, length=100)<br>
+comp_plot = <span class="citation" data-cites="layout">@layout [a b]</span> comp1 = surface( comp_x, comp_x, (x, y)-&gt; min(x,y), c=:roma, legend=:none, nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(45,45) ) comp2 = contour(comp_x, comp_x, (x, y)-&gt; min(x,y), c=:bone, legend=:none, levels = 8, clabels=false, fill=true, alpha=0.4)<br>
+plot(comp1, comp2, layout = comp_plot)<br>
+end</p>
+<h3 id="função-de-elasticidade-de-substituição-constante-ces">Função de elasticidade de substituição constante (CES)</h3>
+<ul>
+<li class="fragment">Um problema com as funções utilidade supracitadas é que assumem curvas de indiferença com formas pré-definidas</li>
+<li class="fragment">Uma função utilidade que permite vários formatos distintos é a função utilidade de <strong>elasticidade de substituição constante (CES)</strong>: <span class="math display">\[U(x,y) = \left[x^\delta + y^\delta\right]^{\frac{1}{\delta}}, \qquad \delta \leq 1, \quad \delta\neq 0\tag{8}\]</span></li>
+<li class="fragment">Essa função incorpora as três vistas anteriormente:
+<ul>
+<li class="fragment">Se <span class="math inline">\(\delta = 1\)</span>, temos o caso de bens substitutos perfeitos</li>
+<li class="fragment">Se <span class="math inline">\(\delta \to 0\)</span>, a CES tende a uma função do tipo Cobb-Douglas</li>
+<li class="fragment">Se <span class="math inline">\(\delta \to -\infty\)</span>, a CES tende ao caso de complementares perfeitos</li>
+</ul></li>
+<li class="fragment">Podemos fazer uma transformação monotônica <span class="math inline">\(U^* = U^\delta/\delta\)</span> e obter uma forma mais tratével: <span class="math display">\[U(x,y) = \frac{x^\delta}{\delta} + \frac{y^\delta}{\delta}\]</span></li>
+</ul>
+<p>begin<br>
+ces_δ1 = 1 ces_x = range(0, 5, length=100) ces_plot = <span class="citation" data-cites="layout">@layout [a b]</span> ces1 = surface( ces_x, ces_x, (x, y)-&gt; x^ces_δ1/ces_δ1 + y^ces_δ1/ces_δ1, c=:roma, legend=:none, nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(45,45) ) ces2 = contour(ces_x, ces_x, (x, y)-&gt; x^ces_δ1/ces_δ1 + y^ces_δ1, c=:bone, legend=:none, levels = 8, clabels=false, fill=true, alpha=0.3)<br>
+plot(ces1, ces2, layout = ces_plot, title=L”δ = 1”) end</p>
+<p>begin<br>
+ces_cobb = 0.1 ces_xcobb = range(0, 5, length=45)<br>
+ces_plotcobb = <span class="citation" data-cites="layout">@layout [a b]</span> ces1cobb = surface( ces_xcobb, ces_xcobb, (x, y)-&gt; (x^ces_cobb + y<sup>ces_cobb)</sup>(1/ces_cobb), c=:roma, legend=:none, nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(45,30) ) ces2cobb = contour(ces_xcobb, ces_xcobb, (x, y)-&gt; (x^ces_cobb + y<sup>ces_cobb)</sup>(1/ces_cobb), c=:thermal, legend=:none, levels = 10, clabels=false, fill=true, alpha=0.4)<br>
+plot(ces1cobb, ces2cobb, layout = ces_plotcobb, title=L”δ = 0.1”)<br>
+end</p>
+<p>begin<br>
+ces_l = -50 ces_xl = range(0, 5, length=100)<br>
+ces_plotl = <span class="citation" data-cites="layout">@layout [a b]</span> ces1l = surface( ces_xl, ces_xl, (x, y)-&gt; (x^ces_l + y<sup>ces_l)</sup>(1/ces_l), c=:roma, legend=:none, nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(45,45) ) ces2l = contour(ces_xl, ces_xl, (x, y)-&gt; (x^ces_l + y<sup>ces_l)</sup>(1/ces_l), c=:bone, legend=:none, levels = 10, clabels=false, fill=true, alpha=0.4)<br>
+plot(ces1l, ces2l, layout = ces_plotl, title=L”δ = -50”)<br>
+end</p>
+<h3 id="função-quasi-linear">Função quasi-linear</h3>
+<ul>
+<li class="fragment">Uma função utilidade quasi-linear é definida pela seguinte forma funcional: <span class="math display">\[U(x, y) =  v(x) + y\]</span></li>
+<li class="fragment">Abaixo ilustramos o gráfico e as curvas de indiferença associadas a função utilidade quasi-linear com a seguinte forma funcional específica: <span class="math display">\[U(x, y) = \ln(1 + x) + y\]</span></li>
+</ul>
+<p>begin<br>
+ql_x = range(0, 5, length=100)<br>
+ql_plotl = <span class="citation" data-cites="layout">@layout [a b]</span> ql = surface( ql_x, ql_x, (x, y)-&gt; log(1 + x) + y, c=:roma, legend=:none, nx=50, ny=50, display_option=Plots.GR.OPTION_SHADED_MESH, camera=(45,30) ) ql2 = contour(ql_x, ql_x, (x, y)-&gt; log(1+x) + y, c=:bone, legend=:none, levels = 10, clabels=false, fill=true, alpha=0.4)<br>
+plot(ql, ql2, layout = ql_plotl)<br>
+end</p>
+</section>
+<section id="preferências-homotéticas-e-não-homotéticas" class="slide level2">
+<h2>Preferências homotéticas e não-homotéticas</h2>
+<ul>
+<li class="fragment">Uma função utilidade é <strong>homotética</strong> se sua taxa marginal de substituição depende apenas da <em>razão</em> entre as quantidades de bens, e não de suas quantidades totais</li>
+<li class="fragment">A importância de funções utilidade homotéticas é que suas curvas de indiferença são similares</li>
+<li class="fragment">A inclinação das curvas depende apenas da razão entre os bens, e não do quão distante as curvas estão da origem</li>
+<li class="fragment">As curvas de indiferença associadas a utilidades mais altas são cópias das de utilidades mais baixas</li>
+<li class="fragment">Portanto, podemos estudar o comportamento de um indivíduo que tenha preferências homotéticas olhando apenas uma curva de indiferença (ou um número pequeno)</li>
+<li class="fragment">Sem nos preocupar que o resultado altere drasticamente para diferentes níveis de utilidade</li>
+</ul>
+<blockquote>
+<ol type="1">
+<li class="fragment">Mostre que as quatro funções utilidade estudadas anteriormente exibem preferências homotéticas:</li>
+</ol>
+<!-- -->
+<ol type="a">
+<li class="fragment"><p>Função Cobb-Douglas</p></li>
+<li class="fragment"><p>Bens substitutos</p></li>
+<li class="fragment"><p>Bens complementares</p></li>
+<li class="fragment"><p>Função de elasticidade de substituição constante</p></li>
+</ol>
+</blockquote>
+<p>!!! hint “Respostas” (a) Função Cobb-Douglas: <span class="math inline">\(U(x,y) = x^\alpha y^\beta\)</span></p>
+<pre><code>$$\text{TMS} = \frac{\alpha y}{\beta x}$$
+
+(b) Bens substitutos: $U(x,y) = \alpha x + \beta y$
+
+$$\text{TMS} = \frac{\alpha}{\beta}$$
+
+(c) Bens complementares: $U(x,y) = \min\{\alpha x + \beta y\}$
+
+$$\text{TMS} = \begin{cases} \infty, &amp;\quad&amp; \alpha x&lt; \beta y \\ \text{indefinida}, &amp;\quad&amp; \alpha x = \beta y \\ 0, &amp;\quad&amp; \alpha x &gt; \beta y\end{cases}$$
+
+(d) Função CES: $U(x,y) = \left[x^\delta + y^\delta\right]^{\frac{1}{\delta}}$
+
+$$\text{TMS} = \left(\frac{y}{x}\right)^{1-\delta}$$</code></pre>
+<blockquote>
+<ol start="2" type="1">
+<li class="fragment">Mostre que a função utilidade quasi-linear abaixo não exibe preferências homotéticas:</li>
+</ol>
+<p><span class="math display">\[U(x,y) = x + \ln y\]</span></p>
+</blockquote>
+<p>!!! hint “Resposta” <span class="math display">\[\text{TMS} = y\]</span></p>
+<p>begin<br>
+q_linear = range(0, 20, length=100) contour(q_linear, q_linear, (x, y)-&gt; x + log(y), c=:roma, legend=:none, levels = 10, clabels=false, title=L”U(x,y) = x + y”, fill=true, alpha=0.4)<br>
+end</p>
+<ul>
+<li class="fragment">Note que no caso da função utilidade quasi-linear, a TMS diminui à medida que a quantidade escolhida de <span class="math inline">\(y\)</span> diminui, mas é independente da quantidade consumida de <span class="math inline">\(x\)</span></li>
+<li class="fragment">Como <span class="math inline">\(x\)</span> tem uma utilidade marginal constante, a disposição de um indivíduo a abrir mão de <span class="math inline">\(y\)</span> para adquirir uma unidade adicional de <span class="math inline">\(x\)</span> depende, apenas, do quanto de <span class="math inline">\(y\)</span> possui</li>
+<li class="fragment">Ao contrário do caso homotético, quando as quantidades de <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> dobram, a TMS também dobra (ao invés de permanecer invariante)</li>
+</ul>
+</section>
+<section id="superfície-de-indiferença" class="slide level2">
+<h2>Superfície de indiferença</h2>
+<ul>
+<li class="fragment">Se o indivíduo deriva utilidade do consumo de <span class="math inline">\(n\)</span> bens, sua função utilidade por ser representada como: <span class="math display">\[U(x_1, \dots, x_n)\]</span></li>
+<li class="fragment">Portanto, a equação: <span class="math display">\[U(x_1, \dots, x_n) = k,\]</span> neste caso, define uma <strong>superfície de indiferença</strong> <span class="math inline">\(n\)</span>-dimensional</li>
+<li class="fragment">Continuaremos assumindo que a superfície de indiferença é convexa</li>
+<li class="fragment">Isto é, cestas de consumo mais balanceadas são preferíveis às cestas não-balanceadas</li>
+<li class="fragment">Portanto, assume-se que a função utilidade é quasi-côncava</li>
+<li class="fragment">Podemos estudar as trocas voluntárias que um indivíduo esteja disposto a fazer entre dois bens quaisquer (<span class="math inline">\(x_1\)</span> e <span class="math inline">\(x_2\)</span>) usando o teorema da função implícita para obter a TMS: <span class="math display">\[\text{TMS}_{x_1, x_2} = -\left.\frac{dx_2}{dx_1}\right|_{U(x_1, \dots, x_n) = k} = \frac{U_1(x_1, \dots, x_n)}{U_2(x_1, \dots, x_n)}\]</span></li>
+<li class="fragment">A disposição de um indivíduo em trocar <span class="math inline">\(x_2\)</span> por <span class="math inline">\(x_1\)</span> depende não só da quantidade desses bens mas, também, das quantidades de todos os outros bens</li>
+</ul>
+</section>
+<section id="bibliografia" class="slide level2">
+<h2><span class="emoji" data-emoji="books">📚</span> Bibliografia</h2>
+<p>VARIAN, H. R. Microeconomia: uma abordagem moderna. 9.ed. Rio de Janeiro: Elsevier, 2015.</p>
+<p>NICHOLSON, W.; SNYDER C. Teoria microeconômica: Princípios básicos e aplicações. Cengage Learning Brasil, 2019.</p>
+<p>JEHLE, G. A.; RENY, P. J. Advanced microeconomic theory. 3.ed. Pearson Education Limited, 2011.</p>
+
+<img src="img/UdescEsag.jpeg" class="slide-logo r-stretch"><div class="footer footer-default">
+
+</div>
+</section>
+
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="Aula04_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="Aula04_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="Aula04_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="Aula04_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="Aula04_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="Aula04_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="Aula04_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="Aula04_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="Aula04_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="Aula04_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="Aula04_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

@@ -1,10 +1,11 @@
 ---
 title: "Conceitos Iniciais"
 title-slide-attributes:
-  data-background-image: http://econtutorials.com/wp-content/uploads/2015/03/udemy-image-1.jpg
-  data-background-size: contain
-  data-background-opacity: "0.7"
-center-title-slide: false
+  data-background-image: "img/UdescEsag.jpeg"
+  data-background-size: 50%
+  data-background-position: top left
+  # data-background-opacity: "0.7"
+center-title-slide: true
 author: "Rafael Bressan"
 logo: "img/UdescEsag.jpeg"
 format: 
@@ -219,25 +220,25 @@ $$p_1 \Delta x_1 + p_2 \Delta x_2 = 0 \Rightarrow \frac{\Delta x_2}{\Delta x_1} 
 
 ## 
 
-<iframe src="https://rfbressan.shinyapps.io/reta_orcamentaria/" style="border: 0px solid #AAA; width: 100%; height: 100%"></iframe>
+<iframe src="https://rfbressan.shinyapps.io/reta_orcamentaria/" style="border: 0px solid #AAA; width: 100%; height: 100%">
 
-- Qual o efeito sobre o conjunto orçamentário quando os preços unitários e a renda variam?
+</iframe>
 
+-   Qual o efeito sobre o conjunto orçamentário quando os preços unitários e a renda variam?
 
 ## Restrição Orçamentária
 
-- Considere o conjunto orçamentário definido em (a).
+-   Considere o conjunto orçamentário definido em (a).
 
-- O que ocorreria caso todos os preços e a renda aumentassem na mesma proporção $\lambda$?
+-   O que ocorreria caso todos os preços e a renda aumentassem na mesma proporção $\lambda$?
 
-- $(\lambda p_1) x_1 + (\lambda p_2) x_2 = \lambda I$
+-   $(\lambda p_1) x_1 + (\lambda p_2) x_2 = \lambda I$
 
-- Intuitivamente, se todos os preços da economia aumentam (ou diminuem) na mesma proporção, incluindo a renda, então, nada muda no universo de escolhas factíveis.
+-   Intuitivamente, se todos os preços da economia aumentam (ou diminuem) na mesma proporção, incluindo a renda, então, nada muda no universo de escolhas factíveis.
 
-- Transformar um dos preços da economia em **numerário** (normalizar o preço de um bem em 1). Por exemplo, se adotamos o bem 1 como bem-numerário, temos:
+-   Transformar um dos preços da economia em **numerário** (normalizar o preço de um bem em 1). Por exemplo, se adotamos o bem 1 como bem-numerário, temos:
 
-- $x_1 + \frac{p_2}{p_1}x_2 = \frac{I}{p_1}.$
-
+-   $x_1 + \frac{p_2}{p_1}x_2 = \frac{I}{p_1}.$
 
 ## :books: Bibliografia
 
@@ -246,4 +247,3 @@ VARIAN, H. R. Microeconomia: uma abordagem moderna. 9.ed. Rio de Janeiro: Elsevi
 NICHOLSON, W.; SNYDER C. Teoria microeconômica: Princípios básicos e aplicações. Cengage Learning Brasil, 2019. Disponível em: [app.minhabiblioteca.com](https://app.minhabiblioteca.com.br/#/books/9788522127030/)
 
 JEHLE, G. A.; RENY, P. J. Advanced microeconomic theory. 3.ed. Pearson Education Limited, 2011.
-
