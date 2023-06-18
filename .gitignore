@@ -216,3 +216,5 @@ TSWLatexianTemp*
 .Rproj.user
 .Rhistory
 micro1.Rproj
+micro1/
+.vscode

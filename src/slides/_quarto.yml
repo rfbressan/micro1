@@ -1,0 +1,9 @@
+project:
+  title: "Slides"
+crossref:
+  fig-title: Figura
+  tbl-title: Tabela
+  fig-prefix: Figura
+  tbl-prefix: Tabela
+  eq-prefix: Equação
+

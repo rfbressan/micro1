@@ -18,9 +18,16 @@ format:
     height: 900
 from: markdown+emoji # list of emojis: https://gist.github.com/rxaviers/7360908
 fontsize: "2.2em"
-editor: visual
+editor: source
 jupyter: python3
 ---
+
+```{python}
+import matplotlib.pyplot as plt
+import ipywidgets as widgets
+from IPython.display import display
+from IPython.display import clear_output
+```
 
 ## Introdução
 
@@ -220,11 +227,10 @@ $$p_1 \Delta x_1 + p_2 \Delta x_2 = 0 \Rightarrow \frac{\Delta x_2}{\Delta x_1} 
 
 ## 
 
-<iframe src="https://rfbressan.shinyapps.io/reta_orcamentaria/" style="border: 0px solid #AAA; width: 100%; height: 100%">
-
-</iframe>
+<iframe src="https://rfbressan.shinyapps.io/reta_orcamentaria/" style="border: 0px solid #AAA; width: 100%; height: 100%"></iframe>
 
 -   Qual o efeito sobre o conjunto orçamentário quando os preços unitários e a renda variam?
+
 
 ## Restrição Orçamentária
 

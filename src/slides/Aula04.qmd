@@ -18,7 +18,7 @@ format:
     height: 900
 from: markdown+emoji # list of emojis: https://gist.github.com/rxaviers/7360908
 fontsize: "2.2em"
-editor: visual
+editor: source
 jupyter: python3
 ---
 
@@ -58,17 +58,7 @@ O que a racionalidade individual implica?
 
 * **Indiferença a descrições logicamente equivalentes de alternativas e conjuntos escolhas**: Substituir uma descrição de alternativas por outra que seja "logicamente equivalente" não afeta a escolha
 
-## 
-
-> Na aula anterior estudamos o problema da escassez que um consumidor está sujeito, vimos a definição do conjunto orçamentário Walrasiano
->
-> Nosso objetivo, nas próximas aulas, é estudar o objetivo do consumidor
->
-> A maximização deste objetivo, sujeita à restrição orçamentária, é conhecida como **problema (primal) do consumidor**
-
-------------------------------------------------------------------------
-
-### Preferências do consumidor
+## Preferências do consumidor
 
 -   Pressupomos que o consumidor seja capaz de ordenar as cestas de consumo do seu espaço de mercadorias de acordo com suas preferências, comparando-as em pares
 -   Ou seja, para quaisquer duas cestas de consumo $\textbf{x}$ e $\textbf{y}$ diferentes, o consumidor é capaz de compará-las: ou $\textbf{x}$ é pelo menos tão boa quanto $\textbf{y}$, ou $\textbf{y}$ é pelo menos tão boa quanto $\textbf{x}$
