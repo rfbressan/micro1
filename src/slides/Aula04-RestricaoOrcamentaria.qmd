@@ -222,7 +222,7 @@ $$x_1 + \frac{p_2}{p_1} x_2 + \frac{p_3}{p_1} x_3 + \dots + \frac{p_n}{p_1} x_n 
 
 
 
-## :books: Referências
+## :books: Bibliografia
 
 NICHOLSON, W.; SNYDER C. Teoria microeconômica: Princípios básicos e aplicações. Cengage Learning Brasil, 2019. Disponível em: [https://app.minhabiblioteca.com.br/#/books/9788522127030/](app.minhabiblioteca.com.br/#/books/9788522127030)
 
