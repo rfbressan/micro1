@@ -1,0 +1,533 @@
+---
+author:
+- |
+  **Docente Responsável:** Paulo Victor da Fonseca\
+  **E-mail:** <paulo.fonseca@udesc.br>\
+  **Disciplina:** 23MIC1 - Microeconomia I\
+  **Universidade do Estado de Santa Catarina (UDESC)**\
+  **Centro de Ciências da Administração e Socioeconômicas - ESAG**
+date: 19 de Outubro, 2022
+title: "Microeconomia I: Efeito renda e substituição"
+---
+
+::: frame
+Sumário
+:::
+
+# Curva de demanda individual
+
+## Derivação da curva de demanda individual
+
+::: frame
+Derivação da curva de demanda individual
+
+-   Para simplificar a análise, consideraremos o caso de apenas dois
+    bens e, como visto anteriormente, a função de demanda Marshalliana
+    para o bem $x$ é dada por: $$x^* = x(p_x, p_y, I).$$
+
+-   A [curva de demanda]{style="color: blue"} derivada por essa função
+    traz a relação entre $x$ e $p_x$, enquanto $p_y$, $I$ e a relação de
+    preferências são mantidas constantes. Matematicamente:
+    $$x^* = x(p_x, \bar{p}_y, \bar{I}).
+                      \label{eq1}$$
+:::
+
+::: frame
+Derivação da curva de demanda individual
+
+<figure id="fig1">
+<img src="demanda.JPG" style="width:50.0%" />
+<figcaption>Curva de demanda. Fonte: Nicholson e Snyder
+(2019).</figcaption>
+</figure>
+:::
+
+::: frame
+Derivação da curva de demanda individual
+
+-   Na Figura [1](#fig1){reference-type="ref" reference="fig1"}
+    assumimos que as quantidades ótimas consumidas de $x$ aumentam à
+    medida que o preço $p_x$ diminui.
+
+-   Essa hipótese está de acordo com nossa conclusão geral de que, com
+    exceção do caso observado pelo paradoxo de Giffen,
+    $\partial x/\partial p_x$ é negativa.
+
+::: defi
+**Definição 1** (Curva de demanda individual). *Uma [curva de demanda
+individual]{style="color: blue"} mostra a relação entre o preço de um
+bem e a quantidade consumida deste mesmo bem por um indivíduo, assumindo
+que todos os outros determinantes da demanda sejam mantidos constantes.*
+:::
+:::
+
+## Deslocamentos da curva de demanda
+
+::: frame
+Deslocamentos da curva de demanda
+
+-   Na nossa derivação da curva de demanda, três fatores foram mantidos
+    constantes:
+
+    1.  a renda do indivíduo.
+
+    2.  os preços dos outros bens.
+
+    3.  as preferências deste indivíduo.
+
+-   Se qualquer um desses fatores for alterado, a curva de demanda será
+    deslocada para uma nova posição.
+
+-   Um aumento na renda deslocaria a curva de demanda para cima, no caso
+    em que $\partial x/\partial I > 0$.
+
+-   Se tivermos uma alteração no preço de outro bem, $p_y$ por exemplo,
+    a curva de demanda pode se deslocar tanto para baixo quanto para
+    cima, a depender de como os bens $x$ e $y$ estão relacionados.
+
+-   Por fim, a curva de demanda também será deslocada se as preferências
+    do indivíduo pelo bem $x$ se alterarem.
+:::
+
+::: frame
+Deslocamentos da curva de demanda
+
+-   É importante notar que a curva de demanda é apenas uma representação
+    gráfica bidimensional da verdadeira função de demanda
+    ([\[eq1\]](#eq1){reference-type="ref" reference="eq1"}) e que será
+    estável apenas se os outros fatores forem mantidos constantes.
+
+-   Outro ponto importante é a distinção entre **deslocamento ao longo
+    da curva** de demanda (causado por variações em $p_x$) e
+    **deslocamento da curva** de demanda (causado por variações na
+    renda, preço de outros bens e/ou preferências).
+
+-   Tradicionalmente, o termo *aumento da demanda* refere-se a
+    deslocamentos para cima da curva de demanda.
+
+-   Por sua vez, o termo *aumento da quantidade demandada* refere-se a
+    movimentos ao longo da curva de demanda causados por uma queda em
+    $p_x$.
+:::
+
+# Demanda compensada (Hicksiana): funções e curvas
+
+## Curva de demanda compensada
+
+::: frame
+Curva de demanda compensada
+
+-   Na Figura [1](#fig1){reference-type="ref" reference="fig1"}, o nível
+    de utilidade do indivíduo variava ao longo da curva de demanda.
+
+-   À medida que $p_x$ decresce, o nível de utilidade aumenta de $U_1$
+    para $U_2$ e $U_3$.
+
+-   Isso acontece devido à hipótese de que a renda nominal e os preços
+    dos outros bens são mantidos constantes.
+
+-   Portanto, uma queda em $p_x$ representa um ganho de satisfação
+    (utilidade) para este indivíduo dado que seu poder de compra real
+    aumenta.
+
+-   Uma abordagem alternativa mantém a renda real (ou utilidade)
+    constante enquanto examina os efeitos de variações no preço $p_x$.
+:::
+
+::: frame
+Curva de demanda compensada
+
+<figure id="fig2">
+<img src="demandahicks.JPG" style="width:45.0%" />
+<figcaption>Curva de demanda compensada. Fonte: Nicholson e Snyder
+(2019).</figcaption>
+</figure>
+:::
+
+::: frame
+Curva de demanda compensada
+
+-   A derivação da curva de demanda compensada é ilustrada pela Figura
+    [2](#fig2){reference-type="ref" reference="fig2"}, onde a utilidade
+    é mantida constante (em $U_2$) e o preço $p_x$ é sucessivamente
+    reduzido.
+
+-   À medida que $p_x$ decresce, a renda nominal do indivíduo também
+    decresce e, portanto, impedindo aumentos no nível de utilidade.
+
+-   Em outras palavras, os efeitos de uma variação de preços no poder de
+    compra são **compensados** para restringir o indivíduo a manter o
+    mesmo nível de utilidade $U_2$.
+
+-   Portanto, as [reações a mudanças de preços incluem apenas os efeitos
+    substituição]{style="color: blue"}.
+
+-   No caso de aumentos do preço $p_x$, a compensação de renda seria
+    positiva para manter o indivíduo sobre a mesma curva de indiferença
+    $U_2$.
+
+-   Estes resultados são resumidos pela seguinte definição.
+:::
+
+::: frame
+Curva de demanda compensada
+
+::: defi
+**Definição 2** (Curva de demanda compensada). *Uma [curva de demanda
+compensada]{style="color: blue"} evidencia a relação entre o preço de um
+bem e a quantidade ótima consumida sob a hipótese de que os outros
+preços e a **utilidade** são mantidos constantes.*
+
+*Portanto, **a curva ilustra apenas os efeitos substituição**.*
+
+*Matematicamente, a curva de demanda compensada é uma representação
+gráfica bidimensional da [função de demanda
+compensada]{style="color: blue"}: $$x^c = x^c(p_x, p_y, U).
+            \label{eq2}$$*
+:::
+
+<figure id="fig3">
+<img src="hicks.jpg" style="width:15.0%" />
+<figcaption><a
+href="https://pt.wikipedia.org/wiki/John_Richard_Hicks">John Richard
+Hicks</a> - Nobel de Economia em 1972.</figcaption>
+</figure>
+:::
+
+## Lema de Shephard
+
+::: frame
+Lema de Shephard[]{#voltar label="voltar"}
+
+-   Muitos fatos acerca das funções de demanda compensada podem ser
+    provadas utilizando um resultado da teoria da dualidade conhecido
+    como [lema de Shephard]{style="color: blue"}.
+
+-   Considere o problema dual de minimização de dispêndio, cujo
+    Lagrangeano associado é dado por:
+    $$\mathcal{L} = p_x x + p_y y + \mu[U(x,y) - \bar{U}].
+                      \label{eq3}$$
+
+-   A solução do problema dual de minimização de dispêndio
+    ([\[eq3\]](#eq3){reference-type="ref" reference="eq3"}) nos dá a
+    função dispêndio $E(p_x, p_y, U)$.
+
+-   Como a função dispêndio é uma função-valor, podemos aplicar o
+    [](#envelope).
+:::
+
+::: frame
+Lema de Shephard
+
+-   Portanto, aplicando o teorema do envelope com relação a $p_x$,
+    temos:
+    $$\frac{d E(p_x, p_y, U)}{d p_x} = \frac{\partial \mathcal{L}}{\partial p_x} = x^c(p_x, p_y, U).
+                      \label{eq4}$$
+
+-   Ou seja, a função de demanda compensada de um bem pode ser obtida
+    diferenciando a função dispêndio com relação ao preço deste bem.
+
+-   A equação ([\[eq4\]](#eq4){reference-type="ref" reference="eq4"})
+    nos diz que variações no preço de um bem irão afetar os gastos
+    mínimos deste indivíduo em uma proporção aproximadamente igual à
+    quantidade demandada deste bem.
+:::
+
+::: frame
+Lema de Shephard
+
+-   Vimos anteriormente na disciplina que a função dispêndio
+    $E(p_x, p_y, U)$ é côncava nos preços. Matematicamente, isso quer
+    dizer que: $$\frac{\partial^2 E(p_x, p_y, U)}{\partial p_x^2} < 0.$$
+
+-   Pelo lema de Shephard podemos, então, calcular a inclinação da curva
+    de demanda compensada:
+    $$\frac{\partial^2 E(p_x, p_y, V)}{\partial p_x^2} = \frac{\partial x^c(p_x, p_y, V)}{\partial p_x} < 0.
+                      \label{eq5}$$
+
+-   A equação ([\[eq5\]](#eq5){reference-type="ref" reference="eq5"})
+    nos diz que [a curva de demanda compensada é]{style="color: blue"},
+    necessariamente, [negativamente inclinada]{style="color: blue"}.
+:::
+
+::: frame
+Lema de Shephard
+
+-   A ambiguidade verificada no caso da curva de demanda Marshalliana
+    não é observada neste caso.
+
+-   Isso deve-se ao fato de que curvas de demanda compensada envolverem
+    apenas os efeitos substituição e a hipótese de quase-concavidade
+    assegura que a inclinação desta curva de demanda é sempre negativa.
+:::
+
+## Relação entre curvas de demanda compensada e não-compensada
+
+::: frame
+Relação entre as curvas de demanda compensada e não-compensada
+
+<figure id="fig4">
+<img src="demandas.JPG" style="width:60.0%" />
+<figcaption>Relação entre curvas de demanda compensada e não-compensada.
+Fonte: Nicholson e Snyder (2019).</figcaption>
+</figure>
+:::
+
+::: frame
+Relação entre as curvas de demanda compensada e não-compensada
+
+-   Ao nível de preços $p_x^{''}$ as curvas de demanda Hicksiana e
+    Marshalliana se interceptam pois, a esse preço, a renda do indivíduo
+    é aquela suficiente para atingir o nível de utilidade $U_2$.
+
+-   Portanto, uma quantidade $x^{''}$ é demandada de acordo com os dois
+    conceitos.
+
+-   Para preços abaixo deste valor, o poder de compra deste indivíduo
+    deve ser reduzido para que o mesmo nível de utilidade $U_2$ seja
+    atingido e, portanto, assumindo que $x$ seja um bem normal, uma
+    quantidade menor do bem $x$ é demandada sob a ótica Hicksiana quando
+    comparada à curva de demanda Marshalliana.
+
+-   Por outro lado, para preços acima de $p_x{''}$, a compensação de
+    renda é positiva já que o indivíduo precisa de um poder de compra
+    maior para atingir o mesmo nível de utilidade. Portanto, se $x$ é um
+    bem normal, uma quantidade maior de $x$ é demandada ao longo de
+    $x^c$ do que ao longo da curva de demanda $x$.
+:::
+
+::: frame
+Relação entre as curvas de demanda compensada e não-compensada
+
+-   De maneira geral, portanto, [para bens normais a curva de demanda
+    compensada é menos responsiva a variações de preços do que a curva
+    de demanda não compensada]{style="color: blue"}.
+
+-   Isto deve-se ao fato de que a curva de demanda Marshalliana reflete
+    tanto o efeito substituição quanto o efeito renda a variações de
+    preços, enquanto a demanda Hicksiana reflete apenas os efeitos
+    substituição.
+:::
+
+## Exercício
+
+::: frame
+Exercício Considere a seguinte função utilidade:
+$$U(x,y) = x^{0,5}y^{0,5}.$$
+
+1.  Obtenha as funções demanda Marshallianas.
+
+2.  Obtenha as funções demanda Hicksiana via lema de Shephard.
+
+3.  Calcule as quantidades ótimas demandadas, sob as duas óticas, quando
+    $p_x = 1, p_y = 4, I = 8, U = 2$.
+
+4.  Suponha que $p_x$ aumente para 4, compare as demandas Hicksianas e
+    Marshallianas neste caso.
+:::
+
+# Análise formal dos efeitos de variação de preços
+
+## Abordagem indireta
+
+::: frame
+Abordagem indireta
+
+-   Até agora nos concentramos em análises gráficas para descrever o
+    comportamento dos indivíduos em resposta a variações nos preços.
+
+-   Nosso objetivo agora é desenvolver uma abordagem matemática mais
+    formal para examinar a derivada parcial $\partial x/\partial p_x$.
+    Ou seja, como uma variação no preço de um bem afeta a quantidade
+    adquirida deste mesmo bem, *ceteris paribus*, para a curva de
+    demanda Marshalliana tradicional.
+
+-   Aqui adotaremos uma abordagem indireta que está fundamentada no
+    conceito de dualidade dos problemas de otimização. Fonte: [A one
+    line proof of the Slutsky equation, Phillip
+    Cook](http://cc.kangwon.ac.kr/~kimoon/me/me-132/cook-proof-1972.pdf).
+:::
+
+::: frame
+Abordagem indireta
+
+-   Por definição, sabemos que:
+    $$x^c(p_x,p_y,U) = x[p_x,p_y,E(p_x,p_y,U)].
+                \label{eq6}$$
+
+-   Vimos essa conclusão na Figura [4](#fig4){reference-type="ref"
+    reference="fig4"}, que mostrou que a quantidade demandada é idêntica
+    para as demandas Hicksianas e Marshallianas quando a renda é
+    exatamente aquela suficiente para atingir o nível de utilidade
+    requerido.
+
+-   Portanto, temos que:
+    $$\frac{\partial x^c}{\partial p_x} = \frac{\partial x}{\partial p_x} + \frac{\partial x}{\partial E}  \frac{\partial E}{\partial p_x}.$$
+
+-   Rearranjando os termos:
+    $$\frac{\partial x}{\partial p_x} = \frac{\partial x^c}{\partial p_x} -\frac{\partial x}{\partial E}  \frac{\partial E}{\partial p_x}.
+                \label{eq8}$$
+:::
+
+## Efeito substituição
+
+::: frame
+Efeito substituição
+
+-   A equação ([\[eq8\]](#eq8){reference-type="ref" reference="eq8"})
+    nos mostra que nosso objeto de interesse, $\partial x/\partial p_x$,
+    pode ser decomposto em dois termos.
+
+-   O primeiro termo, $\partial x^c/\partial p_x$ nos dá a inclinação da
+    curva de demanda compensada.
+
+-   Essa inclinação representa movimentos ao longo de uma curva de
+    indiferença o que é exatamente o que chamamos anteriormente de
+    [efeito substituição]{style="color: blue"}.
+
+-   O primeiro termo do lado direito da equação
+    ([\[eq8\]](#eq8){reference-type="ref" reference="eq8"}) é uma
+    representação matemática deste efeito.
+:::
+
+## Efeito renda
+
+::: frame
+Efeito renda
+
+-   O segundo termo da equação ([\[eq8\]](#eq8){reference-type="ref"
+    reference="eq8"}),
+    $-\frac{\partial x}{\partial E}  \frac{\partial E}{\partial p_x}$,
+    reflete o modo com que variações em $p_x$ afetam a demanda pelo bem
+    $x$ via mudanças no poder de compra do indivíduo.
+
+-   Portanto, este termo representa o [efeito
+    renda]{style="color: blue"}.
+
+-   O sinal negativo reflete a relação inversa entre mudanças nos preços
+    e variações no poder de compra.
+
+-   Por exemplo, um aumento de $p_x$ aumenta o nível de dispêndio
+    necessário para manter a utilidade constante
+    ($\partial E/\partial p_x>0$).
+
+-   Mas como a renda nominal é mantida constante na demanda
+    Marshalliana, esse nível extra de dispêndio não está disponível.
+
+-   Portanto, os gastos com o bem $x$ devem ser reduzidos para ser
+    compatível com essa redução do poder de compra.
+
+-   A magnitude desta redução nos gastos é dada por
+    $\partial x/\partial E$.
+:::
+
+## Equação de Slutsky
+
+::: frame
+Equação de Slutsky
+
+-   A relação representada pela equação
+    ([\[eq8\]](#eq8){reference-type="ref" reference="eq8"}) foi
+    originalmente derivada pelo economista e estatístico russo Eugen
+    Slutsky no final do século XIX.
+
+    <figure id="fig5">
+    <img src="slutsky.jpg" style="width:30.0%" />
+    <figcaption><a href="https://pt.wikipedia.org/wiki/Eugen_Slutsky">Eugen
+    Slutsky (1880-1948)</a>.</figcaption>
+    </figure>
+:::
+
+::: frame
+Equação de Slutsky
+
+-   Primeiro, vamos reescrever o efeito substituição da seguinte forma:
+    $$\text{efeito substituição} = \frac{\partial x^c}{\partial p_x} = \left. \frac{\partial x}{\partial p_x} \right|_{U = \text{constante}},
+                    \label{eq9}$$ para indicar movimentos ao longo da
+    curva de indiferença.
+
+-   Para o efeito renda, temos:
+    $$\text{efeito renda} = -\frac{\partial x}{\partial E}\frac{\partial E}{\partial p_x} = -\frac{\partial x}{\partial I}\frac{\partial E}{\partial p_x},
+                    \label{eq10}$$ dado que mudanças na renda $I$ ou nos
+    gastos $E$ são idênticas para a função $x(p_x,p_y,I)$.
+
+-   Pelo Lema de Shephard temos, então:
+    $$\text{efeito renda} = -x^c\frac{\partial x}{\partial I}.$$
+:::
+
+::: frame
+Equação de Slutsky
+
+-   Portanto, podemos escrever a [equação de
+    Slutsky]{style="color: blue"} da seguinte forma: $$\begin{aligned}
+                    \frac{\partial x(p_x,p_y,I)}{\partial p_x} &=& \text{efeito substituição} + \text{efeito renda} \nonumber \\
+                    &=& \left. \frac{\partial x}{\partial p_x} \right|_{U = \text{constante}} - x\frac{\partial x}{\partial I}, \label{eq12}
+                
+    \end{aligned}$$ onde usamos o fato de que
+    $x(p_x,p_y,I) = x^c(p_x,p_y,V)$ avaliados no ponto de máximo.
+
+-   A equação de Slutsky ([\[eq12\]](#eq12){reference-type="ref"
+    reference="eq12"}) possibilita um tratamento mais definitivo acerca
+    da direção e magnitude dos efeitos renda e substituição.
+:::
+
+::: frame
+Equação de Slutsky
+
+1.  O [efeito substituição]{style="color: blue"} (e a inclinação da
+    curva de demanda compensada) é sempre negativo. Este resultado
+    deriva diretamente da quase-concavidade das funções utilidades (TMS
+    decrescente) e da concavidade da função dispêndio.
+
+2.  O sinal do [efeito renda]{style="color: blue"} depende do sinal do
+    termo $\partial x/\partial I$. Se $x$ é um bem normal, então, este
+    termo é positivo e o efeito renda é negativo. Neste caso, então,
+    preço e quantidade sempre se movem em direções opostas. Se $x$ é um
+    bem inferior, então $\partial x/\partial I<0$ e os dois termos da
+    equação de Slutsky possuem sinais distintos. Neste caso, o efeito
+    total de uma variação nos preços é ambíguo - tudo depende das
+    magnitudes relativas de ambos os efeitos. É possível, teoricamente,
+    que, no caso de bens inferiores, o efeito renda domine o efeito
+    substituição, levando ao paradoxo de Giffen
+    ($\partial x/\partial p_x > 0$).
+:::
+
+## Exercício
+
+::: frame
+Exercício No exercício anterior, para o caso de uma função utilidade do
+tipo Cobb-Douglas, vimos que a demanda Marshalliana para o bem $x$ era:
+$$x(p_x,p_y,I) = \frac{0,5I}{p_x},$$ e a demanda compensada era:
+$$x^c(p_x,p_y,U) = p_x^{-0,5}p_y^{0,5}U.$$
+
+Mostre que o efeito total de uma variação de preços sobre a demanda
+Marshalliana é igual à soma dos dois componentes da equação de Slutsky.
+:::
+
+# Apêndice: Teorema do envelope
+
+::: frame
+Teorema do envelope[]{#envelope label="envelope"}
+
+::: teo
+**Teorema 1** (Teorema do envelope). *Seja
+$y^* = f(x_1^*, \dots, x_n^*; a)$ a função valor de $x$ que maximiza a
+função objetivo sujeito à restrição.*
+
+*Se a função valor $y^*$ e os valores ótimos de $x^*$ são
+diferenciáveis, então:
+$$\frac{\partial y^*}{\partial a} = \frac{\partial \mathcal{L}}{\partial a}(x_1^*, \dots, x_n^*; a).$$*
+:::
+
+[](#voltar)
+:::
+
+::: thebibliography
+NICHOLSON, W.; SNYDER C. Teoria microeconômica: Princípios básicos e
+aplicações. Cengage Learning Brasil, 2019. Disponível em:
+[app.minhabiblioteca.com.br/books/9788522127030](https://app.minhabiblioteca.com.br/reader/books/9788522127030)
+
+VARIAN, H. R. Microeconomia: uma abordagem moderna. 9.ed. Rio de
+Janeiro: Elsevier, 2015. Disponível em:
+[app.minhabiblioteca.com.br/books/9788595155107](https://app.minhabiblioteca.com.br/books/9788595155107)
+:::
