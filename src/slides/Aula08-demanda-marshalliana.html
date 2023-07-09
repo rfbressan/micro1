@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="Aula08-demanda-marshalliana_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Aula08-demanda-marshalliana_files/libs/quarto-html/tabby.min.js"></script>
+<script src="Aula08-demanda-marshalliana_files/libs/quarto-html/popper.min.js"></script>
+<script src="Aula08-demanda-marshalliana_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="Aula08-demanda-marshalliana_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Aula08-demanda-marshalliana_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="Aula08-demanda-marshalliana_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="Aula08-demanda-marshalliana_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.3.361">
+
+  <meta name="author" content="Rafael Bressan">
+  <title>Demanda Marshalliana</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="Aula08-demanda-marshalliana_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="Aula08-demanda-marshalliana_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="Aula08-demanda-marshalliana_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="Aula08-demanda-marshalliana_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="Aula08-demanda-marshalliana_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="Aula08-demanda-marshalliana_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="Aula08-demanda-marshalliana_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="Aula08-demanda-marshalliana_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="Aula08-demanda-marshalliana_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-image="img/UdescEsag.jpeg" data-background-position="top left" data-background-size="50%" class="quarto-title-block center">
+  <h1 class="title">Demanda Marshalliana</h1>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Rafael Bressan 
+</div>
+</div>
+</div>
+
+</section>
+<section id="funções-de-demanda-marshallianas" class="slide level2">
+<h2>Funções de demanda Marshallianas</h2>
+<ul>
+<li class="fragment"><p>Na aula anterior vimos como manipular as condições de primeira ordem para um problema de otimização com restrições para solucionar o problema primal do consumidor e encontrar os valores ótimos de <span class="math inline">\(x_1, x_2, \dots, x_n\)</span>.</p></li>
+<li class="fragment"><p>De maneira geral, estes valores ótimos serão funções dos preços unitários de todos os bens e da renda monetária do indivíduo. Isto é:</p></li>
+</ul>
+<div class="fragment">
+<p><span id="eq-eq1"><span class="math display">\[\begin{aligned}
+    x_1^* &amp;=&amp; x_1(p_1, p_2, \dots, p_n, I), \nonumber \\
+    x_2^* &amp;=&amp; x_2(p_1, p_2, \dots, p_n, I), \nonumber \\
+    &amp;\vdots&amp; \nonumber \\
+    x_n^* &amp;=&amp; x_n(p_1, p_2, \dots, p_n, I).          
+\end{aligned} \qquad(1)\]</span></span></p>
+</div>
+<ul>
+<li class="fragment"><p>A este conjunto de <span style="color: red">funções de demanda</span> ( <a href="#/funções-de-demanda-marshallianas">Equação&nbsp;1</a> ) damos o nome de <a href="https://en.wikipedia.org/wiki/Marshallian_demand_function">demandas Marshallianas</a> em homenagem ao economista clássico <a href="https://pt.wikipedia.org/wiki/Alfred_Marshall">Alfred Marshall</a>.</p></li>
+<li class="fragment"><p>Ambas serão estudadas em maior profundidade nas próximas aulas.</p></li>
+</ul>
+</section>
+<section id="função-de-utilidade-indireta" class="slide level2">
+<h2>Função de utilidade indireta</h2>
+<ul>
+<li class="fragment"><p>O conjunto de funções de demandas Marshallianas ( <a href="#/funções-de-demanda-marshallianas">Equação&nbsp;1</a> ) mostra qual a escolha ótima de consumo quando os preços são <span class="math inline">\(p_1, p_2, \dots, p_n\)</span> e a renda <span class="math inline">\(I\)</span>.</p></li>
+<li class="fragment"><p>Se substituirmos os valores ótimos de <span class="math inline">\(x\)</span> na função utilidade original <span class="math inline">\(U(x_1, x_2, \dots, x_n)\)</span>, obtemos:</p></li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[\begin{aligned}
+    \text{utilidade máxima} &amp;=U[x_1^*(p_1, \dots, p_n, I), \dots, x_n^*(p_1, \dots, p_n, I)] \nonumber \\
+    &amp;=V(p_1, p_2, \dots, p_n, I).        
+\end{aligned}\]</span></p>
+</div>
+<ul>
+<li class="fragment"><p>Dado o objetivo do consumidor em maximizar sua utilidade dada sua restrição orçamentária, o nível ótimo de utilidade atingível dependerá <strong><em>indiretamente</em></strong> dos preços dos bens e da renda monetária à disposição deste consumidor.</p></li>
+<li class="fragment"><p>Esta dependência é observada pela <span style="color: red">função de utilidade indireta</span> <span class="math inline">\(V\)</span>.</p></li>
+<li class="fragment"><p>Mudanças nos preços dos bens ou na renda alteram o nível de utilidade que pode ser obtido.</p></li>
+</ul>
+</section>
+<section id="função-de-utilidade-indireta-1" class="slide level2">
+<h2>Função de utilidade indireta</h2>
+<ul>
+<li class="fragment"><p>A função de utilidade indireta é um exemplo de uma <span style="color: red">função valor</span>.</p></li>
+<li class="fragment"><p>Essa função soluciona todas as variáveis endógenas em um problema de otimização deixando o valor ótimo obtido como uma função somente das variáveis exógenas.</p></li>
+<li class="fragment"><p>Tal abordagem nos permite explorar como mudanças nas variáveis exógenas afetam o resultado final sem precisarmos refazer o problema de otimização original.</p></li>
+<li class="fragment"><p>É importante ressaltar, no entanto, que a dependência de <span class="math inline">\(x_i\)</span> em <span class="math inline">\(p_1, \dots, p_n\)</span> e <span class="math inline">\(I\)</span>, e não diretamente nas quantidades consumidas dos outros bens, não implica que a escolha de consumo de um bem qualquer não dependa da escolha de consumo dos outros bens.</p></li>
+<li class="fragment"><p>Significa, apenas, que as escolhas de <span class="math inline">\(x_j\)</span> (<span class="math inline">\(j \neq i\)</span>) estão implicitamente incorporadas na solução e foram substituídas pelos seus preços e pela renda.</p></li>
+</ul>
+</section>
+<section id="exemplos" class="slide level2">
+<h2>Exemplos</h2>
+<p>Cobb-Douglas</p>
+<p>Obtenha as funções de demanda Marshallianas e a função de utilidade indireta para a seguinte função utilidade do tipo Cobb-Douglas:</p>
+<p><span class="math display">\[U(x,y) = x^{0,5}y^{0,5},\]</span></p>
+<p>considerando a restrição orçamentária: <span class="math inline">\(p_xx + p_yy = I\)</span>.</p>
+<p>Calcule o nível de utilidade máximo quando <span class="math inline">\(p_x = 1\)</span>, <span class="math inline">\(p_y = 4\)</span> e <span class="math inline">\(I = 8\)</span>.</p>
+</section>
+<section id="exemplos-1" class="slide level2">
+<h2>Exemplos</h2>
+<p>Bens complementares</p>
+<p>Obtenha as funções de demanda Marshallianas e a função de utilidade indireta para a seguinte função utilidade de bens complementares: <span class="math display">\[U(x,y) = \min(x,4y)\]</span> considerando a restrição orçamentária: <span class="math inline">\(p_xx + p_yy = I\)</span>.</p>
+<p>Calcule o nível de utilidade máximo quando <span class="math inline">\(p_x = 1\)</span>, <span class="math inline">\(p_y = 4\)</span> e <span class="math inline">\(I = 8\)</span>.</p>
+</section>
+<section id="exemplos-2" class="slide level2">
+<h2>Exemplos</h2>
+<p>Função Cobb-Douglas</p>
+<p>Obtenha as funções de demanda Marshallianas e a função de utilidade indireta para a seguinte função utilidade do tipo Cobb-Douglas: <span class="math display">\[U(x,y) = x^{\alpha}y^{1-\alpha}, \qquad \alpha \in (0,1)\]</span> considerando a restrição orçamentária: <span class="math inline">\(p_xx + p_yy = I\)</span>.</p>
+<p>Mostre que a fração da renda consumida em cada bem é constante.</p>
+</section>
+<section>
+<section id="princípio-do-lump-sum" class="title-slide slide level1 center">
+<h1>Princípio do lump-sum</h1>
+
+</section>
+<section id="princípio-do-lump-sum-1" class="slide level2">
+<h2>Princípio do lump-sum</h2>
+<ul>
+<li class="fragment"><p>Muitos insights da análise econômica tem origem no reconhecimento de que a utilidade depende, em última instância, da renda dos indivíduos e dos preços que eles enfrentam.</p></li>
+<li class="fragment"><p>Um dos mais importantes é o chamado <span style="color: red">princípio lump-sum</span> que ilustra a superioridade dos impostos sobre a renda (poder de compra) em relação aos impostos sobre bens específicos.</p></li>
+<li class="fragment"><p>Uma ideia relacionada é que transferências de renda para pessoas de baixa renda elevarão mais a utilidade (o bem-estar) do que a utilização da mesma quantidade de dinheiro para subsidiar bens específicos.</p></li>
+<li class="fragment"><p>A intuição por trás destes resultados deriva diretamente da hipótese de maximização de utilidade: um imposto ou subsídio sobre a renda deixa o indivíduo livre para decidir como alocar sua renda da melhor maneira que considerar.</p></li>
+</ul>
+</section>
+<section id="princípio-do-lump-sum-2" class="slide level2">
+<h2>Princípio do lump-sum</h2>
+<ul>
+<li class="fragment"><p>Por outro lado, impostos ou subsídios sobre bens específicos alteram o poder de compra dos indivíduos e distorcem suas escolhas em razão dos preços artificiais incorporados nesses esquemas.</p></li>
+<li class="fragment"><p>Por isso, impostos de renda e subsídios gerais devem ser preferidos se a eficiência for um critério importante na política social.</p></li>
+</ul>
+
+<img data-src="img/lumpsum.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;1: Princípio da tributação do tipo lump-sum. Fonte: Nicholson e Snyder (2019).</p></section>
+<section id="princípio-do-lump-sum-3" class="slide level2">
+<h2>Princípio do lump-sum</h2>
+<ul>
+<li class="fragment"><p>Suponha que, inicialmente, o consumidor disponha de uma renda <span class="math inline">\(I\)</span> e sua cesta de consumo ótima seja dada por <span class="math inline">\((x^*, y^*)\)</span>.</p></li>
+<li class="fragment"><p>Um imposto sobre o bem <span class="math inline">\(x\)</span> elevaria seu preço, rotacionando a restrição orçamentária “para dentro”. A este novo preço, a escolha ótima que maximiza a utilidade é dada por <span class="math inline">\((x_1, y_1)\)</span>.</p></li>
+<li class="fragment"><p>A arrecação de impostos seria dada por <span class="math inline">\(\tau x_1\)</span>, sendo <span class="math inline">\(\tau\)</span> a alíquota de imposto sobre o bem <span class="math inline">\(x\)</span>.</p></li>
+<li class="fragment"><p>Suponha, agora, que a incidência do imposto seja sobre a renda do consumidor, de modo que a arrecadação total seja mantida.</p></li>
+<li class="fragment"><p>Neste caso, a receita orçamentária é deslocada para baixo, para o novo nível de renda <span class="math inline">\(I^'\)</span>.</p></li>
+<li class="fragment"><p>Como <span class="math inline">\(I = (p_x + \tau)x_1 + p_yy_1\)</span>, temos que <span class="math inline">\(I' = I-\tau x_1 = p_x x_1 + p_y y_1\)</span>, que mostra que a restrição orçamentária com imposto de renda igual também passa pelo ponto <span class="math inline">\(x_1, y_1\)</span>.</p></li>
+<li class="fragment"><p>Porém, a utilidade obtida pelo imposto de renda (<span class="math inline">\(U_2\)</span>) é superior àquela obtida com imposto incidindo sobre o preço do bem x (<span class="math inline">\(U_1\)</span>).</p></li>
+<li class="fragment"><p>Logo, <strong>a perda de utilidade do imposto de renda é menor que a perda observada com um imposto sobre o preço do bem <span class="math inline">\(x\)</span></strong>.</p></li>
+</ul>
+</section>
+<section id="exemplos-3" class="slide level2">
+<h2>Exemplos</h2>
+<p>Considere que a relação de preferências de um indivíduo seja representada pela seguinte função utilidade do tipo Cobb-Douglas: <span class="math display">\[U(x,y) = x^{0,5}y^{0,5},\]</span> considerando a restrição orçamentária: <span class="math inline">\(p_xx + p_yy = I\)</span>.</p>
+<p>Calcule o nível de utilidade máximo quando <span class="math inline">\(p_x = 1\)</span>, <span class="math inline">\(p_y = 4\)</span> e <span class="math inline">\(I = 8\)</span>.</p>
+<p>Suponha, agora, um imposto de $1 sobre <span class="math inline">\(p_x\)</span>. Mostre que o nível de utilidade, neste caso, é menor que a utilidade obtida sob um imposto de renda que preserve a quantidade total arrecadada.</p>
+</section>
+<section id="exemplos-4" class="slide level2">
+<h2>Exemplos</h2>
+<p>Considere que a relação de preferências de um indivíduo seja representada pela seguinte função utilidade: <span class="math display">\[U(x,y) = \min(x, 4y),\]</span> considerando a restrição orçamentária: <span class="math inline">\(p_xx + p_yy = I\)</span>.</p>
+<p>Calcule o nível de utilidade máximo quando <span class="math inline">\(p_x = 1\)</span>, <span class="math inline">\(p_y = 4\)</span> e <span class="math inline">\(I = 8\)</span>.</p>
+<p>Suponha, agora, um imposto de $1 sobre <span class="math inline">\(p_x\)</span>. Mostre que o nível de utilidade, neste caso, é igual à utilidade obtida sob um imposto de renda que preserve a quantidade total arrecadada. <strong>Neste caso, o princípio lump-sum não é válido pois o consumidor consome proporções fixas dos dois bens e, portanto, o imposto não vai distorcer as escolhas deste agente.</strong></p>
+</section></section>
+<section>
+<section id="função-dispêndio-e-dualidade" class="title-slide slide level1 center">
+<h1>Função dispêndio e dualidade</h1>
+
+</section>
+<section id="problema-dual-do-consumidor" class="slide level2">
+<h2>Problema dual do consumidor</h2>
+<ul>
+<li class="fragment"><p>Até agora focamos no problema primal do consumidor: dados os preços de mercado e a renda, quais são as quantidades de cada bem escolhidas que maximizam sua utilidade.</p></li>
+<li class="fragment"><p>Muitos dos problemas de maximização com restrições possuem um problema “dual” associado de minimização com restrições.</p></li>
+<li class="fragment"><p>Para o caso de maximização de utilidade, o problema dual de minimização associado consiste em alocar a renda do indivíduo de forma a atingir um nível específico de utilidade com o menor gasto possível.</p></li>
+</ul>
+</section>
+<section id="problema-dual-do-consumidor-1" class="slide level2">
+<h2>Problema dual do consumidor</h2>
+
+<img data-src="img/dual.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;2: Problema dual da minimização de dispêndio. Fonte: Nicholson e Snyder (2019).</p></section>
+<section id="problema-dual-do-consumidor-estrutra-formal" class="slide level2">
+<h2>Problema dual do consumidor: estrutra formal</h2>
+<ul>
+<li class="fragment"><p>O dispêndio (ou gasto) do consumidor com a cesta de bens <span class="math inline">\(\textbf{x} = (x_1, x_2, \dots, x_n)\)</span> é dado por: <span class="math display">\[E = p_1x_1 + p_2x_2 + \dots + p_nx_n.\]</span></p></li>
+<li class="fragment"><p>O <span style="color: red">problema dual de minimização de dispêndio do consumidor</span> é, então, dado por:</p></li>
+</ul>
+<div class="fragment">
+<p><span id="eq-eq3"><span class="math display">\[\begin{aligned}
+    &amp;\min_{x_1, \dots, x_n}&amp; p_1x_1 + p_2x_2 + \dots + p_nx_n \nonumber \\
+    &amp;\text{s.a.}&amp; U(x_1, x_2, \dots, x_n) = \bar{U}.
+\end{aligned} \qquad(2)\]</span></span></p>
+</div>
+<ul>
+<li class="fragment">Ou seja, o consumidor minimiza seus gastos para um certo nível de utilidade <span class="math inline">\(\bar{U}\)</span> que deseja alcançar.</li>
+</ul>
+</section>
+<section id="problema-dual-do-consumidor-lagrangeano" class="slide level2">
+<h2>Problema dual do consumidor: Lagrangeano</h2>
+<ul>
+<li class="fragment"><p>Para os casos de pontos ótimos interiores, podemos resolver o problema de minimização via método de Lagrange.</p></li>
+<li class="fragment"><p>O Lagrangeano do problema <a href="#/problema-dual-do-consumidor-estrutra-formal">Equação&nbsp;2</a> é dado por: <span class="math display">\[\mathcal{L} = p_1x_1 + \dots + p_nx_n + \mu\left[\bar{U} - U(x_1, x_2, \dots, x_n)\right].\]</span></p></li>
+<li class="fragment"><p>As condições de primeira ordem associadas são dadas pelo seguinte sistema de <span class="math inline">\(n + 1\)</span> equações:</p></li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[\begin{aligned}
+    p_1 &amp;=&amp; \mu^* \frac{\partial U}{\partial x_1}(x_1^*, x_2^*, \dots, x_n^*) \nonumber \\
+    p_2 &amp;=&amp; \mu^* \frac{\partial U}{\partial x_2}(x_1^*, x_2^*, \dots, x_n^*) \nonumber \\
+    &amp;\vdots&amp; \nonumber \\
+    p_n &amp;=&amp; \mu^* \frac{\partial U}{\partial x_n}(x_1^*, x_2^*, \dots, x_n^*) \nonumber \\
+    \bar{U} &amp;=&amp; U(x_1^*, x_2^*, \dots, x_n^*).            
+\end{aligned}\]</span></p>
+</div>
+</section>
+<section id="problema-dual-do-consumidor-2" class="slide level2">
+<h2>Problema dual do consumidor</h2>
+<ul>
+<li class="fragment"><p>As <span class="math inline">\(n\)</span> primeiras CPOs são idênticas às CPOs do problema primal do consumidor de maximização de utilidade.</p></li>
+<li class="fragment"><p>A condição de que a TMS entre dois bens seja igual à razão entre seus preços de mercado continua válida.</p></li>
+<li class="fragment"><p>Portanto, a solução do problema dual do consumidor satisfaz a condição de tangência entre a curva de indiferença dada por <span class="math inline">\(\bar{U}\)</span> e a reta de dispêndio.</p></li>
+<li class="fragment"><p>Apenas a última CPO é diferente, pois diz que o consumidor deseja consumir a cesta de consumo ótima que garanta um nível de utilidade igual à <span class="math inline">\(\bar{U}\)</span>.</p></li>
+</ul>
+</section>
+<section id="demandas-compensadas" class="slide level2">
+<h2>Demandas compensadas</h2>
+<p>Função dispêndio</p>
+<ul>
+<li class="fragment"><p>As quantidades ótimas consumidas de <span class="math inline">\(x_1, \dots, x_n\)</span> neste problema são funções dos preços dos bens (<span class="math inline">\(p_1, \dots, p_n\)</span>) e do nível de utilidade desejado <span class="math inline">\(\bar{U}\)</span>.</p></li>
+<li class="fragment"><p>Se algum dos preços for alterado, ou a meta de utilidade desejada, a cesta de consumos ótima também será alterada.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Função dispêndio</strong></p>
+</div>
+<div class="callout-content">
+<p>A função dispêndio do indivíduo mostra os gastos mínimos necessários para atingir um determinado nível de utilidade para um dado vetor de preços: <span class="math display">\[\text{dispêndios mínimos} = E(p_1, p_2, \dots, p_n, U).\]</span></p>
+</div>
+</div>
+</div></li>
+<li class="fragment"><p>Essa definição mostra que <strong>a função dispêndio, que também é uma função valor, e a função utilidade indireta são inversas</strong>.</p></li>
+</ul>
+</section>
+<section id="demandas-compensadas-hicksianas" class="slide level2">
+<h2>Demandas compensadas (Hicksianas)</h2>
+<ul>
+<li class="fragment">As funções demanda desse problema são funções dos preços e do nível de utilidade:</li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[\begin{aligned}
+    x_1^h &amp;=&amp; x_1^h(p_1, p_2, \dots, p_n, \bar{U}), \nonumber \\
+    x_2^h &amp;=&amp; x_2^h(p_1, p_2, \dots, p_n, \bar{U}), \nonumber \\
+    &amp;\vdots&amp; \nonumber \\
+    x_n^h &amp;=&amp; x_n^h(p_1, p_2, \dots, p_n, \bar{U}).                
+\end{aligned}\]</span></p>
+</div>
+<ul>
+<li class="fragment"><p>Essas funções de demanda são chamadas <span style="color: red">demandas Hicksianas (ou demandas compensadas)</span>.</p></li>
+<li class="fragment"><p>As demandas Hicksianas são funções dos preços e nível de utilidade. As demandas Marshallianas são funções dos preços e do nível de renda.</p></li>
+</ul>
+</section>
+<section id="demandas-compensadas-hicksianas-1" class="slide level2">
+<h2>Demandas compensadas (Hicksianas)</h2>
+<ul>
+<li class="fragment">São chamadas demandas compensadas pois elas “compensam” o consumidor de modo a mantê-lo sempre na mesma curva de indiferença <span class="math inline">\(\bar{U}\)</span>.</li>
+</ul>
+
+<img data-src="img/compensada.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;3: Demandas compensadas.</p></section>
+<section id="demandas-compensadas-hicksianas-2" class="slide level2">
+<h2>Demandas compensadas (Hicksianas)</h2>
+<ul>
+<li class="fragment"><p>A demanda Hicksiana não é diretamente observável, pois depende do nível de utilidade <span class="math inline">\(\bar{U}\)</span>.</p></li>
+<li class="fragment"><p>A demanda Marshalliana, por sua vez, é diretamente observável pois depende apenas dos preços dos bens e da renda - variáveis mensuráveis.</p></li>
+<li class="fragment"><p>Substituindo as demandas Hicksianas no gasto do consumidor, obtemos a função dispêndio definida anteriormente:</p></li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[E(p_1, p_2, \dots, p_n, \bar{U}) = p_1 x_1^h(p_1, \dots, p_n, \bar{U}) + \dots + p_n x_n^h (p_1, \dots, p_n, \bar{U}).\]</span></p>
+</div>
+<ul>
+<li class="fragment">A função dispêndio mostra o gasto mínimo necessário para se alcançar o nível de utilidade <span class="math inline">\(\bar{U}\)</span>, aos preços <span class="math inline">\(\textbf{p} = (p_1, \dots, p_n)\)</span> de mercado.</li>
+</ul>
+</section>
+<section id="demandas-compensadas-hicksianas-3" class="slide level2">
+<h2>Demandas compensadas (Hicksianas)</h2>
+<ul>
+<li class="fragment"><p>O multiplicador de Lagrange representa o custo marginal para se obter uma unidade adicional de utilidade.</p></li>
+<li class="fragment"><p>Existe uma relação entre o multiplicador de Lagrange do problema dual <span class="math inline">\(\mu\)</span> com o multiplicador de Lagrange <span class="math inline">\(\lambda\)</span> do problema primal:</p></li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[\mu = \frac{p_i}{U_i}, \qquad \lambda = \frac{U_i}{p_i} \Rightarrow \mu = \frac{1}{\lambda}.\]</span></p>
+</div>
+<ul>
+<li class="fragment">Portanto, o multiplicador de Lagrange do problema de minimização é o inverso do multiplicador de Lagrange do problema de maximização.</li>
+</ul>
+</section>
+<section id="exemplos-5" class="slide level2">
+<h2>Exemplos</h2>
+<p>Dados <span class="math inline">\(U(x,y) = x^{0,5}y^{0,5}\)</span> e <span class="math inline">\(I = p_xx + p_yy\)</span>, a função utilidade indireta é dada por: <span class="math inline">\(V(p_x,p_y,I) = \frac{I}{2p_x^{0,5}p_y^{0,5}}\)</span>. Como a função dispêndio é o inverso da utilidade indireta, temos: <span class="math display">\[E(p_x,p_y,U) = 2p_x^{0,5}p_y^{0,5}U.\]</span></p>
+<p>Mostre que este resultado é o mesmo obtido quando resolvemos o problema de minimização.</p>
+<p>Mostre, também, que para <span class="math inline">\(p_x = 1\)</span>, <span class="math inline">\(p_y = 4\)</span> e uma meta de utilidade <span class="math inline">\(U = 2\)</span>, o nível mínimo de dispêndio é <span class="math inline">\(I = 8\)</span>.</p>
+<p>Se o preço do bem <span class="math inline">\(y\)</span> aumentar de $4 para $5, qual a compensação monetária o indivíduo necessita para manter o mesmo nível de utilidade?</p>
+</section>
+<section id="exemplos-6" class="slide level2">
+<h2>Exemplos</h2>
+<p>Dada a função utilidade <span class="math inline">\(U(x,y) = \min(x,4y)\)</span>, podemos calcular a função utilidade indireta: <span class="math display">\[V(p_x,p_y,I) = \frac{I}{p_x + 0,25p_y}.\]</span></p>
+<p>Portanto, a função dispêndio é dada por: <span class="math display">\[E(p_x,p_y,U) = (p_x + 0,25p_y)U.\]</span></p>
+<p>Dados, <span class="math inline">\(p_x = 1, p_y = 4\)</span> e uma meta de utilidade <span class="math inline">\(\bar{U} = 4\)</span>, obtemos o dispêndio total de $8 como no exercício anterior.</p>
+<p>Neste caso, se o preço do bem <span class="math inline">\(y\)</span> aumentar de $4 para $5, os gastos deste consumidor deveriam aumentar em quanto para manter o mesmo nível de utilidade?</p>
+</section>
+<section id="propriedades-da-função-dispêndio" class="slide level2">
+<h2>Propriedades da função dispêndio</h2>
+<ul>
+<li class="fragment">As funções dispêndio são <span style="color: red">homogêneas de grau um</span> em todos os preços.</li>
+</ul>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Função homogênea de grau k</strong></p>
+</div>
+<div class="callout-content">
+<p>Uma função <span class="math inline">\(f(x_1, x_2, \dots, x_n)\)</span> é dita <span style="color: red">homogênea de grau <span class="math inline">\(k\)</span></span> se:</p>
+<p><span class="math display">\[f(tx_1, tx_2, \dots, tx_n) = t^kf(x_1, x_2, \dots, x_n), \qquad \forall t\geq 0.\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li class="fragment">Isto quer dizer que, se todos os preços dos bens dobrarem, então, a renda dispendida também deve dobrar para que o consumidor permaneça na mesma curva de indiferença (mesmo nível de utilidade).</li>
+</ul>
+</section>
+<section id="exemplo" class="slide level2">
+<h2>Exemplo</h2>
+<p>Vimos que a função dispêndio associada a uma função utilidade do tipo Cobb-Douglas <span class="math inline">\(U(x,y) = x^{0,5}y^{0,5}\)</span> é dada por: <span class="math display">\[E(p_x, p_y, U) = 2p_x^{0,5}p_y^{0,5}U.\]</span></p>
+<p>Vamos mostrar que esta função é homogênea de grau 1.</p>
+</section>
+<section id="exemplo-1" class="slide level2">
+<h2>Exemplo</h2>
+<p>Vimos que a função dispêndio associada a uma função utilidade de proporções fixas <span class="math inline">\(U(x,y) = \min(x,4y)\)</span> é dada por: <span class="math display">\[E(p_x, p_y, U) = (p_x + 0,25p_y)U.\]</span> Vamos mostrar que esta função é homogênea de grau 1.</p>
+</section>
+<section id="propriedades-da-função-dispêndio-1" class="slide level2">
+<h2>Propriedades da função dispêndio</h2>
+<ul>
+<li class="fragment">As funções dispêndio são <span style="color: red">não-decrescentes nos preços</span>:</li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[\frac{\partial E(p_1, \dots, p_i, \dots, p_n, U)}{\partial p_i} \geq 0, \qquad \forall i.\]</span></p>
+</div>
+<ul>
+<li class="fragment">Como a função dispêndio nos diz o gasto mínimo necessário para que o consumidor atinja um nível específico de utilidade, um aumento de preços em um bem qualquer deve aumentar esse gasto mínimo.</li>
+</ul>
+</section>
+<section id="propriedades-da-função-dispêndio-2" class="slide level2">
+<h2>Propriedades da função dispêndio</h2>
+<ul>
+<li class="fragment"><p>Suponha que o preço de um bem aumente e dos outros permaneçam constante.</p></li>
+<li class="fragment"><p>Seja <span class="math inline">\(A\)</span> a cesta de consumos adquirida antes do aumento de preços, e <span class="math inline">\(B\)</span> a cesta de consumos adquirida após o aumento de preços.</p></li>
+<li class="fragment"><p>Claramente a cesta <span class="math inline">\(B\)</span> custa mais após o aumento de preços do que custava antes.</p></li>
+<li class="fragment"><p>No entanto, <span class="math inline">\(B\)</span> antes do aumento de preços custava mais que a cesta <span class="math inline">\(A\)</span> - pois <span class="math inline">\(A\)</span> é a cesta ótima de minimiza o dispêndio do consumidor para um dado nível de utilidade.</p></li>
+<li class="fragment"><p>Portanto: a cesta de consumo <span class="math inline">\(A\)</span> custa menos que a cesta de consumo <span class="math inline">\(B\)</span> antes do aumento de preços que, por sua vez, custa menos que a cesta de consumo <span class="math inline">\(A\)</span> após o aumento de preços.</p></li>
+<li class="fragment"><p>Logo, a cesta de consumo escolhida após o aumento de preços (<span class="math inline">\(B\)</span>) custa mais que a cesta escolhida antes do aumento de preços (<span class="math inline">\(A\)</span>) - função dispêndio é não decrescente nos preços.</p></li>
+</ul>
+</section>
+<section id="propriedades-da-função-dispêndio-3" class="slide level2">
+<h2>Propriedades da função dispêndio</h2>
+<ul>
+<li class="fragment">A função dispêndio <span class="math inline">\(E(\textbf{p}, \bar{U})\)</span> é <span style="color: red">côncava nos preços</span> - ou seja, o gráfico da função está sempre abaixo de retas tangentes a ele.</li>
+</ul>
+<div class="fragment">
+<div id="fig-fig3" class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/dispendioconc.JPG"></p>
+<figcaption>Figura&nbsp;4: Função dispêndio: concavidade nos preços. Fonte: Nicholson e Snyder (2019).</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="propriedades-da-função-dispêndio-4" class="slide level2">
+<h2>Propriedades da função dispêndio</h2>
+<ul>
+<li class="fragment"><p>A <a href="#/propriedades-da-função-dispêndio-3">Figura&nbsp;4</a> mostra a função dispêndio de um consumidor como função de um único preço, <span class="math inline">\(p_1\)</span>.</p></li>
+<li class="fragment"><p>Ao preço inicial, <span class="math inline">\(p_1^*\)</span>, o gasto mínimo deste indivíduo é dado por <span class="math inline">\(E(p_1^*, \dots)\)</span>.</p></li>
+<li class="fragment"><p>Agora considere preços maiores ou mais baixos que <span class="math inline">\(p_1^*\)</span>. Se esse indivíduo continuasse adquirindo a mesma cesta de consumo, seus gastos iriam aumentar ou diminuir de maneira linear com as mudanças de preço.</p></li>
+<li class="fragment"><p>Isso corresponde à função pseudodispêndio - ou dispêndio passivo - <span class="math inline">\(E^{\text{pseudo}}\)</span> na figura.</p></li>
+<li class="fragment"><p>Esta reta mostra o nível de gastos que permitiria a aquisição da cesta de consumo original independentemente da variação de preços.</p></li>
+<li class="fragment"><p>Se, no entanto, esta pessoa ajustar sua compra à medida que <span class="math inline">\(p_1\)</span> mudasse, sabemos que (em decorrência da minimização de gastos) os gastos reais seriam menores que esse gasto passivo.</p></li>
+</ul>
+</section>
+<section id="propriedades-da-função-dispêndio-5" class="slide level2">
+<h2>Propriedades da função dispêndio</h2>
+<ul>
+<li class="fragment"><p>Portanto, a função dispêndio real, <span class="math inline">\(E\)</span>, ficará abaixo de <span class="math inline">\(E^{\text{pseudo}}\)</span> em todos os pontos e a função será côncava.</p></li>
+<li class="fragment"><p>Um resultado da concavidade é que <span class="math inline">\(f_{ii} = \partial^2 E/\partial p_i^2\leq 0\)</span>, precisamente o que mostra a <a href="#/propriedades-da-função-dispêndio-3">Figura&nbsp;4</a>.</p></li>
+<li class="fragment"><p>A concavidade da função dispêndio é um dos resultados mais importantes da aula de hoje e será uma propriedade útil para inúmeras aplicações, sobretudo para as relacionadas ao efeito substituição das mudanças de preços - que veremos nas próximas aulas.</p></li>
+</ul>
+</section>
+<section id="bibliografia" class="slide level2">
+<h2><span class="emoji" data-emoji="books">📚</span> Bibliografia</h2>
+<p>NICHOLSON, W.; SNYDER C. Teoria microeconômica: Princípios básicos e aplicações. Cengage Learning Brasil, 2019. Disponível em: <a href="https://app.minhabiblioteca.com.br/#/books/9788522127030/">app.minhabiblioteca.com.br/#/books/9788522127030</a></p>
+<p>VARIAN, H. R. Microeconomia: uma abordagem moderna. 9.ed. Rio de Janeiro: Elsevier, 2015. Disponível em: <a href="https://app.minhabiblioteca.com.br/books/9788595155107">app.minhabiblioteca.com.br/books/9788595155107</a></p>
+
+<img src="img/UdescEsag.jpeg" class="slide-logo r-stretch"><div class="footer footer-default">
+
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="Aula08-demanda-marshalliana_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="Aula08-demanda-marshalliana_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="Aula08-demanda-marshalliana_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="Aula08-demanda-marshalliana_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="Aula08-demanda-marshalliana_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="Aula08-demanda-marshalliana_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="Aula08-demanda-marshalliana_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="Aula08-demanda-marshalliana_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="Aula08-demanda-marshalliana_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="Aula08-demanda-marshalliana_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="Aula08-demanda-marshalliana_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

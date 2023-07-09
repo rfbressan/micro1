@@ -17,6 +17,10 @@ $code-color: #139954;
 
 /*-- scss:rules --*/
 
+.greenbackground {
+  background-color: #054B28 !important;
+}
+
 .reveal .slide-number {
   color: $link-color;
 }
@@ -60,4 +64,8 @@ $code-color: #139954;
 /* Make bold syntax compile to udescgreen */
 strong {
   color: #054B28;
+}
+
+.red {
+  color: #d90502 !important;
 }
