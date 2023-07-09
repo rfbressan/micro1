@@ -46,13 +46,19 @@ Observe que várias dessas aulas se estendem por duas ou mais sessões.
 
 | Tópico                                                   | Slides                                                                                                              | Lista                                                                                                   |
 |----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Aula 1: Apresentação                                      | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula01.html)   |                                                                                                         |
-| Aula 2: Modelos de Escolha Qualitativa                   | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/02-probit/02-probit_pt.html)           | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/02-probit/lista_I_pt.html) |
-| Aula 3: Variáveis Instrumentais e Causalidade - Parte I  | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/03-IV/03-IV_pt.html)                   |                                                                                                         |
-| Aula 4: Variáveis Instrumentais e Causalidade - Parte II | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/04-IV2/04-IV2_pt.html)                    | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/04-IV2/lista_II_pt.html)   |
-| Aula 5: Modelos de Equações Simultâneas                  | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/05-simultaneas/05-simultaneas_pt.html) |  [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/05-simultaneas/lista_III_pt.html) |
-| Aula 6: Dados em Painel - Parte I                        | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/06-panel/06-panel_pt.html)             | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/06-panel/lista_IV_pt.html) |
-| Aula 7: Dados em Painel - Diferenças em Diferenças       | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/07-DID/07_DID_pt.html)                 | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/07-DID/lista_V_pt.html)    |
+| Aula 1: Apresentação | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula01.html)   | |
+| Aula 2: Introdução a Microeconomia | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula02-Introducao.html) | |
+| Aula 3: Matemática | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula03-matematica.html) | |
+| Aula 4: Restrição Orçamentária | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula04-RestricaoOrcamentaria.html) | |
+| Aula 5: Preferências | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula05-Preferencias.html) | |
+| Aula 6: Maximização de Utilidade | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula06-maximizacao-utilidade.html) | |
+| Aula 7: Demanda Marshalliana | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula07-demanda-marshalliana.html) | |
+| Aula 8:  | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula08-.html) | |
+| Aula 9:  | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula09-.html) | |
+| Aula 10:  | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula10-.html) | |
+| Aula 11:  | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula11-.html) | |
+| Aula 12:  | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula12-.html) | |
+| Aula 13:  | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula13-.html) | |
 
 
 ## Bibliografia :books:
