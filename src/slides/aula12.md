@@ -6,8 +6,8 @@ author:
   **Disciplina:** 23MIC1 - Microeconomia I\
   **Universidade do Estado de Santa Catarina (UDESC)**\
   **Centro de Ciências da Administração e Socioeconômicas - ESAG**
-date: 31 de Outubro, 2022
-title: "Microeconomia I: Relações de demanda entre bens"
+date: 23 de Novembro, 2022
+title: "Microeconomia I: Teoria da Firma"
 ---
 
 ::: frame
@@ -16,443 +16,494 @@ Sumário
 
 # Introdução
 
-## Introdução
-
 ::: frame
 Introdução
 
--   Na seção anterior da disciplina estudamos como mudanças no preço de
-    um determinado (e.g., bem $x$) afetam a quantidade demandada deste
-    mesmo bem.
+-   Na primeira parte do nosso curso de Microeconomia I, estudamos o
+    comportamento dos consumidores.
 
--   Ao longo da discussão, mantivemos o preço de todos os outros bens
-    constantes.
+-   Desse comportamento, obtivemos uma função de demanda por um bem que
+    é, quase sempre, decrescente no seu preço.
 
--   No entanto, é evidente que variações nos preços de qualquer um
-    destes outros bens pode afetar a quantidade demandada do bem $x$.
+-   Nosso objetivo agora é estudar o processo de produção e oferta de
+    bens econômicos e o comportamento das firmas.
 
--   Por exemplo, se $x$ representa a quilometragem que um indivíduo
-    dirige, espera-se que essa quantidade decline à medida que o preço
-    da gasolina aumente.
+-   Desse comportamento, vamos obter a oferta de um bem econômico, que
+    será crescente no seu preço.
 
--   Ou que aumente à medida que as tarifas aéreas e de ônibus aumentem.
-
--   Vamos, agora, usar o modelo de maximização de utilidade para estudar
-    tais relações entre um bem e os preços dos outros bens.
-:::
-
-# O caso de dois bens
-
-## Introdução
-
-::: frame
-Introdução
-
--   Por simplicidade e possibilidade de uma representação gráfica,
-    iniciaremos nossa análise de relações de demanda entre bens com o
-    caso de dois bens.
-
--   Vamos considerar como a quantidade ótima escolhida do bem $x$ é
-    afetada por uma variação no preço do bem $y$, $p_y$.
-
--   Suponha que o preço $p_y$ decline, isso resulta em uma rotação para
-    fora da restrição orçamentária, de $I_0$ para $I_1$.
+-   O comportamento desses dois agentes econômicos (consumidores e
+    firmas) pode levar a uma situação de equilíbrio no mercado do bem
+    considerado, onde a quantidade demandada iguala a quantidade
+    produzida, por meio de preços flexíveis.
 :::
 
 ::: frame
 Introdução
+
+-   As instituições que coordenam o processo de transformação de insumos
+    em produtos finais são chamadas [firmas]{style="color: blue"}.
+
+-   Estas instituições podem ser grandes - e.g., Google, Apple,
+    Microsoft, etc. Ou instituições pequenas - e.g., trabalhadores
+    autônomos, produtores locais.
+
+-   Embora essas instituições possam ter diferentes objetivos, todas as
+    firmas devem tomar certas decisões básicas em seus processos
+    produtivos.
+
+-   Nosso objetivo geral, agora, é desenvolver um conjunto de
+    ferramentas que possibilitem a análise destes processos decisórios.
+:::
+
+::: frame
+Introdução
+
+-   Inicialmente estudaremos algumas maneiras de modelar a relação
+    física entre insumos e produtos. Para isso, introduziremos o
+    conceito de [função de produção]{style="color: blue"}, uma abstração
+    útil das complexidades dos processos produtivos do mundo real.
+
+-   Dois aspectos mensuráveis da função de produção serão considerados:
+    os retornos de escala (i.e., como o produto é expandido quando todos
+    os insumos aumentam), e a elasticidade de substituição (i.e., o quão
+    fácil um insumo pode ser substituído por outro enquanto mantemos o
+    mesmo nível de produto).
+:::
+
+::: frame
+Introdução
+
+-   Posteriormente, utilizaremos o conceito de função de produção para
+    discutir os [custos de produção]{style="color: blue"}.
+
+-   Assumiremos que todas as firmas tem por objetivo produzir seus
+    produtos ao menor custo possível, uma hipótese que nos permitirá
+    obter as [funções custo]{style="color: blue"} para uma firma.
+
+-   Discutiremos também, ainda que brevemente, como os custos podem
+    diferir no curto e no longo prazo.
+:::
+
+::: frame
+Introdução
+
+-   Por fim, concluiremos esta seção com o estudo das decisões de oferta
+    por parte de uma firma.
+
+-   Para tal, assumiremos que o gerente de uma firma fará decisões de
+    insumos e produtos de maneira a maximizar os lucros.
+
+-   Com isso desenvolveremos o modelo fundamental do comportamento de
+    oferta das firmas maximizadoras de lucro, um conceito que será muito
+    utilizado em microeconomia e em outras áreas do curso.
+:::
+
+# Funções de produção
+
+## Introdução
+
+::: frame
+Tecnologias de produção: Introdução
+
+-   A principal atividade de qualquer firma é transformar insumos em
+    produtos.
+
+-   Como economistas, estamos interessados nas escolhas que as firmas
+    tomam para atingir este objetivo, abstraindo das muitas
+    complexidades envolvidas nas engenharias destes processos.
+
+-   Para isso, construímos um modelo abstrato do processo produtivo.
+
+-   Neste modelo, a relação entre insumos e produtos é formalizada por
+    uma [função de produção]{style="color: blue"} (também chamada de
+    tecnologia de produção) da forma: $$q = f(k, l, m, \dots),
+                \label{eq1}$$ onde $q$ representa a produção de um bem
+    específico para a firma durante um período especifico do tempo, $k$
+    representa as máquinas (i.e., capital) utilizadas durante este
+    período, $l$ representa o insumo trabalho, $m$ representa a
+    matéria-prima utilizada, e possibilitamos, ainda, a inclusão de
+    outras variáveis que afetem o processo produtivo.
+:::
+
+::: frame
+Tecnologias de produção: Introdução
+
+-   Assume-se que a equação ([\[eq1\]](#eq1){reference-type="ref"
+    reference="eq1"}) forneça, para qualquer conjunto concebível de
+    insumos, a solução de engenharia para o problema de como melhor
+    combinar esses insumos para obter produtos.
+
+-   Portanto, a tecnologia de uma firma descreve a sua capacidade de
+    produzir bens usando insumos de produção (também chamados de fatores
+    de produção).
+
+-   Note que tanto insumo quanto produto são medidos como fluxos no
+    tempo. O importante é que todas estas variáveis sejam calculadas
+    para o mesmo período de tempo.
+:::
+
+## Considerações iniciais
+
+::: frame
+Considerações iniciais
+
+-   [Fatores de produção.]{style="color: blue"} São os insumos
+    utilizados em processos produtivos, podendo ser classificados em
+    categorias amplas como terra, trabalho, bens de capital e matérias
+    primas.
+
+-   [Bens de capital ou capital físico.]{style="color: blue"} São bens
+    produzidos e utilizados como insumos em processos produtivos como
+    máquinas, computadores, tratores, prédios, etc.
+
+-   [Firma.]{style="color: blue"} É qualquer organização que realiza a
+    transformação de certos insumos (que possui e/ou compra) em produtos
+    (que vende).
+
+-   [Restrições de uma firma.]{style="color: blue"} Uma firma está
+    sujeita a duas restrições básicas. Uma delas é a *restrição
+    tecnológica*, pois somente algumas combinações de insumos constituem
+    formas viáveis de produzir certa quantidade de um produto. A outra é
+    a *restrição econômica*, ou seja, uma firma toma suas decisões de
+    produção condicionada pelas estruturas dos mercados de fatores (nos
+    quais demanda insumos) e de produtos (onde vende sua produção).
+:::
+
+::: frame
+Considerações iniciais
+
+-   [Hipótese simplificadora.]{style="color: blue"} Estudaremos a
+    restrição tecnológica do caso *uniproduto*, ou seja, focaremos o
+    caso em que a firma produz apenas um tipo de produto, cuja
+    quantidade denotaremos por $q$, utilizando uma combinação de insumos
+    $(x_1, \dots, x_i, \dots, x_n)$, na qual $x_i \geq 0$ é a quantidade
+    utilizada do fator de produção $i = 1, 2, \dots, n$.
+
+-   [Plano de produção.]{style="color: blue"} É uma lista que especifica
+    as quantidades dos insumos utilizados para produzir uma determinada
+    quantidade de produto. Um plano de produção pode ser representado
+    como um vetor
+    $(-x_1, -x_2, \dots, -x_i, \dots, -x_n, q) \in \mathbb{R}^{n+1}$,
+    onde as coordenadas com valores estritamente negativos indicam os
+    insumos utilizados e a coordenada estritamente positiva indica a
+    quantidade produzida.
+:::
+
+::: frame
+Considerações iniciais
+
+-   [Planos de produção factíveis.]{style="color: blue"} São planos de
+    produção tecnologicamente possíveis.
+
+-   [Conjunto de possibilidade de produção.]{style="color: blue"} É o
+    conjunto $Q \subset \mathbb{R}^{n+1}$ formado por todos os planos de
+    produção factíveis, ou seja, por todas as listas de combinações de
+    insumos e produto tecnologicamente viáveis. Este conjunto representa
+    todas as escolhas tecnológicas que uma firma se defronta.
+:::
+
+::: frame
+Considerações iniciais
+
+-   A Figura [1](#fig1){reference-type="ref" reference="fig1"} ilustra
+    um exemplo de um conjunto de produção para o caso de apenas um
+    insumo e um produto. Usando a convenção que adotamos anteriormente,
+    o insumo é representado por um número negativo e o produto por um
+    número positivo.
 
 <figure id="fig1">
-<img src="grosscomplements.JPG" style="width:60.0%" />
-<figcaption>Efeito-cruzado de variação nos preços: complementares
-brutos. Fonte: Nicholson, Snyder (2016).</figcaption>
+<img src="prodset.JPG" style="width:35.0%" />
+<figcaption>Conjunto de produção. Fonte: Mas-Colell et al.
+(1995).</figcaption>
 </figure>
 :::
 
 ::: frame
-Introdução
+Considerações iniciais
 
--   Como efeito de uma queda em $p_y$, percebemos na Figura
-    [1](#fig1){reference-type="ref" reference="fig1"} um aumento na
-    quantidade demandada do bem $y$ (de $y_0$ para $y_1$) - $y$ é um bem
-    normal.
+-   Poderíamos, alternativamente, mensurar os insumos por números
+    positivos, neste caso uma representação possível para o conjunto de
+    produção seria dado pela Figura [2](#fig2){reference-type="ref"
+    reference="fig2"}.
 
--   O efeito sobre a quantidade demandada de $x$, no entanto, pode
-    variar.
-
--   Na Figura [1](#fig1){reference-type="ref" reference="fig1"}, as
-    curvas de indiferença representadas praticamente assumem um formato
-    em L e, portanto, o efeito substituição é pequeno.
-
--   Portanto, uma queda em $p_y$ não induz em uma grande variação ao
-    longo da curva de indiferença $U_0$ à medida que $y$ é substituído
-    por $x$.
-
--   Como resultado, a quantidade $x$ cai relativamente pouco como
-    resultado do efeito substituição.
-
--   Por outro lado, o efeito renda reflete um maior poder de compra
-    agora disponível para o consumidor e isso faz com que a quantidade
-    total de $x$ escolhida aumente.
+    <figure id="fig2">
+    <img src="prodset2.JPG" style="width:70.0%" />
+    <figcaption>Conjunto de produção. Fonte: Varian (2006).</figcaption>
+    </figure>
 :::
 
 ::: frame
-Introdução
+Considerações iniciais
 
--   Como o efeito renda domina o efeito substituição, neste caso, temos
-    que $\partial x/\partial p_y < 0$, ou seja, $x$ e $p_y$ movem em
-    direções opostas.
+-   [Função de produção.]{style="color: blue"} De maneira mais geral,
+    uma função de produção é a função
+    $q = f(x_1, \dots, x_i, \dots, x_n)$ que associa a cada combinação
+    de insumos $(x_1, \dots, x_i, \dots, x_n) \in \mathbb{R}^n_+$ a
+    quantidade *máxima* $q$ que pode ser produzida. A função de produção
+    $f(x_1, \dots, x_n)$ define a fronteira do conjunto de produção -
+    ver Figura [2](#fig2){reference-type="ref" reference="fig2"}.
+:::
 
--   Como $\partial x/\partial p_y<0$, dizemos que $x$ e $y$ são
-    [complementares brutos]{style="color: blue"}.
+## Produtividade marginal
+
+::: frame
+Produto marginal
+
+-   O [produto físico marginal]{style="color: blue"} do fator de
+    produção $i$, denotado por $PM_i$, é a variação da produção gerada
+    pela variação em uma unidade do insumo $i$, *ceteris paribus*.
+
+-   Mais precisamente, em termos contínuos, pode ser definida como a
+    derivada parcial da função de produção com relação ao insumo $i$:
+    $$PM_i \equiv \frac{\partial f(\mathbf{x})}{\partial x_i} = f_i(\mathbf{x}), \qquad i = 1, \dots, n.
+                \label{eq2}$$
+
+-   Se o fator de produção $i$ contribui para a produção, então,
+    $PM_i>0$ para toda combinação de insumos factível
+    $(x_1, \dots, x_i, \dots, x_n)$.
 :::
 
 ::: frame
-Introdução
+Produto marginal
 
-<figure id="fig2">
-<img src="grosssubstitutes.JPG" style="width:60.0%" />
-<figcaption>Efeito-cruzado de variação nos preços: substitutos brutos.
-Fonte: Nicholson, Snyder (2016).</figcaption>
+-   No caso de apenas dois fatores de produção, capital e trabalho,
+    temos então que:
+
+    1.  O produto marginal do trabalho, $PM_l = f_l$, mede o quanto a
+        produção aumentará se aumentarmos (um pouco) a quantidade de
+        trabalho usada, mantendo a quantidade de capital fixa.
+
+    2.  O produto marginal do capital, $PM_k = f_k$, mede o quanto a
+        produção aumentará se aumentarmos (um pouco) a quantidade de
+        capital usada, mantendo a quantidade de trabalho fixa.
+:::
+
+## Princípio das produtividades marginais decrescentes
+
+::: frame
+Princípio das produtividades marginais decrescentes
+
+-   [Princípio dos rendimentos físicos (produtividades marginais)
+    decrescentes.]{style="color: blue"} Quanto mais se utiliza um fator
+    de produção $i$, *ceteris paribus*, a contribuição deste fator para
+    o aumento da produção tende a ser cada vez menor, ou seja, o produto
+    físico marginal do fator de produção $i$ é estritamente decrescente
+    com relação à quantidade utilizada deste fator.
+
+-   Formalmente:
+    $$\frac{\partial PM_i(\mathbf{x})}{\partial x_i} = \frac{\partial^2 f(\mathbf{x})}{\partial x_i^2} = f_{ii} < 0, \qquad \forall i = 1, \dots, n.$$
+:::
+
+::: frame
+Princípio das produtividades marginais decrescentes
+
+-   Considerando nossa função de produção com apenas dois fatores -
+    capital e trabalho - temos: $$\begin{aligned}
+                \frac{\partial PM_k}{\partial k} &=& \frac{\partial^2 f(k,l)}{\partial k^2} = f_{kk} < 0, \\
+                \frac{\partial PM_l}{\partial l} &=& \frac{\partial^2 f(k,l)}{\partial l^2} = f_{ll} < 0.
+            
+    \end{aligned}$$
+
+-   A hipótese de produtividade marginal decrescente foi originalmente
+    proposta pelo economista do século XIX Thomas Malthus, que temia que
+    o aumento rápido da população resultasse em uma menor produtividade
+    do trabalho.
+
+-   Suas predições pessimistas para o futuro da humanidade fizeram com
+    que a economia ficasse conhecida como "ciência sombria".
+:::
+
+::: frame
+Princípio das produtividades marginais decrescentes
+
+<figure id="fig3">
+<img src="malthus.jpg" style="width:40.0%" />
+<figcaption>Thomas Robert Malthus (1766 - 1834). Fonte: <a
+href="https://en.wikipedia.org/wiki/Thomas_Robert_Malthus">Wikipedia</a>.</figcaption>
 </figure>
 :::
 
 ::: frame
-Introdução
+Princípio das produtividades marginais decrescentes
 
--   Na Figura [2](#fig2){reference-type="ref" reference="fig2"}, a
-    situação é revertida. Agora $\partial x/\partial p_y > 0$.
+-   Uma análise mais cuidadosa da função de produção sugere que tais
+    predições pessimistas podem não ser corretas.
 
--   Como as curvas de indiferença agora são relativamente planas, isso
-    resulta em um efeito substituição grande com a queda em $p_y$.
+-   Variações na produtividade marginal do trabalho ao longo do tempo
+    dependem não só de como o fator de produção trabalho está crescendo
+    mas, também, de mudanças nos outros insumos (e.g., capital).
 
--   A quantidade ótima escolhida de $x$ decresce drasticamente à medida
-    que $y$ é substituído por $x$ ao longo da curva de indiferença
-    $U_0$.
+-   Ou seja, precisamos nos preocupar também com
+    $\partial PM_l/\partial k = f_{lk}$.
 
--   O efeito renda ainda indica um aumento no poder de compra do
-    consumidor.
+-   Na maioria dos casos, $f_{lk} > 0$, portanto, a diminuição da
+    produtividade do trabalho à medida que *ambos $l$ e $k$ aumentam*
+    pode ser uma conclusão precipitada.
 
--   No entanto, agora o efeito substituição domina o efeito renda e,
-    portanto, a quantidade demandada de $x$ decresce para $x_1$.
-
--   Neste caso, $x$ e $p_y$ movem na mesma direção - [substitutos
-    brutos]{style="color: blue"}.
+-   De fato, a produtividade do trabalho parece ter aumentado
+    significativamente desde a época de Malthus, principalmente porque
+    os aumentos nos insumos de capital (combinado a melhorias
+    tecnológicas) compensou o impacto do declínio da produtividade
+    marginal.
 :::
 
-## Tratamento formal
+## Produto médio
 
 ::: frame
-Equação de Slutsky
+Produto médio
 
--   A ambiguidade no efeito de variações em $p_y$ sobre a quantidade
-    demandada de $x$ pode ser ilustrada, formalmente, utilizando-se uma
-    variação da equação de Slutsky.
+-   [Produto físico médio ($PMe_{i}$).]{style="color: blue"} Quantidade
+    produzida por unidade do insumo $i$:
+    $$PMe_i = \frac{f(\mathbf{x})}{x_i}, \qquad x_i > 0.
+                \label{eq4}$$
 
--   Usando procedimentos similares aos das aulas anteriores, temos:
-    $$\begin{aligned}
-                      x^c(p_x,p_y,U) &=& x[p_x,p_y, E(p_x,p_y,U)] \nonumber \\
-                      \frac{\partial x^c}{\partial p_y} &=& \frac{\partial x}{\partial p_y} + \frac{\partial x}{\partial E}\frac{\partial E}{\partial p_y} \nonumber \\
-                      \frac{\partial x}{\partial p_y} &=& \frac{\partial x^c}{\partial p_y} - y\frac{\partial x}{\partial I}. \label{eq1} \\
-                      \frac{\partial x}{\partial p_y} &=& \left.\frac{\partial x}{\partial p_y}\right|_{U=k} - y\frac{\partial x}{\partial I}. \label{eq2} \\
-                      \frac{\partial x}{\partial p_y} &=& \text{efeito substituição} + \text{efeito renda}. \nonumber
-                  
-    \end{aligned}$$
-:::
+-   De maneira geral, *produtividade do trabalho* significa
+    *produtividade média*.
 
-::: frame
-Equação de Slutsky
+-   Como a produtividade média é facilmente mensurável, é comumente
+    utilizada como medida de eficiência - muito utilizada em trabalhos
+    empíricos (e menos em teóricos).
 
--   Podemos, ainda, escrever a equação
-    ([\[eq1\]](#eq1){reference-type="ref" reference="eq1"}) em termos de
-    elasticidades: $$\begin{aligned}
-                      \frac{\partial x}{\partial p_y} &=& \frac{\partial x^c}{\partial p_y} - y\frac{\partial x}{\partial I} \nonumber \\
-                      \textcolor{blue}{\frac{p_y}{x}} \frac{\partial x}{\partial p_y} &=& \textcolor{blue}{\frac{p_y}{x}}\frac{\partial x^c}{\partial p_y} - y\frac{\partial x}{\partial I} \textcolor{blue}{\frac{p_y}{x}} \textcolor{red}{\frac{I}{I}} \nonumber \\
-                      \textcolor{blue}{\frac{p_y}{x}} \frac{\partial x}{\partial p_y} &=& \textcolor{green}{\frac{p_y}{x^c}}\frac{\partial x^c}{\partial p_y} - y\frac{\partial x}{\partial I} \textcolor{blue}{\frac{p_y}{x}} \textcolor{red}{\frac{I}{I}} \nonumber \\
-                      e_{x,p_y} &=& e_{x^c,p_y} - s_y e_{x,I}. \label{eq3}
-                  
-    \end{aligned}$$
+-   Para o caso de dois insumos, a produtividade média do trabalho é:
+    $$PMe_l = \frac{f(k,l)}{l}.$$
 
--   Note que o tamanho do efeito renda é determinado pela proporção da
-    renda despendida com o bem $y$, $s_y$.
-
--   O impacto de uma variação em $p_y$ sobre o poder de compra do
-    consumidor é determinado por quão importante este bem é para este
-    indivíduo.
-:::
-
-::: frame
-Equação de Slutsky
-
--   Para o caso de dois bens, os termos do lado direito das equações
-    ([\[eq1\]](#eq1){reference-type="ref" reference="eq1"}) e
-    ([\[eq3\]](#eq3){reference-type="ref" reference="eq3"}) possuem
-    sinais algébricos distintos.
-
--   Assumindo que as curvas de indiferença sejam convexas, o efeito
-    substituição é positivo - para movimentos apenas ao longo da curva
-    de indiferença, aumentos (quedas) em $p_y$ aumentam (diminuem) a
-    quantidade ótima de $x$.
-
--   Com relação ao efeito renda, no entanto, se $x$ é um bem normal, o
-    efeito renda é claramente negativo.
-
--   Portanto, o efeito total é ambíguo, $\partial x/\partial p_y$ pode
-    tanto ser positivo quanto negativo.
-
--   Mesmo no caso de dois bens, a relação de demanda entre a demanda de
-    $x$ e o preço $p_y$ é complexa.
+-   Note que a produtividade média do trabalho depende do nível de
+    capital utilizado.
 :::
 
 ## Exercício
 
 ::: frame
-Exercício Suponha um consumidor cujas relações de preferência sejam
-descritas pela seguinte função utilidade: $$U(x,y) = x^{0,5}y^{0,5}.$$
-Veja qual o efeito-preço cruzado de uma variação em $p_y$ sobre a
-quantidade demandada do bem $x$, e mostre que a razão pela qual
-variações em $p_y$ não impactam a quantidade ótima de $x$ no caso
-Cobb-Douglas é que os efeitos renda e substituição se cancelam.
+Exercício Suponha a seguinte função de produção:
+$$q = f(k,l) = 600k^2l^2 - k^3l^3.$$
+
+Se o nível de capital utilizado é $k = 10$, obtenha o seguinte:
+
+1.  Produtividade marginal do trabalho e o nível de trabalho utilizado
+    para que o produto atinja seu valor máximo.
+
+2.  Produto médio do trabalho e o nível de trabalho utilizado para que o
+    produto médio do trabalho atinja seu valor máximo.
+
+3.  Verifique que quando $l$ faz com que a produtividade média do
+    trabalho atinja seu nível máximo, neste ponto, a produtividade média
+    do trabalho é igual á produtividade marginal do trabalho.
+
+4.  Mostre que a igualdade do item anterior é geral.
+:::
+
+# Funções de produção e isoquantas
+
+## Isoquantas
+
+::: frame
+Isoquantas
+
+-   Para ilustrar a possível substituição de um insumo por outro em uma
+    função de produção, usamos o seu mapa de isoquanta.
+
+-   [Isoquanta.]{style="color: blue"} Isoquanta é o conjunto
+    $Q(q) = \{(x_1, x_2) \in \mathbb{R}^2_+| f(x_1, x_2) = q\}$ formado
+    por todas as combinações de insumos $(x_1, x_2)$ que geram o mesmo
+    nível (máximo) de produção $q$.
+
+-   Assim como no caso das curvas de indiferença, existem infinitas
+    isoquantas no plano de $k-l$ (se considerarmos os insumos capital e
+    trabalho).
+
+-   Cada isoquanta representa um nível distinto de produto.
+
+-   As isoquantas registram sucessivamente níveis mais altos de produto
+    à medida que nos movemos na direção nordeste.
+
+-   A utilização de mais de cada um dos insumos possibilitará que a
+    produção aumente.
 :::
 
 ::: frame
-Exercício
-:::
+Isoquantas
 
-# Bens substitutos e complementares
-
-## Bens substitutos e complementares
-
-::: frame
-Bens substitutos e complementares
-
--   Para o caso de vários bens, há mais espaço para relações
-    interessantes entre os bens.
-
--   Neste caso, podemos generalizar a equação de Slutsky para quaisquer
-    bens $x_i$ e $x_j$ como (**derive esta expressão como exercício**):
-    $$\frac{\partial x_i(p_1, \dots, p_n, I)}{\partial p_j} = \left.\frac{\partial x_i}{\partial p_j}\right|_{U=k} - x_j\frac{\partial x_i}{\partial I}. \label{eq4}$$
-
--   Em termos de elasticidade, temos (**derive como exercício**):
-    $$e_{i,j} = e_{i,j}^c - s_j e_{i,I}. \label{eq5}$$
+<figure id="fig:my_label">
+<img src="isoquanta.JPG" style="width:60.0%" />
+<figcaption>Mapa de isoquanta. Fonte: Nicholson e Snyder
+(2019).</figcaption>
+</figure>
 :::
 
 ::: frame
-Bens substitutos e complementares
+Isoquantas
 
--   As equações ([\[eq4\]](#eq4){reference-type="ref" reference="eq4"})
-    e ([\[eq5\]](#eq5){reference-type="ref" reference="eq5"}) nos dizem
-    que variações no preço de um bem $j$ qualquer induz efeitos renda e
-    substituição que podem alterar a quantidade demandada de qualquer
-    outro bem.
+-   É possível notar a similaridade entre um mapa de isoquanta e o mapa
+    de curva de indiferença de um indivíduo.
 
--   Dois bens são ditos [substitutos]{style="color: blue"} se um bem,
-    como resultado de variações em condições, substituem um outro bem em
-    uso. Exemplo: chá e café, hamburger e cachorro-quente, manteiga e
-    margarina.
+-   São, de fato, conceitos similares pois representam os mapas de
+    contorno de uma função em particular.
 
--   Dois bens são ditos [complementares]{style="color: blue"} se "vão
-    juntos" no consumo. Exemplo: café e leite, whisky e charuto,
-    refrigerante e hamburger.
+-   No entanto, no caso das isoquantas, o rótulo das curvas é
+    mensurável - uma produção de 10 unidades por período tem um
+    significado quantificável.
 
--   Bens "substitutos" substituem um pelo outro na função utilidade,
-    enquanto "complementares" se complementam.
-
--   Existe duas maneiras distintas de fazer essas ideias intuitivas mais
-    precisas. Uma delas foca no efeito "bruto" de variações dos preços
-    ao incluir tanto o efeito renda quanto o efeito substituição. A
-    outra foca apenas no efeito substituição.
+-   Por este motivo, os economistas estão mais interessados em estudar a
+    forma das funções de produção do que das funções utilidade.
 :::
 
-## Substitutos e complementares brutos (Marshallianos)
+## Propriedades das funções de produção
 
 ::: frame
-Substitutos e complementares brutos (Marshallianos)
+Propriedades das funções de produção
 
-::: defi
-**Definição 1** (Substitutos e complementares brutos). *Dois bens $x_i$
-e $x_j$ são [substitutos brutos]{style="color: blue"} se:
-$$\frac{\partial x_i}{\partial p_j} > 0. \label{eq6}$$*
+-   Duas premissas comuns sobre as propriedades da tecnologia são
+    *monotonicidade* ou *livre descarte* (*free disposal*) e
+    *convexidade*.
 
-*Dois bens $x_i$ e $x_j$ são [complementares
-brutos]{style="color: blue"} se:
-$$\frac{\partial x_i}{\partial p_j} < 0. \label{eq7}$$*
+    1.  [Monotonicidade]{style="color: blue"}. Uma tecnologia apresenta
+        monotonicidade ou livre descarte quando é sempre possível a
+        absorção de quantidades adicionais de pelo menos um insumo sem
+        que isto acarrete redução da produção. A função de produção é,
+        sob tal suposição, não-decrescente com relação a cada um de seus
+        fatores de produção (os produtos marginais são não-negativos) e,
+        portanto, as isoquantas não são positivamente inclinadas.
+
+    2.  [Convexidade]{style="color: blue"}. Uma tecnologia é convexa
+        quando a média ponderada de duas combinações de insumos
+        $(x_1, x_2)$ e $(y_1, y_2)$ que geram uma produção $q$, gera uma
+        produção maior ou igual a $q$.
 :::
-:::
 
-## Assimetria das definições brutas
+## Exemplos simples de funções de produção
 
 ::: frame
-Exemplo Suponha que um consumidor tenha suas relações de preferência
-descritas pela seguinte função utilidade: $$U(x,y) = \ln x + y.$$
+Exemplos de funções de produção
 
-Determine se os bens $x$ e $y$ são substitutos ou complementares brutos.
-:::
+1.  [Tecnologia com fatores de produção substitutos
+    (linear).]{style="color: blue"}
+    $$q = f(k,l) = \alpha k + \beta l, \qquad \alpha, \beta > 0.
+                \label{eq5}$$
 
-::: frame
-Assimetria das definições brutas
+2.  [Tecnologia com fatores de produção combinados em proporções fixas
+    (Leontief).]{style="color: blue"}
+    $$q = f(k,l) = \min\{\alpha k, \beta l\}, \qquad \alpha, \beta > 0.
+                \label{eq6}$$
 
--   Como a definição de complementares e substitutos brutos incorporam
-    tanto o efeito renda quanto o substituição, essa é a definição que
-    observamos no "mundo real".
+3.  [Tecnologia Cobb-Douglas.]{style="color: blue"}
+    $$q = f(k,l) = Ak^\alpha k l^\beta, \qquad A, \alpha, \beta > 0.
+                \label{eq7}$$
 
--   No entanto, existem algumas propriedades indesejáveis nestas
-    definições brutas de complementares e substitutos.
-
--   A principal delas é que estas definições, como mostrado no exercício
-    anterior, não são simétricas.
-
--   Pelas definições, é possível que $x_1$ seja um substituto bruto para
-    $x_2$ e, ao mesmo tempo, $x_2$ seja um complementar bruto para
-    $x_1$.
-
--   Portanto, **a presença dos efeitos renda pode causar resultados
-    paradoxais**.
-:::
-
-## Substitutos e complementares líquidos (Hicksianos)
-
-::: frame
-Substitutos e complementares líquidos (Hicksianos)
-
-::: defi
-**Definição 2** (Substitutos e complementares líquidos). *Os bens $x_i$
-e $x_j$ são ditos [substitutos líquidos]{style="color: blue"} se:
-$$\left.\frac{\partial x_i}{\partial p_j}\right|_{U=k} > 0. \label{eq8}$$*
-
-*Os bens $x_i$ e $x_j$ são ditos [complementares
-líquidos]{style="color: blue"} se:
-$$\left.\frac{\partial x_i}{\partial p_j}\right|_{U=k} < 0. \label{eq9}$$*
-:::
-:::
-
-::: frame
-Substitutos e complementares líquidos (Hicksianos)
-
--   Estas definições olham apenas para os termos de efeito substituição
-    para determinar se dois bens são substitutos ou complementares.
-
--   Esta definição tem um apelo intuitivo (pois olha apenas para o
-    formato das curvas de indiferença) e um apelo teórico (pois não
-    permite ambiguidades).
-
--   Uma vez que determinamos que $x_i$ e $x_j$ são substitutos
-    (complementares) líquidos, eles permanecem substitutos
-    (complementares), não importa em qual direção a definição é
-    aplicada:
-    $$\left.\frac{\partial x_i}{\partial p_j}\right|_{U=k} = \left.\frac{\partial x_j}{\partial p_i}\right|_{U=k}.$$
-
--   O efeito substituição de uma mudança em $p_i$ sobre $x_j$ é idêntico
-    ao efeito substituição de uma mudança em $p_j$ sobre $x_i$.
-:::
-
-::: frame
-Substitutos e complementares líquidos (Hicksianos)
-
--   A diferença entre as definições Marshallianas e Hicksianas para bens
-    substitutos e complementares pode ser percebida nas Figuras
-    [1](#fig1){reference-type="ref" reference="fig1"} e
-    [2](#fig2){reference-type="ref" reference="fig2"}.
-
--   Nas figuras, os dois bens são sempre substitutos líquidos. Dada a
-    convexidade das curvas de indiferença, uma queda em $p_y$ sempre faz
-    com que a quantidade demandada de $x$ seja menor para manter o nível
-    de utilidade constante, $\partial x^c/\partial p_y > 0$.
-
--   Já pela definição Marshalliana, temos ambiguidade pois envolve,
-    também, o efeito renda (que é sempre negativo, assumindo que os dois
-    bens sejam normais).
-
--   Na Figura [1](#fig1){reference-type="ref" reference="fig1"}, o
-    efeito renda negativo domina o efeito substituição positivo e,
-    portanto, $\partial x/\partial p_y<0$ e os bens são denominados
-    "complementares Marshallianos".
-
--   Já na Figura [2](#fig2){reference-type="ref" reference="fig2"}, o
-    efeito substituição positivo domina o efeito renda negativo,
-    $\partial x/\partial p_y>0$ - "substitutos Marshallianos".
-
--   Com $n$ bens padrões ainda mais complexos são possíveis, no entanto,
-    a definição Hicksiana simplifica a análise ao eliminar as
-    ambiguidades.
-:::
-
-# Substituibilidade com vários bens
-
-## Substituibilidade com vários bens
-
-::: frame
-Substituibilidade com vários bens
-
--   Quando consideramos o caso de $n$ bens, vários padrões de demanda
-    podem emergir.
-
--   Se um determinado par de bens é substituto líquido ou complementar
-    líquido é uma questão relacionada às preferências de um indivíduo.
-    Portanto, podemos observar todos os tipos de relações de demanda.
-
--   Uma questão importante é determinar se substituibilidade ou
-    complementariedade é mais prevalente.
-
--   Intuitivamente, tendemos a pensar nos bens como substitutos - um
-    aumento de preços em um mercado específico tende a aumentar a
-    demanda na maioria dos outros mercados.
-:::
-
-::: frame
-Substituibilidade com vários bens
-
--   O economista britânico John Hicks chegou à conclusão que a "maioria"
-    dos bens são substitutos.
-
--   Este resultado é resumido no que ficou conhecido como [segunda lei
-    da demanda de Hicks]{style="color: blue"}.
-
--   Para mostrar este resultado, tomamos a função de demanda compensada
-    para um bem particular $x_i^c(p_1, \dots, p_n, V)$ que, como vimos,
-    é homogênea de grau zero nos preços. Portanto, pelo teorema de
-    Euler, temos:
-    $$p_1 \frac{\partial x_i^c}{\partial p_1} + p_2 \frac{\partial x_i^c}{\partial p_2} + \dots + p_n \frac{\partial x_i^c}{\partial p_n} = 0. \label{eq10}$$
-:::
-
-::: frame
-Substituibilidade com vários bens
-
--   A equação ([\[eq10\]](#eq10){reference-type="ref" reference="eq10"})
-    pode ser escrita em termos de elasticidades:
-    $$e_{i1}^c + e_{i2}^c + \dots + e_{in}^c = 0. \label{eq11}$$
-
--   Mas sabemos que $e_{ii}^c \leq 0$ devido à negatividade do efeito
-    substituição com relação ao próprio bem - [primeira lei da demanda
-    de Hicks]{style="color: blue"}.[^1]
-:::
-
-::: frame
-Substituibilidade com vários bens
-
--   Portanto, deve ser o caso que:
-    $$\sum_{j\neq i}e_{ij}^c \geq 0. \label{eq12}$$
-
--   Ou seja, a soma de todas as elasticidades-preço cruzadas da demanda
-    compensada para um bem particular deve ser não-negativa.
-
--   Isso nos diz que a "maioria" dos bens são substitutos - a evidência
-    empírica é, em termos gerais, compatível com este resultado teórico.
+4.  [Tecnologia CES.]{style="color: blue"}
+    $$q = f(k,l) = [\alpha k^\rho + (1-\alpha) l^\rho]^{\gamma/\rho}, \qquad \rho \leq 1, \rho \neq 0, \gamma > 0, 0\leq \alpha \leq 1.
+                \label{eq8}$$
 :::
 
 ::: thebibliography
-NICHOLSON, W.; SNYDER C. Microeconomic theory: Basic principles and
-extensions. 12th ed. Boston, USA: Cengage Learning, 2016.
+MAS-COLELL, A.; WHINSTON M.D.; GREEN, J.R. Microeconomic Theory. New
+York: Oxford University Press, 1995.
 
 NICHOLSON, W.; SNYDER C. Teoria microeconômica: Princípios básicos e
 aplicações. Cengage Learning Brasil, 2019. Disponível em:
 [app.minhabiblioteca.com.br/books/9788522127030](https://app.minhabiblioteca.com.br/books/9788522127030/)
 
-VARIAN, H. R. Microeconomia: uma abordagem moderna. 9.ed. Rio de
-Janeiro: Elsevier, 2015. Disponível em:
-[app.minhabiblioteca.com.br/books/9788595155107](https://app.minhabiblioteca.com.br/books/9788595155107)
-:::
+RESENDE, J. G. L. Microeconomia I: Notas de Aula.
 
-[^1]: Além disso, a primeira lei da demanda de Hicks também inclui a
-    simetria dos efeitos substituição cruzados:
-    $\partial x_i^c/\partial p_j = \partial x_j^c/\partial p_i$.
+VARIAN, H. R. Intermediate Microeconomics: A modern approach. 7.ed. New
+York: W.W. Norton & Company, 2006.
+:::

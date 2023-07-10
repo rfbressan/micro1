@@ -6,7 +6,7 @@ author:
   **Disciplina:** 23MIC1 - Microeconomia I\
   **Universidade do Estado de Santa Catarina (UDESC)**\
   **Centro de Ciências da Administração e Socioeconômicas - ESAG**
-date: 30 de Novembro, 2022
+date: 07 de Dezembro, 2022
 title: "Microeconomia I: Minimização de custos"
 ---
 
@@ -14,357 +14,326 @@ title: "Microeconomia I: Minimização de custos"
 Sumário
 :::
 
-# Custo econômico $\times$ custo contábil
-
-## Definições
+# Introdução
 
 ::: frame
-Definições
+Introdução
 
--   Antes de discutirmos a teoria dos custos, algumas questões sobre a
-    definição adequada de "custos" devem ser esclarecidas.
+-   Em economia, é tradicional fazer uma distinção entre o [curto
+    prazo]{style="color: blue"} e o [longo prazo]{style="color: blue"}.
 
--   Especificamente, devemos fazer a distinção entre [custo
-    contábil]{style="color: red"} e [custo
-    econômico]{style="color: blue"}.
+-   Embora uma definição temporal precisa não possa ser fornecida para
+    esses termos, o objetivo geral da distinção é diferenciar um curto
+    período durante o qual os agentes econômicos tem apenas uma
+    flexibilidade limitada em suas ações e um período mais longo que
+    proporciona maior liberdade.
 
--   [Custo contábil.]{style="color: red"} A visão de custo do contador
-    enfatiza as despesas pecuniárias, os custos históricos, a
-    depreciação e outros registros históricos.
+-   Essa distinção é particularmente importante na teoria da firma e
+    seus custos, isso porque economistas estão interessados em analisar
+    as reações da oferta em diferentes intervalos de tempo.
+:::
 
--   [Custo econômico.]{style="color: blue"} O custo econômico de
-    qualquer insumo é o pagamento exigido para manter esse insumo em seu
-    emprego atual. De maneira equivalente, o custo econômico de um
-    insumo é a remuneração que o insumo receberia em seu melhor emprego
-    alternativo.
+# Função custo no curto prazo
+
+## Função custo no curto prazo
+
+::: frame
+Função custo no curto prazo
+
+-   [Função custo de curto prazo.]{style="color: blue"} A função custo
+    de curto prazo (ou função custo restringida) é a função que fornece
+    o custo total mínimo necessário para atingir uma meta de produção
+    $q$ de um bem quando a firma não pode ajustar a quantidade de pelo
+    menos um dos seus fatores de produção.
+
+-   Formalmente, suponhamos que no curto prazo o fator de produção
+    capital, utilizado pela firma, seja fixo em um nível predeterminado
+    $\bar{k} > 0$. Assim, a função custo de curto prazo é dada por:
+    $$C_{CP}(v, w, q; \bar{k}) = \min_{l} v\bar{k} + w l \quad \text{s.r.} \quad q = f(\bar{k}, l).
+                \label{eq1}$$
 :::
 
 ::: frame
-Definições
+Função custo no curto prazo
 
--   Os dados contábeis geralmente estão facilmente disponíveis, enquanto
-    os conceitos econômicos correspondentes podem ser mais difíceis de
-    medir.
+-   No caso de apenas um insumo variável, a escolha ótima da firma é
+    óbvia: é a quantidade mínima do insumo variável que é capaz de
+    produzir $q$ unidades do bem final.
 
--   Se a medida contábil não diferir muito de sua contraparte econômica,
-    ela pode ser uma boa aproximação para muitos propósitos práticos.
-
--   Colocaremos as questões de mensuração de lado e utilizaremos os
-    conceitos relevantes para a decisão - custos econômicos - ao longo
-    da análise.
-:::
-
-## Hipóteses simplificadoras
-
-::: frame
-Hipóteses simplificadoras
-
--   Estudaremos a minimização e as curvas de custo de uma firma que
-    produz apenas um tipo de produto $q$ (caso uniproduto) utilizando
-    apenas dois tipos de insumo: trabalho homogêneo ($l$, medido em
-    horas de trabalho) e capital homogêneo ($k$, medido em
-    horas-máquina).
-
--   Ademais, admitiremos que a firma é tomadora de preços nos mercados
-    de fatores (i.e., os insumos são contratados em mercados
-    perfeitamente competitivos), ou seja, as empresas podem comprar (ou
-    vender) todos os serviços de mão de obra ou de capital que
-    desejarem, sob taxas de aluguel vigentes ($w$ e $v$).
-
--   Portanto, a firma paga por unidades dos insumos trabalho e capital
-    os preços exógenos $w > 0$ e $v > 0$, respectivamente.
+-   Para o caso de vários insumos, a escolha não é tão simples, já que a
+    firma pode escolher a substituição entre os insumos variáveis
+    existentes.
 :::
 
 ::: frame
-Hipóteses simplificadoras
+Função custo no curto prazo
 
--   Logo, com essas simplificações, o custo total $C$ para a firma
-    durante o período é dado por: $$\text{Custo total} = C = wl + vk,
-                \label{eq1}$$ em que $l$ e $k$ representam a utilização
-    dos insumos trabalho e capital, respectivamente, durante o insumo.
-:::
-
-# Relação entre maximização de lucro e minimização de custos
-
-## Maximização de lucro e minimização de custos
-
-::: frame
-Maximização de lucro e minimização de custos
-
--   Os lucros econômicos ($\pi$) serão definidos como a diferença entre
-    a receita total ($R$) da firma e seus custos totais ($C$).
-
--   Suponha que a firma adote o preço de mercado ($p$) para a sua
-    produção total ($q$) como dada e que sua função de produção é
-    $q = f(k,l)$. Formalmente, teremos:
-    $$\pi = R - C = pq - wl - vk = pf(k,l) - wl - vk.
-                \label{eq2}$$
-
--   Ou seja, os lucros econômicos desta firma são uma função da
-    quantidade de capital e trabalho empregado.
-:::
-
-::: frame
-Maximização de lucro e minimização de custos
-
--   Supondo que a firma tem como objetivo a maximização de lucros,
-    então, podemos estudar seu comportamento examinando como $k$ e $l$
-    são escolhidos de maneira a maximizar
-    ([\[eq2\]](#eq2){reference-type="ref" reference="eq2"}).
-
--   Isso, por sua vez, levaria a uma teoria da oferta e uma teoria da
-    "demanda derivada" para os insumos de capital e mão de obra.
-
--   Nosso objetivo, agora, é desenvolver uma teoria dos custos que seja
-    um pouco mais geral, aplicando-se não só às firmas tomadoras de
-    preços no mercado de bens (concorrência perfeita) mas, também,
-    àquelas cuja escolha de produção afeta o preço de mercado
-    (monopólios e oligopólios).
-:::
-
-::: frame
-Maximização de lucro e minimização de custos
-
--   A teoria mais geral se aplicará até mesmo a organizações sem fins
-    lucrativos (desde que estejam interessadas em operar de forma
-    eficiente).
-
--   Outra vantagem em analisar a minimização de custos separadamente da
-    maximização de lucros é que é mais simples analisar essa pequena
-    peça isoladamente e, só depois, adicionar os insights obtidos em uma
-    teoria mais geral das operações das firmas.
-:::
-
-## Suposição comportamental
-
-::: frame
-Suposição comportamental
-
--   As condições derivadas para as opções de insumos minimizadores de
-    custo surgirão, novamente, como um subproduto da análise da
-    maximização de lucros na próxima seção dos nossos estudos.
-
--   Para isso, iremos supor que a firma é maximizadora de lucros. Logo,
-    a combinação de insumos ótima ($k^*, l^*)$, associada ao plano de
-    produção maximizador de lucro $(-k^*, -l^*, q^*)$, deve ser
-    minimizadora de custos, pois se não fosse, haveria outro plano de
-    produção envolvendo um menor custo e, portanto, um maior lucro.
-
--   Observação: a análise de maximização de lucros que veremos
-    posteriormente só é válida para firmas competitivas. A minimização
-    de custos, por sua vez, é válida não somente para firmas
-    competitivas mas, também, para firmas que possuem algum controle
-    sobre o preço do seu produto.
-:::
-
-# Minimização de custos
-
-## Análise formal
-
-::: frame
-Minimização de custos: análise formal
-
--   [Isocusto.]{style="color: blue"} Isocusto é o conjunto
-    $\{(k,l) \in \mathbb{R}_+^2| vk + wl = C\}$ formado por todas as
-    combinações de insumos $(k,l)$ que geram o mesmo custo total
-    $C \geq 0$.
-
--   A isocusto associada ao custo total $C$ pode ser descrita pela
-    equação da reta: $$k = \frac{C}{v} - \frac{w}{v}l,$$ cuja inclinação
-    (coeficiente angular) é o negativo da razão entre os preços dos
-    fatores de produção, $-w/v$.
-:::
-
-::: frame
-Minimização de custos: análise formal
-
--   [Problema da minimização de custos.]{style="color: blue"} A firma
-    deve escolher a combinação de insumos $(k^*, l^*)$ para atingir uma
-    meta de produção $q_0$ com o menor custo possível.
-
--   Ou seja, a firma deve resolver o seguinte problema de minimização de
-    custos: $$\begin{aligned}
-                \min_{(k,l)} & \quad wl + vk, \label{eq3} \\
-                \text{s.r.} & \quad f(k,l) = q_0. \nonumber
+-   Como estamos considerando o caso de apenas um insumo variável, as
+    [demandas condicionais de fatores de curto
+    prazo]{style="color: blue"} podem ser representadas como:
+    $$\begin{aligned}
+                k^* &=& \bar{k}, \label{eq2} \\
+                l^* &=& l_{CP}(v, w, q; \bar{k}). \label{eq3}
             
     \end{aligned}$$
+
+-   A demanda pelo insumo trabalho depende do nível que a firma possui
+    do fator capital, $\bar{k}$.
 :::
 
 ::: frame
-Minimização de custos: análise formal
+Função custo no curto prazo
 
--   A função Lagrangeana associada ao problema de otimização restrito
-    ([\[eq3\]](#eq3){reference-type="ref" reference="eq3"}) é dada por:
-    $$\mathcal{L} = wl + vk + \lambda[q_0 - f(k,l)].
-                \label{eq4}$$
+-   Dadas as demandas condicionais de fatores de curto prazo, a [função
+    custo de curto prazo]{style="color: blue"} é obtida simplesmente
+    substituindo tais demandas na função-objetivo do problema de
+    minimização de custos de curto prazo:
+    $$C_{CP}(v, w, q; \bar{k}) = vk^* + wl^* = v\bar{k} + wl_{CP}(v,w,q;\bar{k}). \label{eq4}$$
 
--   As condições de primeira ordem para um ponto de mínimo restrito são
-    dadas por: $$\begin{aligned}
-                \frac{\partial \mathcal{L}}{\partial l} &\therefore& w - \lambda \frac{\partial f}{\partial l} = 0, \nonumber \\
-                \frac{\partial \mathcal{L}}{\partial k} &\therefore& v - \lambda \frac{\partial f}{\partial k} = 0, \label{eq5} \\
-                \frac{\partial \mathcal{L}}{\partial \lambda} &\therefore& q_0 - f(k,l) = 0. \nonumber
-            
-    \end{aligned}$$
+-   Note que o [custo variável de curto prazo]{style="color: blue"} é
+    $CV_{CP} = wl_{CP}(v,w,q;\bar{k})$ e o [custo fixo de curto
+    prazo]{style="color: blue"} é $CF_{CP} = v\bar{k}$.
+:::
+
+## Funções custos: definições
+
+::: frame
+Funções custos: definições
+
+-   Os custos totais de uma firma podem ser divididos em várias
+    categorias.
+
+-   [Custo fixo.]{style="color: blue"} O custo fixo de uma firma é a
+    parte do custo que não varia com a quantidade produzida. Dito de
+    outra forma, os custos fixos são aqueles associados aos fatores de
+    produção fixos - fatores cujas quantidades utilizadas independem do
+    nível de produção e, sobretudo, recebem pagamento haja ou não
+    produção. Exemplos: aluguel, contador, segurança, etc.
+
+-   [Custo variável.]{style="color: blue"} O custo variável é a parte do
+    custo que varia com a quantidade produzida. Exemplos: gastos com
+    mãos-de-obra, insumos variáveis, etc.
+
+-   A classificação de um custo como fixo ou variável depende do
+    horizonte temporal da análise (no longo prazo, todos os custos são
+    variáveis).
+
+-   O custo total é a soma do custo fixo e do custo variável.
 :::
 
 ::: frame
-Minimização de custos: análise formal
+Funções custos: definições
 
--   Dividindo as duas primeiras equações do sistema
-    ([\[eq5\]](#eq5){reference-type="ref" reference="eq5"}), temos:
-    $$\frac{w}{v} = \frac{f_l}{f_k} = TTS(l,k).
-                \label{eq6}$$
+-   Outros dois tipos de custos importantes são custos irrecuperáveis ou
+    afundados (*sunk costs*) e custos quase-fixos.
 
--   Ou seja, no caso padrão (tecnologia estritamente convexa e isoquanta
-    continuamente diferenciável), na escolha minimizadora de custos
-    $(k^*, l^*)$ a isocusto é tangente à isoquanta, de maneira que suas
-    inclinações são iguais.
+-   [Custos irrecuperáveis ou afundados.]{style="color: blue"} São tipos
+    de custos fixos que uma vez incorridos não podem ser recuperados
+    caso a firma decida não produzir (sair do mercado). Exemplo: bens de
+    capital com elevado grau de especificidade de uso apresentam
+    mercados de revenda e de aluguel pouco desenvolvidos ou
+    inexistentes, de maneira que os custos irrecuperáveis associados são
+    elevados.
 
--   A firma minimizadora de custos deve igualar a TTS dos dois insumos à
-    razão de seus preços.
+-   [Custos quase-fixos.]{style="color: blue"} Custos quase-fixos
+    ocorrem apenas se a firma decide produzir uma quantidade positiva do
+    bem. Se ela produz zero, não gasta nada desse custo. Se ela produz
+    qualquer quantidade positiva, ela gasta um valor fixo.
+
+-   Em suma, os custos fixos independem do nível de produção e têm de
+    ser pagos mesmo que a firma não produza. Enquanto que os custos
+    quase-fixos, embora também independentes do nível de produção, só
+    precisam ser pagos se a firma produzir uma quantidade estritamente
+    positiva.
 :::
 
 ::: frame
-Minimização de custos: análise formal
+Custo médio de curto prazo
+
+-   [Custo médio de curto prazo.]{style="color: blue"} É o custo mínimo
+    por unidade produzida quando pelo menos um dos fatores de produção é
+    fixo:
+    $$CMe_{CP}(v,w,q;\bar{k}) \equiv \frac{C_{CP}(v,w,q;\bar{k})}{q} = \underbrace{\frac{v\bar{k}}{q}}_{\color{blue}CFMe_{CP}} + \underbrace{\frac{wl_{CP}(v,w,q;\bar{k})}{q}}_{\color{red}CVMe_{CP}}. \label{eq5}$$
+
+-   Como se pode observar, o custo médio de curto prazo pode ser
+    decomposto em duas parcelas:
+
+    1.  [Custo fixo médio de curto prazo]{style="color: blue"}:
+        $CFMe_{CP}(v,w,q;\bar{k}) \equiv \frac{v\bar{k}}{q}$.
+
+    2.  [Custo variável médio de curto prazo]{style="color: blue"}:
+        $CVMe_{CP}(v,w,q;\bar{k}) \equiv\frac{wl_{CP}(v,w,q;\bar{k})}{q}$.
+:::
+
+::: frame
+Custo médio de curto prazo
 
 <figure id="fig1">
-<img src="custostangencia.JPG" style="width:70.0%" />
-<figcaption>Condição de tangência entre isoquanta e isocusto no ponto de
-minimização de custos. Fonte: Nicholson e Snyder (2019).</figcaption>
+<img src="cme.JPG" style="width:80.0%" />
+<figcaption>Curvas de custo médio de curto prazo: (a) custo fixo médio,
+(b) custo variável médio, (c) custo médio. Fonte: Varian
+(2006).</figcaption>
+</figure>
+
+-   O custo fixo médio é sempre decrescente na quantidade produzida.
+
+-   O custo variável médio pode ser decrescente inicialmente mas, como
+    alguns fatores são fixos, ele se tornará crescente quando a produção
+    aumentar.
+
+-   O custo médio é a soma das duas curvas anteriores.
+:::
+
+::: frame
+Custo médio de curto prazo
+
+-   Para quantidades pequenas de produção, boa parte dos custos totais
+    são custos fixos.
+
+-   Para níveis altos de produção, esses custos fixos são diluídos e
+    irão compor uma parte menor dos custos totais.
+
+-   Como a curva de custo médio é a soma das curvas de custo fixo médio
+    e custo de variável médio, os custos médios serão decrescentes para
+    níveis baixos de produção, em razão da predominância dos custos
+    fixos médios sobre custos variáveis médios.
+
+-   Por outro lado, a curva de custo médio será crescente para níveis
+    altos de produção, já que a relação entre custos fixos médios e
+    custos variáveis médios se invertem.
+
+-   Portanto, o formato mais comum para a curva de custo médio é em $U$,
+    como ilustrado na Figura [1](#fig1){reference-type="ref"
+    reference="fig1"}.
+:::
+
+::: frame
+Custo médio de curto prazo
+
+<figure id="fig2">
+<img src="cme u.JPG" style="width:80.0%" />
+<figcaption>Curva de custo médio de curto prazo. Fonte:
+Resende.</figcaption>
 </figure>
 :::
 
 ::: frame
-Minimização de custos: análise formal
+Custo marginal de curto prazo
 
--   Note que a igualdade na equação
-    ([\[eq6\]](#eq6){reference-type="ref" reference="eq6"}) pode ser
-    expressa como segue: $$\frac{f_k}{v} = \frac{f_l}{w}.
+-   [Custo marginal de curto prazo.]{style="color: blue"} É a variação
+    do custo total mínimo gerada pela variação em uma unidade de
+    produção, em uma situação em que a firma não pode ajustar a
+    quantidade de pelo menos um fator de produção:
+    $$CMg_{CP} \equiv \frac{\partial C_{CP}(v,w,q;\bar{k})}{\partial q} = \frac{\partial CV_{CP}(v,w,q;\bar{k})}{\partial q}.
+                \label{eq6}$$
+:::
+
+## Custo médio $\times$ custo marginal
+
+::: frame
+Custo médio $\times$ custo marginal
+
+-   Tomando a derivada da função de custo médio de curto prazo, temos o
+    seguinte resultado:
+    $$\frac{\partial CMe_{CP}}{\partial q} = \frac{1}{q}[CMg_{CP} - CMe_{CP}].
                 \label{eq7}$$
 
--   Ou seja, para que os custos sejam minimizados, a produtividade
-    marginal por cada unidade monetária dispendida deve ser a mesma para
-    todos os insumos.
+    1.  Se $CMg_{CP} < CMe_{CP}$, a curva de custo médio de curto prazo
+        é estritamente decrescente.
 
--   Qualquer insumo que não satisfazer essa razão custo-benefício comum
-    não deve ser selecionado.
+    2.  Se $CMg_{CP} > CMe_{CP}$, a curva de custo médio de curto prazo
+        é estritamente crescente.
+
+    3.  Se $CMg_{CP} = CMe_{CP}$, temos o ponto de mínimo do custo médio
+        de curto prazo.
 :::
 
 ::: frame
-Minimização de custos: análise formal
+Custo médio $\times$ custo marginal
 
--   Alternativamente, podemos, ainda, escrever a condição de igualdade
-    da seguinte forma: $$\frac{w}{f_l} = \frac{v}{f_k} = \lambda.
-                \label{eq8}$$
+<figure id="fig3">
+<img src="cmg x cme.JPG" style="width:50.0%" />
+<figcaption>Custo médio de curto prazo <span
+class="math inline">×</span> custo marginal de curto prazo. Fonte:
+Resende.</figcaption>
+</figure>
 
--   A equação ([\[eq8\]](#eq8){reference-type="ref" reference="eq8"})
-    mostra o custo extra de se obter uma unidade a mais de produção,
-    selecionando mão de obra ou entrada de capital adicional.
-
--   Por causa da minimização de custos, esse custo marginal é o mesmo,
-    independentemente do insumo selecionado.
-
--   Esse custo marginal comum também é medido pelo multiplicador de
-    Lagrange $\lambda$ do problema de minimização de custos.
-
--   Como é o caso de todos os problemas de otimização restrita, o
-    multiplicador de Lagrange mostra o quanto se incorreria, em termos
-    de custos extras, caso a restrição de produção fosse relaxada
-    levemente.
+-   Em resumo, a curva de custo marginal está abaixo da curva de custo
+    médio quando esta é decrescente e acima da curva de custo médio
+    quando esta é crescente. As duas curvas se cruzam no ponto mínimo da
+    curva de custo médio.
 :::
 
-## Função demanda condicional de fatores
+::: frame
+Custo marginal $\times$ custo variável médio
+
+-   O custo marginal de curto prazo é igual ao custo variável médio de
+    curto prazo quando a produção é nula, $q = 0$.
+
+-   Ademais, se o custo marginal é estritamente menor (maior) que o
+    custo variável médio, então a função custo variável médio é
+    estritamente decrescente (crescente), e a função custo marginal
+    cruza a função custo variável médio no ponto de mínimo desta última.
+:::
 
 ::: frame
-Função demanda condicional de fatores
+Custo marginal $\times$ custo variável médio
 
--   [Função demanda condicional de fatores (ou demanda contingente de
-    insumos).]{style="color: blue"} Se a isoquanta é estritamente
-    convexa, existe uma, e somente uma, combinação de insumos ótima
-    $(k^*, l^*)$ que resolve o problema de minimização de custos, a qual
-    é uma função contínua dos preços $(v, w) \in \mathbb{R}_{++}^2$ e da
-    meta de produção $q \geq 0$, ou seja: $$\begin{aligned}
-                k &=& k^c(v, w, q), \label{eq9} \\
-                l &=& l^c(v, w, q). \label{eq10}
+<figure id="fig4">
+<img src="cvme cmg.JPG" style="width:70.0%" />
+<figcaption>Curvas de custo de curto prazo. Fonte: Varian
+(2006).</figcaption>
+</figure>
+:::
+
+# Funções custo no longo prazo
+
+## Função custo de longo prazo
+
+::: frame
+Função custo de longo prazo
+
+-   [Função custo de longo prazo.]{style="color: blue"} É a função custo
+    que fornece o custo total mínimo necessário para atingir uma meta de
+    produção $q$ de um bem quando a firma pode ajustar as quantidades de
+    todos os seus fatores de produção.
+
+-   Portanto, ela é a mesma função custo que definimos na aula anterior:
+    $$C_{LP}(v,w,q) = C(v,w,q).$$
+:::
+
+## Custo médio de longo prazo
+
+::: frame
+Custo médio de longo prazo
+
+-   [Custo médio de longo prazo.]{style="color: blue"} $CMe_{LP}$ é o
+    custo mínimo por unidade produzida quando todos os fatores de
+    produção são variáveis.
+
+-   Como não há custo fixo no longo prazo, o custo médio de longo prazo
+    e o custo variável médio de longo prazo ($CVMe_{LP}$) são iguais:
+    $$\begin{aligned}
+                CMe_{LP} = CVMe_{LP} = \begin{cases}
+                \frac{C(v,w,q)}{q}, \quad & \text{se} \quad q > 0, \\
+                0, \quad \text{se} & \quad q = 0.
+                \end{cases}
+                \label{eq8}
             
     \end{aligned}$$
 :::
 
-## Funções custo
+## Custo marginal de longo prazo
 
 ::: frame
-Funções custo
+Custo marginal de longo prazo
 
--   [Função custo total.]{style="color: blue"} A função custo total mede
-    o custo total mínimo de produzir $q$ unidades de um bem quando os
-    preços dos fatores de produção são $(v, w) \in \mathbb{R}_{++}^2$ e
-    a tecnologia de produção é $f(k,l)$: $$C = C(v, w, q).
-                \label{eq11}$$
-
--   A função custo é obtida substituindo a função demanda condicional de
-    fatores na função objetivo do problema de minimização de custos, ou
-    seja: $$C(v, w, q) = v k^c(v, w, q) + w l^c(v, w, q).
-                \label{eq12}$$
-:::
-
-## Custo médio e custo marginal
-
-::: frame
-Funções custo médio e marginal
-
--   A [função custo médio]{style="color: blue"} (AC) é o custo mínimo
-    total por unidade produzida:
-    $$\text{Custo médio} = AC(v, w, q) = \frac{C(v, w, q)}{q}.
-                \label{eq13}$$
-
--   A [função custo marginal]{style="color: blue"} (MC) é a variação do
-    custo total mínimo gerada pela variação de uma unidade de produção:
-    $$\text{Custo marginal} = MC(v, w, q) = \frac{\partial C(v, w, q)}{\partial q}.
-                \label{eq14}$$
-:::
-
-## Propriedades das funções custo
-
-::: frame
-Propriedades das funções custo
-
--   A função custo total satisfaz as seguintes propriedades:
-
-    1.  $C(v, w, 0) = 0$.
-
-    2.  $C(v, w, q)$ é estritamente crescente em $q$.
-
-    3.  $C(v, w, q)$ é não-decrescente nos preços dos insumos $v$ e $w$.
-
-    4.  $C(v, w, q)$ é homogênea de grau 1 nos preços dos insumos $v$ e
-        $w$, isto é:
-        $$C(tv, tw, q) = tC(v, w, q), \forall t > 0. \label{eq15}$$
-
-    5.  A função custo total é côncava nos preços dos insumos $v$ e $w$.
-
-    6.  Lema de Shephard: $$\begin{aligned}
-                        \frac{\partial C(v, w, q)}{\partial v} &=& k^c(v, w, q), \label{eq16} \\
-                        \frac{\partial C(v, w, q)}{\partial w} &=& l^c(v, w, q). \label{eq17}
-                    
-        \end{aligned}$$
-:::
-
-# Exercícios
-
-::: frame
-Cobb-Douglas $$q = f(k,l) = k^\alpha l^\beta.$$
-:::
-
-::: frame
-Função CES $$q = f(k,l) = (k^\rho + l^\rho)^{\gamma/\rho}.$$
-:::
-
-::: frame
-Tecnologia linear $$q = f(k,l) = \alpha k + \beta l.$$
-:::
-
-::: frame
-Leontief $$q = f(k,l) = \min(\alpha k, \beta l).$$
+-   [Custo marginal de longo prazo.]{style="color: blue"} É a variação
+    do custo total mínimo gerada pela variação em uma unidade de
+    produção, em uma situação em que a firma pode ajustar todas as
+    quantidades dos fatores de produção:
+    $$CMg_{LP} = \frac{\partial C_{LP}(v, w, q)}{\partial q} = \frac{\partial CV_{LP}(v,w,q)}{\partial q}.
+                \label{eq9}$$
 :::
 
 ::: thebibliography

@@ -6,296 +6,365 @@ author:
   **Disciplina:** 23MIC1 - Microeconomia I\
   **Universidade do Estado de Santa Catarina (UDESC)**\
   **Centro de Ciências da Administração e Socioeconômicas - ESAG**
-date: 28 de Novembro, 2022
-title: "Microeconomia I: Teoria da Firma"
+date: 30 de Novembro, 2022
+title: "Microeconomia I: Minimização de custos"
 ---
 
 ::: frame
 Sumário
 :::
 
-# Taxa técnica de substituição
+# Custo econômico $\times$ custo contábil
 
-## Definição
+## Definições
 
 ::: frame
-Taxa técnica de substituição
+Definições
 
--   [Taxa técnica de substituição (TTS).]{style="color: blue"} A taxa
-    técnica de substituição (ou taxa marginal de substituição técnica)
-    entre dois insumos mede o quanto a firma deve abrir mão de um desses
-    insumos e acrescentar do outro insumo para continuar produzindo a
-    mesma quantidade do bem final ao longo de uma isoquanta.
+-   Antes de discutirmos a teoria dos custos, algumas questões sobre a
+    definição adequada de "custos" devem ser esclarecidas.
 
--   Intuitivamente, a taxa técnica de substituição do insumo $j$ por
-    insumo $i$, denotada por $TTS(x_i,x_j)$, é a quantidade de insumo
-    $j$ que a firma pode reduzir por usar uma unidade adicional do
-    insumo $i$ e manter sua produção constante ou, alternativamente, é a
-    quantidade adicional de insumo $j$ que a firma deve usar para abrir
-    mão de uma unidade do insumo $i$ e manter constante sua produção.
+-   Especificamente, devemos fazer a distinção entre [custo
+    contábil]{style="color: red"} e [custo
+    econômico]{style="color: blue"}.
+
+-   [Custo contábil.]{style="color: red"} A visão de custo do contador
+    enfatiza as despesas pecuniárias, os custos históricos, a
+    depreciação e outros registros históricos.
+
+-   [Custo econômico.]{style="color: blue"} O custo econômico de
+    qualquer insumo é o pagamento exigido para manter esse insumo em seu
+    emprego atual. De maneira equivalente, o custo econômico de um
+    insumo é a remuneração que o insumo receberia em seu melhor emprego
+    alternativo.
 :::
 
 ::: frame
-Taxa técnica de substituição
+Definições
 
--   A TTS entre os insumos $i$ e $j$ pode ser obtida do seguinte modo:
-    suponha que alteramos os insumos $i$ e $j$ em $dx_i$ e $dx_j$,
-    respectivamente, de modo a manter inalterado o nível de produção
-    $(dq = 0)$.
+-   Os dados contábeis geralmente estão facilmente disponíveis, enquanto
+    os conceitos econômicos correspondentes podem ser mais difíceis de
+    medir.
 
--   Usando o conceito de diferencial total, obtemos: $$\begin{aligned}
-                0 &=& dq = \frac{\partial f(x_1, \dots, x_n)}{\partial x_i}dx_i + \frac{\partial f(x_1, \dots, x_n)}{\partial x_j}dx_j \\
-                &\Rightarrow & \left.\frac{dx_j}{dx_i}\right|_{q = f(\mathbf{x})} = -\frac{f_i}{f_j}.
+-   Se a medida contábil não diferir muito de sua contraparte econômica,
+    ela pode ser uma boa aproximação para muitos propósitos práticos.
+
+-   Colocaremos as questões de mensuração de lado e utilizaremos os
+    conceitos relevantes para a decisão - custos econômicos - ao longo
+    da análise.
+:::
+
+## Hipóteses simplificadoras
+
+::: frame
+Hipóteses simplificadoras
+
+-   Estudaremos a minimização e as curvas de custo de uma firma que
+    produz apenas um tipo de produto $q$ (caso uniproduto) utilizando
+    apenas dois tipos de insumo: trabalho homogêneo ($l$, medido em
+    horas de trabalho) e capital homogêneo ($k$, medido em
+    horas-máquina).
+
+-   Ademais, admitiremos que a firma é tomadora de preços nos mercados
+    de fatores (i.e., os insumos são contratados em mercados
+    perfeitamente competitivos), ou seja, as empresas podem comprar (ou
+    vender) todos os serviços de mão de obra ou de capital que
+    desejarem, sob taxas de aluguel vigentes ($w$ e $v$).
+
+-   Portanto, a firma paga por unidades dos insumos trabalho e capital
+    os preços exógenos $w > 0$ e $v > 0$, respectivamente.
+:::
+
+::: frame
+Hipóteses simplificadoras
+
+-   Logo, com essas simplificações, o custo total $C$ para a firma
+    durante o período é dado por: $$\text{Custo total} = C = wl + vk,
+                \label{eq1}$$ em que $l$ e $k$ representam a utilização
+    dos insumos trabalho e capital, respectivamente, durante o insumo.
+:::
+
+# Relação entre maximização de lucro e minimização de custos
+
+## Maximização de lucro e minimização de custos
+
+::: frame
+Maximização de lucro e minimização de custos
+
+-   Os lucros econômicos ($\pi$) serão definidos como a diferença entre
+    a receita total ($R$) da firma e seus custos totais ($C$).
+
+-   Suponha que a firma adote o preço de mercado ($p$) para a sua
+    produção total ($q$) como dada e que sua função de produção é
+    $q = f(k,l)$. Formalmente, teremos:
+    $$\pi = R - C = pq - wl - vk = pf(k,l) - wl - vk.
+                \label{eq2}$$
+
+-   Ou seja, os lucros econômicos desta firma são uma função da
+    quantidade de capital e trabalho empregado.
+:::
+
+::: frame
+Maximização de lucro e minimização de custos
+
+-   Supondo que a firma tem como objetivo a maximização de lucros,
+    então, podemos estudar seu comportamento examinando como $k$ e $l$
+    são escolhidos de maneira a maximizar
+    ([\[eq2\]](#eq2){reference-type="ref" reference="eq2"}).
+
+-   Isso, por sua vez, levaria a uma teoria da oferta e uma teoria da
+    "demanda derivada" para os insumos de capital e mão de obra.
+
+-   Nosso objetivo, agora, é desenvolver uma teoria dos custos que seja
+    um pouco mais geral, aplicando-se não só às firmas tomadoras de
+    preços no mercado de bens (concorrência perfeita) mas, também,
+    àquelas cuja escolha de produção afeta o preço de mercado
+    (monopólios e oligopólios).
+:::
+
+::: frame
+Maximização de lucro e minimização de custos
+
+-   A teoria mais geral se aplicará até mesmo a organizações sem fins
+    lucrativos (desde que estejam interessadas em operar de forma
+    eficiente).
+
+-   Outra vantagem em analisar a minimização de custos separadamente da
+    maximização de lucros é que é mais simples analisar essa pequena
+    peça isoladamente e, só depois, adicionar os insights obtidos em uma
+    teoria mais geral das operações das firmas.
+:::
+
+## Suposição comportamental
+
+::: frame
+Suposição comportamental
+
+-   As condições derivadas para as opções de insumos minimizadores de
+    custo surgirão, novamente, como um subproduto da análise da
+    maximização de lucros na próxima seção dos nossos estudos.
+
+-   Para isso, iremos supor que a firma é maximizadora de lucros. Logo,
+    a combinação de insumos ótima ($k^*, l^*)$, associada ao plano de
+    produção maximizador de lucro $(-k^*, -l^*, q^*)$, deve ser
+    minimizadora de custos, pois se não fosse, haveria outro plano de
+    produção envolvendo um menor custo e, portanto, um maior lucro.
+
+-   Observação: a análise de maximização de lucros que veremos
+    posteriormente só é válida para firmas competitivas. A minimização
+    de custos, por sua vez, é válida não somente para firmas
+    competitivas mas, também, para firmas que possuem algum controle
+    sobre o preço do seu produto.
+:::
+
+# Minimização de custos
+
+## Análise formal
+
+::: frame
+Minimização de custos: análise formal
+
+-   [Isocusto.]{style="color: blue"} Isocusto é o conjunto
+    $\{(k,l) \in \mathbb{R}_+^2| vk + wl = C\}$ formado por todas as
+    combinações de insumos $(k,l)$ que geram o mesmo custo total
+    $C \geq 0$.
+
+-   A isocusto associada ao custo total $C$ pode ser descrita pela
+    equação da reta: $$k = \frac{C}{v} - \frac{w}{v}l,$$ cuja inclinação
+    (coeficiente angular) é o negativo da razão entre os preços dos
+    fatores de produção, $-w/v$.
+:::
+
+::: frame
+Minimização de custos: análise formal
+
+-   [Problema da minimização de custos.]{style="color: blue"} A firma
+    deve escolher a combinação de insumos $(k^*, l^*)$ para atingir uma
+    meta de produção $q_0$ com o menor custo possível.
+
+-   Ou seja, a firma deve resolver o seguinte problema de minimização de
+    custos: $$\begin{aligned}
+                \min_{(k,l)} & \quad wl + vk, \label{eq3} \\
+                \text{s.r.} & \quad f(k,l) = q_0. \nonumber
             
     \end{aligned}$$
 :::
 
 ::: frame
-Taxa técnica de substituição
+Minimização de custos: análise formal
 
--   Portanto, a taxa técnica de substituição do insumo $j$ por insumo
-    $i$, $TTS(x_i, x_j)$ é dada por:
-    $$TTS(x_i, x_j) = -\left.\frac{dx_j}{dx_i}\right|_{q = f(\mathbf{x})} = \frac{f_i}{f_j} = \frac{PM_i}{PM_j}.
-                \label{eq1}$$
+-   A função Lagrangeana associada ao problema de otimização restrito
+    ([\[eq3\]](#eq3){reference-type="ref" reference="eq3"}) é dada por:
+    $$\mathcal{L} = wl + vk + \lambda[q_0 - f(k,l)].
+                \label{eq4}$$
 
--   Ou seja, a taxa técnica de substituição é dada pela razão entre as
-    produtividades marginais dos insumos.
-
--   A TTS é o análogo para a teoria da firma da taxa marginal de
-    substituição da teoria do consumidor.
-
--   Considerando nossa função de produção apenas com os insumos capital
-    e trabalho temos que a TTS de trabalho por capital é dada por:
-    $$TTS(l,k) = \frac{PM_l}{PM_k}.$$
-:::
-
-## Implicações das propriedades da tecnologia
-
-::: frame
-Implicações das propriedades da tecnologia
-
--   A propriedade de [livre descarte]{style="color: blue"} torna a TTS
-    positiva.
-
--   A propriedade de convexidade implica que a TTS(l,k) é decrescente,
-    ou seja, conforme aumenta-se a quantidade do insumo trabalho menor a
-    quantidade do insumo capital que é possível reduzir para que o nível
-    de produção mantenha-se constante.
+-   As condições de primeira ordem para um ponto de mínimo restrito são
+    dadas por: $$\begin{aligned}
+                \frac{\partial \mathcal{L}}{\partial l} &\therefore& w - \lambda \frac{\partial f}{\partial l} = 0, \nonumber \\
+                \frac{\partial \mathcal{L}}{\partial k} &\therefore& v - \lambda \frac{\partial f}{\partial k} = 0, \label{eq5} \\
+                \frac{\partial \mathcal{L}}{\partial \lambda} &\therefore& q_0 - f(k,l) = 0. \nonumber
+            
+    \end{aligned}$$
 :::
 
 ::: frame
-Implicações das propriedades da tecnologia
+Minimização de custos: análise formal
+
+-   Dividindo as duas primeiras equações do sistema
+    ([\[eq5\]](#eq5){reference-type="ref" reference="eq5"}), temos:
+    $$\frac{w}{v} = \frac{f_l}{f_k} = TTS(l,k).
+                \label{eq6}$$
+
+-   Ou seja, no caso padrão (tecnologia estritamente convexa e isoquanta
+    continuamente diferenciável), na escolha minimizadora de custos
+    $(k^*, l^*)$ a isocusto é tangente à isoquanta, de maneira que suas
+    inclinações são iguais.
+
+-   A firma minimizadora de custos deve igualar a TTS dos dois insumos à
+    razão de seus preços.
+:::
+
+::: frame
+Minimização de custos: análise formal
 
 <figure id="fig1">
-<img src="isoquanta.JPG" style="width:70.0%" />
-<figcaption>Isoquantas e convexidade. Fonte: Nicholson e Snyder
-(2019).</figcaption>
+<img src="custostangencia.JPG" style="width:70.0%" />
+<figcaption>Condição de tangência entre isoquanta e isocusto no ponto de
+minimização de custos. Fonte: Nicholson e Snyder (2019).</figcaption>
 </figure>
 :::
 
-## Exercícios
-
 ::: frame
-Exercícios
+Minimização de custos: análise formal
 
--   Calcula a taxa técnica de substituição para cada uma das tecnologias
-    de produção a seguir:
+-   Note que a igualdade na equação
+    ([\[eq6\]](#eq6){reference-type="ref" reference="eq6"}) pode ser
+    expressa como segue: $$\frac{f_k}{v} = \frac{f_l}{w}.
+                \label{eq7}$$
 
-    1.  [Linear (Fatores de produção substitutos).]{style="color: blue"}
-        $q = \alpha k + \beta l$.
+-   Ou seja, para que os custos sejam minimizados, a produtividade
+    marginal por cada unidade monetária dispendida deve ser a mesma para
+    todos os insumos.
 
-    2.  [Leontief (Fatores de produção em proporções
-        fixas.]{style="color: blue"} $q = \min\{\alpha k, \beta l\}$.
-
-    3.  [Cobb-Douglas.]{style="color: blue"} $q = A k^\alpha l^\beta$.
-
-    4.  [Elasticidade de substituição constante.]{style="color: blue"}
-        $q = (k^\rho + l^\rho)^{\gamma/\rho}$.
-:::
-
-# Retornos de escala
-
-## Introdução
-
-::: frame
-Retornos de escala
-
--   Uma questão importante relacionada ao conceito de função de produção
-    é o que acontece com a quantidade produzida quando há um aumento
-    generalizado nos insumos utilizados pelo processo produtivo?
-
--   Essa é uma questão de [rendimentos de escala]{style="color: blue"}
-    que interessa os economistas de pelo menos desde a publicação de "A
-    riqueza das nações" por Adam Smith em 1776.
-
--   Smith identificou duas forças em ação quando realizamos um
-    experimento de dobrar todos os insumos produtivos.
+-   Qualquer insumo que não satisfazer essa razão custo-benefício comum
+    não deve ser selecionado.
 :::
 
 ::: frame
-Retornos de escala
+Minimização de custos: análise formal
 
-1.  A duplicação de escala permite uma maior divisão do trabalho e a
-    especialização da função. Por isso, pode-se argumentar que a
-    eficiência pode aumentar - a produção pode aumentar mais do que o
-    dobro.
+-   Alternativamente, podemos, ainda, escrever a condição de igualdade
+    da seguinte forma: $$\frac{w}{f_l} = \frac{v}{f_k} = \lambda.
+                \label{eq8}$$
 
-2.  A duplicação dos insumos também implica alguma perda de eficiência,
-    uma vez que a supervisão gerencial torna-se mais difícil, dada a
-    maior escala da empresa.
+-   A equação ([\[eq8\]](#eq8){reference-type="ref" reference="eq8"})
+    mostra o custo extra de se obter uma unidade a mais de produção,
+    selecionando mão de obra ou entrada de capital adicional.
 
--   Qual dessas duas tendências será prevalente é uma questão empírica
-    de extrema relevância.
+-   Por causa da minimização de custos, esse custo marginal é o mesmo,
+    independentemente do insumo selecionado.
+
+-   Esse custo marginal comum também é medido pelo multiplicador de
+    Lagrange $\lambda$ do problema de minimização de custos.
+
+-   Como é o caso de todos os problemas de otimização restrita, o
+    multiplicador de Lagrange mostra o quanto se incorreria, em termos
+    de custos extras, caso a restrição de produção fosse relaxada
+    levemente.
 :::
 
-## Definição
+## Função demanda condicional de fatores
 
 ::: frame
-Retornos de escala
+Função demanda condicional de fatores
 
-1.  [Rendimentos decrescentes de escala.]{style="color: blue"} Uma firma
-    apresenta rendimentos decrescentes de escala se ao aumentarmos todas
-    as quantidades dos insumos utilizados na mesma proporção, a
-    quantidade produzida varia numa proporção menor que a variação das
-    quantidades utilizadas dos insumos.
-
-2.  [Rendimentos constantes de escala.]{style="color: blue"} Uma firma
-    apresenta rendimentos constantes de escala se ao aumentarmos todas
-    as quantidades dos insumos utilizados na mesma proporção, a
-    quantidade produzida varia na mesma proporção que a variação das
-    quantidades utilizadas dos insumos.
-
-3.  [Rendimentos crescentes de escala.]{style="color: blue"} Uma firma
-    apresenta rendimentos crescentes de escala se ao aumentarmos todas
-    as quantidades dos insumos utilizados na mesma proporção, a
-    quantidade produzida varia numa proporção maior que a variação das
-    quantidades utilizadas dos insumos.
+-   [Função demanda condicional de fatores (ou demanda contingente de
+    insumos).]{style="color: blue"} Se a isoquanta é estritamente
+    convexa, existe uma, e somente uma, combinação de insumos ótima
+    $(k^*, l^*)$ que resolve o problema de minimização de custos, a qual
+    é uma função contínua dos preços $(v, w) \in \mathbb{R}_{++}^2$ e da
+    meta de produção $q \geq 0$, ou seja: $$\begin{aligned}
+                k &=& k^c(v, w, q), \label{eq9} \\
+                l &=& l^c(v, w, q). \label{eq10}
+            
+    \end{aligned}$$
 :::
 
+## Funções custo
+
 ::: frame
-Retornos de escala
+Funções custo
 
--   Formalmente, temos as seguintes definições:
+-   [Função custo total.]{style="color: blue"} A função custo total mede
+    o custo total mínimo de produzir $q$ unidades de um bem quando os
+    preços dos fatores de produção são $(v, w) \in \mathbb{R}_{++}^2$ e
+    a tecnologia de produção é $f(k,l)$: $$C = C(v, w, q).
+                \label{eq11}$$
 
-    1.  A função de produção $f(x_1, \dots, x_n)$ apresentará
-        [rendimentos decrescentes de escala]{style="color: blue"} se:
-        $$f(tx_1, \dots, tx_n) < tf(x_1, \dots, x_n), \forall t>1.
-                    \label{eq2}$$
-
-    2.  A função de produção $f(x_1, \dots, x_n)$ apresentará
-        [rendimentos constantes de escala]{style="color: blue"} se:
-        $$f(tx_1, \dots, tx_n) = tf(x_1, \dots, x_n), \forall t>1.
-                    \label{eq3}$$
-
-    3.  A função de produção $f(x_1, \dots, x_n)$ apresentará
-        [rendimentos crescentes de escala]{style="color: blue"} se:
-        $$f(tx_1, \dots, tx_n) > tf(x_1, \dots, x_n), \forall t>1.
-                    \label{eq4}$$
+-   A função custo é obtida substituindo a função demanda condicional de
+    fatores na função objetivo do problema de minimização de custos, ou
+    seja: $$C(v, w, q) = v k^c(v, w, q) + w l^c(v, w, q).
+                \label{eq12}$$
 :::
 
-## Exercícios
+## Custo médio e custo marginal
 
 ::: frame
-Exercícios
+Funções custo médio e marginal
 
--   Para cada uma das tecnologias de produção a seguir, verifique os
-    rendimentos de escala:
+-   A [função custo médio]{style="color: blue"} (AC) é o custo mínimo
+    total por unidade produzida:
+    $$\text{Custo médio} = AC(v, w, q) = \frac{C(v, w, q)}{q}.
+                \label{eq13}$$
 
-    1.  [Linear (Fatores de produção substitutos).]{style="color: blue"}
-        $q = \alpha k + \beta l$.
-
-    2.  [Leontief (Fatores de produção em proporções
-        fixas.]{style="color: blue"} $q = \min\{\alpha k, \beta l\}$.
-
-    3.  [Cobb-Douglas.]{style="color: blue"} $q = A k^\alpha l^\beta$.
-
-    4.  [Elasticidade de substituição constante.]{style="color: blue"}
-        $q = (k^\rho + l^\rho)^{\gamma/\rho}$.
+-   A [função custo marginal]{style="color: blue"} (MC) é a variação do
+    custo total mínimo gerada pela variação de uma unidade de produção:
+    $$\text{Custo marginal} = MC(v, w, q) = \frac{\partial C(v, w, q)}{\partial q}.
+                \label{eq14}$$
 :::
 
-# Elasticidade de substituição
-
-## Introdução
+## Propriedades das funções custo
 
 ::: frame
-Elasticidade de substituição
+Propriedades das funções custo
 
--   Outra característica importante da função de produção é a facilidade
-    de substituição de um insumo por outro.
+-   A função custo total satisfaz as seguintes propriedades:
 
--   Essa é uma questão que diz respeito à forma de uma única isoquanta,
-    em vez do mapa de isoquantas como um todo.
+    1.  $C(v, w, 0) = 0$.
 
--   Ao longo de uma isoquanta, a TTS diminuirá à medida que a relação
-    capital-trabalho diminuir (supondo convexidade).
+    2.  $C(v, w, q)$ é estritamente crescente em $q$.
 
--   Agora desejamos definir algum parâmetro que meça esse grau de
-    capacidade de resposta.
+    3.  $C(v, w, q)$ é não-decrescente nos preços dos insumos $v$ e $w$.
+
+    4.  $C(v, w, q)$ é homogênea de grau 1 nos preços dos insumos $v$ e
+        $w$, isto é:
+        $$C(tv, tw, q) = tC(v, w, q), \forall t > 0. \label{eq15}$$
+
+    5.  A função custo total é côncava nos preços dos insumos $v$ e $w$.
+
+    6.  Lema de Shephard: $$\begin{aligned}
+                        \frac{\partial C(v, w, q)}{\partial v} &=& k^c(v, w, q), \label{eq16} \\
+                        \frac{\partial C(v, w, q)}{\partial w} &=& l^c(v, w, q). \label{eq17}
+                    
+        \end{aligned}$$
 :::
 
-::: frame
-Elasticidade de substituição
-
--   Se a TTS não se altera com as mudanças na razão capital-trabalho
-    ($k/l$), podemos dizer que a substituição é fácil, uma vez que a
-    razão das produtividades marginais dos insumos não muda à medida que
-    a combinação de insumos muda.
-
--   Por outro lado, se a TTS muda rapidamente à medida que ocorrem
-    pequenas mudanças em $k/l$, diríamos que a substituição é difícil,
-    já que pequenas variações na combinação de insumos terão um efeito
-    substancial sobre as produtividades relativas do insumo.
-
--   Uma medida sem escala dessa capacidade de resposta é proporcionada
-    pela [elasticidade de substituição]{style="color: blue"}.
-
--   Enquanto a TTS mede a inclinação de uma isoquanta, a elasticidade de
-    substituição é uma medida da curvatura de uma isoquanta.
-:::
-
-## Definição
+# Exercícios
 
 ::: frame
-Elasticidade de substituição
-
--   [Elasticidade de substituição no arco.]{style="color: blue"} Mede a
-    variação percentual média da razão entre os fatores de produção
-    $k/l$ relativa à variação de um por cento (para cima ou para baixo)
-    da $TTS(l,k)$ ao longo de uma isoquanta. Ou seja:
-    $$\sigma = \frac{\Delta (k/l)/(k/l)}{\Delta TTS(l,k)/TTS(l,k)} = \frac{\Delta (k/l)}{\Delta TTS(l,k)} \frac{TTS(l,k)}{k/l}.
-                \label{eq5}$$
+Cobb-Douglas $$q = f(k,l) = k^\alpha l^\beta.$$
 :::
 
 ::: frame
-Elasticidade de substituição
-
--   [Elasticidade de substituição no ponto.]{style="color: blue"} É uma
-    aproximação da variação percentual média da razão entre os fatores
-    de produção $k/l$ relativa à variação de um por cento (para cima ou
-    para baixo) da $TTS(l,k)$, quando esta variação é infinitesimal, ao
-    longo de uma isoquanta. Ou seja:
-    $$\sigma = \frac{d (k/l)/(k/l)}{d TTS(l,k)/TTS(l,k)} = \frac{d \ln (k/l)}{d \ln TTS(l,k)}.
-                \label{eq6}$$
+Função CES $$q = f(k,l) = (k^\rho + l^\rho)^{\gamma/\rho}.$$
 :::
 
-## Exercícios
+::: frame
+Tecnologia linear $$q = f(k,l) = \alpha k + \beta l.$$
+:::
 
 ::: frame
-Exercícios
-
--   Para cada uma das tecnologias de produção a seguir, verifique a
-    elasticidade de substituição:
-
-    1.  [Linear (Fatores de produção substitutos).]{style="color: blue"}
-        $q = \alpha k + \beta l$.
-
-    2.  [Cobb-Douglas.]{style="color: blue"} $q = A k^\alpha l^\beta$.
-
-    3.  [Elasticidade de substituição constante.]{style="color: blue"}
-        $q = (k^\rho + l^\rho)^{\gamma/\rho}$.
-
-    4.  [Leontief (Fatores de produção em proporções
-        fixas.]{style="color: blue"} $q = \min\{\alpha k, \beta l\}$.
+Leontief $$q = f(k,l) = \min(\alpha k, \beta l).$$
 :::
 
 ::: thebibliography

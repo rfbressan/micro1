@@ -6,7 +6,7 @@ author:
   **Disciplina:** 23MIC1 - Microeconomia I\
   **Universidade do Estado de Santa Catarina (UDESC)**\
   **Centro de Ciências da Administração e Socioeconômicas - ESAG**
-date: 23 de Novembro, 2022
+date: 28 de Novembro, 2022
 title: "Microeconomia I: Teoria da Firma"
 ---
 
@@ -14,484 +14,288 @@ title: "Microeconomia I: Teoria da Firma"
 Sumário
 :::
 
-# Introdução
+# Taxa técnica de substituição
+
+## Definição
 
 ::: frame
-Introdução
+Taxa técnica de substituição
 
--   Na primeira parte do nosso curso de Microeconomia I, estudamos o
-    comportamento dos consumidores.
+-   [Taxa técnica de substituição (TTS).]{style="color: blue"} A taxa
+    técnica de substituição (ou taxa marginal de substituição técnica)
+    entre dois insumos mede o quanto a firma deve abrir mão de um desses
+    insumos e acrescentar do outro insumo para continuar produzindo a
+    mesma quantidade do bem final ao longo de uma isoquanta.
 
--   Desse comportamento, obtivemos uma função de demanda por um bem que
-    é, quase sempre, decrescente no seu preço.
-
--   Nosso objetivo agora é estudar o processo de produção e oferta de
-    bens econômicos e o comportamento das firmas.
-
--   Desse comportamento, vamos obter a oferta de um bem econômico, que
-    será crescente no seu preço.
-
--   O comportamento desses dois agentes econômicos (consumidores e
-    firmas) pode levar a uma situação de equilíbrio no mercado do bem
-    considerado, onde a quantidade demandada iguala a quantidade
-    produzida, por meio de preços flexíveis.
+-   Intuitivamente, a taxa técnica de substituição do insumo $j$ por
+    insumo $i$, denotada por $TTS(x_i,x_j)$, é a quantidade de insumo
+    $j$ que a firma pode reduzir por usar uma unidade adicional do
+    insumo $i$ e manter sua produção constante ou, alternativamente, é a
+    quantidade adicional de insumo $j$ que a firma deve usar para abrir
+    mão de uma unidade do insumo $i$ e manter constante sua produção.
 :::
 
 ::: frame
-Introdução
+Taxa técnica de substituição
 
--   As instituições que coordenam o processo de transformação de insumos
-    em produtos finais são chamadas [firmas]{style="color: blue"}.
+-   A TTS entre os insumos $i$ e $j$ pode ser obtida do seguinte modo:
+    suponha que alteramos os insumos $i$ e $j$ em $dx_i$ e $dx_j$,
+    respectivamente, de modo a manter inalterado o nível de produção
+    $(dq = 0)$.
 
--   Estas instituições podem ser grandes - e.g., Google, Apple,
-    Microsoft, etc. Ou instituições pequenas - e.g., trabalhadores
-    autônomos, produtores locais.
-
--   Embora essas instituições possam ter diferentes objetivos, todas as
-    firmas devem tomar certas decisões básicas em seus processos
-    produtivos.
-
--   Nosso objetivo geral, agora, é desenvolver um conjunto de
-    ferramentas que possibilitem a análise destes processos decisórios.
-:::
-
-::: frame
-Introdução
-
--   Inicialmente estudaremos algumas maneiras de modelar a relação
-    física entre insumos e produtos. Para isso, introduziremos o
-    conceito de [função de produção]{style="color: blue"}, uma abstração
-    útil das complexidades dos processos produtivos do mundo real.
-
--   Dois aspectos mensuráveis da função de produção serão considerados:
-    os retornos de escala (i.e., como o produto é expandido quando todos
-    os insumos aumentam), e a elasticidade de substituição (i.e., o quão
-    fácil um insumo pode ser substituído por outro enquanto mantemos o
-    mesmo nível de produto).
-:::
-
-::: frame
-Introdução
-
--   Posteriormente, utilizaremos o conceito de função de produção para
-    discutir os [custos de produção]{style="color: blue"}.
-
--   Assumiremos que todas as firmas tem por objetivo produzir seus
-    produtos ao menor custo possível, uma hipótese que nos permitirá
-    obter as [funções custo]{style="color: blue"} para uma firma.
-
--   Discutiremos também, ainda que brevemente, como os custos podem
-    diferir no curto e no longo prazo.
-:::
-
-::: frame
-Introdução
-
--   Por fim, concluiremos esta seção com o estudo das decisões de oferta
-    por parte de uma firma.
-
--   Para tal, assumiremos que o gerente de uma firma fará decisões de
-    insumos e produtos de maneira a maximizar os lucros.
-
--   Com isso desenvolveremos o modelo fundamental do comportamento de
-    oferta das firmas maximizadoras de lucro, um conceito que será muito
-    utilizado em microeconomia e em outras áreas do curso.
-:::
-
-# Funções de produção
-
-## Introdução
-
-::: frame
-Tecnologias de produção: Introdução
-
--   A principal atividade de qualquer firma é transformar insumos em
-    produtos.
-
--   Como economistas, estamos interessados nas escolhas que as firmas
-    tomam para atingir este objetivo, abstraindo das muitas
-    complexidades envolvidas nas engenharias destes processos.
-
--   Para isso, construímos um modelo abstrato do processo produtivo.
-
--   Neste modelo, a relação entre insumos e produtos é formalizada por
-    uma [função de produção]{style="color: blue"} (também chamada de
-    tecnologia de produção) da forma: $$q = f(k, l, m, \dots),
-                \label{eq1}$$ onde $q$ representa a produção de um bem
-    específico para a firma durante um período especifico do tempo, $k$
-    representa as máquinas (i.e., capital) utilizadas durante este
-    período, $l$ representa o insumo trabalho, $m$ representa a
-    matéria-prima utilizada, e possibilitamos, ainda, a inclusão de
-    outras variáveis que afetem o processo produtivo.
-:::
-
-::: frame
-Tecnologias de produção: Introdução
-
--   Assume-se que a equação ([\[eq1\]](#eq1){reference-type="ref"
-    reference="eq1"}) forneça, para qualquer conjunto concebível de
-    insumos, a solução de engenharia para o problema de como melhor
-    combinar esses insumos para obter produtos.
-
--   Portanto, a tecnologia de uma firma descreve a sua capacidade de
-    produzir bens usando insumos de produção (também chamados de fatores
-    de produção).
-
--   Note que tanto insumo quanto produto são medidos como fluxos no
-    tempo. O importante é que todas estas variáveis sejam calculadas
-    para o mesmo período de tempo.
-:::
-
-## Considerações iniciais
-
-::: frame
-Considerações iniciais
-
--   [Fatores de produção.]{style="color: blue"} São os insumos
-    utilizados em processos produtivos, podendo ser classificados em
-    categorias amplas como terra, trabalho, bens de capital e matérias
-    primas.
-
--   [Bens de capital ou capital físico.]{style="color: blue"} São bens
-    produzidos e utilizados como insumos em processos produtivos como
-    máquinas, computadores, tratores, prédios, etc.
-
--   [Firma.]{style="color: blue"} É qualquer organização que realiza a
-    transformação de certos insumos (que possui e/ou compra) em produtos
-    (que vende).
-
--   [Restrições de uma firma.]{style="color: blue"} Uma firma está
-    sujeita a duas restrições básicas. Uma delas é a *restrição
-    tecnológica*, pois somente algumas combinações de insumos constituem
-    formas viáveis de produzir certa quantidade de um produto. A outra é
-    a *restrição econômica*, ou seja, uma firma toma suas decisões de
-    produção condicionada pelas estruturas dos mercados de fatores (nos
-    quais demanda insumos) e de produtos (onde vende sua produção).
-:::
-
-::: frame
-Considerações iniciais
-
--   [Hipótese simplificadora.]{style="color: blue"} Estudaremos a
-    restrição tecnológica do caso *uniproduto*, ou seja, focaremos o
-    caso em que a firma produz apenas um tipo de produto, cuja
-    quantidade denotaremos por $q$, utilizando uma combinação de insumos
-    $(x_1, \dots, x_i, \dots, x_n)$, na qual $x_i \geq 0$ é a quantidade
-    utilizada do fator de produção $i = 1, 2, \dots, n$.
-
--   [Plano de produção.]{style="color: blue"} É uma lista que especifica
-    as quantidades dos insumos utilizados para produzir uma determinada
-    quantidade de produto. Um plano de produção pode ser representado
-    como um vetor
-    $(-x_1, -x_2, \dots, -x_i, \dots, -x_n, q) \in \mathbb{R}^{n+1}$,
-    onde as coordenadas com valores estritamente negativos indicam os
-    insumos utilizados e a coordenada estritamente positiva indica a
-    quantidade produzida.
-:::
-
-::: frame
-Considerações iniciais
-
--   [Planos de produção factíveis.]{style="color: blue"} São planos de
-    produção tecnologicamente possíveis.
-
--   [Conjunto de possibilidade de produção.]{style="color: blue"} É o
-    conjunto $Q \subset \mathbb{R}^{n+1}$ formado por todos os planos de
-    produção factíveis, ou seja, por todas as listas de combinações de
-    insumos e produto tecnologicamente viáveis. Este conjunto representa
-    todas as escolhas tecnológicas que uma firma se defronta.
-:::
-
-::: frame
-Considerações iniciais
-
--   A Figura [1](#fig1){reference-type="ref" reference="fig1"} ilustra
-    um exemplo de um conjunto de produção para o caso de apenas um
-    insumo e um produto. Usando a convenção que adotamos anteriormente,
-    o insumo é representado por um número negativo e o produto por um
-    número positivo.
-
-<figure id="fig1">
-<img src="prodset.JPG" style="width:35.0%" />
-<figcaption>Conjunto de produção. Fonte: Mas-Colell et al.
-(1995).</figcaption>
-</figure>
-:::
-
-::: frame
-Considerações iniciais
-
--   Poderíamos, alternativamente, mensurar os insumos por números
-    positivos, neste caso uma representação possível para o conjunto de
-    produção seria dado pela Figura [2](#fig2){reference-type="ref"
-    reference="fig2"}.
-
-    <figure id="fig2">
-    <img src="prodset2.JPG" style="width:70.0%" />
-    <figcaption>Conjunto de produção. Fonte: Varian (2006).</figcaption>
-    </figure>
-:::
-
-::: frame
-Considerações iniciais
-
--   [Função de produção.]{style="color: blue"} De maneira mais geral,
-    uma função de produção é a função
-    $q = f(x_1, \dots, x_i, \dots, x_n)$ que associa a cada combinação
-    de insumos $(x_1, \dots, x_i, \dots, x_n) \in \mathbb{R}^n_+$ a
-    quantidade *máxima* $q$ que pode ser produzida. A função de produção
-    $f(x_1, \dots, x_n)$ define a fronteira do conjunto de produção -
-    ver Figura [2](#fig2){reference-type="ref" reference="fig2"}.
-:::
-
-## Produtividade marginal
-
-::: frame
-Produto marginal
-
--   O [produto físico marginal]{style="color: blue"} do fator de
-    produção $i$, denotado por $PM_i$, é a variação da produção gerada
-    pela variação em uma unidade do insumo $i$, *ceteris paribus*.
-
--   Mais precisamente, em termos contínuos, pode ser definida como a
-    derivada parcial da função de produção com relação ao insumo $i$:
-    $$PM_i \equiv \frac{\partial f(\mathbf{x})}{\partial x_i} = f_i(\mathbf{x}), \qquad i = 1, \dots, n.
-                \label{eq2}$$
-
--   Se o fator de produção $i$ contribui para a produção, então,
-    $PM_i>0$ para toda combinação de insumos factível
-    $(x_1, \dots, x_i, \dots, x_n)$.
-:::
-
-::: frame
-Produto marginal
-
--   No caso de apenas dois fatores de produção, capital e trabalho,
-    temos então que:
-
-    1.  O produto marginal do trabalho, $PM_l = f_l$, mede o quanto a
-        produção aumentará se aumentarmos (um pouco) a quantidade de
-        trabalho usada, mantendo a quantidade de capital fixa.
-
-    2.  O produto marginal do capital, $PM_k = f_k$, mede o quanto a
-        produção aumentará se aumentarmos (um pouco) a quantidade de
-        capital usada, mantendo a quantidade de trabalho fixa.
-:::
-
-## Princípio das produtividades marginais decrescentes
-
-::: frame
-Princípio das produtividades marginais decrescentes
-
--   [Princípio dos rendimentos físicos (produtividades marginais)
-    decrescentes.]{style="color: blue"} Quanto mais se utiliza um fator
-    de produção $i$, *ceteris paribus*, a contribuição deste fator para
-    o aumento da produção tende a ser cada vez menor, ou seja, o produto
-    físico marginal do fator de produção $i$ é estritamente decrescente
-    com relação à quantidade utilizada deste fator.
-
--   Formalmente:
-    $$\frac{\partial PM_i(\mathbf{x})}{\partial x_i} = \frac{\partial^2 f(\mathbf{x})}{\partial x_i^2} = f_{ii} < 0, \qquad \forall i = 1, \dots, n.$$
-:::
-
-::: frame
-Princípio das produtividades marginais decrescentes
-
--   Considerando nossa função de produção com apenas dois fatores -
-    capital e trabalho - temos: $$\begin{aligned}
-                \frac{\partial PM_k}{\partial k} &=& \frac{\partial^2 f(k,l)}{\partial k^2} = f_{kk} < 0, \\
-                \frac{\partial PM_l}{\partial l} &=& \frac{\partial^2 f(k,l)}{\partial l^2} = f_{ll} < 0.
+-   Usando o conceito de diferencial total, obtemos: $$\begin{aligned}
+                0 &=& dq = \frac{\partial f(x_1, \dots, x_n)}{\partial x_i}dx_i + \frac{\partial f(x_1, \dots, x_n)}{\partial x_j}dx_j \\
+                &\Rightarrow & \left.\frac{dx_j}{dx_i}\right|_{q = f(\mathbf{x})} = -\frac{f_i}{f_j}.
             
     \end{aligned}$$
-
--   A hipótese de produtividade marginal decrescente foi originalmente
-    proposta pelo economista do século XIX Thomas Malthus, que temia que
-    o aumento rápido da população resultasse em uma menor produtividade
-    do trabalho.
-
--   Suas predições pessimistas para o futuro da humanidade fizeram com
-    que a economia ficasse conhecida como "ciência sombria".
 :::
 
 ::: frame
-Princípio das produtividades marginais decrescentes
+Taxa técnica de substituição
 
-<figure id="fig3">
-<img src="malthus.jpg" style="width:40.0%" />
-<figcaption>Thomas Robert Malthus (1766 - 1834). Fonte: <a
-href="https://en.wikipedia.org/wiki/Thomas_Robert_Malthus">Wikipedia</a>.</figcaption>
-</figure>
+-   Portanto, a taxa técnica de substituição do insumo $j$ por insumo
+    $i$, $TTS(x_i, x_j)$ é dada por:
+    $$TTS(x_i, x_j) = -\left.\frac{dx_j}{dx_i}\right|_{q = f(\mathbf{x})} = \frac{f_i}{f_j} = \frac{PM_i}{PM_j}.
+                \label{eq1}$$
+
+-   Ou seja, a taxa técnica de substituição é dada pela razão entre as
+    produtividades marginais dos insumos.
+
+-   A TTS é o análogo para a teoria da firma da taxa marginal de
+    substituição da teoria do consumidor.
+
+-   Considerando nossa função de produção apenas com os insumos capital
+    e trabalho temos que a TTS de trabalho por capital é dada por:
+    $$TTS(l,k) = \frac{PM_l}{PM_k}.$$
+:::
+
+## Implicações das propriedades da tecnologia
+
+::: frame
+Implicações das propriedades da tecnologia
+
+-   A propriedade de [livre descarte]{style="color: blue"} torna a TTS
+    positiva.
+
+-   A propriedade de convexidade implica que a TTS(l,k) é decrescente,
+    ou seja, conforme aumenta-se a quantidade do insumo trabalho menor a
+    quantidade do insumo capital que é possível reduzir para que o nível
+    de produção mantenha-se constante.
 :::
 
 ::: frame
-Princípio das produtividades marginais decrescentes
+Implicações das propriedades da tecnologia
 
--   Uma análise mais cuidadosa da função de produção sugere que tais
-    predições pessimistas podem não ser corretas.
-
--   Variações na produtividade marginal do trabalho ao longo do tempo
-    dependem não só de como o fator de produção trabalho está crescendo
-    mas, também, de mudanças nos outros insumos (e.g., capital).
-
--   Ou seja, precisamos nos preocupar também com
-    $\partial PM_l/\partial k = f_{lk}$.
-
--   Na maioria dos casos, $f_{lk} > 0$, portanto, a diminuição da
-    produtividade do trabalho à medida que *ambos $l$ e $k$ aumentam*
-    pode ser uma conclusão precipitada.
-
--   De fato, a produtividade do trabalho parece ter aumentado
-    significativamente desde a época de Malthus, principalmente porque
-    os aumentos nos insumos de capital (combinado a melhorias
-    tecnológicas) compensou o impacto do declínio da produtividade
-    marginal.
-:::
-
-## Produto médio
-
-::: frame
-Produto médio
-
--   [Produto físico médio ($PMe_{i}$).]{style="color: blue"} Quantidade
-    produzida por unidade do insumo $i$:
-    $$PMe_i = \frac{f(\mathbf{x})}{x_i}, \qquad x_i > 0.
-                \label{eq4}$$
-
--   De maneira geral, *produtividade do trabalho* significa
-    *produtividade média*.
-
--   Como a produtividade média é facilmente mensurável, é comumente
-    utilizada como medida de eficiência - muito utilizada em trabalhos
-    empíricos (e menos em teóricos).
-
--   Para o caso de dois insumos, a produtividade média do trabalho é:
-    $$PMe_l = \frac{f(k,l)}{l}.$$
-
--   Note que a produtividade média do trabalho depende do nível de
-    capital utilizado.
-:::
-
-## Exercício
-
-::: frame
-Exercício Suponha a seguinte função de produção:
-$$q = f(k,l) = 600k^2l^2 - k^3l^3.$$
-
-Se o nível de capital utilizado é $k = 10$, obtenha o seguinte:
-
-1.  Produtividade marginal do trabalho e o nível de trabalho utilizado
-    para que o produto atinja seu valor máximo.
-
-2.  Produto médio do trabalho e o nível de trabalho utilizado para que o
-    produto médio do trabalho atinja seu valor máximo.
-
-3.  Verifique que quando $l$ faz com que a produtividade média do
-    trabalho atinja seu nível máximo, neste ponto, a produtividade média
-    do trabalho é igual á produtividade marginal do trabalho.
-
-4.  Mostre que a igualdade do item anterior é geral.
-:::
-
-# Funções de produção e isoquantas
-
-## Isoquantas
-
-::: frame
-Isoquantas
-
--   Para ilustrar a possível substituição de um insumo por outro em uma
-    função de produção, usamos o seu mapa de isoquanta.
-
--   [Isoquanta.]{style="color: blue"} Isoquanta é o conjunto
-    $Q(q) = \{(x_1, x_2) \in \mathbb{R}^2_+| f(x_1, x_2) = q\}$ formado
-    por todas as combinações de insumos $(x_1, x_2)$ que geram o mesmo
-    nível (máximo) de produção $q$.
-
--   Assim como no caso das curvas de indiferença, existem infinitas
-    isoquantas no plano de $k-l$ (se considerarmos os insumos capital e
-    trabalho).
-
--   Cada isoquanta representa um nível distinto de produto.
-
--   As isoquantas registram sucessivamente níveis mais altos de produto
-    à medida que nos movemos na direção nordeste.
-
--   A utilização de mais de cada um dos insumos possibilitará que a
-    produção aumente.
-:::
-
-::: frame
-Isoquantas
-
-<figure id="fig:my_label">
-<img src="isoquanta.JPG" style="width:60.0%" />
-<figcaption>Mapa de isoquanta. Fonte: Nicholson e Snyder
+<figure id="fig1">
+<img src="isoquanta.JPG" style="width:70.0%" />
+<figcaption>Isoquantas e convexidade. Fonte: Nicholson e Snyder
 (2019).</figcaption>
 </figure>
 :::
 
+## Exercícios
+
 ::: frame
-Isoquantas
+Exercícios
 
--   É possível notar a similaridade entre um mapa de isoquanta e o mapa
-    de curva de indiferença de um indivíduo.
+-   Calcula a taxa técnica de substituição para cada uma das tecnologias
+    de produção a seguir:
 
--   São, de fato, conceitos similares pois representam os mapas de
-    contorno de uma função em particular.
+    1.  [Linear (Fatores de produção substitutos).]{style="color: blue"}
+        $q = \alpha k + \beta l$.
 
--   No entanto, no caso das isoquantas, o rótulo das curvas é
-    mensurável - uma produção de 10 unidades por período tem um
-    significado quantificável.
+    2.  [Leontief (Fatores de produção em proporções
+        fixas.]{style="color: blue"} $q = \min\{\alpha k, \beta l\}$.
 
--   Por este motivo, os economistas estão mais interessados em estudar a
-    forma das funções de produção do que das funções utilidade.
+    3.  [Cobb-Douglas.]{style="color: blue"} $q = A k^\alpha l^\beta$.
+
+    4.  [Elasticidade de substituição constante.]{style="color: blue"}
+        $q = (k^\rho + l^\rho)^{\gamma/\rho}$.
 :::
 
-## Propriedades das funções de produção
+# Retornos de escala
+
+## Introdução
 
 ::: frame
-Propriedades das funções de produção
+Retornos de escala
 
--   Duas premissas comuns sobre as propriedades da tecnologia são
-    *monotonicidade* ou *livre descarte* (*free disposal*) e
-    *convexidade*.
+-   Uma questão importante relacionada ao conceito de função de produção
+    é o que acontece com a quantidade produzida quando há um aumento
+    generalizado nos insumos utilizados pelo processo produtivo?
 
-    1.  [Monotonicidade]{style="color: blue"}. Uma tecnologia apresenta
-        monotonicidade ou livre descarte quando é sempre possível a
-        absorção de quantidades adicionais de pelo menos um insumo sem
-        que isto acarrete redução da produção. A função de produção é,
-        sob tal suposição, não-decrescente com relação a cada um de seus
-        fatores de produção (os produtos marginais são não-negativos) e,
-        portanto, as isoquantas não são positivamente inclinadas.
+-   Essa é uma questão de [rendimentos de escala]{style="color: blue"}
+    que interessa os economistas de pelo menos desde a publicação de "A
+    riqueza das nações" por Adam Smith em 1776.
 
-    2.  [Convexidade]{style="color: blue"}. Uma tecnologia é convexa
-        quando a média ponderada de duas combinações de insumos
-        $(x_1, x_2)$ e $(y_1, y_2)$ que geram uma produção $q$, gera uma
-        produção maior ou igual a $q$.
+-   Smith identificou duas forças em ação quando realizamos um
+    experimento de dobrar todos os insumos produtivos.
 :::
 
-## Exemplos simples de funções de produção
+::: frame
+Retornos de escala
+
+1.  A duplicação de escala permite uma maior divisão do trabalho e a
+    especialização da função. Por isso, pode-se argumentar que a
+    eficiência pode aumentar - a produção pode aumentar mais do que o
+    dobro.
+
+2.  A duplicação dos insumos também implica alguma perda de eficiência,
+    uma vez que a supervisão gerencial torna-se mais difícil, dada a
+    maior escala da empresa.
+
+-   Qual dessas duas tendências será prevalente é uma questão empírica
+    de extrema relevância.
+:::
+
+## Definição
 
 ::: frame
-Exemplos de funções de produção
+Retornos de escala
 
-1.  [Tecnologia com fatores de produção substitutos
-    (linear).]{style="color: blue"}
-    $$q = f(k,l) = \alpha k + \beta l, \qquad \alpha, \beta > 0.
+1.  [Rendimentos decrescentes de escala.]{style="color: blue"} Uma firma
+    apresenta rendimentos decrescentes de escala se ao aumentarmos todas
+    as quantidades dos insumos utilizados na mesma proporção, a
+    quantidade produzida varia numa proporção menor que a variação das
+    quantidades utilizadas dos insumos.
+
+2.  [Rendimentos constantes de escala.]{style="color: blue"} Uma firma
+    apresenta rendimentos constantes de escala se ao aumentarmos todas
+    as quantidades dos insumos utilizados na mesma proporção, a
+    quantidade produzida varia na mesma proporção que a variação das
+    quantidades utilizadas dos insumos.
+
+3.  [Rendimentos crescentes de escala.]{style="color: blue"} Uma firma
+    apresenta rendimentos crescentes de escala se ao aumentarmos todas
+    as quantidades dos insumos utilizados na mesma proporção, a
+    quantidade produzida varia numa proporção maior que a variação das
+    quantidades utilizadas dos insumos.
+:::
+
+::: frame
+Retornos de escala
+
+-   Formalmente, temos as seguintes definições:
+
+    1.  A função de produção $f(x_1, \dots, x_n)$ apresentará
+        [rendimentos decrescentes de escala]{style="color: blue"} se:
+        $$f(tx_1, \dots, tx_n) < tf(x_1, \dots, x_n), \forall t>1.
+                    \label{eq2}$$
+
+    2.  A função de produção $f(x_1, \dots, x_n)$ apresentará
+        [rendimentos constantes de escala]{style="color: blue"} se:
+        $$f(tx_1, \dots, tx_n) = tf(x_1, \dots, x_n), \forall t>1.
+                    \label{eq3}$$
+
+    3.  A função de produção $f(x_1, \dots, x_n)$ apresentará
+        [rendimentos crescentes de escala]{style="color: blue"} se:
+        $$f(tx_1, \dots, tx_n) > tf(x_1, \dots, x_n), \forall t>1.
+                    \label{eq4}$$
+:::
+
+## Exercícios
+
+::: frame
+Exercícios
+
+-   Para cada uma das tecnologias de produção a seguir, verifique os
+    rendimentos de escala:
+
+    1.  [Linear (Fatores de produção substitutos).]{style="color: blue"}
+        $q = \alpha k + \beta l$.
+
+    2.  [Leontief (Fatores de produção em proporções
+        fixas.]{style="color: blue"} $q = \min\{\alpha k, \beta l\}$.
+
+    3.  [Cobb-Douglas.]{style="color: blue"} $q = A k^\alpha l^\beta$.
+
+    4.  [Elasticidade de substituição constante.]{style="color: blue"}
+        $q = (k^\rho + l^\rho)^{\gamma/\rho}$.
+:::
+
+# Elasticidade de substituição
+
+## Introdução
+
+::: frame
+Elasticidade de substituição
+
+-   Outra característica importante da função de produção é a facilidade
+    de substituição de um insumo por outro.
+
+-   Essa é uma questão que diz respeito à forma de uma única isoquanta,
+    em vez do mapa de isoquantas como um todo.
+
+-   Ao longo de uma isoquanta, a TTS diminuirá à medida que a relação
+    capital-trabalho diminuir (supondo convexidade).
+
+-   Agora desejamos definir algum parâmetro que meça esse grau de
+    capacidade de resposta.
+:::
+
+::: frame
+Elasticidade de substituição
+
+-   Se a TTS não se altera com as mudanças na razão capital-trabalho
+    ($k/l$), podemos dizer que a substituição é fácil, uma vez que a
+    razão das produtividades marginais dos insumos não muda à medida que
+    a combinação de insumos muda.
+
+-   Por outro lado, se a TTS muda rapidamente à medida que ocorrem
+    pequenas mudanças em $k/l$, diríamos que a substituição é difícil,
+    já que pequenas variações na combinação de insumos terão um efeito
+    substancial sobre as produtividades relativas do insumo.
+
+-   Uma medida sem escala dessa capacidade de resposta é proporcionada
+    pela [elasticidade de substituição]{style="color: blue"}.
+
+-   Enquanto a TTS mede a inclinação de uma isoquanta, a elasticidade de
+    substituição é uma medida da curvatura de uma isoquanta.
+:::
+
+## Definição
+
+::: frame
+Elasticidade de substituição
+
+-   [Elasticidade de substituição no arco.]{style="color: blue"} Mede a
+    variação percentual média da razão entre os fatores de produção
+    $k/l$ relativa à variação de um por cento (para cima ou para baixo)
+    da $TTS(l,k)$ ao longo de uma isoquanta. Ou seja:
+    $$\sigma = \frac{\Delta (k/l)/(k/l)}{\Delta TTS(l,k)/TTS(l,k)} = \frac{\Delta (k/l)}{\Delta TTS(l,k)} \frac{TTS(l,k)}{k/l}.
                 \label{eq5}$$
+:::
 
-2.  [Tecnologia com fatores de produção combinados em proporções fixas
-    (Leontief).]{style="color: blue"}
-    $$q = f(k,l) = \min\{\alpha k, \beta l\}, \qquad \alpha, \beta > 0.
+::: frame
+Elasticidade de substituição
+
+-   [Elasticidade de substituição no ponto.]{style="color: blue"} É uma
+    aproximação da variação percentual média da razão entre os fatores
+    de produção $k/l$ relativa à variação de um por cento (para cima ou
+    para baixo) da $TTS(l,k)$, quando esta variação é infinitesimal, ao
+    longo de uma isoquanta. Ou seja:
+    $$\sigma = \frac{d (k/l)/(k/l)}{d TTS(l,k)/TTS(l,k)} = \frac{d \ln (k/l)}{d \ln TTS(l,k)}.
                 \label{eq6}$$
+:::
 
-3.  [Tecnologia Cobb-Douglas.]{style="color: blue"}
-    $$q = f(k,l) = Ak^\alpha k l^\beta, \qquad A, \alpha, \beta > 0.
-                \label{eq7}$$
+## Exercícios
 
-4.  [Tecnologia CES.]{style="color: blue"}
-    $$q = f(k,l) = [\alpha k^\rho + (1-\alpha) l^\rho]^{\gamma/\rho}, \qquad \rho \leq 1, \rho \neq 0, \gamma > 0, 0\leq \alpha \leq 1.
-                \label{eq8}$$
+::: frame
+Exercícios
+
+-   Para cada uma das tecnologias de produção a seguir, verifique a
+    elasticidade de substituição:
+
+    1.  [Linear (Fatores de produção substitutos).]{style="color: blue"}
+        $q = \alpha k + \beta l$.
+
+    2.  [Cobb-Douglas.]{style="color: blue"} $q = A k^\alpha l^\beta$.
+
+    3.  [Elasticidade de substituição constante.]{style="color: blue"}
+        $q = (k^\rho + l^\rho)^{\gamma/\rho}$.
+
+    4.  [Leontief (Fatores de produção em proporções
+        fixas.]{style="color: blue"} $q = \min\{\alpha k, \beta l\}$.
 :::
 
 ::: thebibliography

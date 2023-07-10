@@ -61,7 +61,7 @@ Observe que várias dessas aulas se estendem por duas ou mais sessões.
 | Aula 13:  | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula13-.html) | |
 
 
-## Bibliografia :books:
+## :books: Bibliografia 
 
 👉 VARIAN, H. R. Microeconomia: uma abordagem moderna. 9.ed. Rio de Janeiro: Elsevier, 2015.
 

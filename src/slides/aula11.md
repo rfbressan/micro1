@@ -6,474 +6,453 @@ author:
   **Disciplina:** 23MIC1 - Microeconomia I\
   **Universidade do Estado de Santa Catarina (UDESC)**\
   **Centro de Ciências da Administração e Socioeconômicas - ESAG**
-date: 26 de Outubro, 2022
-title: "Microeconomia I: Elasticidades da demanda"
+date: 31 de Outubro, 2022
+title: "Microeconomia I: Relações de demanda entre bens"
 ---
 
 ::: frame
 Sumário
 :::
 
-# Elasticidades da demanda
+# Introdução
 
 ## Introdução
 
 ::: frame
 Introdução
 
--   Até agora não demos nenhuma atenção à maneira como as variáveis
-    usadas em microeconomia são medidas.
+-   Na seção anterior da disciplina estudamos como mudanças no preço de
+    um determinado (e.g., bem $x$) afetam a quantidade demandada deste
+    mesmo bem.
 
--   Talvez a consequência mais importante de escolher unidades de
-    mensuração é que as derivadas parciais geralmente usadas para
-    resumir comportamentos econômicos refletirão essas unidades.
+-   Ao longo da discussão, mantivemos o preço de todos os outros bens
+    constantes.
 
--   Por exemplo, se $q$ representa a quantidade de gasolina demandada
-    por todos os consumidores brasileiros durante um determinado ano
-    (medida em bilhões de galões) e $p$ representa o preço em reais de
-    cada galão, então, $\partial q/\partial p$ medirá a variação na
-    demanda (em bilhões de galões por ano) para uma mudança de um real
-    por galão no preço.
+-   No entanto, é evidente que variações nos preços de qualquer um
+    destes outros bens pode afetar a quantidade demandada do bem $x$.
 
--   **O tamanho numérico dessa derivada depende de como $p$ e $q$ são
-    medidos**.
+-   Por exemplo, se $x$ representa a quilometragem que um indivíduo
+    dirige, espera-se que essa quantidade decline à medida que o preço
+    da gasolina aumente.
+
+-   Ou que aumente à medida que as tarifas aéreas e de ônibus aumentem.
+
+-   Vamos, agora, usar o modelo de maximização de utilidade para estudar
+    tais relações entre um bem e os preços dos outros bens.
+:::
+
+# O caso de dois bens
+
+## Introdução
+
+::: frame
+Introdução
+
+-   Por simplicidade e possibilidade de uma representação gráfica,
+    iniciaremos nossa análise de relações de demanda entre bens com o
+    caso de dois bens.
+
+-   Vamos considerar como a quantidade ótima escolhida do bem $x$ é
+    afetada por uma variação no preço do bem $y$, $p_y$.
+
+-   Suponha que o preço $p_y$ decline, isso resulta em uma rotação para
+    fora da restrição orçamentária, de $I_0$ para $I_1$.
 :::
 
 ::: frame
 Introdução
 
--   A decisão de medir o consumo em milhões de galões por ano
-    multiplicaria o tamanho da derivada por $1.000$, enquanto a decisão
-    de medir o preço em centavos por galão o reduziria por um fator de
-    $100$.
-
--   A dependência do tamanho numérico de derivadas parciais nas unidades
-    de medição utilizadas impõe um problema.
-
--   Embora muitas teorias econômicas façam predições sobre o sinal
-    (direção) de derivadas parciais, quaisquer previsões sobre a
-    magnitude numérica de tais derivadas seria contingente em como
-    escolhemos medir as variáveis.
-
--   Fazer comparações entre estudos poderia ser praticamente impossível,
-    especialmente dada a grande variedade de sistemas de mensuração no
-    mundo.
-
--   Por esse motivo, adotamos uma maneira diferente e livre de unidades
-    de medida para medir impactos quantitativos.
+<figure id="fig1">
+<img src="grosscomplements.JPG" style="width:60.0%" />
+<figcaption>Efeito-cruzado de variação nos preços: complementares
+brutos. Fonte: Nicholson, Snyder (2016).</figcaption>
+</figure>
 :::
 
 ::: frame
 Introdução
 
--   Usamos [elasticidades]{style="color: blue"} para resumir
-    praticamente todos os impactos quantitativos que nos interessam.
+-   Como efeito de uma queda em $p_y$, percebemos na Figura
+    [1](#fig1){reference-type="ref" reference="fig1"} um aumento na
+    quantidade demandada do bem $y$ (de $y_0$ para $y_1$) - $y$ é um bem
+    normal.
 
--   Como essas medições se concentram no efeito proporcional de uma
-    mudança em uma variável sobre outra, elas são livres de unidades de
-    medida - as unidades são "canceladas" quando a elasticidade é
-    calculada.
+-   O efeito sobre a quantidade demandada de $x$, no entanto, pode
+    variar.
 
-::: defi
-**Definição 1** (Elasticidade). *Seja $y$ uma função de $x$ - $y(x)$ -
-então, a [elasticidade de $y$ com relação a $x$]{style="color: blue"}
-($e_{y,x}$) é definida como:
-$$e_{y,x} \equiv \frac{\Delta y/y}{\Delta x/x} = \frac{\Delta y}{\Delta x} \frac{x}{y} = \frac{dy(x)}{dx}\frac{x}{y}.$$*
-:::
-:::
+-   Na Figura [1](#fig1){reference-type="ref" reference="fig1"}, as
+    curvas de indiferença representadas praticamente assumem um formato
+    em L e, portanto, o efeito substituição é pequeno.
 
-## Elasticidades da demanda Marshalliana
+-   Portanto, uma queda em $p_y$ não induz em uma grande variação ao
+    longo da curva de indiferença $U_0$ à medida que $y$ é substituído
+    por $x$.
 
-::: frame
-Elasticidades da demanda Marshalliana
+-   Como resultado, a quantidade $x$ cai relativamente pouco como
+    resultado do efeito substituição.
 
-::: defi
-**Definição 2** (Elasticidades da demanda Marshalliana). *Seja
-$x(p_x, p_y,I)$ uma função de demanda Marshalliana, temos as seguintes
-definições:*
-
--   *[Elasticidade-preço da demanda]{style="color: blue"} ($e_{x,p_x}$).
-    mede a variação proporcional na quantidade demandada em resposta a
-    uma variação proporcional no próprio preço de um bem:
-    $$e_{x,p_x} \equiv \frac{\Delta x/x}{\Delta p_x/p_x} = \frac{\Delta x}{\Delta p_x}\frac{p_x}{x} = \frac{\partial x(p_x,p_y,I)}{\partial p_x}\frac{p_x}{x}.
-                          \label{eq2}$$*
-
--   *[Elasticidade-renda da demanda]{style="color: blue"} ($e_{x,I}$).
-    mede a variação proporcional na quantidade demandada em resposta a
-    uma variação proporcional na renda:
-    $$e_{x,I} \equiv \frac{\Delta x/x}{\Delta I/I} = \frac{\Delta x}{\Delta I}\frac{I}{x} = \frac{\partial x(p_x,p_y,I)}{\partial I}\frac{I}{x}.
-                          \label{eq3}$$*
-:::
+-   Por outro lado, o efeito renda reflete um maior poder de compra
+    agora disponível para o consumidor e isso faz com que a quantidade
+    total de $x$ escolhida aumente.
 :::
 
 ::: frame
-Elasticidades da demanda Marshalliana
+Introdução
 
-::: defi
-**Definição 3** (Elasticidades da demanda Marshalliana).
+-   Como o efeito renda domina o efeito substituição, neste caso, temos
+    que $\partial x/\partial p_y < 0$, ou seja, $x$ e $p_y$ movem em
+    direções opostas.
 
--   *[Elasticidade-preço cruzado da demanda]{style="color: blue"}
-    ($e_{x,p_y}$). mede a variação proporcional na quantidade demandada
-    de $x$ em resposta a uma variação proporcional no preço de um outro
-    bem:
-    $$e_{x,p_y} \equiv \frac{\Delta x/x}{\Delta p_y/p_y} = \frac{\Delta x}{\Delta p_y}\frac{p_y}{x} = \frac{\partial x(p_x,p_y,I)}{\partial p_y}\frac{p_y}{x}.
-                          \label{eq4}$$*
-:::
-:::
-
-## Elasticidade-preço da demanda
-
-::: frame
-Elasticidade-preço da demanda
-
--   Além de prover uma maneira conveniente de resumir como as pessoas
-    respondem às variações de preços, a **elasticidade-preço da
-    demanda** é, também, um conceito central na teoria de como as firmas
-    reagem às curvas de demanda que encontram.
-
--   Se $e_{x,p_x} = -1$, variações em $x$ e $p_x$ são do mesmo tamanho
-    proporcional - [elasticidade unitária]{style="color: blue"}.
-
--   Se $e_{x,p_x} < -1$, as variações nas quantidades são
-    proporcionalmente maiores que as variações nos preços - [demanda
-    elástica]{style="color: blue"}.
-
--   Se $e_{x,p_x} > -1$, as variações nas quantidades são
-    proporcionalmente menores que as variações nos preços - [demanda
-    inelástica]{style="color: blue"}.
+-   Como $\partial x/\partial p_y<0$, dizemos que $x$ e $y$ são
+    [complementares brutos]{style="color: blue"}.
 :::
 
 ::: frame
-Elasticidade-preço e gasto total
+Introdução
 
--   A elasticidade-preço da demanda determina como variações no preço,
-    *ceteris paribus*, afeta o gasto total em um bem:
-    $$\frac{\partial (x p_x)}{\partial p_x} = p_x \frac{\partial x}{\partial p_x} + x = x(e_{x,p_x} + 1).
-                      \label{eq5}$$
-
-    1.  Se a demanda é inelástica, preço e gasto total movem-se na mesma
-        direção. Esse é o caso, e.g., da demanda pela maioria dos
-        produtos agrícolas. As variações nos preços de determinadas
-        safras, decorrentes do clima, geralmente fazem com que o gasto
-        total nessas safras se desloque na mesma direção.
-
-    2.  Se a demanda é elástica, as reações a uma variação de preço são
-        tão grandes que o efeito sobre o gasto total é revertido.
-
-    3.  No caso de elasticidade unitária, o gasto total é constante, não
-        importando como o preço varie.
-:::
-
-## Elasticidades-preço compensadas
-
-::: frame
-Elasticidades-preço compensadas
-
-::: defi
-**Definição 4** (Elasticidades-preço compensadas). *Seja
-$x^c(p_x, p_y,U)$ uma função de demanda compensada, temos as seguintes
-definições:*
-
--   *[Elasticidade-preço da demanda compensada]{style="color: blue"}
-    ($e_{x^c,p_x}$). Mede a variação proporcional compensada na
-    quantidade demandada em resposta a uma variação proporcional no
-    próprio preço de um bem:
-    $$e_{x^c,p_x} \equiv \frac{\Delta x^c/x^c}{\Delta p_x/p_x} = \frac{\Delta x^c}{\Delta p_x}\frac{p_x}{x^c} = \frac{\partial x^c(p_x,p_y,U)}{\partial p_x}\frac{p_x}{x^c}.
-                          \label{eq6}$$*
-
--   *[Elasticidade-preço cruzado da demanda
-    compensada]{style="color: blue"} ($e_{x^c,p_y}$). Mede a variação
-    proporcional compensada na quantidade demandada em resposta a uma
-    variação proporcional no preço de outro bem:
-    $$e_{x^c,p_y} \equiv \frac{\Delta x^c/x^c}{\Delta p_y/p_y} = \frac{\Delta x^c}{\Delta p_y}\frac{p_y}{x^c} = \frac{\partial x^c(p_x,p_y,U)}{\partial p_y}\frac{p_y}{x}^c.
-                          \label{eq7}$$*
-:::
+<figure id="fig2">
+<img src="grosssubstitutes.JPG" style="width:60.0%" />
+<figcaption>Efeito-cruzado de variação nos preços: substitutos brutos.
+Fonte: Nicholson, Snyder (2016).</figcaption>
+</figure>
 :::
 
 ::: frame
-Elasticidades-preço compensadas
+Introdução
 
--   Se essas elasticidades-preço compensadas diferem muito de suas
-    equivalentes Marshallianas depende da importância dos efeitos renda
-    na demanda global pelo bem $x$.
+-   Na Figura [2](#fig2){reference-type="ref" reference="fig2"}, a
+    situação é revertida. Agora $\partial x/\partial p_y > 0$.
 
--   Pela equação de Slutsky temos que:
-    $$\frac{\partial x}{\partial p_x} = \frac{\partial x^c}{\partial p_x} - x \frac{\partial x}{\partial I}.$$
+-   Como as curvas de indiferença agora são relativamente planas, isso
+    resulta em um efeito substituição grande com a queda em $p_y$.
 
--   Portanto:
-    $$e_{x,p_x} = \frac{p_x}{x}\frac{\partial x}{\partial p_x} = \frac{p_x}{x}\frac{\partial x^c}{\partial p_x} - \frac{p_x}{x}x\frac{\partial x}{\partial I} = e_{x^c,p_x} - s_xe_{x,I},
-                      \label{eq8}$$ onde $s_x \equiv xp_x/I$ é a fração
-    total da renda alocada na aquisição do bem $x$.
+-   A quantidade ótima escolhida de $x$ decresce drasticamente à medida
+    que $y$ é substituído por $x$ ao longo da curva de indiferença
+    $U_0$.
+
+-   O efeito renda ainda indica um aumento no poder de compra do
+    consumidor.
+
+-   No entanto, agora o efeito substituição domina o efeito renda e,
+    portanto, a quantidade demandada de $x$ decresce para $x_1$.
+
+-   Neste caso, $x$ e $p_y$ movem na mesma direção - [substitutos
+    brutos]{style="color: blue"}.
+:::
+
+## Tratamento formal
+
+::: frame
+Equação de Slutsky
+
+-   A ambiguidade no efeito de variações em $p_y$ sobre a quantidade
+    demandada de $x$ pode ser ilustrada, formalmente, utilizando-se uma
+    variação da equação de Slutsky.
+
+-   Usando procedimentos similares aos das aulas anteriores, temos:
+    $$\begin{aligned}
+                      x^c(p_x,p_y,U) &=& x[p_x,p_y, E(p_x,p_y,U)] \nonumber \\
+                      \frac{\partial x^c}{\partial p_y} &=& \frac{\partial x}{\partial p_y} + \frac{\partial x}{\partial E}\frac{\partial E}{\partial p_y} \nonumber \\
+                      \frac{\partial x}{\partial p_y} &=& \frac{\partial x^c}{\partial p_y} - y\frac{\partial x}{\partial I}. \label{eq1} \\
+                      \frac{\partial x}{\partial p_y} &=& \left.\frac{\partial x}{\partial p_y}\right|_{U=k} - y\frac{\partial x}{\partial I}. \label{eq2} \\
+                      \frac{\partial x}{\partial p_y} &=& \text{efeito substituição} + \text{efeito renda}. \nonumber
+                  
+    \end{aligned}$$
 :::
 
 ::: frame
-Elasticidades-preço compensadas
+Equação de Slutsky
 
--   A equação ([\[eq8\]](#eq8){reference-type="ref" reference="eq8"})
-    mostra que as elasticidades-preço da demanda compensada e não
-    compensada serão semelhantes se verificarmos umas das duas condições
-    a seguir:
-
-    1.  A porção da renda destinada ao bem $x$, $s_x$, for pequena.
-
-    2.  A elasticidade-renda da demanda para o bem $x$, $e_{x,I}$, for
-        pequena.
-
--   Qualquer uma dessas duas condições reduzem a importância do efeito
-    renda como componente da elasticidade-preço Marshalliana.
-
--   Se $s_x$ é pequeno, o poder aquisitivo de um consumidor não será
-    muito afetado por uma variação de preço.
-
--   Mesmo que um bem tenha um peso grande sobre o orçamento, se a
-    demanda deste bem não for muito reativa às variações no poder de
-    compra, o efeito renda terá uma influência relativamente pequena
-    sobre a elasticidade da demanda.
-
--   Portanto, em muitas situações podemos utilizar os dois conceitos -
-    situações em que os efeitos substituição constituem o componente
-    mais importante das reações dos preços.
-:::
-
-## Relações entre as elasticidades da demanda
-
-::: frame
-Homogeneidade[]{#voltar label="voltar"}
-
--   A homogeneidade das funções demanda pode ser expressa em termos de
-    elasticidade.
-
--   Como qualquer aumento proporcional em todos os preços e renda deixa
-    a quantidade demandada inalterada, a adição líquida de todas as
-    elasticidades-preço com a elasticidade-renda para um bem particular
-    devem somar zero.
-
--   Pelo [](#apendice1), obtemos a seguinte expressão:
-    $$0 = p_x\frac{\partial x}{\partial p_x} + p_y \frac{\partial x}{\partial p_y} + I\frac{\partial x}{\partial I}.
-                      \label{eq9}$$
-
--   Dividindo a equação ([\[eq9\]](#eq9){reference-type="ref"
-    reference="eq9"}) por $x$, temos:
-    $$0 = e_{x,p_x} + e_{x,p_y} + e_{x,I}.
-                      \label{eq10}$$
-:::
-
-::: frame
-Homogeneidade
-
--   O resultado da equação ([\[eq10\]](#eq10){reference-type="ref"
-    reference="eq10"}) mostra que as elasticidades da demanda para
-    qualquer bem não podem seguir um padrão completamente flexível.
-
--   Elas devem exibir uma espécie de consistência interna que reflete a
-    abordagem de maximização de utilidade na qual a teoria da demanda é
-    baseada.
-:::
-
-::: frame
-Agregação de Engel[]{#voltar2 label="voltar2"}
-
--   A [](#leiengel) nos diz que a fração da renda alocada em alimentação
-    diminui à medida que a renda aumenta.
-
--   Em termos de elasticidade, a lei de Engel é uma afirmação da
-    regularidade empírica de que a elasticidade-renda da demanda para
-    alimento geralmente é inferior a 1.
-
--   Portanto, a elasticidade-renda de todos os itens não-alimentícios
-    deve ser superior a 1.
-
--   Se um indivíduo tem um aumento em seu poder de compra, esperamos que
-    os gastos com alimentação aumentem em uma proporção menor. Como essa
-    renda deve ser gasta em outros bens, no total, esses outros gastos
-    devem aumentar proporcionalmente mais rápido que a renda.
-:::
-
-::: frame
-Agregação de Engel
-
--   Formalmente, podemos diferenciar a restrição orçamentária com
-    relação à renda, mantendo os preços constantes:
-    $$1 = p_x\frac{\partial x}{\partial I} + p_y\frac{\partial y}{\partial I}.
-                      \label{eq11}$$
-
--   Portanto:
-    $$1 = p_x \frac{\partial x}{\partial I} \frac{xI}{xI} + p_y \frac{\partial y}{\partial I} \frac{yI}{yI} = s_x e_{x,I} + s_y e_{y,I}.
-                      \label{eq12}$$
-
--   A equação ([\[eq12\]](#eq12){reference-type="ref" reference="eq12"})
-    nos diz que a média ponderada das elasticidades-renda de todos os
-    bens que uma pessoa adquire deve ser igual a 1.
-:::
-
-::: frame
-Agregação de Engel
-
--   Se uma pessoa gastou um quarto de sua renda com alimentação, e a
-    elasticidade-renda da demanda de alimentos for igual a 0,5, então, a
-    elasticidade-renda da demanda para os demais gastos deve ser:
-    $$\frac{[1 - 0,25\times 0,5]}{0,75} \approx 1,17.$$
-
--   Como alimentação é uma "necessidade" importante, todo o restante é,
-    de certa forma, um "luxo".
-:::
-
-::: frame
-Agregação de Cournot
-
--   O economista francês do século XIX Antoine Cournot estava
-    interessado, entre outras coisas, em saber como a variação em um
-    único preço pode afetar a demanda para todos os bens.
-
-    <figure id="cournot">
-    <img src="cournot.jpg" style="width:30.0%" />
-    <figcaption>Antoine Augustin Cournot (1801-1877). Fonte: <a
-    href="https://pt.wikipedia.org/wiki/Cournot">Wikipedia</a>.</figcaption>
-    </figure>
-:::
-
-::: frame
-Agregação de Cournot
-
--   Diferenciando a restrição orçamentária com relação a $p_x$, temos:
-    $$0 = p_x\frac{\partial x}{\partial p_x} + x + p_y\frac{\partial y}{\partial p_x}.$$
-
--   Multiplicando por $p_x/I$: $$\begin{aligned}
-                      0 &=& p_x\frac{\partial x}{\partial p_x} \frac{p_x}{I} \frac{x}{x} + x \frac{p_x}{I} + p_y\frac{\partial y}{\partial p_x} \frac{p_x}{I} \frac{y}{y} \\
-                      &=& s_x e_{x,p_x} + s_x + s_y e_{y,p_x}.
+-   Podemos, ainda, escrever a equação
+    ([\[eq1\]](#eq1){reference-type="ref" reference="eq1"}) em termos de
+    elasticidades: $$\begin{aligned}
+                      \frac{\partial x}{\partial p_y} &=& \frac{\partial x^c}{\partial p_y} - y\frac{\partial x}{\partial I} \nonumber \\
+                      \textcolor{blue}{\frac{p_y}{x}} \frac{\partial x}{\partial p_y} &=& \textcolor{blue}{\frac{p_y}{x}}\frac{\partial x^c}{\partial p_y} - y\frac{\partial x}{\partial I} \textcolor{blue}{\frac{p_y}{x}} \textcolor{red}{\frac{I}{I}} \nonumber \\
+                      \textcolor{blue}{\frac{p_y}{x}} \frac{\partial x}{\partial p_y} &=& \textcolor{green}{\frac{p_y}{x^c}}\frac{\partial x^c}{\partial p_y} - y\frac{\partial x}{\partial I} \textcolor{blue}{\frac{p_y}{x}} \textcolor{red}{\frac{I}{I}} \nonumber \\
+                      e_{x,p_y} &=& e_{x^c,p_y} - s_y e_{x,I}. \label{eq3}
                   
     \end{aligned}$$
 
--   Portanto, o resultado final de Cournot é:
-    $$s_x e_{x,p_x} + s_y e_{y,p_x} = -s_x.
-                      \label{eq13}$$
+-   Note que o tamanho do efeito renda é determinado pela proporção da
+    renda despendida com o bem $y$, $s_y$.
 
--   A restrição orçamentária impõe alguns limites sobre o grau em que a
-    elasticidade-preço cruzada pode ser positiva.
-:::
-
-## Exercícios
-
-::: frame
-Função utilidade do tipo Cobb-Douglas:
-$$U(x,y) = x^\alpha y^{1-\alpha}.$$
+-   O impacto de uma variação em $p_y$ sobre o poder de compra do
+    consumidor é determinado por quão importante este bem é para este
+    indivíduo.
 :::
 
 ::: frame
-Função utilidade CES: $$U(x,y) = x^{0,5} + y^{0,5}.$$
+Equação de Slutsky
+
+-   Para o caso de dois bens, os termos do lado direito das equações
+    ([\[eq1\]](#eq1){reference-type="ref" reference="eq1"}) e
+    ([\[eq3\]](#eq3){reference-type="ref" reference="eq3"}) possuem
+    sinais algébricos distintos.
+
+-   Assumindo que as curvas de indiferença sejam convexas, o efeito
+    substituição é positivo - para movimentos apenas ao longo da curva
+    de indiferença, aumentos (quedas) em $p_y$ aumentam (diminuem) a
+    quantidade ótima de $x$.
+
+-   Com relação ao efeito renda, no entanto, se $x$ é um bem normal, o
+    efeito renda é claramente negativo.
+
+-   Portanto, o efeito total é ambíguo, $\partial x/\partial p_y$ pode
+    tanto ser positivo quanto negativo.
+
+-   Mesmo no caso de dois bens, a relação de demanda entre a demanda de
+    $x$ e o preço $p_y$ é complexa.
+:::
+
+## Exercício
+
+::: frame
+Exercício Suponha um consumidor cujas relações de preferência sejam
+descritas pela seguinte função utilidade: $$U(x,y) = x^{0,5}y^{0,5}.$$
+Veja qual o efeito-preço cruzado de uma variação em $p_y$ sobre a
+quantidade demandada do bem $x$, e mostre que a razão pela qual
+variações em $p_y$ não impactam a quantidade ótima de $x$ no caso
+Cobb-Douglas é que os efeitos renda e substituição se cancelam.
 :::
 
 ::: frame
-Função utilidade CES: $$U(x,y) = -x^{-1} - y^{-1}.$$
+Exercício
 :::
 
-# Apêndice: Teorema de Euler {#apendice1}
+# Bens substitutos e complementares
 
-## Teorema de Euler
+## Bens substitutos e complementares
 
 ::: frame
-Teorema de Euler
+Bens substitutos e complementares
+
+-   Para o caso de vários bens, há mais espaço para relações
+    interessantes entre os bens.
+
+-   Neste caso, podemos generalizar a equação de Slutsky para quaisquer
+    bens $x_i$ e $x_j$ como (**derive esta expressão como exercício**):
+    $$\frac{\partial x_i(p_1, \dots, p_n, I)}{\partial p_j} = \left.\frac{\partial x_i}{\partial p_j}\right|_{U=k} - x_j\frac{\partial x_i}{\partial I}. \label{eq4}$$
+
+-   Em termos de elasticidade, temos (**derive como exercício**):
+    $$e_{i,j} = e_{i,j}^c - s_j e_{i,I}. \label{eq5}$$
+:::
+
+::: frame
+Bens substitutos e complementares
+
+-   As equações ([\[eq4\]](#eq4){reference-type="ref" reference="eq4"})
+    e ([\[eq5\]](#eq5){reference-type="ref" reference="eq5"}) nos dizem
+    que variações no preço de um bem $j$ qualquer induz efeitos renda e
+    substituição que podem alterar a quantidade demandada de qualquer
+    outro bem.
+
+-   Dois bens são ditos [substitutos]{style="color: blue"} se um bem,
+    como resultado de variações em condições, substituem um outro bem em
+    uso. Exemplo: chá e café, hamburger e cachorro-quente, manteiga e
+    margarina.
+
+-   Dois bens são ditos [complementares]{style="color: blue"} se "vão
+    juntos" no consumo. Exemplo: café e leite, whisky e charuto,
+    refrigerante e hamburger.
+
+-   Bens "substitutos" substituem um pelo outro na função utilidade,
+    enquanto "complementares" se complementam.
+
+-   Existe duas maneiras distintas de fazer essas ideias intuitivas mais
+    precisas. Uma delas foca no efeito "bruto" de variações dos preços
+    ao incluir tanto o efeito renda quanto o efeito substituição. A
+    outra foca apenas no efeito substituição.
+:::
+
+## Substitutos e complementares brutos (Marshallianos)
+
+::: frame
+Substitutos e complementares brutos (Marshallianos)
 
 ::: defi
-**Definição 5** (Função homogênea de grau $k$). *Seja $f$ uma função de
-$n$ variáveis reais definida em um domínio $\mathcal{D}$.*
+**Definição 1** (Substitutos e complementares brutos). *Dois bens $x_i$
+e $x_j$ são [substitutos brutos]{style="color: blue"} se:
+$$\frac{\partial x_i}{\partial p_j} > 0. \label{eq6}$$*
 
-*O conjunto $\mathcal{D}$ é um [cone]{style="color: blue"} se sempre que
-$(x_1, x_2, \dots, x_n) \in \mathcal{D}$ e $t>0$, também temos que
-$(tx_1, tx_2, \dots, tx_n) \in \mathcal{D}$.*
+*Dois bens $x_i$ e $x_j$ são [complementares
+brutos]{style="color: blue"} se:
+$$\frac{\partial x_i}{\partial p_j} < 0. \label{eq7}$$*
+:::
+:::
 
-*Quando $\mathcal{D}$ é um cone, dizemos que a função $f$ é homogênea de
-grau $k$ em $\mathcal{D}$ se:
-$$f(tx_1, tx_2, \dots, tx_n) = t^kf(x_1, x_2, \dots, x_n), \qquad \forall t>0.
-            \label{eqa1}$$*
+## Assimetria das definições brutas
+
+::: frame
+Exemplo Suponha que um consumidor tenha suas relações de preferência
+descritas pela seguinte função utilidade: $$U(x,y) = \ln x + y.$$
+
+Determine se os bens $x$ e $y$ são substitutos ou complementares brutos.
+:::
+
+::: frame
+Assimetria das definições brutas
+
+-   Como a definição de complementares e substitutos brutos incorporam
+    tanto o efeito renda quanto o substituição, essa é a definição que
+    observamos no "mundo real".
+
+-   No entanto, existem algumas propriedades indesejáveis nestas
+    definições brutas de complementares e substitutos.
+
+-   A principal delas é que estas definições, como mostrado no exercício
+    anterior, não são simétricas.
+
+-   Pelas definições, é possível que $x_1$ seja um substituto bruto para
+    $x_2$ e, ao mesmo tempo, $x_2$ seja um complementar bruto para
+    $x_1$.
+
+-   Portanto, **a presença dos efeitos renda pode causar resultados
+    paradoxais**.
+:::
+
+## Substitutos e complementares líquidos (Hicksianos)
+
+::: frame
+Substitutos e complementares líquidos (Hicksianos)
+
+::: defi
+**Definição 2** (Substitutos e complementares líquidos). *Os bens $x_i$
+e $x_j$ são ditos [substitutos líquidos]{style="color: blue"} se:
+$$\left.\frac{\partial x_i}{\partial p_j}\right|_{U=k} > 0. \label{eq8}$$*
+
+*Os bens $x_i$ e $x_j$ são ditos [complementares
+líquidos]{style="color: blue"} se:
+$$\left.\frac{\partial x_i}{\partial p_j}\right|_{U=k} < 0. \label{eq9}$$*
 :::
 :::
 
 ::: frame
-Teorema de Euler
+Substitutos e complementares líquidos (Hicksianos)
 
--   Uma propriedade útil de funções homogêneas pode ser obtida ao
-    diferenciarmos a equação ([\[eqa1\]](#eqa1){reference-type="ref"
-    reference="eqa1"}) com relação ao fator de proporcionalidade, $t$.
+-   Estas definições olham apenas para os termos de efeito substituição
+    para determinar se dois bens são substitutos ou complementares.
 
--   Com isso obtemos o [teorema de Euler]{style="color: blue"} para
-    funções homogêneas.
+-   Esta definição tem um apelo intuitivo (pois olha apenas para o
+    formato das curvas de indiferença) e um apelo teórico (pois não
+    permite ambiguidades).
 
-<figure id="euler">
-<img src="euler.jpg" style="width:30.0%" />
-<figcaption>Leonhard Euler (1707-1783). Fonte: <a
-href="https://en.wikipedia.org/wiki/Leonhard_Euler">Wikipedia</a>.</figcaption>
-</figure>
+-   Uma vez que determinamos que $x_i$ e $x_j$ são substitutos
+    (complementares) líquidos, eles permanecem substitutos
+    (complementares), não importa em qual direção a definição é
+    aplicada:
+    $$\left.\frac{\partial x_i}{\partial p_j}\right|_{U=k} = \left.\frac{\partial x_j}{\partial p_i}\right|_{U=k}.$$
+
+-   O efeito substituição de uma mudança em $p_i$ sobre $x_j$ é idêntico
+    ao efeito substituição de uma mudança em $p_j$ sobre $x_i$.
 :::
 
 ::: frame
-Teorema de Euler
+Substitutos e complementares líquidos (Hicksianos)
 
-::: teo
-**Teorema 1** (Teorema de Euler). *Seja $f$ uma função diferenciável de
-$n$ variáveis definida em um cone aberto $\mathcal{D}$. Então, $f$ é
-homogênea de grau $k$ se, e somente se, a seguinte equação é válida para
-todo $(x_1, x_2, \dots, x_n) \in \mathcal{D}$:
-$$kf(x_1, x_2, \dots, x_n) = \sum_{i=1}^n x_i f_i(x_1, x_2, \dots, x_n),
-            \label{eqa2}$$ onde
-$f_i (x_1, \dots, x_n) = \frac{\partial f(x_1, \dots, x_n)}{\partial x_i}$.*
+-   A diferença entre as definições Marshallianas e Hicksianas para bens
+    substitutos e complementares pode ser percebida nas Figuras
+    [1](#fig1){reference-type="ref" reference="fig1"} e
+    [2](#fig2){reference-type="ref" reference="fig2"}.
+
+-   Nas figuras, os dois bens são sempre substitutos líquidos. Dada a
+    convexidade das curvas de indiferença, uma queda em $p_y$ sempre faz
+    com que a quantidade demandada de $x$ seja menor para manter o nível
+    de utilidade constante, $\partial x^c/\partial p_y > 0$.
+
+-   Já pela definição Marshalliana, temos ambiguidade pois envolve,
+    também, o efeito renda (que é sempre negativo, assumindo que os dois
+    bens sejam normais).
+
+-   Na Figura [1](#fig1){reference-type="ref" reference="fig1"}, o
+    efeito renda negativo domina o efeito substituição positivo e,
+    portanto, $\partial x/\partial p_y<0$ e os bens são denominados
+    "complementares Marshallianos".
+
+-   Já na Figura [2](#fig2){reference-type="ref" reference="fig2"}, o
+    efeito substituição positivo domina o efeito renda negativo,
+    $\partial x/\partial p_y>0$ - "substitutos Marshallianos".
+
+-   Com $n$ bens padrões ainda mais complexos são possíveis, no entanto,
+    a definição Hicksiana simplifica a análise ao eliminar as
+    ambiguidades.
 :::
 
-[](#voltar)
-:::
+# Substituibilidade com vários bens
 
-# Apêndice: Lei de Engel {#leiengel}
+## Substituibilidade com vários bens
 
 ::: frame
-Lei de Engel
+Substituibilidade com vários bens
 
--   A lei de Engel é uma relação econômica proposta pelo estatístico
-    Ernst Engel em 1857.
+-   Quando consideramos o caso de $n$ bens, vários padrões de demanda
+    podem emergir.
 
-    <figure id="engel">
-    <img src="engel.jpg" style="width:30.0%" />
-    <figcaption>Ernst Engel (1821, 1896). Fonte: <a
-    href="https://en.wikipedia.org/wiki/Ernst_Engel">Wikipedia</a>.</figcaption>
-    </figure>
+-   Se um determinado par de bens é substituto líquido ou complementar
+    líquido é uma questão relacionada às preferências de um indivíduo.
+    Portanto, podemos observar todos os tipos de relações de demanda.
+
+-   Uma questão importante é determinar se substituibilidade ou
+    complementariedade é mais prevalente.
+
+-   Intuitivamente, tendemos a pensar nos bens como substitutos - um
+    aumento de preços em um mercado específico tende a aumentar a
+    demanda na maioria dos outros mercados.
 :::
 
 ::: frame
-Lei de Engel
+Substituibilidade com vários bens
 
--   A lei de Engel diz que um aumento na renda de uma família diminui a
-    proporção da renda que é gasta em produtos alimentícios, mesmo que o
-    total dos gastos com alimentação esteja aumentando.
+-   O economista britânico John Hicks chegou à conclusão que a "maioria"
+    dos bens são substitutos.
 
--   Em outras palavras, a elasticidade-renda da demanda da alimentação
-    está entre 0 e 1.
+-   Este resultado é resumido no que ficou conhecido como [segunda lei
+    da demanda de Hicks]{style="color: blue"}.
 
--   De acordo com a lei de Engel, famílias de baixa renda irão alocar
-    uma fração de sua renda em alimentação muito maior do que famílias
-    de níveis intermediários ou elevados de renda.
-
--   A lei de Engel pode ser usada como um indicador para padrões de vida
-    em vários países. Para isso, uma medida chamada **coeficiente de
-    Engel** é usada.
+-   Para mostrar este resultado, tomamos a função de demanda compensada
+    para um bem particular $x_i^c(p_1, \dots, p_n, V)$ que, como vimos,
+    é homogênea de grau zero nos preços. Portanto, pelo teorema de
+    Euler, temos:
+    $$p_1 \frac{\partial x_i^c}{\partial p_1} + p_2 \frac{\partial x_i^c}{\partial p_2} + \dots + p_n \frac{\partial x_i^c}{\partial p_n} = 0. \label{eq10}$$
 :::
 
 ::: frame
-Lei de Engel
+Substituibilidade com vários bens
 
-<figure id="engellaw">
-<img src="engellaw.png" style="width:35.0%" />
-<figcaption>Lei de Engel. Fonte: <a
-href="https://en.wikipedia.org/wiki/Engel%27s_law">Wikipedia</a>.</figcaption>
-</figure>
+-   A equação ([\[eq10\]](#eq10){reference-type="ref" reference="eq10"})
+    pode ser escrita em termos de elasticidades:
+    $$e_{i1}^c + e_{i2}^c + \dots + e_{in}^c = 0. \label{eq11}$$
 
-[](#voltar2)
+-   Mas sabemos que $e_{ii}^c \leq 0$ devido à negatividade do efeito
+    substituição com relação ao próprio bem - [primeira lei da demanda
+    de Hicks]{style="color: blue"}.[^1]
+:::
+
+::: frame
+Substituibilidade com vários bens
+
+-   Portanto, deve ser o caso que:
+    $$\sum_{j\neq i}e_{ij}^c \geq 0. \label{eq12}$$
+
+-   Ou seja, a soma de todas as elasticidades-preço cruzadas da demanda
+    compensada para um bem particular deve ser não-negativa.
+
+-   Isso nos diz que a "maioria" dos bens são substitutos - a evidência
+    empírica é, em termos gerais, compatível com este resultado teórico.
 :::
 
 ::: thebibliography
+NICHOLSON, W.; SNYDER C. Microeconomic theory: Basic principles and
+extensions. 12th ed. Boston, USA: Cengage Learning, 2016.
+
 NICHOLSON, W.; SNYDER C. Teoria microeconômica: Princípios básicos e
 aplicações. Cengage Learning Brasil, 2019. Disponível em:
-[app.minhabiblioteca.com.br/books/9788522127030](https://app.minhabiblioteca.com.br/books/9788522127030)
+[app.minhabiblioteca.com.br/books/9788522127030](https://app.minhabiblioteca.com.br/books/9788522127030/)
 
 VARIAN, H. R. Microeconomia: uma abordagem moderna. 9.ed. Rio de
 Janeiro: Elsevier, 2015. Disponível em:
 [app.minhabiblioteca.com.br/books/9788595155107](https://app.minhabiblioteca.com.br/books/9788595155107)
 :::
+
+[^1]: Além disso, a primeira lei da demanda de Hicks também inclui a
+    simetria dos efeitos substituição cruzados:
+    $\partial x_i^c/\partial p_j = \partial x_j^c/\partial p_i$.

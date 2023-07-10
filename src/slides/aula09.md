@@ -4,505 +4,528 @@ author:
   **Docente Responsável:** Paulo Victor da Fonseca\
   **E-mail:** <paulo.fonseca@udesc.br>\
   **Disciplina:** 23MIC1 - Microeconomia I\
-  \
   **Universidade do Estado de Santa Catarina (UDESC)**\
   **Centro de Ciências da Administração e Socioeconômicas - ESAG**
-date: 03 de Outubro, 2022
-title: Microeconomia I - Efeitos renda e substituição
+date: 19 de Outubro, 2022
+title: "Microeconomia I: Efeito renda e substituição"
 ---
 
 ::: frame
 Sumário
 :::
 
-# Funções demanda
+# Curva de demanda individual
 
-## Funções demanda Marshallianas
+## Derivação da curva de demanda individual
 
 ::: frame
-Funções demanda Marshallianas
+Derivação da curva de demanda individual
 
--   Como vimos na disciplina, até agora, geralmente será possível
-    solucionar as condições necessárias de primeira ordem de um problema
-    de maximização de utilidade para os níveis ótimos de
-    $x_1, x_2, \dots, x_n$ (e para o multiplicador de Lagrange,
-    $\lambda$) como funções dos preços e da renda.
+-   Para simplificar a análise, consideraremos o caso de apenas dois
+    bens e, como visto anteriormente, a função de demanda Marshalliana
+    para o bem $x$ é dada por: $$x^* = x(p_x, p_y, I).$$
 
--   Matematicamente, essa solução pode ser expressa por um sistema de
-    $n$ funções de demanda Marshallianas da forma: $$\begin{aligned}
-                x_1^* &=& x_1(p_1, p_2, \dots, p_n, I), \nonumber \\
-                x_2^* &=& x_2(p_1, p_2, \dots, p_n, I), \nonumber \\
-                &\vdots& \nonumber \\
-                x_n^* &=& x_n(p_1, p_2, \dots, p_n, I).
-                \label{eq1}
-                
-    \end{aligned}$$
+-   A [curva de demanda]{style="color: blue"} derivada por essa função
+    traz a relação entre $x$ e $p_x$, enquanto $p_y$, $I$ e a relação de
+    preferências são mantidas constantes. Matematicamente:
+    $$x^* = x(p_x, \bar{p}_y, \bar{I}).
+                      \label{eq1}$$
 :::
 
 ::: frame
-Funções demanda Marshallianas
+Derivação da curva de demanda individual
 
--   Uma vez conhecidos todos os preços, a renda e a forma funcional
-    dessas funções demanda, é possível fazer "predições" do quanto de
-    cada bem este consumidor irá consumir.
-
--   A notação em ([\[eq1\]](#eq1){reference-type="ref" reference="eq1"})
-    evidencia que os preços e a renda são variáveis exógenas, ou seja,
-    são os parâmetros aos quais o consumidor não tem nenhum controle
-    nesse estágio da análise.
-
--   Mudanças nesses parâmetros irão deslocar a restrição orçamentária e,
-    consequentemente, alterar as escolhas ótimas deste indivíduo.
-
--   Nosso objetivo agora é estudar exatamente essas questões.
-    Especificamente, $\partial x/\partial I$ e $\partial x/\partial p_x$
-    para um bem arbitrário $x$.
-
--   Mais tarde na disciplina estudaremos o efeito-preço cruzado
-    $\partial x/\partial p_y$ para um par de bens arbitrário $x$ e $y$.
+<figure id="fig1">
+<img src="demanda.JPG" style="width:50.0%" />
+<figcaption>Curva de demanda. Fonte: Nicholson e Snyder
+(2019).</figcaption>
+</figure>
 :::
 
-## Homogeneidade
+::: frame
+Derivação da curva de demanda individual
+
+-   Na Figura [1](#fig1){reference-type="ref" reference="fig1"}
+    assumimos que as quantidades ótimas consumidas de $x$ aumentam à
+    medida que o preço $p_x$ diminui.
+
+-   Essa hipótese está de acordo com nossa conclusão geral de que, com
+    exceção do caso observado pelo paradoxo de Giffen,
+    $\partial x/\partial p_x$ é negativa.
+
+::: defi
+**Definição 1** (Curva de demanda individual). *Uma [curva de demanda
+individual]{style="color: blue"} mostra a relação entre o preço de um
+bem e a quantidade consumida deste mesmo bem por um indivíduo, assumindo
+que todos os outros determinantes da demanda sejam mantidos constantes.*
+:::
+:::
+
+## Deslocamentos da curva de demanda
 
 ::: frame
-Homogeneidade das funções demanda
+Deslocamentos da curva de demanda
 
--   [As funções demanda são homogêneas de grau zero em todos os preços e
+-   Na nossa derivação da curva de demanda, três fatores foram mantidos
+    constantes:
+
+    1.  a renda do indivíduo.
+
+    2.  os preços dos outros bens.
+
+    3.  as preferências deste indivíduo.
+
+-   Se qualquer um desses fatores for alterado, a curva de demanda será
+    deslocada para uma nova posição.
+
+-   Um aumento na renda deslocaria a curva de demanda para cima, no caso
+    em que $\partial x/\partial I > 0$.
+
+-   Se tivermos uma alteração no preço de outro bem, $p_y$ por exemplo,
+    a curva de demanda pode se deslocar tanto para baixo quanto para
+    cima, a depender de como os bens $x$ e $y$ estão relacionados.
+
+-   Por fim, a curva de demanda também será deslocada se as preferências
+    do indivíduo pelo bem $x$ se alterarem.
+:::
+
+::: frame
+Deslocamentos da curva de demanda
+
+-   É importante notar que a curva de demanda é apenas uma representação
+    gráfica bidimensional da verdadeira função de demanda
+    ([\[eq1\]](#eq1){reference-type="ref" reference="eq1"}) e que será
+    estável apenas se os outros fatores forem mantidos constantes.
+
+-   Outro ponto importante é a distinção entre **deslocamento ao longo
+    da curva** de demanda (causado por variações em $p_x$) e
+    **deslocamento da curva** de demanda (causado por variações na
+    renda, preço de outros bens e/ou preferências).
+
+-   Tradicionalmente, o termo *aumento da demanda* refere-se a
+    deslocamentos para cima da curva de demanda.
+
+-   Por sua vez, o termo *aumento da quantidade demandada* refere-se a
+    movimentos ao longo da curva de demanda causados por uma queda em
+    $p_x$.
+:::
+
+# Demanda compensada (Hicksiana): funções e curvas
+
+## Curva de demanda compensada
+
+::: frame
+Curva de demanda compensada
+
+-   Na Figura [1](#fig1){reference-type="ref" reference="fig1"}, o nível
+    de utilidade do indivíduo variava ao longo da curva de demanda.
+
+-   À medida que $p_x$ decresce, o nível de utilidade aumenta de $U_1$
+    para $U_2$ e $U_3$.
+
+-   Isso acontece devido à hipótese de que a renda nominal e os preços
+    dos outros bens são mantidos constantes.
+
+-   Portanto, uma queda em $p_x$ representa um ganho de satisfação
+    (utilidade) para este indivíduo dado que seu poder de compra real
+    aumenta.
+
+-   Uma abordagem alternativa mantém a renda real (ou utilidade)
+    constante enquanto examina os efeitos de variações no preço $p_x$.
+:::
+
+::: frame
+Curva de demanda compensada
+
+<figure id="fig2">
+<img src="demandahicks.JPG" style="width:45.0%" />
+<figcaption>Curva de demanda compensada. Fonte: Nicholson e Snyder
+(2019).</figcaption>
+</figure>
+:::
+
+::: frame
+Curva de demanda compensada
+
+-   A derivação da curva de demanda compensada é ilustrada pela Figura
+    [2](#fig2){reference-type="ref" reference="fig2"}, onde a utilidade
+    é mantida constante (em $U_2$) e o preço $p_x$ é sucessivamente
+    reduzido.
+
+-   À medida que $p_x$ decresce, a renda nominal do indivíduo também
+    decresce e, portanto, impedindo aumentos no nível de utilidade.
+
+-   Em outras palavras, os efeitos de uma variação de preços no poder de
+    compra são **compensados** para restringir o indivíduo a manter o
+    mesmo nível de utilidade $U_2$.
+
+-   Portanto, as [reações a mudanças de preços incluem apenas os efeitos
+    substituição]{style="color: blue"}.
+
+-   No caso de aumentos do preço $p_x$, a compensação de renda seria
+    positiva para manter o indivíduo sobre a mesma curva de indiferença
+    $U_2$.
+
+-   Estes resultados são resumidos pela seguinte definição.
+:::
+
+::: frame
+Curva de demanda compensada
+
+::: defi
+**Definição 2** (Curva de demanda compensada). *Uma [curva de demanda
+compensada]{style="color: blue"} evidencia a relação entre o preço de um
+bem e a quantidade ótima consumida sob a hipótese de que os outros
+preços e a **utilidade** são mantidos constantes.*
+
+*Portanto, **a curva ilustra apenas os efeitos substituição**.*
+
+*Matematicamente, a curva de demanda compensada é uma representação
+gráfica bidimensional da [função de demanda
+compensada]{style="color: blue"}: $$x^c = x^c(p_x, p_y, U).
+            \label{eq2}$$*
+:::
+
+<figure id="fig3">
+<img src="hicks.jpg" style="width:15.0%" />
+<figcaption><a
+href="https://pt.wikipedia.org/wiki/John_Richard_Hicks">John Richard
+Hicks</a> - Nobel de Economia em 1972.</figcaption>
+</figure>
+:::
+
+## Lema de Shephard
+
+::: frame
+Lema de Shephard[]{#voltar label="voltar"}
+
+-   Muitos fatos acerca das funções de demanda compensada podem ser
+    provadas utilizando um resultado da teoria da dualidade conhecido
+    como [lema de Shephard]{style="color: blue"}.
+
+-   Considere o problema dual de minimização de dispêndio, cujo
+    Lagrangeano associado é dado por:
+    $$\mathcal{L} = p_x x + p_y y + \mu[U(x,y) - \bar{U}].
+                      \label{eq3}$$
+
+-   A solução do problema dual de minimização de dispêndio
+    ([\[eq3\]](#eq3){reference-type="ref" reference="eq3"}) nos dá a
+    função dispêndio $E(p_x, p_y, U)$.
+
+-   Como a função dispêndio é uma função-valor, podemos aplicar o
+    [](#envelope).
+:::
+
+::: frame
+Lema de Shephard
+
+-   Portanto, aplicando o teorema do envelope com relação a $p_x$,
+    temos:
+    $$\frac{d E(p_x, p_y, U)}{d p_x} = \frac{\partial \mathcal{L}}{\partial p_x} = x^c(p_x, p_y, U).
+                      \label{eq4}$$
+
+-   Ou seja, a função de demanda compensada de um bem pode ser obtida
+    diferenciando a função dispêndio com relação ao preço deste bem.
+
+-   A equação ([\[eq4\]](#eq4){reference-type="ref" reference="eq4"})
+    nos diz que variações no preço de um bem irão afetar os gastos
+    mínimos deste indivíduo em uma proporção aproximadamente igual à
+    quantidade demandada deste bem.
+:::
+
+::: frame
+Lema de Shephard
+
+-   Vimos anteriormente na disciplina que a função dispêndio
+    $E(p_x, p_y, U)$ é côncava nos preços. Matematicamente, isso quer
+    dizer que: $$\frac{\partial^2 E(p_x, p_y, U)}{\partial p_x^2} < 0.$$
+
+-   Pelo lema de Shephard podemos, então, calcular a inclinação da curva
+    de demanda compensada:
+    $$\frac{\partial^2 E(p_x, p_y, V)}{\partial p_x^2} = \frac{\partial x^c(p_x, p_y, V)}{\partial p_x} < 0.
+                      \label{eq5}$$
+
+-   A equação ([\[eq5\]](#eq5){reference-type="ref" reference="eq5"})
+    nos diz que [a curva de demanda compensada é]{style="color: blue"},
+    necessariamente, [negativamente inclinada]{style="color: blue"}.
+:::
+
+::: frame
+Lema de Shephard
+
+-   A ambiguidade verificada no caso da curva de demanda Marshalliana
+    não é observada neste caso.
+
+-   Isso deve-se ao fato de que curvas de demanda compensada envolverem
+    apenas os efeitos substituição e a hipótese de quase-concavidade
+    assegura que a inclinação desta curva de demanda é sempre negativa.
+:::
+
+## Relação entre curvas de demanda compensada e não-compensada
+
+::: frame
+Relação entre as curvas de demanda compensada e não-compensada
+
+<figure id="fig4">
+<img src="demandas.JPG" style="width:60.0%" />
+<figcaption>Relação entre curvas de demanda compensada e não-compensada.
+Fonte: Nicholson e Snyder (2019).</figcaption>
+</figure>
+:::
+
+::: frame
+Relação entre as curvas de demanda compensada e não-compensada
+
+-   Ao nível de preços $p_x^{''}$ as curvas de demanda Hicksiana e
+    Marshalliana se interceptam pois, a esse preço, a renda do indivíduo
+    é aquela suficiente para atingir o nível de utilidade $U_2$.
+
+-   Portanto, uma quantidade $x^{''}$ é demandada de acordo com os dois
+    conceitos.
+
+-   Para preços abaixo deste valor, o poder de compra deste indivíduo
+    deve ser reduzido para que o mesmo nível de utilidade $U_2$ seja
+    atingido e, portanto, assumindo que $x$ seja um bem normal, uma
+    quantidade menor do bem $x$ é demandada sob a ótica Hicksiana quando
+    comparada à curva de demanda Marshalliana.
+
+-   Por outro lado, para preços acima de $p_x{''}$, a compensação de
+    renda é positiva já que o indivíduo precisa de um poder de compra
+    maior para atingir o mesmo nível de utilidade. Portanto, se $x$ é um
+    bem normal, uma quantidade maior de $x$ é demandada ao longo de
+    $x^c$ do que ao longo da curva de demanda $x$.
+:::
+
+::: frame
+Relação entre as curvas de demanda compensada e não-compensada
+
+-   De maneira geral, portanto, [para bens normais a curva de demanda
+    compensada é menos responsiva a variações de preços do que a curva
+    de demanda não compensada]{style="color: blue"}.
+
+-   Isto deve-se ao fato de que a curva de demanda Marshalliana reflete
+    tanto o efeito substituição quanto o efeito renda a variações de
+    preços, enquanto a demanda Hicksiana reflete apenas os efeitos
+    substituição.
+:::
+
+## Exercício
+
+::: frame
+Exercício Considere a seguinte função utilidade:
+$$U(x,y) = x^{0,5}y^{0,5}.$$
+
+1.  Obtenha as funções demanda Marshallianas.
+
+2.  Obtenha as funções demanda Hicksiana via lema de Shephard.
+
+3.  Calcule as quantidades ótimas demandadas, sob as duas óticas, quando
+    $p_x = 1, p_y = 4, I = 8, U = 2$.
+
+4.  Suponha que $p_x$ aumente para 4, compare as demandas Hicksianas e
+    Marshallianas neste caso.
+:::
+
+# Análise formal dos efeitos de variação de preços
+
+## Abordagem indireta
+
+::: frame
+Abordagem indireta
+
+-   Até agora nos concentramos em análises gráficas para descrever o
+    comportamento dos indivíduos em resposta a variações nos preços.
+
+-   Nosso objetivo agora é desenvolver uma abordagem matemática mais
+    formal para examinar a derivada parcial $\partial x/\partial p_x$.
+    Ou seja, como uma variação no preço de um bem afeta a quantidade
+    adquirida deste mesmo bem, *ceteris paribus*, para a curva de
+    demanda Marshalliana tradicional.
+
+-   Aqui adotaremos uma abordagem indireta que está fundamentada no
+    conceito de dualidade dos problemas de otimização. Fonte: [A one
+    line proof of the Slutsky equation, Phillip
+    Cook](http://cc.kangwon.ac.kr/~kimoon/me/me-132/cook-proof-1972.pdf).
+:::
+
+::: frame
+Abordagem indireta
+
+-   Por definição, sabemos que:
+    $$x^c(p_x,p_y,U) = x[p_x,p_y,E(p_x,p_y,U)].
+                \label{eq6}$$
+
+-   Vimos essa conclusão na Figura [4](#fig4){reference-type="ref"
+    reference="fig4"}, que mostrou que a quantidade demandada é idêntica
+    para as demandas Hicksianas e Marshallianas quando a renda é
+    exatamente aquela suficiente para atingir o nível de utilidade
+    requerido.
+
+-   Portanto, temos que:
+    $$\frac{\partial x^c}{\partial p_x} = \frac{\partial x}{\partial p_x} + \frac{\partial x}{\partial E}  \frac{\partial E}{\partial p_x}.$$
+
+-   Rearranjando os termos:
+    $$\frac{\partial x}{\partial p_x} = \frac{\partial x^c}{\partial p_x} -\frac{\partial x}{\partial E}  \frac{\partial E}{\partial p_x}.
+                \label{eq8}$$
+:::
+
+## Efeito substituição
+
+::: frame
+Efeito substituição
+
+-   A equação ([\[eq8\]](#eq8){reference-type="ref" reference="eq8"})
+    nos mostra que nosso objeto de interesse, $\partial x/\partial p_x$,
+    pode ser decomposto em dois termos.
+
+-   O primeiro termo, $\partial x^c/\partial p_x$ nos dá a inclinação da
+    curva de demanda compensada.
+
+-   Essa inclinação representa movimentos ao longo de uma curva de
+    indiferença o que é exatamente o que chamamos anteriormente de
+    [efeito substituição]{style="color: blue"}.
+
+-   O primeiro termo do lado direito da equação
+    ([\[eq8\]](#eq8){reference-type="ref" reference="eq8"}) é uma
+    representação matemática deste efeito.
+:::
+
+## Efeito renda
+
+::: frame
+Efeito renda
+
+-   O segundo termo da equação ([\[eq8\]](#eq8){reference-type="ref"
+    reference="eq8"}),
+    $-\frac{\partial x}{\partial E}  \frac{\partial E}{\partial p_x}$,
+    reflete o modo com que variações em $p_x$ afetam a demanda pelo bem
+    $x$ via mudanças no poder de compra do indivíduo.
+
+-   Portanto, este termo representa o [efeito
     renda]{style="color: blue"}.
 
--   Portanto, variações nos preços e renda na mesma proporção não afetam
-    as quantidades físicas dos bens demandados.
+-   O sinal negativo reflete a relação inversa entre mudanças nos preços
+    e variações no poder de compra.
 
--   Matematicamente, temos:
-    $$x_i^* = x_i(p_1, p_2, \dots, p_n, I) = x_i(tp_1, tp_2, \dots, tp_n, tI), \qquad \forall t>0.$$
+-   Por exemplo, um aumento de $p_x$ aumenta o nível de dispêndio
+    necessário para manter a utilidade constante
+    ($\partial E/\partial p_x>0$).
 
--   Este resultado mostra que, em teoria, as demandas individuais não
-    serão afetadas por um evento de **inflação pura**.
+-   Mas como a renda nominal é mantida constante na demanda
+    Marshalliana, esse nível extra de dispêndio não está disponível.
 
--   No caso de um processo inflacionário que não seja puro (i.e., se
-    alguns preços aumentam mais rapidamente que outros) este não seria o
-    caso.
+-   Portanto, os gastos com o bem $x$ devem ser reduzidos para ser
+    compatível com essa redução do poder de compra.
+
+-   A magnitude desta redução nos gastos é dada por
+    $\partial x/\partial E$.
 :::
 
-::: frame
-Homogeneidade das funções demanda
-
--   Homogeneidade de grau zero das funções demanda é um resultado direto
-    da hipótese de maximização de utilidade.
-
--   Funções demanda derivadas do problema de maximização de utilidade
-    serão homogêneas.
-
--   Por sua vez, funções demanda que não sejam homogêneas não podem
-    refletir maximização de utilidade - a não ser que os preços entrem
-    diretamente na função utilidade do indivíduo (e.g., bens que
-    apresentem o "efeito esnobe").
-:::
+## Equação de Slutsky
 
 ::: frame
-Exemplos Mostre que as funções demanda associadas à função utilidade do
-tipo Cobb-Douglas: $$U(x,y) = x^{0,3}y^{0,7},$$ são homogêneas de grau
-0.
-:::
+Equação de Slutsky
 
-::: frame
-Exemplos Mostre que as funções demanda associadas à função utilidade do
-tipo CES: $$U(x,y) = x^{0,5} + y^{0,5},$$ são homogêneas de grau 0.
-:::
+-   A relação representada pela equação
+    ([\[eq8\]](#eq8){reference-type="ref" reference="eq8"}) foi
+    originalmente derivada pelo economista e estatístico russo Eugen
+    Slutsky no final do século XIX.
 
-# Variações na renda
-
-## Efeitos de variações na renda
-
-::: frame
-Efeitos de variações na renda
-
--   À medida que o poder de compra de um indivíduo aumenta, é natural
-    que a quantidade consumida de cada bem também aumente.
-
-    <figure id="fig1">
-    <img src="renda.JPG" style="width:50.0%" />
-    <figcaption>Efeito de um aumento na renda. Fonte: Nicholson e Snyder
-    (2019).</figcaption>
+    <figure id="fig5">
+    <img src="slutsky.jpg" style="width:30.0%" />
+    <figcaption><a href="https://pt.wikipedia.org/wiki/Eugen_Slutsky">Eugen
+    Slutsky (1880-1948)</a>.</figcaption>
     </figure>
 :::
 
 ::: frame
-Efeitos de variações na renda
+Equação de Slutsky
 
--   A Figura [1](#fig1){reference-type="ref" reference="fig1"} ilustra o
-    efeito de um aumento na renda sobre as quantidades ótimas consumidas
-    dos bens $x$ e $y$.
+-   Primeiro, vamos reescrever o efeito substituição da seguinte forma:
+    $$\text{efeito substituição} = \frac{\partial x^c}{\partial p_x} = \left. \frac{\partial x}{\partial p_x} \right|_{U = \text{constante}},
+                    \label{eq9}$$ para indicar movimentos ao longo da
+    curva de indiferença.
 
--   À medida que a renda (poder de compra) aumenta de $I_1$ para $I_2$ e
-    $I_3$, a quantidade demanda do bem $x$ ($y$) aumenta de $x_1$ para
-    $x_2$ para $x_3$ ($y_1$ para $y_2$ para $y_3$).
+-   Para o efeito renda, temos:
+    $$\text{efeito renda} = -\frac{\partial x}{\partial E}\frac{\partial E}{\partial p_x} = -\frac{\partial x}{\partial I}\frac{\partial E}{\partial p_x},
+                    \label{eq10}$$ dado que mudanças na renda $I$ ou nos
+    gastos $E$ são idênticas para a função $x(p_x,p_y,I)$.
 
--   Note que as retas orçamentárias $I_1$, $I_2$ e $I_3$ são paralelas,
-    mostrando que apenas a renda está variando, e não os preços
-    relativos de $x$ e $y$.
-
--   Dado que a razão de preços relativos $p_x/p_y$ permanece constante,
-    as condições de maximização de utilidade requerem que a TMS também
-    permaneça constante à medida que o indivíduo se desloca para níveis
-    mais altos de satisfação.
-
--   Portanto, a TMS é a mesma nos pontos $(x_1,y_1)$, $(x_2, y_2)$ e
-    $(x_3, y_3)$.
-:::
-
-## Bens normais e bens inferiores
-
-::: frame
-Bens normais e bens inferiores
-
--   Na Figura [1](#fig1){reference-type="ref" reference="fig1"} temos um
-    caso em que as quantidades demandadas de $x$ e $y$ aumentam com o
-    aumento na renda -
-    $\partial x/\partial I, \partial y/\partial I > 0.$
-
--   Essa é considerada a situação usual e bens que exibem essa
-    propriedade são denominados [bens normais]{style="color: blue"}
-    sobre o intervalo de variação de renda observada.
-
--   No entanto, para alguns bens, a quantidade ótima demandada pode
-    decrescer quando a renda aumenta em alguns intervalos.
-
--   Um bem $z$ para o qual temos que $\partial z/\partial I<0$ é
-    denominado um [bem inferior]{style="color: blue"}.
+-   Pelo Lema de Shephard temos, então:
+    $$\text{efeito renda} = -x^c\frac{\partial x}{\partial I}.$$
 :::
 
 ::: frame
-Bens normais e bens inferiores
+Equação de Slutsky
 
-<figure id="fig2">
-<img src="bem_inferior.JPG" style="width:70.0%" />
-<figcaption>Curva de indiferença exibindo inferioridade. Fonte:
-Nicholson e Snyder (2019).</figcaption>
-</figure>
+-   Portanto, podemos escrever a [equação de
+    Slutsky]{style="color: blue"} da seguinte forma: $$\begin{aligned}
+                    \frac{\partial x(p_x,p_y,I)}{\partial p_x} &=& \text{efeito substituição} + \text{efeito renda} \nonumber \\
+                    &=& \left. \frac{\partial x}{\partial p_x} \right|_{U = \text{constante}} - x\frac{\partial x}{\partial I}, \label{eq12}
+                
+    \end{aligned}$$ onde usamos o fato de que
+    $x(p_x,p_y,I) = x^c(p_x,p_y,V)$ avaliados no ponto de máximo.
+
+-   A equação de Slutsky ([\[eq12\]](#eq12){reference-type="ref"
+    reference="eq12"}) possibilita um tratamento mais definitivo acerca
+    da direção e magnitude dos efeitos renda e substituição.
 :::
 
 ::: frame
-Bens normais e bens inferiores
+Equação de Slutsky
 
--   Na Figura [2](#fig2){reference-type="ref" reference="fig2"}, o bem
-    $z$ é inferior pois sua quantidade demandada decresce à medida que a
-    renda aumenta.
+1.  O [efeito substituição]{style="color: blue"} (e a inclinação da
+    curva de demanda compensada) é sempre negativo. Este resultado
+    deriva diretamente da quase-concavidade das funções utilidades (TMS
+    decrescente) e da concavidade da função dispêndio.
 
--   Note que as curvas de indiferença não precisam apresentar um formato
-    "estranho" para exibir inferioridade.
-
--   As curvas de indiferença correspondentes aos bens $y$ e $z$
-    continuam a apresentar uma TMS decrescente.
-
--   O bem $z$ é inferior em função da forma como se relaciona com os
-    outros bens disponíveis, e não por causa de uma peculiaridade
-    exclusiva a ele.
+2.  O sinal do [efeito renda]{style="color: blue"} depende do sinal do
+    termo $\partial x/\partial I$. Se $x$ é um bem normal, então, este
+    termo é positivo e o efeito renda é negativo. Neste caso, então,
+    preço e quantidade sempre se movem em direções opostas. Se $x$ é um
+    bem inferior, então $\partial x/\partial I<0$ e os dois termos da
+    equação de Slutsky possuem sinais distintos. Neste caso, o efeito
+    total de uma variação nos preços é ambíguo - tudo depende das
+    magnitudes relativas de ambos os efeitos. É possível, teoricamente,
+    que, no caso de bens inferiores, o efeito renda domine o efeito
+    substituição, levando ao paradoxo de Giffen
+    ($\partial x/\partial p_x > 0$).
 :::
+
+## Exercício
 
 ::: frame
-Bens normais e bens inferiores
+Exercício No exercício anterior, para o caso de uma função utilidade do
+tipo Cobb-Douglas, vimos que a demanda Marshalliana para o bem $x$ era:
+$$x(p_x,p_y,I) = \frac{0,5I}{p_x},$$ e a demanda compensada era:
+$$x^c(p_x,p_y,U) = p_x^{-0,5}p_y^{0,5}U.$$
 
-::: defi
-**Definição 1** (Bens normais e bens inferiores). *Um bem $x_i$ para o
-qual $\partial x_i/\partial I < 0$ sobre algum intervalo de variação da
-renda é denominado um [bem inferior]{style="color: blue"} nesse
-intervalo.*
-
-*Um bem $x_i$ para o qual $\partial x_i/\partial I \geq 0$ sobre algum
-intervalo de variação da renda é denominado um [bem
-normal]{style="color: blue"} (ou **não-inferior**) nesse intervalo.*
-:::
+Mostre que o efeito total de uma variação de preços sobre a demanda
+Marshalliana é igual à soma dos dois componentes da equação de Slutsky.
 :::
 
-# Variações no preço de um bem
+# Apêndice: Teorema do envelope
 
 ::: frame
-Variações no preço de um bem
+Teorema do envelope[]{#envelope label="envelope"}
 
--   O efeito de uma variação no preço de um bem é mais complexo de ser
-    analisado do que efeitos na variação da renda.
+::: teo
+**Teorema 1** (Teorema do envelope). *Seja
+$y^* = f(x_1^*, \dots, x_n^*; a)$ a função valor de $x$ que maximiza a
+função objetivo sujeito à restrição.*
 
--   Isso porque, geometricamente, uma mudança de preços não só altera os
-    interceptos da restrição orçamentária mas, também, sua inclinação.
-
--   Consequentemente, a nova escolha ótima derivada do problema de
-    maximização de utilidade envolve não apenas a mudança para uma nova
-    curva de indiferença mas, também, alterações em sua TMS.
+*Se a função valor $y^*$ e os valores ótimos de $x^*$ são
+diferenciáveis, então:
+$$\frac{\partial y^*}{\partial a} = \frac{\partial \mathcal{L}}{\partial a}(x_1^*, \dots, x_n^*; a).$$*
 :::
 
-::: frame
-Variações no preço de um bem
-
--   Analiticamente, quando um preço é alterado, dois efeitos distintos
-    entram em ação.
-
-    1.  [Efeito substituição:]{style="color: blue"} mesmo que o
-        indivíduo permaneça na mesma curva de indiferença, os padrões de
-        alocação de consumo seriam alterados de maneira a equalizar a
-        TMS à nova razão entre os preços dos bens.
-
-    2.  [Efeito renda:]{style="color: blue"} este efeito emerge pois uma
-        mudança no preço de um bem, necessariamente, afeta a renda
-        "real" do indivíduo. Este consumidor não pode permanecer na
-        mesma curva de indiferença e deve, portanto, mudar para uma
-        nova.
-
--   Vamos, inicialmente, estudar graficamente estes dois efeitos. Na
-    próxima aula daremos um tratamento mais formal.
-:::
-
-## Efeitos de uma redução no preço
-
-::: frame
-Efeitos de uma redução no preço
-
-<figure id="fig3">
-<img src="dec1.JPG" style="width:40.0%" />
-<figcaption>Efeitos de uma redução em <span
-class="math inline"><em>p</em><sub><em>x</em></sub></span>. Fonte:
-Nicholson e Snyder (2019).</figcaption>
-</figure>
-
--   O efeito substituição e o efeito renda são ilustrados na Figura
-    [3](#fig3){reference-type="ref" reference="fig3"}.
-:::
-
-::: frame
-Efeitos de uma redução no preço
-
--   Inicialmente, o ponto que maximiza utilidade dada a restrição
-    orçamentária é dado por $(x^*,y^*).$
-
--   A restrição orçamentária inicial é $I = p_x^1x + p_yy$. Após uma
-    redução no preço do bem $x$, a nova restrição orçamentária é dada
-    por $I = p_x^2x+p_yy$.
-
--   Ao novo nível de preços, o ponto que maximiza utilidade é dado por
-    $(x^{**}, y^{**})$, onde a nova restrição orçamentária é tangente à
-    curva de indiferença $U_2$.
-
--   O movimento para este novo ponto ótimo pode ser analiticamente
-    decomposto em dois efeitos.
-:::
-
-::: frame
-Efeitos de uma redução no preço
-
-1.  [Efeito substituição:]{style="color: blue"} a mudança na inclinação
-    da restrição orçamentária motivaria uma mudança para o ponto $B$. Se
-    mantivermos, conceitualmente, a renda real (i.e., utilidade)
-    constante - ou seja, mesma curva de indiferença - um preço relativo
-    mais baixo do bem $x$ causa a escolha ótima deste consumidor a se
-    alterar de $(x^*,y^*)$ para o ponto $B$.
-
-2.  [Efeito renda:]{style="color: blue"} O deslocamento adicional do
-    ponto $B$ para o ponto $(x^{**}, y^{**})$ é analiticamente idêntico
-    ao que vimos antes sobre mudanças na renda. Como o preço do bem $x$
-    caiu, esse indivíduo dispõe de uma renda "real" mais alta e,
-    portanto, pode atingir um nível de utilidade mais alta ($U_2$). Se
-    $x$ é um bem normal, sua demanda aumentará em resposta ao aumento no
-    poder de compra deste consumidor.
-:::
-
-::: frame
-Efeitos de uma redução no preço
-
--   De maneira geral, o resultado de uma redução no preço do bem $x$ é
-    um aumento na demanda deste bem.
-
--   Em termos práticos, este argumento "sequencial" não é observado. O
-    ponto $B$ nunca é observado, apenas as duas opções ótimas são
-    refletidas no comportamento observável.
-
--   No entanto, a noção dos efeitos substituição e renda é
-    analiticamente valioso já que mostra que uma mudança de preços afeta
-    a quantidade demandada de $x$ de duas maneiras conceitualmente
-    distintas.
-
--   Isso terá um papel fundamental no nosso estudo sobre a teoria da
-    demanda.
-:::
-
-## Efeitos de um aumento no preço
-
-::: frame
-Efeitos de um aumento no preço
-
-<figure id="fig4">
-<img src="dec2.JPG" style="width:40.0%" />
-<figcaption>Efeitos de um aumento em <span
-class="math inline"><em>p</em><sub><em>x</em></sub></span>. Fonte:
-Nicholson e Snyder (2019).</figcaption>
-</figure>
-
--   Um aumento no preço do bem $x$ pode ser analisado com argumentos
-    similares.
-:::
-
-::: frame
-Efeitos de um aumento no preço
-
--   Neste caso, a restrição orçamentária se desloca para dentro,
-    refletindo o aumento no preço do bem $x$ de $p_x^1$ para $p_x^2$.
-
--   Novamente, o movimento do ponto inicial de maximização de utilidade
-    $(x^*,y^*)$ para o novo ponto $(x^{**}, y^{**})$ também pode ser
-    decomposto em dois efeitos.
-
-    1.  [Efeito substituição:]{style="color: blue"} Mesmo que este
-        indivíduo pudesse permanecer na mesma curva de indiferença
-        ($U_2)$, ainda há um incentivo para substituir bem $y$ por $x$ e
-        mover ao longo de $U_2$ para o ponto $B$.
-
-    2.  [Efeito renda:]{style="color: blue"} No entanto, como o poder de
-        compra deste consumidor foi reduzido pelo aumento no preço do
-        bem $x$, deverá haver um deslocamento para um nível mais baixo
-        de utilidade ($U_1$).
-
--   Note que, neste caso, os efeitos substituição e renda movem na mesma
-    direção, fazendo com que a quantidade demandada de $x$ diminua em
-    resposta a um aumento no seu preço.
-:::
-
-## Efeitos de variações nos preços para bens inferiores
-
-::: frame
-Efeitos de variações nos preços para bens inferiores
-
--   Nos casos que vimos até agora, os efeitos renda e substituição
-    tendem a reforçar um ao outro.
-
--   Para uma redução nos preços, ambos fazem com que uma quantidade
-    maior do bem seja demandada.
-
--   Já para um aumento nos preços, ambos fazem com que uma quantidade
-    menor do bem seja demandada.
-
--   Esta análise é válida para o caso de bens normais (não-inferiores).
-    No entanto, a possibilidade de bens inferiores complica a análise.
-
--   Neste caso, os efeitos renda e substituição funcionam em direções
-    contrárias e, consequentemente, o efeito total de uma variação de
-    preços é indeterminado.
-:::
-
-::: frame
-Efeitos de variações nos preços para bens inferiores
-
--   Uma redução nos preços, por exemplo, sempre fará com que um
-    indivíduo consuma mais de um bem por causa do efeito substituição.
-
--   No entanto, se o bem for inferior, o aumento no poder de compra
-    causado pela redução de preços pode fazer com que haja uma redução
-    na demanda por este bem.
-
--   Portanto, o resultado é indeterminado.
-
--   O efeito substituição tende a aumentar a quantidade demandada do bem
-    inferior, enquanto o efeito renda tende a reduzir esta quantidade.
-
--   Em contraste com a situação de bens normais, neste caso não é
-    possível fazer predições acerca da direção do efeito total de uma
-    mudança em $p_x$ sobre a quantidade ótima consumida de $x$.
-:::
-
-## O paradoxo de Giffen
-
-::: frame
-Paradoxo de Giffen
-
--   Se o efeito renda de uma variação de preços for forte o suficiente,
-    a mudança nos preços e a mudança resultante na quantidade demandada
-    podem ocorrer na mesma direção.
-
--   Este resultado, conhecido como [paradoxo de
-    Giffen]{style="color: blue"}, foi observado pelo economista inglês
-    Robert Giffen no século XIX na Irlanda.
-
-<figure id="fig5">
-<img src="giffen.jpg" style="width:20.0%" />
-<figcaption>Sir. Robert Giffen (1837-1910). Fonte: <a
-href="https://www.hetwebsite.net/het/profiles/giffen.htm">The history of
-economic thought website.</a></figcaption>
-</figure>
-:::
-
-::: frame
-Paradoxo de Giffen
-
--   Na Irlanda do século XIX, frente a um aumento no preço das batatas,
-    reportou-se um aumento no consumo deste bem.
-
--   Este resultado peculiar pode ser explicado pela magnitude do efeito
-    renda associado a um aumento nos preços das batatas.
-
--   As batatas, além de serem bens inferiores, também representavam uma
-    parcela grande da renda dos irlandeses.
-
--   Portanto, um aumento no preço da batata reduziria substancialmente a
-    renda real dos consumidores.
-
--   Os irlandeses seriam, então, forçados a reduzir o consumo de outros
-    bens alimentícios considerados de luxo para adquirirem mais batatas.
-:::
-
-::: frame
-Paradoxo de Giffen
-
--   Mesmo que essa interpretação dos eventos seja historicamente
-    improvável, a possibilidade de um aumento na quantidade demandada em
-    resposta a um aumento no preço de um bem passou a ser conhecida como
-    [paradoxo de Giffen]{style="color: blue"}.
-
--   O principal problema com essa interpretação dos eventos é que
-    desconsidera a observação de Marshall de que tanto fatores de oferta
-    quanto de demanda devem ser considerados na análise de variações de
-    preços.
-
--   Se os preços das batatas subiram devido à [crise na
-    Irlanda](https://pt.wikipedia.org/wiki/Grande_fome_de_1845%E2%80%931849_na_Irlanda),
-    neste caso, a oferta também seria reduzida. Portanto, como seria
-    possível um aumento na quantidade consumida?
-
--   Além disso, dado que muitos irlandeses eram produtores de batatas, o
-    aumento no preço da batata significaria um aumento da renda real.
-
--   Referência: [Robert Giffen and the Irish
-    potato](https://www.jstor.org/stable/1803318).
-:::
-
-## Resumo
-
-::: frame
--   [Efeitos renda e substituição.]{style="color: blue"} A hipótese de
-    maximização de utilidade sugere que, para bens normais, uma redução
-    no preço de um bem leva a um aumento em sua quantidade consumida
-    dado que:
-
-    1.  o [efeito subsituição]{style="color: blue"} faz com que uma
-        quantidade maior seja consumida à medida que o indivíduo se move
-        ao longo de uma curva de indiferença.
-
-    2.  o [efeito renda]{style="color: blue"} faz com que uma quantidade
-        maior seja consumida dado que a redução no preço aumenta o poder
-        de compra do consumidor e, portanto, permite o deslocamento para
-        uma curva de indiferença associada a um nível de utilidade mais
-        alto.
-
--   Quando o preço de um bem normal aumenta, o argumento é similar e a
-    predição do modelo é que haja uma redução na quantidade demandada
-    deste bem.
-
--   Por fim, para o caso de bens inferiores, os efeitos renda e
-    substituição operam em direções opostas e o efeito total é
-    indeterminado.
+[](#voltar)
 :::
 
 ::: thebibliography
 NICHOLSON, W.; SNYDER C. Teoria microeconômica: Princípios básicos e
 aplicações. Cengage Learning Brasil, 2019. Disponível em:
-[app.minhabiblioteca.com.br/#/books/9788522127030](https://app.minhabiblioteca.com.br/#/books/9788522127030/)
+[app.minhabiblioteca.com.br/books/9788522127030](https://app.minhabiblioteca.com.br/reader/books/9788522127030)
 
 VARIAN, H. R. Microeconomia: uma abordagem moderna. 9.ed. Rio de
 Janeiro: Elsevier, 2015. Disponível em:

@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="Aula09-Efeito-Renda_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Aula09-Efeito-Renda_files/libs/quarto-html/tabby.min.js"></script>
+<script src="Aula09-Efeito-Renda_files/libs/quarto-html/popper.min.js"></script>
+<script src="Aula09-Efeito-Renda_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="Aula09-Efeito-Renda_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Aula09-Efeito-Renda_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="Aula09-Efeito-Renda_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="Aula09-Efeito-Renda_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.3.361">
+
+  <meta name="author" content="Rafael Bressan">
+  <title>Efeitos renda e substituição</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="Aula09-Efeito-Renda_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="Aula09-Efeito-Renda_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="Aula09-Efeito-Renda_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="Aula09-Efeito-Renda_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="Aula09-Efeito-Renda_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="Aula09-Efeito-Renda_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="Aula09-Efeito-Renda_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="Aula09-Efeito-Renda_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="Aula09-Efeito-Renda_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-image="img/UdescEsag.jpeg" data-background-position="top left" data-background-size="50%" class="quarto-title-block center">
+  <h1 class="title">Efeitos renda e substituição</h1>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Rafael Bressan 
+</div>
+</div>
+</div>
+
+</section>
+<section>
+<section id="funções-demanda" class="title-slide slide level1 greenbackground center">
+<h1>Funções demanda</h1>
+
+</section>
+<section id="funções-demanda-marshallianas" class="slide level2">
+<h2>Funções demanda Marshallianas</h2>
+<ul>
+<li class="fragment"><p>Como vimos na disciplina, até agora, geralmente será possível solucionar as condições necessárias de primeira ordem de um problema de maximização de utilidade para os níveis ótimos de <span class="math inline">\(x_1, x_2, \dots, x_n\)</span> (e para o multiplicador de Lagrange, <span class="math inline">\(\lambda\)</span>) como funções dos preços e da renda.</p></li>
+<li class="fragment"><p>Matematicamente, essa solução pode ser expressa por um sistema de <span class="math inline">\(n\)</span> funções de demanda Marshallianas da forma:</p></li>
+</ul>
+<div class="fragment">
+<p><span id="eq-eq1"><span class="math display">\[\begin{aligned}
+    x_1^* &amp;=&amp; x_1(p_1, p_2, \dots, p_n, I), \nonumber \\
+    x_2^* &amp;=&amp; x_2(p_1, p_2, \dots, p_n, I), \nonumber \\
+    &amp;\vdots&amp; \nonumber \\
+    x_n^* &amp;=&amp; x_n(p_1, p_2, \dots, p_n, I).        
+\end{aligned} \qquad(1)\]</span></span></p>
+</div>
+</section>
+<section id="funções-demanda-marshallianas-1" class="slide level2">
+<h2>Funções demanda Marshallianas</h2>
+<ul>
+<li class="fragment"><p>Uma vez conhecidos todos os preços, a renda e a forma funcional dessas funções demanda, é possível fazer “predições” do quanto de cada bem este consumidor irá consumir.</p></li>
+<li class="fragment"><p>A notação na <a href="#/funções-demanda-marshallianas">Equação&nbsp;1</a> evidencia que os preços e a renda são variáveis exógenas, ou seja, são os parâmetros aos quais o consumidor não tem nenhum controle nesse estágio da análise.</p></li>
+<li class="fragment"><p>Mudanças nesses parâmetros irão deslocar a restrição orçamentária e, consequentemente, alterar as escolhas ótimas deste indivíduo.</p></li>
+<li class="fragment"><p>Nosso objetivo agora é estudar exatamente essas questões. Especificamente, <span class="math inline">\(\partial x/\partial I\)</span> e <span class="math inline">\(\partial x/\partial p_x\)</span> para um bem arbitrário <span class="math inline">\(x\)</span>.</p></li>
+<li class="fragment"><p>Mais tarde na disciplina estudaremos o efeito-preço cruzado <span class="math inline">\(\partial x/\partial p_y\)</span> para um par de bens arbitrário <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span>.</p></li>
+</ul>
+</section>
+<section id="homogeneidade" class="slide level2">
+<h2>Homogeneidade</h2>
+<ul>
+<li class="fragment"><p><span style="color: red">As funções demanda são homogêneas de grau zero em todos os preços e renda</span>.</p></li>
+<li class="fragment"><p>Portanto, variações nos preços e renda na mesma proporção não afetam as quantidades físicas dos bens demandados.</p></li>
+<li class="fragment"><p>Matematicamente, temos: <span class="math display">\[x_i^* = x_i(p_1, p_2, \dots, p_n, I) = x_i(tp_1, tp_2, \dots, tp_n, tI), \qquad \forall t&gt;0.\]</span></p></li>
+<li class="fragment"><p>Este resultado mostra que, em teoria, as demandas individuais não serão afetadas por um evento de <strong>inflação pura</strong>.</p></li>
+<li class="fragment"><p>No caso de um processo inflacionário que não seja puro (i.e., se alguns preços aumentam mais rapidamente que outros) este não seria o caso.</p></li>
+</ul>
+</section>
+<section id="homogeneidade-1" class="slide level2">
+<h2>Homogeneidade</h2>
+<ul>
+<li class="fragment"><p>Homogeneidade de grau zero das funções demanda é um resultado direto da hipótese de maximização de utilidade.</p></li>
+<li class="fragment"><p>Funções demanda derivadas do problema de maximização de utilidade serão homogêneas.</p></li>
+<li class="fragment"><p>Por sua vez, funções demanda que não sejam homogêneas não podem refletir maximização de utilidade - a não ser que os preços entrem diretamente na função utilidade do indivíduo (e.g., bens que apresentem o “efeito esnobe”).</p></li>
+</ul>
+</section>
+<section id="exemplos" class="slide level2">
+<h2>Exemplos</h2>
+<p>Mostre que as funções demanda associadas à função utilidade do tipo Cobb-Douglas: <span class="math display">\[U(x,y) = x^{0,3}y^{0,7},\]</span> são homogêneas de grau 0.</p>
+</section>
+<section id="exemplos-1" class="slide level2">
+<h2>Exemplos</h2>
+<p>Mostre que as funções demanda associadas à função utilidade do tipo CES: <span class="math display">\[U(x,y) = x^{0,5} + y^{0,5},\]</span> são homogêneas de grau 0.</p>
+</section></section>
+<section>
+<section id="variações-na-renda" class="title-slide slide level1 greenbackground center">
+<h1>Variações na renda</h1>
+
+</section>
+<section id="efeitos-de-variações-na-renda" class="slide level2">
+<h2>Efeitos de variações na renda</h2>
+<ul>
+<li class="fragment">À medida que o poder de compra de um indivíduo aumenta, é natural que a quantidade consumida de cada bem também aumente.</li>
+</ul>
+<div class="fragment">
+<div id="fig-fig1" class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/renda.JPG"></p>
+<figcaption>Figura&nbsp;1: Efeito de um aumento na renda. Fonte: Nicholson e Snyder (2019).</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="efeitos-de-variações-na-renda-1" class="slide level2">
+<h2>Efeitos de variações na renda</h2>
+<ul>
+<li class="fragment"><p>A <a href="#/efeitos-de-variações-na-renda">Figura&nbsp;1</a> ilustra o efeito de um aumento na renda sobre as quantidades ótimas consumidas dos bens <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span>.</p></li>
+<li class="fragment"><p>À medida que a renda (poder de compra) aumenta de <span class="math inline">\(I_1\)</span> para <span class="math inline">\(I_2\)</span> e <span class="math inline">\(I_3\)</span>, a quantidade demandada do bem <span class="math inline">\(x\)</span> (<span class="math inline">\(y\)</span>) aumenta de <span class="math inline">\(x_1\)</span> para <span class="math inline">\(x_2\)</span> para <span class="math inline">\(x_3\)</span> (<span class="math inline">\(y_1\)</span> para <span class="math inline">\(y_2\)</span> para <span class="math inline">\(y_3\)</span>).</p></li>
+<li class="fragment"><p>Note que as retas orçamentárias <span class="math inline">\(I_1\)</span>, <span class="math inline">\(I_2\)</span> e <span class="math inline">\(I_3\)</span> são paralelas, mostrando que apenas a renda está variando, e não os preços relativos de <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span>.</p></li>
+<li class="fragment"><p>Dado que a razão de preços relativos <span class="math inline">\(p_x/p_y\)</span> permanece constante, as condições de maximização de utilidade requerem que a TMS também permaneça constante à medida que o indivíduo se desloca para níveis mais altos de satisfação.</p></li>
+<li class="fragment"><p>Portanto, a TMS é a mesma nos pontos <span class="math inline">\((x_1,y_1)\)</span>, <span class="math inline">\((x_2, y_2)\)</span> e <span class="math inline">\((x_3, y_3)\)</span>.</p></li>
+</ul>
+</section>
+<section id="bens-normais-e-bens-inferiores" class="slide level2">
+<h2>Bens normais e bens inferiores</h2>
+<ul>
+<li class="fragment"><p>Na <a href="#/efeitos-de-variações-na-renda">Figura&nbsp;1</a> temos um caso em que as quantidades demandadas de <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> aumentam com o aumento na renda - <span class="math inline">\(\partial x/\partial I, \partial y/\partial I &gt; 0.\)</span></p></li>
+<li class="fragment"><p>Essa é considerada a situação usual e bens que exibem essa propriedade são denominados <span style="color: red">bens normais</span> sobre o intervalo de variação de renda observada.</p></li>
+<li class="fragment"><p>No entanto, para alguns bens, a quantidade ótima demandada pode decrescer quando a renda aumenta em alguns intervalos.</p></li>
+<li class="fragment"><p>Um bem <span class="math inline">\(z\)</span> para o qual temos que <span class="math inline">\(\partial z/\partial I&lt;0\)</span> é denominado um <span style="color: red">bem inferior</span>.</p></li>
+</ul>
+</section>
+<section id="bens-normais-e-bens-inferiores-1" class="slide level2">
+<h2>Bens normais e bens inferiores</h2>
+
+<img data-src="img/bem_inferior.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;2: Curva de indiferença exibindo inferioridade. Fonte: Nicholson e Snyder (2019).</p></section>
+<section id="bens-normais-e-bens-inferiores-2" class="slide level2">
+<h2>Bens normais e bens inferiores</h2>
+<ul>
+<li class="fragment"><p>Na <a href="#/fig-fig2">Figura&nbsp;2</a>, o bem <span class="math inline">\(z\)</span> é inferior pois sua quantidade demandada decresce à medida que a renda aumenta.</p></li>
+<li class="fragment"><p>Note que as curvas de indiferença não precisam apresentar um formato “estranho” para exibir inferioridade.</p></li>
+<li class="fragment"><p>As curvas de indiferença correspondentes aos bens <span class="math inline">\(y\)</span> e <span class="math inline">\(z\)</span> continuam a apresentar uma TMS decrescente.</p></li>
+<li class="fragment"><p>O bem <span class="math inline">\(z\)</span> é inferior em função da forma como se relaciona com os outros bens disponíveis, e não por causa de uma peculiaridade exclusiva a ele.</p></li>
+</ul>
+</section>
+<section id="bens-normais-e-bens-inferiores-3" class="slide level2">
+<h2>Bens normais e bens inferiores</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Bens normais e bens inferiores</strong></p>
+</div>
+<div class="callout-content">
+<p>Um bem <span class="math inline">\(x_i\)</span> para o qual <span class="math inline">\(\partial x_i/\partial I &lt; 0\)</span> sobre algum intervalo de variação da renda é denominado um <span style="color: red">bem inferior</span> nesse intervalo.</p>
+<p>Um bem <span class="math inline">\(x_i\)</span> para o qual <span class="math inline">\(\partial x_i/\partial I \geq 0\)</span> sobre algum intervalo de variação da renda é denominado um <span style="color: red">bem normal</span> (ou <strong>não-inferior</strong>) nesse intervalo.</p>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="variações-no-preço-de-um-bem" class="title-slide slide level1 greenbackground center">
+<h1>Variações no preço de um bem</h1>
+
+</section>
+<section id="variações-no-preço-de-um-bem-1" class="slide level2">
+<h2>Variações no preço de um bem</h2>
+<ul>
+<li class="fragment"><p>O efeito de uma variação no preço de um bem é mais complexo de ser analisado do que efeitos na variação da renda.</p></li>
+<li class="fragment"><p>Isso porque, geometricamente, uma mudança de preços não só altera os interceptos da restrição orçamentária mas, também, sua inclinação.</p></li>
+<li class="fragment"><p>Consequentemente, a nova escolha ótima derivada do problema de maximização de utilidade envolve não apenas a mudança para uma nova curva de indiferença mas, também, alterações em sua TMS.</p></li>
+</ul>
+</section>
+<section id="variações-no-preço-de-um-bem-2" class="slide level2">
+<h2>Variações no preço de um bem</h2>
+<ul>
+<li class="fragment"><p>Analiticamente, quando um preço é alterado, dois efeitos distintos entram em ação.</p>
+<ol type="1">
+<li class="fragment"><p><span style="color: red">Efeito substituição:</span> mesmo que o indivíduo permaneça na mesma curva de indiferença, os padrões de alocação de consumo seriam alterados de maneira a equalizar a TMS à nova razão entre os preços dos bens.</p></li>
+<li class="fragment"><p><span style="color: red">Efeito renda:</span> este efeito emerge pois uma mudança no preço de um bem, necessariamente, afeta a renda “real” do indivíduo. Este consumidor não pode permanecer na mesma curva de indiferença e deve, portanto, mudar para uma nova.</p></li>
+</ol></li>
+<li class="fragment"><p>Vamos, inicialmente, estudar graficamente estes dois efeitos. Na próxima aula daremos um tratamento mais formal.</p></li>
+</ul>
+</section>
+<section id="efeitos-de-uma-redução-no-preço" class="slide level2">
+<h2>Efeitos de uma redução no preço</h2>
+
+<img data-src="img/dec1.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;3: Efeitos de uma redução em <span class="math inline">\(p_x\)</span>. Fonte: Nicholson e Snyder (2019).</p></section>
+<section id="efeitos-de-uma-redução-no-preço-1" class="slide level2">
+<h2>Efeitos de uma redução no preço</h2>
+<ul>
+<li class="fragment"><p>Inicialmente, o ponto que maximiza utilidade dada a restrição orçamentária é dado por <span class="math inline">\((x^*,y^*).\)</span></p></li>
+<li class="fragment"><p>A restrição orçamentária inicial é <span class="math inline">\(I = p_x^1x + p_yy\)</span>. Após uma redução no preço do bem <span class="math inline">\(x\)</span>, a nova restrição orçamentária é dada por <span class="math inline">\(I = p_x^2x+p_yy\)</span>.</p></li>
+<li class="fragment"><p>Ao novo nível de preços, o ponto que maximiza utilidade é dado por <span class="math inline">\((x^{**}, y^{**})\)</span>, onde a nova restrição orçamentária é tangente à curva de indiferença <span class="math inline">\(U_2\)</span>.</p></li>
+<li class="fragment"><p>O movimento para este novo ponto ótimo pode ser analiticamente decomposto em dois efeitos.</p></li>
+</ul>
+</section>
+<section id="efeitos-de-uma-redução-no-preço-2" class="slide level2">
+<h2>Efeitos de uma redução no preço</h2>
+<ol type="1">
+<li class="fragment"><p><span style="color: red">Efeito substituição:</span> a mudança na inclinação da restrição orçamentária motivaria uma mudança para o ponto <span class="math inline">\(B\)</span>. Se mantivermos, conceitualmente, a renda real (i.e., utilidade) constante - ou seja, mesma curva de indiferença - um preço relativo mais baixo do bem <span class="math inline">\(x\)</span> causa a escolha ótima deste consumidor a se alterar de <span class="math inline">\((x^*,y^*)\)</span> para o ponto <span class="math inline">\(B\)</span>.</p></li>
+<li class="fragment"><p><span style="color: red">Efeito renda:</span> O deslocamento adicional do ponto <span class="math inline">\(B\)</span> para o ponto <span class="math inline">\((x^{**}, y^{**})\)</span> é analiticamente idêntico ao que vimos antes sobre mudanças na renda. Como o preço do bem <span class="math inline">\(x\)</span> caiu, esse indivíduo dispõe de uma renda “real” mais alta e, portanto, pode atingir um nível de utilidade mais alta (<span class="math inline">\(U_2\)</span>). Se <span class="math inline">\(x\)</span> é um bem normal, sua demanda aumentará em resposta ao aumento no poder de compra deste consumidor.</p></li>
+</ol>
+</section>
+<section id="efeitos-de-uma-redução-no-preço-3" class="slide level2">
+<h2>Efeitos de uma redução no preço</h2>
+<ul>
+<li class="fragment"><p>De maneira geral, o resultado de uma redução no preço do bem <span class="math inline">\(x\)</span> é um aumento na demanda deste bem.</p></li>
+<li class="fragment"><p>Em termos práticos, este argumento “sequencial” não é observado. O ponto <span class="math inline">\(B\)</span> nunca é observado, apenas as duas opções ótimas são refletidas no comportamento observável.</p></li>
+<li class="fragment"><p>No entanto, a noção dos efeitos substituição e renda é analiticamente valioso já que mostra que uma mudança de preços afeta a quantidade demandada de <span class="math inline">\(x\)</span> de duas maneiras conceitualmente distintas.</p></li>
+<li class="fragment"><p>Isso terá um papel fundamental no nosso estudo sobre a teoria da demanda.</p></li>
+</ul>
+</section>
+<section id="efeitos-de-um-aumento-no-preço" class="slide level2">
+<h2>Efeitos de um aumento no preço</h2>
+
+<img data-src="img/dec2.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;4: Efeitos de um aumento em <span class="math inline">\(p_x\)</span>. Fonte: Nicholson e Snyder (2019).</p></section>
+<section id="efeitos-de-um-aumento-no-preço-1" class="slide level2">
+<h2>Efeitos de um aumento no preço</h2>
+<ul>
+<li class="fragment"><p>Neste caso, a restrição orçamentária se desloca para dentro, refletindo o aumento no preço do bem <span class="math inline">\(x\)</span> de <span class="math inline">\(p_x^1\)</span> para <span class="math inline">\(p_x^2\)</span>.</p></li>
+<li class="fragment"><p>Novamente, o movimento do ponto inicial de maximização de utilidade <span class="math inline">\((x^*,y^*)\)</span> para o novo ponto <span class="math inline">\((x^{**}, y^{**})\)</span> também pode ser decomposto em dois efeitos.</p>
+<ol type="1">
+<li class="fragment"><p><span style="color: red">Efeito substituição:</span> Mesmo que este indivíduo pudesse permanecer na mesma curva de indiferença (<span class="math inline">\(U_2)\)</span>, ainda há um incentivo para substituir bem <span class="math inline">\(y\)</span> por <span class="math inline">\(x\)</span> e mover ao longo de <span class="math inline">\(U_2\)</span> para o ponto <span class="math inline">\(B\)</span>.</p></li>
+<li class="fragment"><p><span style="color: red">Efeito renda:</span> No entanto, como o poder de compra deste consumidor foi reduzido pelo aumento no preço do bem <span class="math inline">\(x\)</span>, deverá haver um deslocamento para um nível mais baixo de utilidade (<span class="math inline">\(U_1\)</span>).</p></li>
+</ol></li>
+<li class="fragment"><p>Note que, neste caso, os efeitos substituição e renda movem na mesma direção, fazendo com que a quantidade demandada de <span class="math inline">\(x\)</span> diminua em resposta a um aumento no seu preço.</p></li>
+</ul>
+</section>
+<section id="efeitos-de-variações-nos-preços-para-bens-inferiores" class="slide level2">
+<h2>Efeitos de variações nos preços para bens inferiores</h2>
+<ul>
+<li class="fragment"><p>Nos casos que vimos até agora, os efeitos renda e substituição tendem a reforçar um ao outro.</p></li>
+<li class="fragment"><p>Para uma redução nos preços, ambos fazem com que uma quantidade maior do bem seja demandada.</p></li>
+<li class="fragment"><p>Já para um aumento nos preços, ambos fazem com que uma quantidade menor do bem seja demandada.</p></li>
+<li class="fragment"><p>Esta análise é válida para o caso de bens normais (não-inferiores). No entanto, a possibilidade de bens inferiores complica a análise.</p></li>
+<li class="fragment"><p>Neste caso, os efeitos renda e substituição funcionam em direções contrárias e, consequentemente, o efeito total de uma variação de preços é indeterminado.</p></li>
+</ul>
+</section>
+<section id="efeitos-de-variações-nos-preços-para-bens-inferiores-1" class="slide level2">
+<h2>Efeitos de variações nos preços para bens inferiores</h2>
+<ul>
+<li class="fragment"><p>Uma redução nos preços, por exemplo, sempre fará com que um indivíduo consuma mais de um bem por causa do efeito substituição.</p></li>
+<li class="fragment"><p>No entanto, se o bem for inferior, o aumento no poder de compra causado pela redução de preços pode fazer com que haja uma redução na demanda por este bem.</p></li>
+<li class="fragment"><p>Portanto, o resultado é indeterminado.</p></li>
+<li class="fragment"><p>O efeito substituição tende a aumentar a quantidade demandada do bem inferior, enquanto o efeito renda tende a reduzir esta quantidade.</p></li>
+<li class="fragment"><p>Em contraste com a situação de bens normais, neste caso não é possível fazer predições acerca da direção do efeito total de uma mudança em <span class="math inline">\(p_x\)</span> sobre a quantidade ótima consumida de <span class="math inline">\(x\)</span>.</p></li>
+</ul>
+</section>
+<section id="paradoxo-de-giffen" class="slide level2">
+<h2>Paradoxo de Giffen</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<ul>
+<li class="fragment"><p>Se o efeito renda de uma variação de preços for forte o suficiente, a mudança nos preços e a mudança resultante na quantidade demandada podem ocorrer na mesma direção.</p></li>
+<li class="fragment"><p>Este resultado, conhecido como <span style="color: red">paradoxo de Giffen</span>, foi observado pelo economista inglês <a href="https://www.hetwebsite.net/het/profiles/giffen.htm">Robert Giffen</a> no século XIX na Irlanda.</p></li>
+</ul>
+</div><div class="column" style="width:30%;">
+<div class="fragment">
+<div id="fig-fig5" class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/giffen.jpg"></p>
+<figcaption>Figura&nbsp;5: Sir. Robert Giffen (1837-1910). Fonte: The history of economic thought website.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="paradoxo-de-giffen-1" class="slide level2">
+<h2>Paradoxo de Giffen</h2>
+<ul>
+<li class="fragment"><p>Na Irlanda do século XIX, frente a um aumento no preço das <span class="emoji" data-emoji="potato">🥔</span>, reportou-se um aumento no consumo deste bem.</p></li>
+<li class="fragment"><p>Este resultado peculiar pode ser explicado pela magnitude do efeito renda associado a um aumento nos preços das batatas.</p></li>
+<li class="fragment"><p>As batatas, além de serem bens inferiores, também representavam uma parcela grande da renda dos irlandeses.</p></li>
+<li class="fragment"><p>Portanto, um aumento no preço da batata reduziria substancialmente a renda real dos consumidores.</p></li>
+<li class="fragment"><p>Os irlandeses seriam, então, forçados a reduzir o consumo de outros bens alimentícios considerados de luxo para adquirirem mais batatas.</p></li>
+</ul>
+</section>
+<section id="paradoxo-de-giffen-2" class="slide level2">
+<h2>Paradoxo de Giffen</h2>
+<ul>
+<li class="fragment"><p>Mesmo que essa interpretação dos eventos seja historicamente improvável, a possibilidade de um aumento na quantidade demandada em resposta a um aumento no preço de um bem passou a ser conhecida como <span style="color: red">paradoxo de Giffen</span>.</p></li>
+<li class="fragment"><p>O principal problema com essa interpretação dos eventos é que desconsidera a observação de Marshall de que tanto fatores de oferta quanto de demanda devem ser considerados na análise de variações de preços.</p></li>
+<li class="fragment"><p>Se os preços das batatas subiram devido à <a href="https://pt.wikipedia.org/wiki/Grande_fome_de_1845%E2%80%931849_na_Irlanda">crise na Irlanda</a>, neste caso, a oferta também seria reduzida. Portanto, como seria possível um aumento na quantidade consumida?</p></li>
+<li class="fragment"><p>Além disso, dado que muitos irlandeses eram produtores de batatas, o aumento no preço da batata significaria um aumento da renda real.</p></li>
+<li class="fragment"><p>Referência: <a href="https://www.jstor.org/stable/1803318">Robert Giffen and the Irish potato</a>.</p></li>
+</ul>
+</section>
+<section id="resumo" class="slide level2">
+<h2>Resumo</h2>
+<ul>
+<li class="fragment"><p><span style="color: red">Efeitos renda e substituição.</span> A hipótese de maximização de utilidade sugere que, para bens normais, uma redução no preço de um bem leva a um aumento em sua quantidade consumida dado que:</p>
+<ol type="1">
+<li class="fragment"><p>o <span style="color: red">efeito subsituição</span> faz com que uma quantidade maior seja consumida à medida que o indivíduo se move ao longo de uma curva de indiferença.</p></li>
+<li class="fragment"><p>o <span style="color: red">efeito renda</span> faz com que uma quantidade maior seja consumida dado que a redução no preço aumenta o poder de compra do consumidor e, portanto, permite o deslocamento para uma curva de indiferença associada a um nível de utilidade mais alto.</p></li>
+</ol></li>
+<li class="fragment"><p>Quando o preço de um bem normal aumenta, o argumento é similar e a predição do modelo é que haja uma redução na quantidade demandada deste bem.</p></li>
+<li class="fragment"><p>Por fim, para o caso de bens inferiores, os efeitos renda e substituição operam em direções opostas e o efeito total é indeterminado.</p></li>
+</ul>
+</section>
+<section id="bibliografia" class="slide level2">
+<h2><span class="emoji" data-emoji="books">📚</span> Bibliografia</h2>
+<p>NICHOLSON, W.; SNYDER C. Teoria microeconômica: Princípios básicos e aplicações. Cengage Learning Brasil, 2019. Disponível em: <a href="https://app.minhabiblioteca.com.br/#/books/9788522127030/">app.minhabiblioteca.com.br/#/books/9788522127030</a></p>
+<p>VARIAN, H. R. Microeconomia: uma abordagem moderna. 9.ed. Rio de Janeiro: Elsevier, 2015. Disponível em: <a href="https://app.minhabiblioteca.com.br/books/9788595155107">app.minhabiblioteca.com.br/books/9788595155107</a></p>
+
+<img src="img/UdescEsag.jpeg" class="slide-logo r-stretch"><div class="footer footer-default">
+
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="Aula09-Efeito-Renda_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="Aula09-Efeito-Renda_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="Aula09-Efeito-Renda_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="Aula09-Efeito-Renda_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="Aula09-Efeito-Renda_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="Aula09-Efeito-Renda_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="Aula09-Efeito-Renda_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="Aula09-Efeito-Renda_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="Aula09-Efeito-Renda_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="Aula09-Efeito-Renda_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="Aula09-Efeito-Renda_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
