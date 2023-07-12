@@ -53,9 +53,9 @@ Observe que várias dessas aulas se estendem por duas ou mais sessões.
 | Aula 5: Preferências | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula05-Preferencias.html) | |
 | Aula 6: Maximização de Utilidade | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula06-maximizacao-utilidade.html) | |
 | Aula 7: Demanda Marshalliana | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula07-demanda-marshalliana.html) | |
-| Aula 8:  | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula08-.html) | |
-| Aula 9:  | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula09-.html) | |
-| Aula 10:  | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula10-.html) | |
+| Aula 8: Efeito Renda e Substituição | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula08-Efeito-Renda.html) | |
+| Aula 9: Equação de Slutsky | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula09-Slutsky.html) | |
+| Aula 10: Elasticidades da Demanda | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula10-Elasticidade-Demanda.html) | |
 | Aula 11:  | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula11-.html) | |
 | Aula 12:  | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula12-.html) | |
 | Aula 13:  | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula13-.html) | |

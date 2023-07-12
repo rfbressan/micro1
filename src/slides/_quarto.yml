@@ -3,7 +3,8 @@ project:
 crossref:
   fig-title: Figura
   tbl-title: Tabela
+  thm-title: Teorema
   fig-prefix: Figura
   tbl-prefix: Tabela
   eq-prefix: Equação
-
+  thm-prefix: Teorema
