@@ -22,16 +22,9 @@ editor: source
 jupyter: python3
 ---
 
-::: frame
-Sumário
-:::
-
-# Elasticidades da demanda
+# Elasticidades da demanda{.greenbackground}
 
 ## Introdução
-
-::: frame
-Introdução
 
 -   Até agora não demos nenhuma atenção à maneira como as variáveis
     usadas em microeconomia são medidas.
@@ -47,12 +40,10 @@ Introdução
     demanda (em bilhões de galões por ano) para uma mudança de um real
     por galão no preço.
 
--   **O tamanho numérico dessa derivada depende de como $p$ e $q$ são
-    medidos**.
-:::
+-   **O tamanho numérico dessa derivada depende de como $p$ e $q$ são medidos**.
 
-::: frame
-Introdução
+
+## Introdução
 
 -   A decisão de medir o consumo em milhões de galões por ano
     multiplicaria o tamanho da derivada por $1.000$, enquanto a decisão
@@ -73,12 +64,11 @@ Introdução
 
 -   Por esse motivo, adotamos uma maneira diferente e livre de unidades
     de medida para medir impactos quantitativos.
-:::
 
-::: frame
-Introdução
 
--   Usamos [elasticidades]{style="color: blue"} para resumir
+## Introdução
+
+-   Usamos [elasticidades]{style="color: red"} para resumir
     praticamente todos os impactos quantitativos que nos interessam.
 
 -   Como essas medições se concentram no efeito proporcional de uma
@@ -86,82 +76,60 @@ Introdução
     medida - as unidades são "canceladas" quando a elasticidade é
     calculada.
 
-::: defi
-**Definição 1** (Elasticidade). *Seja $y$ uma função de $x$ - $y(x)$ -
-então, a [elasticidade de $y$ com relação a $x$]{style="color: blue"}
+:::{.fragment}
+:::{.callout-tip title="Elasticidade"}
+Seja $y$ uma função de $x$ - $y(x)$ -
+então, a [elasticidade de $y$ com relação a $x$]{style="color: red"}
 ($e_{y,x}$) é definida como:
-$$e_{y,x} \equiv \frac{\Delta y/y}{\Delta x/x} = \frac{\Delta y}{\Delta x} \frac{x}{y} = \frac{dy(x)}{dx}\frac{x}{y}.$$*
+$$e_{y,x} \equiv \frac{\Delta y/y}{\Delta x/x} = \frac{\Delta y}{\Delta x} \frac{x}{y} = \frac{dy(x)}{dx}\frac{x}{y}.$${#eq-eq1}
 :::
 :::
 
 ## Elasticidades da demanda Marshalliana
 
-::: frame
-Elasticidades da demanda Marshalliana
 
-::: defi
-**Definição 2** (Elasticidades da demanda Marshalliana). *Seja
-$x(p_x, p_y,I)$ uma função de demanda Marshalliana, temos as seguintes
-definições:*
+:::{.callout-tip title="Elasticidades da demanda Marshalliana"}
+Seja $x(p_x, p_y,I)$ uma função de demanda Marshalliana, temos as seguintes
+definições:
 
--   *[Elasticidade-preço da demanda]{style="color: blue"} ($e_{x,p_x}$).
+-   [Elasticidade-preço da demanda]{style="color: red"} ($e_{x,p_x}$).
     mede a variação proporcional na quantidade demandada em resposta a
     uma variação proporcional no próprio preço de um bem:
-    $$e_{x,p_x} \equiv \frac{\Delta x/x}{\Delta p_x/p_x} = \frac{\Delta x}{\Delta p_x}\frac{p_x}{x} = \frac{\partial x(p_x,p_y,I)}{\partial p_x}\frac{p_x}{x}.
-                          \label{eq2}$$*
+    $$e_{x,p_x} \equiv \frac{\Delta x/x}{\Delta p_x/p_x} = \frac{\Delta x}{\Delta p_x}\frac{p_x}{x} = \frac{\partial x(p_x,p_y,I)}{\partial p_x}\frac{p_x}{x}.$${#eq-eq2}
 
--   *[Elasticidade-renda da demanda]{style="color: blue"} ($e_{x,I}$).
+-   [Elasticidade-renda da demanda]{style="color: red"} ($e_{x,I}$).
     mede a variação proporcional na quantidade demandada em resposta a
     uma variação proporcional na renda:
-    $$e_{x,I} \equiv \frac{\Delta x/x}{\Delta I/I} = \frac{\Delta x}{\Delta I}\frac{I}{x} = \frac{\partial x(p_x,p_y,I)}{\partial I}\frac{I}{x}.
-                          \label{eq3}$$*
-:::
-:::
+    $$e_{x,I} \equiv \frac{\Delta x/x}{\Delta I/I} = \frac{\Delta x}{\Delta I}\frac{I}{x} = \frac{\partial x(p_x,p_y,I)}{\partial I}\frac{I}{x}.$${#eq-eq3}
 
-::: frame
-Elasticidades da demanda Marshalliana
-
-::: defi
-**Definição 3** (Elasticidades da demanda Marshalliana).
-
--   *[Elasticidade-preço cruzado da demanda]{style="color: blue"}
+-   [Elasticidade-preço cruzado da demanda]{style="color: red"}
     ($e_{x,p_y}$). mede a variação proporcional na quantidade demandada
     de $x$ em resposta a uma variação proporcional no preço de um outro
     bem:
-    $$e_{x,p_y} \equiv \frac{\Delta x/x}{\Delta p_y/p_y} = \frac{\Delta x}{\Delta p_y}\frac{p_y}{x} = \frac{\partial x(p_x,p_y,I)}{\partial p_y}\frac{p_y}{x}.
-                          \label{eq4}$$*
-:::
+    $$e_{x,p_y} \equiv \frac{\Delta x/x}{\Delta p_y/p_y} = \frac{\Delta x}{\Delta p_y}\frac{p_y}{x} = \frac{\partial x(p_x,p_y,I)}{\partial p_y}\frac{p_y}{x}.$${#eq-eq4}
 :::
 
 ## Elasticidade-preço da demanda
 
-::: frame
-Elasticidade-preço da demanda
-
 -   Além de prover uma maneira conveniente de resumir como as pessoas
-    respondem às variações de preços, a **elasticidade-preço da
-    demanda** é, também, um conceito central na teoria de como as firmas
+    respondem às variações de preços, a **elasticidade-preço da demanda** é, também, um conceito central na teoria de como as firmas
     reagem às curvas de demanda que encontram.
 
 -   Se $e_{x,p_x} = -1$, variações em $x$ e $p_x$ são do mesmo tamanho
-    proporcional - [elasticidade unitária]{style="color: blue"}.
+    proporcional - [elasticidade unitária]{style="color: red"}.
 
 -   Se $e_{x,p_x} < -1$, as variações nas quantidades são
-    proporcionalmente maiores que as variações nos preços - [demanda
-    elástica]{style="color: blue"}.
+    proporcionalmente maiores que as variações nos preços - [demanda elástica]{style="color: red"}.
 
 -   Se $e_{x,p_x} > -1$, as variações nas quantidades são
-    proporcionalmente menores que as variações nos preços - [demanda
-    inelástica]{style="color: blue"}.
-:::
+    proporcionalmente menores que as variações nos preços - [demanda inelástica]{style="color: red"}.
 
-::: frame
-Elasticidade-preço e gasto total
+
+## Elasticidade-preço e gasto total
 
 -   A elasticidade-preço da demanda determina como variações no preço,
     *ceteris paribus*, afeta o gasto total em um bem:
-    $$\frac{\partial (x p_x)}{\partial p_x} = p_x \frac{\partial x}{\partial p_x} + x = x(e_{x,p_x} + 1).
-                      \label{eq5}$$
+    $$\frac{\partial (x p_x)}{\partial p_x} = p_x \frac{\partial x}{\partial p_x} + x = x(e_{x,p_x} + 1).$${#eq-eq5}
 
     1.  Se a demanda é inelástica, preço e gasto total movem-se na mesma
         direção. Esse é o caso, e.g., da demanda pela maioria dos
@@ -174,36 +142,27 @@ Elasticidade-preço e gasto total
 
     3.  No caso de elasticidade unitária, o gasto total é constante, não
         importando como o preço varie.
-:::
 
 ## Elasticidades-preço compensadas
 
-::: frame
-Elasticidades-preço compensadas
-
-::: defi
-**Definição 4** (Elasticidades-preço compensadas). *Seja
-$x^c(p_x, p_y,U)$ uma função de demanda compensada, temos as seguintes
+:::{.callout-tip title="Elasticidades-preço compensadas"}
+Seja $x^c(p_x, p_y,U)$ uma função de demanda compensada, temos as seguintes
 definições:*
 
--   *[Elasticidade-preço da demanda compensada]{style="color: blue"}
+-   [Elasticidade-preço da demanda compensada]{style="color: red"}
     ($e_{x^c,p_x}$). Mede a variação proporcional compensada na
     quantidade demandada em resposta a uma variação proporcional no
     próprio preço de um bem:
-    $$e_{x^c,p_x} \equiv \frac{\Delta x^c/x^c}{\Delta p_x/p_x} = \frac{\Delta x^c}{\Delta p_x}\frac{p_x}{x^c} = \frac{\partial x^c(p_x,p_y,U)}{\partial p_x}\frac{p_x}{x^c}.
-                          \label{eq6}$$*
+    $$e_{x^c,p_x} \equiv \frac{\Delta x^c/x^c}{\Delta p_x/p_x} = \frac{\Delta x^c}{\Delta p_x}\frac{p_x}{x^c} = \frac{\partial x^c(p_x,p_y,U)}{\partial p_x}\frac{p_x}{x^c}.$${#eq-eq6}
 
--   *[Elasticidade-preço cruzado da demanda
-    compensada]{style="color: blue"} ($e_{x^c,p_y}$). Mede a variação
+-   [Elasticidade-preço cruzado da demanda compensada]{style="color: red"} ($e_{x^c,p_y}$). Mede a variação
     proporcional compensada na quantidade demandada em resposta a uma
     variação proporcional no preço de outro bem:
-    $$e_{x^c,p_y} \equiv \frac{\Delta x^c/x^c}{\Delta p_y/p_y} = \frac{\Delta x^c}{\Delta p_y}\frac{p_y}{x^c} = \frac{\partial x^c(p_x,p_y,U)}{\partial p_y}\frac{p_y}{x}^c.
-                          \label{eq7}$$*
-:::
+    $$e_{x^c,p_y} \equiv \frac{\Delta x^c/x^c}{\Delta p_y/p_y} = \frac{\Delta x^c}{\Delta p_y}\frac{p_y}{x^c} = \frac{\partial x^c(p_x,p_y,U)}{\partial p_y}\frac{p_y}{x}^c.$${#eq-eq7}
 :::
 
-::: frame
-Elasticidades-preço compensadas
+
+## Elasticidades-preço compensadas
 
 -   Se essas elasticidades-preço compensadas diferem muito de suas
     equivalentes Marshallianas depende da importância dos efeitos renda
@@ -213,16 +172,14 @@ Elasticidades-preço compensadas
     $$\frac{\partial x}{\partial p_x} = \frac{\partial x^c}{\partial p_x} - x \frac{\partial x}{\partial I}.$$
 
 -   Portanto:
-    $$e_{x,p_x} = \frac{p_x}{x}\frac{\partial x}{\partial p_x} = \frac{p_x}{x}\frac{\partial x^c}{\partial p_x} - \frac{p_x}{x}x\frac{\partial x}{\partial I} = e_{x^c,p_x} - s_xe_{x,I},
-                      \label{eq8}$$ onde $s_x \equiv xp_x/I$ é a fração
+    $$e_{x,p_x} = \frac{p_x}{x}\frac{\partial x}{\partial p_x} = \frac{p_x}{x}\frac{\partial x^c}{\partial p_x} - \frac{p_x}{x}x\frac{\partial x}{\partial I} = e_{x^c,p_x} - s_xe_{x,I},$${#eq-eq8} 
+    onde $s_x \equiv xp_x/I$ é a fração
     total da renda alocada na aquisição do bem $x$.
-:::
 
-::: frame
-Elasticidades-preço compensadas
 
--   A equação ([\[eq8\]](#eq8){reference-type="ref" reference="eq8"})
-    mostra que as elasticidades-preço da demanda compensada e não
+## Elasticidades-preço compensadas
+
+-   A @eq-eq8 mostra que as elasticidades-preço da demanda compensada e não
     compensada serão semelhantes se verificarmos umas das duas condições
     a seguir:
 
@@ -245,12 +202,10 @@ Elasticidades-preço compensadas
 -   Portanto, em muitas situações podemos utilizar os dois conceitos -
     situações em que os efeitos substituição constituem o componente
     mais importante das reações dos preços.
-:::
 
-## Relações entre as elasticidades da demanda
 
-::: frame
-Homogeneidade[]{#voltar label="voltar"}
+## Relações entre as elasticidades da demanda{#homogeneidade}
+
 
 -   A homogeneidade das funções demanda pode ser expressa em termos de
     elasticidade.
@@ -260,32 +215,26 @@ Homogeneidade[]{#voltar label="voltar"}
     elasticidades-preço com a elasticidade-renda para um bem particular
     devem somar zero.
 
--   Pelo [](#apendice1), obtemos a seguinte expressão:
-    $$0 = p_x\frac{\partial x}{\partial p_x} + p_y \frac{\partial x}{\partial p_y} + I\frac{\partial x}{\partial I}.
-                      \label{eq9}$$
+-   Pelo [Teorema de Euler](#homogeneidade-defi), obtemos a seguinte expressão:
+    $$0 = p_x\frac{\partial x}{\partial p_x} + p_y \frac{\partial x}{\partial p_y} + I\frac{\partial x}{\partial I}.$${#eq-eq9}
 
--   Dividindo a equação ([\[eq9\]](#eq9){reference-type="ref"
-    reference="eq9"}) por $x$, temos:
-    $$0 = e_{x,p_x} + e_{x,p_y} + e_{x,I}.
-                      \label{eq10}$$
-:::
+-   Dividindo a @eq-eq9 por $x$, temos:
+    $$0 = e_{x,p_x} + e_{x,p_y} + e_{x,I}.$${#eq-eq10}
 
-::: frame
-Homogeneidade
 
--   O resultado da equação ([\[eq10\]](#eq10){reference-type="ref"
-    reference="eq10"}) mostra que as elasticidades da demanda para
+## Homogeneidade
+
+-   O resultado da @eq-eq10 mostra que as elasticidades da demanda para
     qualquer bem não podem seguir um padrão completamente flexível.
 
 -   Elas devem exibir uma espécie de consistência interna que reflete a
     abordagem de maximização de utilidade na qual a teoria da demanda é
     baseada.
-:::
 
-::: frame
-Agregação de Engel[]{#voltar2 label="voltar2"}
 
--   A [](#leiengel) nos diz que a fração da renda alocada em alimentação
+## Agregação de Engel{#voltar-agregacao-engel}
+
+-   A [Lei de Engel](#leiengel) nos diz que a fração da renda alocada em alimentação
     diminui à medida que a renda aumenta.
 
 -   Em termos de elasticidade, a lei de Engel é uma afirmação da
@@ -299,27 +248,22 @@ Agregação de Engel[]{#voltar2 label="voltar2"}
     os gastos com alimentação aumentem em uma proporção menor. Como essa
     renda deve ser gasta em outros bens, no total, esses outros gastos
     devem aumentar proporcionalmente mais rápido que a renda.
-:::
 
-::: frame
-Agregação de Engel
+
+## Agregação de Engel
 
 -   Formalmente, podemos diferenciar a restrição orçamentária com
     relação à renda, mantendo os preços constantes:
-    $$1 = p_x\frac{\partial x}{\partial I} + p_y\frac{\partial y}{\partial I}.
-                      \label{eq11}$$
+    $$1 = p_x\frac{\partial x}{\partial I} + p_y\frac{\partial y}{\partial I}.$${#eq-eq11}
 
 -   Portanto:
-    $$1 = p_x \frac{\partial x}{\partial I} \frac{xI}{xI} + p_y \frac{\partial y}{\partial I} \frac{yI}{yI} = s_x e_{x,I} + s_y e_{y,I}.
-                      \label{eq12}$$
+    $$1 = p_x \frac{\partial x}{\partial I} \frac{xI}{xI} + p_y \frac{\partial y}{\partial I} \frac{yI}{yI} = s_x e_{x,I} + s_y e_{y,I}.$${#eq-eq12}
 
--   A equação ([\[eq12\]](#eq12){reference-type="ref" reference="eq12"})
-    nos diz que a média ponderada das elasticidades-renda de todos os
+-   A @eq-eq12 nos diz que a média ponderada das elasticidades-renda de todos os
     bens que uma pessoa adquire deve ser igual a 1.
-:::
 
-::: frame
-Agregação de Engel
+
+## Agregação de Engel
 
 -   Se uma pessoa gastou um quarto de sua renda com alimentação, e a
     elasticidade-renda da demanda de alimentos for igual a 0,5, então, a
@@ -328,129 +272,104 @@ Agregação de Engel
 
 -   Como alimentação é uma "necessidade" importante, todo o restante é,
     de certa forma, um "luxo".
-:::
 
-::: frame
-Agregação de Cournot
 
--   O economista francês do século XIX Antoine Cournot estava
-    interessado, entre outras coisas, em saber como a variação em um
+## Agregação de Cournot
+
+:::{.columns}
+::::{.column width=70%}
+-   Economista do século XIX, Cournot estava
+    interessado em saber como a variação em um
     único preço pode afetar a demanda para todos os bens.
-
-    <figure id="cournot">
-    <img src="cournot.jpg" style="width:30.0%" />
-    <figcaption>Antoine Augustin Cournot (1801-1877). Fonte: <a
-    href="https://pt.wikipedia.org/wiki/Cournot">Wikipedia</a>.</figcaption>
-    </figure>
-:::
-
-::: frame
-Agregação de Cournot
 
 -   Diferenciando a restrição orçamentária com relação a $p_x$, temos:
     $$0 = p_x\frac{\partial x}{\partial p_x} + x + p_y\frac{\partial y}{\partial p_x}.$$
 
--   Multiplicando por $p_x/I$: $$\begin{aligned}
-                      0 &=& p_x\frac{\partial x}{\partial p_x} \frac{p_x}{I} \frac{x}{x} + x \frac{p_x}{I} + p_y\frac{\partial y}{\partial p_x} \frac{p_x}{I} \frac{y}{y} \\
-                      &=& s_x e_{x,p_x} + s_x + s_y e_{y,p_x}.
-                  
-    \end{aligned}$$
+-   Multiplicando por $p_x/I$: 
+$$\begin{aligned}
+0 &=& p_x\frac{\partial x}{\partial p_x} \frac{p_x}{I} \frac{x}{x} + x \frac{p_x}{I} + p_y\frac{\partial y}{\partial p_x} \frac{p_x}{I} \frac{y}{y} \\
+&=& s_x e_{x,p_x} + s_x + s_y e_{y,p_x}.
+\end{aligned}$$
 
 -   Portanto, o resultado final de Cournot é:
-    $$s_x e_{x,p_x} + s_y e_{y,p_x} = -s_x.
-                      \label{eq13}$$
+    $$s_x e_{x,p_x} + s_y e_{y,p_x} = -s_x.$${#eq-eq13}
 
 -   A restrição orçamentária impõe alguns limites sobre o grau em que a
     elasticidade-preço cruzada pode ser positiva.
 :::
 
+:::{.column width=30%}
+![Antoine Augustin Cournot (1801-1877). Fonte: <a href="https://pt.wikipedia.org/wiki/Cournot">Wikipedia</a>.](img/cournot.jpg){#fig-cournot}
+:::
+:::
+
 ## Exercícios
 
-::: frame
 Função utilidade do tipo Cobb-Douglas:
 $$U(x,y) = x^\alpha y^{1-\alpha}.$$
-:::
 
-::: frame
 Função utilidade CES: $$U(x,y) = x^{0,5} + y^{0,5}.$$
-:::
 
-::: frame
 Função utilidade CES: $$U(x,y) = -x^{-1} - y^{-1}.$$
+
+# Apêndice: Teorema de Euler
+
+## Teorema de Euler{#homogeneidade-defi}
+
+:::{.callout-tip title="Função homogênea"}
+Seja $f$ uma função de $n$ variáveis reais definida em um domínio $\mathcal{D}$.
+
+O conjunto $\mathcal{D}$ é um [cone]{style="color: red"} se sempre que
+$(x_1, x_2, \dots, x_n) \in \mathcal{D}$ e $t>0$, também temos que
+$(tx_1, tx_2, \dots, tx_n) \in \mathcal{D}$.
+
+Quando $\mathcal{D}$ é um cone, dizemos que a função $f$ é homogênea de
+grau $k$ em $\mathcal{D}$ se:
+$$f(tx_1, tx_2, \dots, tx_n) = t^kf(x_1, x_2, \dots, x_n), \qquad \forall t>0.$${#eq-eqa1}
 :::
 
-# Apêndice: Teorema de Euler {#apendice1}
 
 ## Teorema de Euler
 
-::: frame
-Teorema de Euler
-
-::: defi
-**Definição 5** (Função homogênea de grau $k$). *Seja $f$ uma função de
-$n$ variáveis reais definida em um domínio $\mathcal{D}$.*
-
-*O conjunto $\mathcal{D}$ é um [cone]{style="color: blue"} se sempre que
-$(x_1, x_2, \dots, x_n) \in \mathcal{D}$ e $t>0$, também temos que
-$(tx_1, tx_2, \dots, tx_n) \in \mathcal{D}$.*
-
-*Quando $\mathcal{D}$ é um cone, dizemos que a função $f$ é homogênea de
-grau $k$ em $\mathcal{D}$ se:
-$$f(tx_1, tx_2, \dots, tx_n) = t^kf(x_1, x_2, \dots, x_n), \qquad \forall t>0.
-            \label{eqa1}$$*
-:::
-:::
-
-::: frame
-Teorema de Euler
-
+:::{.columns}
+::::{.column width=70%}
 -   Uma propriedade útil de funções homogêneas pode ser obtida ao
-    diferenciarmos a equação ([\[eqa1\]](#eqa1){reference-type="ref"
-    reference="eqa1"}) com relação ao fator de proporcionalidade, $t$.
+    diferenciarmos a @eq-eqa1 com relação ao fator de proporcionalidade, $t$.
 
--   Com isso obtemos o [teorema de Euler]{style="color: blue"} para
+-   Com isso obtemos o [teorema de Euler]{style="color: red"} para
     funções homogêneas.
-
-<figure id="euler">
-<img src="euler.jpg" style="width:30.0%" />
-<figcaption>Leonhard Euler (1707-1783). Fonte: <a
-href="https://en.wikipedia.org/wiki/Leonhard_Euler">Wikipedia</a>.</figcaption>
-</figure>
 :::
 
-::: frame
-Teorema de Euler
+::::{.column width=30%}
+![Leonhard Euler (1707-1783). Fonte: <a href="https://en.wikipedia.org/wiki/Leonhard_Euler">Wikipedia</a>.](img/euler.jpg){#fig-euler}
+:::
+:::
 
-::: teo
-**Teorema 1** (Teorema de Euler). *Seja $f$ uma função diferenciável de
+## Teorema de Euler
+
+:::{.callout-tip title="Teorema de Euler"}
+Seja $f$ uma função diferenciável de
 $n$ variáveis definida em um cone aberto $\mathcal{D}$. Então, $f$ é
 homogênea de grau $k$ se, e somente se, a seguinte equação é válida para
 todo $(x_1, x_2, \dots, x_n) \in \mathcal{D}$:
-$$kf(x_1, x_2, \dots, x_n) = \sum_{i=1}^n x_i f_i(x_1, x_2, \dots, x_n),
-            \label{eqa2}$$ onde
-$f_i (x_1, \dots, x_n) = \frac{\partial f(x_1, \dots, x_n)}{\partial x_i}$.*
+$$kf(x_1, x_2, \dots, x_n) = \sum_{i=1}^n x_i f_i(x_1, x_2, \dots, x_n),$${#eq-eqa2} 
+onde $f_i (x_1, \dots, x_n) = \frac{\partial f(x_1, \dots, x_n)}{\partial x_i}$.
 :::
 
-[](#voltar)
-:::
+[:rewind:](#homogeneidade)
 
-# Apêndice: Lei de Engel {#leiengel}
 
-::: frame
-Lei de Engel
+# Apêndice: Lei de Engel 
+
+## Lei de Engel{#leiengel}
 
 -   A lei de Engel é uma relação econômica proposta pelo estatístico
     Ernst Engel em 1857.
 
-    <figure id="engel">
-    <img src="engel.jpg" style="width:30.0%" />
-    <figcaption>Ernst Engel (1821, 1896). Fonte: <a
-    href="https://en.wikipedia.org/wiki/Ernst_Engel">Wikipedia</a>.</figcaption>
-    </figure>
-:::
+![Ernst Engel (1821, 1896). Fonte: <a href="https://en.wikipedia.org/wiki/Ernst_Engel">Wikipedia</a>.](img/engel.jpg){#fig-engel}
 
-::: frame
-Lei de Engel
+
+## Lei de Engel
 
 -   A lei de Engel diz que um aumento na renda de uma família diminui a
     proporção da renda que é gasta em produtos alimentícios, mesmo que o
@@ -464,23 +383,18 @@ Lei de Engel
     de níveis intermediários ou elevados de renda.
 
 -   A lei de Engel pode ser usada como um indicador para padrões de vida
-    em vários países. Para isso, uma medida chamada **coeficiente de
-    Engel** é usada.
-:::
+    em vários países. Para isso, uma medida chamada **coeficiente de Engel** é usada.
 
-::: frame
-Lei de Engel
 
-<figure id="engellaw">
-<img src="engellaw.png" style="width:35.0%" />
-<figcaption>Lei de Engel. Fonte: <a
-href="https://en.wikipedia.org/wiki/Engel%27s_law">Wikipedia</a>.</figcaption>
-</figure>
+## Lei de Engel
 
-[](#voltar2)
-:::
+![Lei de Engel. Fonte: <a href="https://en.wikipedia.org/wiki/Engel%27s_law">Wikipedia</a>.](img/engellaw.png){#fig-engellaw}
 
-::: thebibliography
+[:rewind:](#voltar-agregacao-engel)
+
+
+## :books: Bibliografia
+
 NICHOLSON, W.; SNYDER C. Teoria microeconômica: Princípios básicos e
 aplicações. Cengage Learning Brasil, 2019. Disponível em:
 [app.minhabiblioteca.com.br/books/9788522127030](https://app.minhabiblioteca.com.br/books/9788522127030)
