@@ -285,11 +285,11 @@ $$U(x,y) = x^{0,5}y^{0,5}.$$
 
 # Análise formal da variação de preços{.greenbackground}
 
+## Abordagem Gráfica {background-iframe="https://www.econgraphs.org/graphs/consumer/income_substitution/slutsky_decomposition.html" background-interactive="true"}
+
+
 ## Abordagem indireta
 
-
--   Até agora nos concentramos em análises gráficas para descrever o
-    comportamento dos indivíduos em resposta a variações nos preços.
 
 -   Nosso objetivo agora é desenvolver uma abordagem matemática mais
     formal para examinar a derivada parcial $\partial x/\partial p_x$.

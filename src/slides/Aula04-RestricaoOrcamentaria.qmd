@@ -41,22 +41,21 @@ jupyter: python3
 
 ## Restrição Orçamentária
 - A ***restrição orçamentária*** representa a escassez no problema do consumidor.        
-- Cada consumidor dispõe de uma certa quantidade de dinheiro para dispender em um determinado período do tempo.        
+- Cada consumidor dispõe de uma certa quantidade de renda para dispender em um determinado período do tempo.        
 - O consumidor escolhe quais bens consumir e o quanto consumir de acordo com suas preferências, mas o valor total dos bens não pode ultrapassar sua renda.
     
 
 
 ## Restrição Orçamentária
+:::{.nonincremental}
 - Vamos assumir que existam $n$ bens nessa economia, representados por $x_1, x_2, \dots, x_n$.        
 - Vamos supor, ainda, que os respectivos preços destes bens são dados por $p_1, p_2, \dots, p_n$.        
 - Por hipótse, os consumidores são **tomadores de preços**. Ou seja, os preços são fixos para estes consumidores e eles não podem alterá-los (existem modelos que relaxam essa hipótese).
-        
-- A renda do consumidor é denotada por $I$, e é exógena às ações do consumidor.
-- Ou seja, o consumidor não consegue alterar sua própria renda. Essa hipótese não é adequada se queremos estudar, por exemplo, a oferta de trabalho dos indivíduos. Nesse caso, a renda é endógena: a renda depende da decisão dos indivíduos acerca do quanto e onde trabalhar. Mais à frente no curso analisaremos esse caso.
-    
+- A renda do consumidor é denotada por $I$, e é exógena às ações do consumidor^[Ou seja, o consumidor não consegue alterar sua própria renda. Essa hipótese não é adequada se queremos estudar, por exemplo, a oferta de trabalho dos indivíduos. Nesse caso, a renda é endógena: a renda depende da decisão dos indivíduos acerca do quanto e onde trabalhar. Mais à frente no curso analisaremos esse caso.
+].
+:::
 
-
-## Restrição e reta orçamentárias
+## Restrição e reta orçamentária
 
 ::: {.callout-tip title="Restrição orçamentária"}
 A **restrição orçamentária** de um consumidor pode, então, ser escrita como:
@@ -87,10 +86,13 @@ $$p_1 x_1 + p_2 x_2 + \dots + p_n x_n = I.$$ {#eq-reta_orcamentaria}
 - De maneira similar, se toda a renda for alocada na aquisição do bem $y$, ele poderá comprar, no máximo, $I/p_y$ unidades deste bem.
     
 
-## Representação gráfica
+## Representação gráfica 
 
-![Restrição Orçamentária](img/restricao.JPG){#fig-fig1}
+::: {#fig-fig1}
+<iframe src="https://www.econgraphs.org/graphs/consumer/budget/budget_set" style="border: 0px solid #AAA; width: 100%; height: 100%"></iframe>  
 
+Restrição Orçamentária
+:::
 
 ## Representação gráfica
 - Como evidenciado pela @fig-fig1, os pontos $I/p_x$ e $I/p_y$ são os interceptos da reta orçamentária.
@@ -128,7 +130,10 @@ $$p_x \Delta x + p_y \Delta y = 0 \implies \frac{\Delta y}{\Delta x} = -\frac{p_
 
 ## Variações na renda e preços
 
-<iframe src="https://rfbressan.shinyapps.io/reta_orcamentaria/" style="border: 0px solid #AAA; width: 100%; height: 100%"></iframe>
+<iframe src="https://www.econgraphs.org/graphs/consumer/budget/budget_set" style="border: 0px solid #AAA; width: 100%; height: 100%"></iframe> 
+
+
+<!-- <iframe src="https://rfbressan.shinyapps.io/reta_orcamentaria/" style="border: 0px solid #AAA; width: 100%; height: 100%"></iframe> -->
 
 
 ## Preços absolutos e preços relativos

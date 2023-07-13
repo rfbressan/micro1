@@ -53,36 +53,40 @@ O **conjunto consumo** é o conjunto formado por todas as **cestas de consumo** 
 
 ## Preferências do consumidor
 
-- **Preferência fraca**: se o consumidor afirma que $\textbf{x} = (x_1, \dots, x_n)$ é pelo menos tão boa quanto a cesta de consumo $\textbf{y} = (y_1, \dots, y_n)$, dizemos que o consumidor \textbf{prefere fracamente} $\textbf{x}$ a $\textbf{y}$ e denotamos essa relação por $\textbf{x} \succeq \textbf{y}$.
-- **Indiferença**: se $\textbf{x}$ é pelo menos tão boa quanto $\textbf{y}$, e $\textbf{y}$ é pelo menos tão boa quanto $\textbf{x}$, o consumidor mostra-se \textbf{indiferente} entre as duas cestas de consumo. Essa \emph{relação de indiferença} é denotada por $\textbf{x} \sim \textbf{y}$. Em síntese, $\textbf{x} \sim \textbf{y} \Leftrightarrow ((\textbf{x} \succeq \textbf{y}) \land (\textbf{y} \succeq \textbf{x}))$.
-- **Preferência estrita**: se $\textbf{x}$ é pelo menos tão boa quanto $\textbf{y}$, e não é o caso que $\textbf{y}$ seja pelo menos tão boa quanto $\textbf{x}$, dizemos que $\textbf{x}$ é \textbf{estritamente preferida} a $\textbf{y}$, denotado por $\textbf{x} \succ \textbf{y}$. Em suma, $\textbf{x} \succ \textbf{y} \Leftrightarrow ((\textbf{x} \succeq \textbf{y}) \land \neg(\textbf{y} \succeq \textbf{x}))$.
+- **Preferência fraca**: se o consumidor afirma que $\textbf{x} = (x_1, \dots, x_n)$ é pelo menos tão boa quanto a cesta de consumo $\textbf{y} = (y_1, \dots, y_n)$, dizemos que o consumidor **prefere fracamente** $\textbf{x}$ a $\textbf{y}$ e denotamos essa relação por $\textbf{x} \succeq \textbf{y}$.
+- **Indiferença**: se $\textbf{x}$ é pelo menos tão boa quanto $\textbf{y}$, e $\textbf{y}$ é pelo menos tão boa quanto $\textbf{x}$, o consumidor mostra-se **indiferente** entre as duas cestas de consumo. Essa \emph{relação de indiferença} é denotada por $\textbf{x} \sim \textbf{y}$. Em síntese, $\textbf{x} \sim \textbf{y} \Leftrightarrow ((\textbf{x} \succeq \textbf{y}) \land (\textbf{y} \succeq \textbf{x}))$.
+- **Preferência estrita**: se $\textbf{x}$ é pelo menos tão boa quanto $\textbf{y}$, e não é o caso que $\textbf{y}$ seja pelo menos tão boa quanto $\textbf{x}$, dizemos que $\textbf{x}$ é **estritamente preferida** a $\textbf{y}$, denotado por $\textbf{x} \succ \textbf{y}$. Em suma, $\textbf{x} \succ \textbf{y} \Leftrightarrow ((\textbf{x} \succeq \textbf{y}) \land \neg(\textbf{y} \succeq \textbf{x}))$.
 
 
 ## Axiomas da escolha racional
 
 Vamos supor que as preferências do consumidor satisfaçam os seguintes axiomas:
+
 - **Completude**: para quaisquer cestas de consumo $\textbf{x}$ e $\textbf{y}$ do espaço de mercadorias, temos $\textbf{x} \succeq \textbf{y}$ ou $\textbf{y} \succeq \textbf{x}$ (ou ambos).
+  + Consequentemente, os consumidores não são paralisados pela indecisão: eles conhecem todas as cestas de bens disponíveis e sempre são capazes de compará-las.
 
-Consequentemente, os consumidores não são paralisados pela indecisão: eles conhecem todas as cestas de bens disponíveis e sempre são capazes de compará-las.
 - **Transitividade**: para quaisquer cestas de consumo $\textbf{x}$, $\textbf{y}$ e $\textbf{z}$ do espaço de mercadorias, se $\textbf{x} \succeq \textbf{y}$ e $\textbf{y} \succeq \textbf{z}$, então $\textbf{x} \succeq \textbf{z}$.
-
-As escolhas de um indivíduo são consistentes internamente.
-- **Monotonicidade (não-saciedade)**: se $\textbf{x} \geq \textbf{y}$, então $\textbf{x} \succeq \textbf{y}$.
-
-O axioma da monotonicidade diz que mais é melhor.
-
-
-## Axiomas da escolha racional
-
-- **Convexidade**: se $\textbf{x}$ e $\textbf{y}$ são cestas de consumo tais que $\textbf{x} \sim \textbf{y}$, então $\lambda \textbf{x} + (1-\lambda)\textbf{y} \succeq \textbf{x}, \forall \lambda \in [0,1]$.
-
-O consumidor prefere fracamente cestas de consumo mais balanceadas, ou seja, as médias são fracamente preferidas aos extremos.
-
-- **Convexidade estrita**: se $\textbf{x}$ e $\textbf{y}$ são cestas de consumo tais que $\textbf{x} \sim \textbf{y}$, então $\lambda \textbf{x} + (1-\lambda)\textbf{y} \succ \textbf{x}, \forall \lambda \in (0,1)$.
-
-O consumidor prefere de maneira estrita cestas de consumo mais balanceadas, ou seja, as médias são estritamente preferidas aos extremos.
+  + As escolhas de um indivíduo são consistentes internamente.
 
 - **Continuidade**: se um indivíduo afirma que $\textbf{x} \succeq \textbf{y}$, então, cestas de consumo "muito próximas" a $\textbf{x}$ também são fracamente preferidas a $\textbf{y}$. Formalmente, para quaisquer sequências de pares $\{\textbf{x}^n,\textbf{y}^n\}_{n=1}^\infty$, tais que $\textbf{x}^n \succeq \textbf{y}^n$ para qualquer $n \in \mathbb{N}$, $\textbf{x} = \lim_{n\to \infty} \textbf{x}^n$, e $\textbf{y} = \lim_{n\to \infty} \textbf{y}^n$, nós temos $\textbf{x} \succeq \textbf{y}$.
+
+
+## Pressupostos adicionais da escolha racional
+
+- **Convexidade**: se $\textbf{x}$ e $\textbf{y}$ são cestas de consumo tais que $\textbf{x} \sim \textbf{y}$, então $\lambda \textbf{x} + (1-\lambda)\textbf{y} \succeq \textbf{x}, \forall \lambda \in [0,1]$.
+  + O consumidor prefere fracamente cestas de consumo mais balanceadas, ou seja, as médias são fracamente preferidas aos extremos.
+
+  + **Convexidade estrita**: se $\textbf{x}$ e $\textbf{y}$ são cestas de consumo tais que $\textbf{x} \sim \textbf{y}$, então $\lambda \textbf{x} + (1-\lambda)\textbf{y} \succ \textbf{x}, \forall \lambda \in (0,1)$.
+    + O consumidor prefere de maneira estrita cestas de consumo mais balanceadas, ou seja, as médias são estritamente preferidas aos extremos.
+
+- **Monotonicidade (não-saciedade)**: se $\textbf{x} \geq \textbf{y}$, então $\textbf{x} \succeq \textbf{y}$.
+  + O axioma da monotonicidade diz que mais é melhor.
+
+- Relações de preferência que atendem a estes pressupostos adicionais são chamadas de 
+
+:::{.fragment .fade-up .r-stack}
+**Preferências bem-comportadas** :thumbsup:
+:::
 
 ## Utilidade
     
@@ -123,21 +127,19 @@ $$\textbf{x} \succeq \textbf{y} \Leftrightarrow u(\textbf{x}) \geq u(\textbf{y})
 - De maneira similar, não é possível mensurar se uma mudança de uma situação $\textbf{x}$ para uma situação $\textbf{y}$ provê mais utilidade para uma pessoa ou para outra.
 
 
-## Ceteris paribus
+<!-- ## Ceteris paribus
     
 - Como a **utilidade** se refere à satisfação geral de um consumidor, essa medida é afetada por uma variedade de fatores.
 
 - A utilidade de um consumidor é afetada não apenas pelo seu consumo de bens físicos ou serviços. Mas, também, por atitudes psicológicas, pressões sociais, experiências pessoais e o ambiente cultural de maneira geral.
 
-- Apesar de essas influências serem de interesse geral dos economistas, nesta disciplina focaremos exclusivamente nas escolhas entre opções quantificáveis, enquanto mantemos constante os outros fatores que influenciam o comportamento - _ceteris paribus_.
+- Apesar de essas influências serem de interesse geral dos economistas, nesta disciplina focaremos exclusivamente nas escolhas entre opções quantificáveis, enquanto mantemos constante os outros fatores que influenciam o comportamento - _ceteris paribus_. -->
 
 
 
 ## Bens econômicos
     
-- Assumimos que as preferências de um indivíduo podem ser representadas por uma função utilidade da forma:
-$$U(x_1, x_2, \dots, x_n),$$
-
+- Assumimos que as preferências de um indivíduo podem ser representadas por uma função utilidade da forma: $$U(x_1, x_2, \dots, x_n),$$
 onde $x_1, \dots, x_n$ são as quantidades de cada um dos $n$ bens ou serviços que podem ser consumidas em um período do tempo.
 
 - Nessa representação, assumimos que as variáveis são **bens econômicos**. Isto é, quaisquer que sejam as quantidades que elas representem, assumimos uma quantidade maior qualquer de um $x_i$ em particular, durante algum dado período, será preferida a menos.
@@ -146,7 +148,7 @@ onde $x_1, \dots, x_n$ são as quantidades de cada um dos $n$ bens ou serviços 
 ## Bens econômicos
 
     
-![Mais de um bem é preferível a menos. Fonte: Nicholson & Snyder (2019).](img/bens.JPG)
+![Mais de um bem é preferível a menos. Fonte: Nicholson & Snyder (2019).](img/bens.JPG){#fig-fig1}
 
 ## Curvas de indiferença
 
@@ -154,8 +156,7 @@ onde $x_1, \dots, x_n$ são as quantidades de cada um dos $n$ bens ou serviços 
 
 - Essas trocas voluntárias podem ser melhor estudadas utilizando o conceito de **curvas de indiferença**.
 
-## Curvas de indiferença: definição
-
+:::{.fragment}
 ::: {.callout-tip title="Curva de indiferença"}
 Uma **curva de indiferença** representa um conjunto de cestas de consumo indiferentes entre si. Ou seja, uma curva de indiferença contém todas as combinações de cestas de consumo que dão o mesmo nível de satisfação ao indivíduo.
 
@@ -166,15 +167,18 @@ $$
 
 Em termos de função utilidade:
 $$
-\sim(\textbf{x}) \equiv \{\textbf{y}\in\mathbb{R}_+^n: u(\textbf{y}) = \bar{u}, \text{onde }  u(\textbf{x}) = \bar{u}\}.
+\sim(\textbf{x}) \equiv \{\textbf{y}\in\mathbb{R}_+^n: u(\textbf{y}) = u(\textbf{x})\}.
 $$
 :::
-
+:::
 
 ## Curvas de indiferença: representação gráfica
 
-![Curvas de indiferença - caso de 2 bens. Fonte: Nicholson \& Snyder (2019).](img/indif.JPG)  
+![Curvas de indiferença - caso de 2 bens. Fonte: Nicholson \& Snyder (2019).](img/indif.JPG){#fig-fig2} 
 
+## Curvas de indiferença: representação gráfica
+
+<iframe src="https://www.econgraphs.org/graphs/consumer/preferences/indifference_curves_and_preferred_sets" style="border: 0px solid #AAA; width: 100%; height: 100%"></iframe>
 
 ## Curvas de indiferença: propriedades
 
@@ -187,11 +191,11 @@ $$
 
 ## Curvas de indiferença: propriedades
 
-![Implicação do axioma da transitividade. Fonte: Nicholson \& Snyder (2019).](img/transit.JPG)
+![Implicação do axioma da transitividade. Fonte: Nicholson \& Snyder (2019).](img/transit.JPG){#fig-fig3}
 
 ## Curvas de indiferença: propriedades
     
-![Implicação do axioma da convexidade estrita. Fonte: Nicholson \& Snyder (2019).](img/convex.JPG)
+![Implicação do axioma da convexidade estrita. Fonte: Nicholson \& Snyder (2019).](img/convex.JPG){#fig-fig4}
 
 
 ## Taxa Marginal de Substituição
@@ -218,7 +222,9 @@ onde a notação indica que a inclinação é calculada ao longo da curva de ind
 
 - Pelo axioma de **monotonicidade**, as curvas de indiferença são negativamente inclinadas. Portanto, a TMS, assim definida, é sempre um número positivo. Ou seja, o consumidor só se mantém indiferente se a redução de consumo de um bem for compensada pelo aumento no consumo de um outro bem.
 
-- Pelo axioma da **convexidade estrita**, vimos que o conjunto fracamente preferido $\succeq(\texbf{x})$ é **convexo**. Isso é equivalente a dizer que a **taxa marginal de substituição é decrescente**. Ou seja, a taxa à qual um indivíduo com preferências estritamente convexas deseja trocar um bem $x$ por $y$ diminui à medida que aumentamos a quantidade do bem $y$.
+- Pelo axioma da **convexidade estrita**, vimos que o conjunto fracamente preferido $\succeq(\textbf{x})$ é **estritamente convexo**. 
+
+- Combinando ambos, equivale a dizer que a **taxa marginal de substituição é decrescente**. Ou seja, a taxa à qual um indivíduo com preferências estritamente convexas deseja trocar um bem $x$ por $y$ diminui à medida que aumentamos a quantidade do bem $y$.
     
 
 
@@ -301,7 +307,10 @@ U(x,y) = x^\delta y^{1-\delta},
 $$
 onde $\delta = \alpha/(\alpha + \beta)$ e $1-\delta = \beta/(\alpha + \beta)$.
 
-- [Função utilidade do tipo Cobb-Douglas.](https://www.econgraphs.org/graphs/micro/consumer_theory/preferences_and_utility/cobb_douglas_utility_3d)
+## Cobb-Douglas
+
+<iframe src="https://www.econgraphs.org/graphs/micro/consumer_theory/preferences_and_utility/cobb_douglas_utility_3d" style="width: 120%; height: 120%; border: 0px solid #AAA"></iframe>
+
 
 ## Substitutos perfeitos
     
@@ -316,7 +325,9 @@ $$
 
 - Uma pessoa com esse tipo de preferências está disposta a abrir mão da mesma quantidade do bem $y$ para adquirir uma unidade adicional de $x$, não importa quanto de $x$ esteja sendo consumido - a TMS é constante e o princípio de taxa marginal de substituição decrescente não se aplica.
 
-- [Função utilidade para substitutos perfeitos.](https://www.econgraphs.org/graphs/micro/consumer_theory/preferences_and_utility/substitutes_utility_3d)
+## Substitutos Perfeitos
+
+<iframe src="https://www.econgraphs.org/graphs/micro/consumer_theory/preferences_and_utility/substitutes_utility_3d" style="width: 120%; height: 120%; border: 0px solid #AAA"></iframe>
 
 
 ## Complementares perfeitos
@@ -332,10 +343,33 @@ $$
 $$
 Indicando que nenhum dos bens especificados na função utilidade será consumido de maneira supérflua quando $\alpha x= \beta y$.
 
-- [Função utilidade para bens complementares perfeitos.](https://www.econgraphs.org/graphs/micro/consumer_theory/preferences_and_utility/complements_utility_3d)
+## Complementares Perfeitos
+
+<iframe src="https://www.econgraphs.org/graphs/micro/consumer_theory/preferences_and_utility/complements_utility_3d" style="width: 120%; height: 120%; border: 0px solid #AAA"></iframe>
 
 
 ## Elasticidade de substituição constante (CES)
+
+## Elasticidade de substituição constante (CES)
+
+- A função utilidade do tipo elasticidade de substituição constante (CES) é dada por:
+$$
+U(x,y) = \left[\alpha x^\rho + (1-\alpha)y^\rho\right]^{1/\rho},
+$$
+onde $\alpha$ é o peso relativo do bem $x$ na utilidade total, $\rho$ é o parâmetro de elasticidade de substituição e $y$ é outro bem.
+
+- A elasticidade de substituição entre $x$ e $y$ é constante e igual a $\sigma = \frac{1}{1-\rho}$.
+
+- Quando $\rho = 0$, a função utilidade se reduz a $U(x,y) = x^\alpha y^{1-\alpha}$, que é a função utilidade do tipo **Cobb-Douglas**.
+
+- Quando $\rho = 1$, a função utilidade se reduz a $U(x,y) = \alpha x + (1-\alpha) y$, que é a função utilidade do tipo utilidade de **substitutos perfeitos**.
+
+- Quando $\rho\rightarrow\infty$, a função utilidade se reduz a $U(x,y) = \min\{\alpha x, (1-\alpha) y\}$, que é a função utilidade do tipo utilidade de **complementares perfeitos**.
+
+
+## Elasticidade de substituição constante (CES)
+
+<iframe src="https://www.econgraphs.org/graphs/consumer/utility/ces_indifference" style="width: 120%; height: 120%; border: 0px solid #AAA"></iframe>
 
 ## :books: Bibliografia
 

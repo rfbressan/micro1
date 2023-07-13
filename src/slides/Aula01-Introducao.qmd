@@ -1,0 +1,517 @@
+---
+title: "23MIC1 - Microeconomia I"
+title-slide-attributes:
+  data-background-image: "img/UdescEsag.jpeg"
+  data-background-size: 50%
+  data-background-position: top left
+  # data-background-opacity: "0.7"
+center-title-slide: true
+author: "Rafael Bressan"
+logo: "img/UdescEsag.jpeg"
+format: 
+  revealjs:
+    theme: [default, udesc.scss] 
+    code-fold: true
+    chalkboard: true
+    incremental: true
+    width: 1600
+    height: 900
+from: markdown+emoji # list of emojis: https://gist.github.com/rxaviers/7360908
+fontsize: "2.2em"
+editor: source
+jupyter: python3
+---
+
+
+## Apresentação: Docente
+
+**Nome**: Rafael Bressan
+
+**Formação**: 
+
+::: {.nonincremental}
+
+1. Mestrado acadêmico em Economia - FGV/EESP, 2022.
+1. Especialização em Data Science e Big Data - PUC-MG, 2021.
+1. Ciências Econômicas - UDESC, 2020
+1. Engenharia de Controle e Automação Industrial - UFSC, 2003.
+
+:::
+
+**Áreas de Interesse**: Microeconometria aplicada a evasão fiscal e comércio internacional
+
+**Website**: [Site Pessoal](https://rafaelbressan.netlify.app/)
+
+**Contato**: Mensagem via Moodle
+
+## Apresentação: Microeconomia I
+
+23MIC1 - Microeconomia I
+
+-   A economia divide-se em dois ramos principais: microeconomia e
+    macroeconomia.
+
+-   A **microeconomia** trata do comportamento das
+    unidades (agentes) econômicas individuais - e.g., consumidores,
+    trabalhadores, proprietários de terra, empresas.
+
+-   A microeconomia explica como e por que essas unidades tomam decisões
+    econômicas - e.g., como consumidores tomam suas decisões de compra e
+    como essas escolhas são influenciadas por variações nos preços e na
+    renda.
+
+
+## Apresentação: Microeconomia I 
+
+-   Outro objeto de estudo da microeconomia é a compreensão de como as
+    unidades econômicas (empresas) interagem para formar unidades
+    maiores - mercados e indústrias. Por meio do estudo do comportamento
+    e da interação entre cada empresa e os consumidores, a microeconomia
+    revela como os setores e os mercados operam e se desenvolvem, por
+    que são diferentes entre si e como são influenciados pelas políticas
+    governamentais e condições econômicas globais.
+
+-   Algumas questões que podem ser analisadas pelas ferramentas
+    microeconômicas são: o aumento de um imposto qualquer, o aumento da
+    punição de certos tipos de crimes, a liberalização das drogas, a
+    discriminação racial, além de muitos outros.
+
+
+## Apresentação: Microeconomia I
+
+A ênfase da disciplina 23MIC1 - Microeconomia I é compreender o racional das decisões dos agentes econômicos e o propósito do curso é fornecer uma base microeconômica sólida, que será extensivamente adotada em outras disciplinas de economia. O curso será dividido em quatro blocos:
+
+1.  Introdução
+
+2.  Comportamento do consumidor e demanda
+
+3.  Comportamento do produtor e oferta
+
+4.  Equilíbrio parcial de mercados perfeitamente competitivos
+
+
+## Ementa
+
+**Ementa 1**. *Restrição orçamentária. Preferências do consumidor.
+Comportamento do consumidor. Demanda individual e demanda de mercado.
+Elasticidade. Preferência revelada. Equação de Slutsky. Escolhas sob
+incerteza e ativos de risco. Escolha intertemporal. Excedente do
+consumidor e do produtor. Tecnologias de produção. Maximização de
+lucros. Minimização de custos. Curvas de custo. Oferta da empresa e
+oferta de mercado.*
+
+## Objetivo
+
+**Objetivo 1**. *A disciplina apresenta os modelos básicos referentes
+aos comportamentos do consumidor e do produtor, que são os blocos de
+construção básicos da análise microeconômica contemporânea.*
+
+## Aulas e sistema de avaliação
+
+Formato das aulas e sistema de avaliação
+
+-   A disciplina apoia-se, fundamentalmente, em livros-texto e notas de
+    aula e será ministrada por meio de aulas expositivas.
+
+-   As aulas acontecerão às:
+
+    -   Quartas-feiras das 08:20 às 10:00.
+
+    -   Sextas-feiras das 08:20 às 10:00.
+
+-   A avaliação será realizada a partir dos procedimentos abaixo:
+
+    -   Atividade avaliativa I (PI): 25%
+
+    -   Atividade avaliativa II (PII): 35%
+
+    -   Atividade avaliativa III (PIII): 40%
+
+
+
+## Aulas e sistema de avaliação
+
+Formato das aulas e sistema de avaliação
+
+-   Os alunos devem ter em mente que o aprendizado e o acompanhamento do
+    curso dependem essencialmente de seu próprio esforço.
+
+-   Os tópicos do programa serão apresentados em aulas expositivas,
+    destinadas à apresentação de conceitos, modelos e suas aplicações.
+
+-   Embora importantes, **as aulas não podem jamais ser vistas como substitutas da leitura regular e cuidadosa dos textos indicados e da resolução dos exercícios propostos.**
+
+# Introdução{.greenbackground}
+
+## O que é microeconomia?
+
+-   A definição mais utilizada de economia é: _"economia é o estudo da alocação de recursos escassos"_.
+
+-   Em um mundo com recursos escassos e demandas quase ilimitadas, é
+    necessário estabelecer critérios para decidir quantos e quais bens e
+    serviços serão produzidos, e como serão alocados entre os agentes
+    econômicos.
+
+-   É esse mecanismo de **alocar os recursos escassos aos agentes econômicos** que compõe o cerne da ciência econômica.
+
+-   Para determinar a alocação ótima dos recursos, é necessário estudar
+    o comportamento dos agentes no ambiente econômico. É precisamente o
+    comportamento das unidades econômicas individuais o objeto de estudo
+    da **microeconomia**.
+
+
+## Agentes econômicos
+
+-   Neste curso focaremos em dois tipos de **agentes econômicos**:
+    [consumidores]{style="color: red"} e [firmas]{style="color: red"}.
+
+    1.  [Consumidores]{style="color: red"} manisfestam suas ações por
+        intermédio de suas demandas - qual a quantidade de cada bem que
+        desejam adquirir. Manifestam suas demandas buscando obter a
+        satisfação máxima a partir de sua renda e dos preços dos bens e
+        serviços disponíveis para consumo.
+
+    2.  [Firmas]{style="color: red"} manifestam suas ações por
+        intermédio de sua demanda por insumos ou fatores de produção
+        (capital, trabalho, etc.) e por sua oferta de bens e serviços
+        produzidos. Suas demandas e ofertas representam suas buscas de
+        maximização dos lucros a partir das tecnologias que dispõem para
+        produzir os bens ofertados e dos preços dos insumos contratados.
+
+## Mercado
+
+-   As ofertas e demandas de firmas e consumidores são representadas no
+    **mercado**.
+
+-   As quantidades demandadas e ofertadas por cada agente dependem,
+    portanto, dos preços dos bens e dos insumos.
+
+-   O mercado funciona cotando preços e verificando as quantidades
+    demandadas e ofertadas a cada nível de preço possível.
+
+-   Quando a quantidade ofertada iguala a quantidade demandada, dizemos
+    que o mercado está em **equilíbrio**.
+
+-   Existem vários mercados em um sistema econômico. Pelo menos um para
+    cada bem ou serviço existente.
+
+
+# Modelos econômicos{.greenbackground}
+
+## Modelos teóricos
+
+-   Como um sistema econômico é um ambiente extremamente complexo, seria
+    impossível descrever todas as características que o compõem.
+
+-   Portanto, economistas utilizam [modelos
+    econômicos]{style="color: red"} para descrever as atividades
+    econômicas.
+
+-   Estes modelos devem abstrair grande parte das complexidades do
+    "mundo real" e focar apenas naqueles elementos que são
+    **essenciais** para o objeto de estudo em questão.
+
+-   Apesar de serem abstrações da realidade, os modelos econômicos
+    fornecem um auxílio fundamental para o entendimento do comportamento
+    econômico (tanto das firmas quanto dos consumidores, e de como esses
+    grupos interagem para formação de mercados).
+
+
+## Validação de modelos econômicos
+
+-   Existem dois métodos gerais de validar um modelo econômico:
+
+    1.  **Abordagem direta.** Busca a validação dos pressupostos básicos
+        nos quais o modelo está baseado.
+
+    2.  **Abordagem indireta.** Busca a validação do modelo verificando
+        se suas implicações possuem capacidade preditiva de eventos do
+        "mundo real".
+
+-   O **modelo de maximização de lucros** assume que o único objetivo de
+    uma firma é maximizar seus lucros, dadas suas restrições. Qualquer
+    outro possível objetivo é tratado como irrelevante para a análise. O
+    modelo ainda assume que a firma possui informações suficientes
+    acerca de seus custos e acerca da natureza do mercado em que está
+    inserida para descobrir suas opções otimizadoras de lucros.
+    Obviamente, a maioria das firmas não possuem tais informações (pelo
+    menos não sem custos adicionais).
+
+
+## Validação de modelos econômicos
+
+
+-   **Testando os pressupostos.** As firmas de fato maximizam seus
+    lucros? Os resultados de questionários enviados para executivos são
+    inconclusivos. Enquanto alguns mencionam que a maximização de lucros
+    é o principal objetivo, outros indicam que existem outros interesses
+    a serem considerados.
+
+-   Alguns economistas argumentam que o teste definitivo de um modelo
+    econômico é obtido quando confrontamos suas implicações com os dados
+    obtidos do mundo real. Portanto, se as implicações do modelo de
+    maximização de lucros forem alinhados com o comportamento das firmas
+    do "mundo real", temos evidências empíricas que suportam a adoção
+    deste modelo. Caso contrário, se os dados que temos disponíveis
+    parecem inconsistentes com a predição do modelo, temos argumentos
+    para rejeitá-lo.
+
+
+## Características gerais de modelos econômicos
+
+Hipótese de *ceteris paribus*
+
+-   Modelos econômicos tem por objetivo explicar algumas relações
+    simples.
+
+-   Estes modelos focam nos efeitos de apenas algumas variáveis de cada
+    vez.
+
+-   Outras variáveis são, por hipótese, tomadas como constantes ao longo
+    do período de estudo.
+
+
+
+## Estutura dos modelos econômicos
+
+-   Os modelos que estudaremos na disciplina possuem uma estrutura
+    matemática e evidenciam as relações entre fatores (variáveis) que
+    afetam as decisões de firmas e consumidores e os resultados destas
+    decisões.
+
+-   As variáveis que estão fora do controle dos tomadores de decisão são
+    denominadas [variáveis exógenas]{style="color: red"}.
+
+-   Por outro lado, as variáveis que são determinadas dentro do modelo
+    são denonimadas [variáveis endógenas]{style="color: red"}.
+
+
+
+## Hipóteses de comportamento otimizador
+
+-   A maioria dos modelos econômicos começa sua estruturação com a
+    hipótese de que os agentes econômicos considerados estão buscando
+    seus objetivos de maneira **racional**.
+
+    -   Consumidores buscam maximizar suas utilidades.
+
+    -   Firmas buscam maximizar seus lucros (ou minimizar custos).
+
+    -   Reguladores governamentais buscam maximizar o bem-estar público.
+
+-   Racionalidade em economia não significa a exclusão de comportamentos
+    prejudiciais ao próprio indivíduo (e.g., fumar ou usar drogas).
+
+-   Os agentes econômicos são racionais no sentido de que suas ações são
+    coerentes com a busca de sua felicidade ou de seus objetivos, mesmo
+    que isso resulte em um comportamento prejudicial à pessoa ou à
+    sociedade.
+
+
+## Análise positiva vs. análise normativa
+
+-   A análise econômica pode ser classificada como positiva ou
+    normativa.
+
+-   A [análise econômica positiva]{style="color: red"} busca descrever
+    o comportamento dos agentes e os resultados da interação entre os
+    agentes, ou seja, busca explicar os fenômenos
+    econômicos que são observados.
+
+-   A [análise econômica normativa]{style="color: red"} estuda como os
+    resultados **deveriam** ser e o que fazer para obtê-los.
+
+-   Exemplo: a análise positiva pode constatar que a existência de um
+    salário-mínimo aumenta o desemprego. Uma análise normativa pode
+    recomendar o aumento do salário-mínimo.
+
+
+# Economias de mercado{.greenbackground}
+
+## Economias de mercado
+
+-   Uma economia onde o sistema de preços opera livremente é chamada de
+    **economia de mercado**.
+
+-   O sistema de preços é fundamental para a alocação de recursos em uma
+    sociedade. Ele provê **informação e incentivos** que coordenam a decisão
+    de milhares de consumidores e produtores.
+
+-   Cada agente precisa conhecer apenas os preços dos produtos que
+    afetam o seu objetivo para tomar suas decisões.
+
+-   Por isso diz-se que a economia é **descentralizada**: cada agente
+    decide o que consumir ou produzir sem a necessidade de existência de
+    uma entidade que coordene suas ações.
+
+
+## Eficiência de um mercado competitivo
+
+-   Apesar da falta aparente de coordenação, um mercado **competitivo** é eficiente do ponto de vista econômico - mão invisível de Adam Smith.
+
+-   Duas razões preponderam a favor do mercado como mecanismo de
+    alocação de recursos:
+
+    1.  Em uma economia centralizada, o planejador central precisa
+        conhecer todas as preferências dos consumidores e as tecnologias
+        das firmas para decidir o que e quanto produzir. Em um mecanismo
+        de mercado e decisões descentralizadas existe uma economia
+        fantástica de informação para alocar recursos escassos.
+        Consumidores só precisam conhecer suas preferências e os preços
+        dos bens, e as firmas suas tecnologias e preços dos insumos e
+        bens produzidos.
+
+
+## Eficiência de um mercado competitivo
+
+1.  Como consumidores desejam pagar o menor preço possível pelos bens,
+    compram apenas das empresas que podem ofertar mais barato (por terem
+    tecnologia mais avançada ou pagarem menos nos insumos). Por outro
+    lado, firmas querem vender pelo preço mais caro e venderão para
+    consumidores dispostos a pagar mais pelos bens.
+
+    Assim, na economia de mercado, os bens são produzidos pelas firmas
+    mais eficientes e consumidos pelos consumidores que atribuem maior
+    valor ao bem.
+
+    **A "mão invisível" de Adam Smith, onde cada agente agindo de maneira egoísta e visando seu próprio bem, em um mercado competitivo, acaba gerando o bem comum.**
+
+
+## Eficiência de um mercado competitivo
+
+-   Para que a "mão invisível" funcione, são necessárias algumas
+    condições como:
+
+    1.  Ausência de externalidades (quando a decisão de um agente afeta
+        as preferências de outros).
+
+    2.  Ausência de poder de mercado (quando existe um ou poucos
+        produtores de um determinado bem).
+
+    3.  Entre outras.
+
+-   Quando estas condições não são válidas, dizemos que existe uma
+    **falha de mercado** - objeto de estudo do curso de Microeconomia II.
+
+# Postulados básicos de economia{.greenbackground}
+
+## Escassez
+
+-   [Escassez]{style="color: red"} significa que os recursos da
+    sociedade são limitados. É impossível todos terem todas as coisas
+    que querem: "*you can't always get what you want*" - Rolling Stones.
+
+::: {.fragment}
+
+[![Mick Jagger - formado em Economia pela London School of Economics](img/jagger.JPG)](https://pt.wikipedia.org/wiki/Mick_Jagger)
+
+:::
+
+## Escassez
+
+-   Quando se toma uma decisão econômica, geralmente se paga alguma
+    coisa, devido à escassez de recursos.
+
+-   Qual o custo de fazer uma graduação em uma universidade pública?
+
+-   Mesmo que não se pague uma mensalidade, existe o custo de não se
+    poder trabalhar, gerando perda de renda corrente.
+
+-   O verdadeiro custo de algum bem ou serviço é o valor da melhor
+    alternativa de uso dos recursos utilizados para se adquirir esse
+    bem. Este custo econômico é chamado de [custo de
+    oportunidade]{style="color: red"}.
+
+## Escolhas (Tradeoffs)
+
+-   Escassez impõe a necessidade de escolher entre alternativas
+    possíveis.
+
+-   Se queremos produzir mais de um determinado bem, teremos que
+    produzir menos de outro.
+
+-   A palavra *tradeoff* ilustra essa situação em que para se obter
+    alguma coisa deve-se sacrificar outra.
+
+
+## Comportamento individual maximizador
+
+-   Os agentes econômicos tomam decisões com algum objetivo em mente, e
+    essas decisões são tomadas para se alcançar esse objetivo.
+
+-   A razão para estudarmos agentes individuais, e não grupos, é
+    prática - existem teorias bem estabelecidas sobre o comportamento
+    individual, enquanto a teoria de comportamento em grupo não é tão
+    bem estabelecida.
+
+-   No entanto, decisões em grupo são fundamentais em macroeconomia e em
+    alguns campos da microeconomia.
+
+## Substituição
+
+-   [Substituição]{style="color: red"} significa que as pessoas estão
+    dispostas a fazer as escolhas que a escassez de recursos exige.
+
+-   Entre quaisquer dois bens A e B que desejamos, estamos dispostos a
+    abrir mão de um pouco de A para receber um pouco de B.
+
+-   Essa substituição normalmente envolvem pequenos incrementos dos
+    bens - chamados de **marginais**.
+
+-   Para decidir o quanto um indivíduo investe em educação, ele pensa
+    primeiro nos seus benefícios e custos. Se os benefícios do ensino
+    primário forem maior que os custos, ele fará o primário. Uma vez
+    tendo decidido fazer o primário, o indivíduo pensa se os benefícios
+    do ensino médio superam os custos. Esse princípio é aplicado até
+    chegar-se ao ponto em que o benefício marginal da educação for igual
+    ou menor que o custo marginal da educação.
+
+
+## Implicações dos postulados
+
+-   Os agentes econômicos tomam suas decisões dependendo dos custos e
+    benefícios envolvidos nessas escolhas.
+
+-   Assim, quando há alterações nestes custos e benefícios, as decisões
+    se modificam.
+
+-   Portanto, podem ser colocados incentivos na economia para induzir as
+    pessoas ou firmas a tomarem certas decisões. Por exemplo, se o preço
+    do combustível aumentar, os consumidores reduzem o uso do automóvel.
+
+-   O reconhecimento de que agentes econômicos respondem a incentivos é
+    de fundamental importância em economia. Por exemplo, a formulação de
+    políticas públicas deve levar em conta que as pessoas podem alterar
+    seu comportamento devido a uma nova lei, e essa mudança pode ter
+    efeitos não desejáveis (e.g., lei seca nos Estados Unidos nos anos
+    1920s).
+
+## :books: Bibliografia
+
+::: {#fig-biblio layout-ncol=2}
+
+![NICHOLSON](img/nicholson.jpg){#fig-nicholson}
+
+![VARIAN](img/varian.jpg){#fig-varian}
+
+Livros-texto adotados
+
+:::
+
+## :books: Bibliografia
+
+
+NICHOLSON, W.; SNYDER C. Teoria microeconômica: Princípios básicos e
+aplicações. Cengage Learning Brasil, 2019. Disponível em:
+[app.minhabiblioteca.com.br/#/books/9788522127030](https://app.minhabiblioteca.com.br/#/books/9788522127030/)
+
+VARIAN, H. R. Microeconomia: uma abordagem moderna. 9.ed. Rio de
+Janeiro: Elsevier, 2015. Disponível em:
+[app.minhabiblioteca.com.br/books/9788595155107](https://app.minhabiblioteca.com.br/books/9788595155107)
+
+PINDYCK, R. S.; RUBINFELD, D. L. Microeconomia. 8. ed. São Paulo:
+Pearson Education do Brasil, 2013.
+
+JEHLE, G. A.; RENY, P. J. Advanced microeconomic theory (Third Edition). Essex: Pearson Education Limited, v. 136, 2011.
+
+

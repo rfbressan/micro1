@@ -46,7 +46,7 @@ Observe que várias dessas aulas se estendem por duas ou mais sessões.
 
 | Tópico                                                   | Slides                                                                                                              | Lista                                                                                                   |
 |----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Aula 1: Apresentação | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula01.html)   | |
+| Aula 1: Introdução a Microeconomia | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula01-Introducao.html)   | |
 | Aula 2: Introdução a Microeconomia | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula02-Introducao.html) | |
 | Aula 3: Matemática | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula03-matematica.html) | |
 | Aula 4: Restrição Orçamentária | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula04-RestricaoOrcamentaria.html) | |
