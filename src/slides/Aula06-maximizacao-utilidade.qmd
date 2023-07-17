@@ -41,8 +41,9 @@ jupyter: python3
     $\delta = \alpha/(\alpha + \beta)$ e
     $1-\delta = \beta/(\alpha + \beta)$.
 
--   [Função utilidade do tipo
-    Cobb-Douglas.](https://www.econgraphs.org/graphs/micro/consumer_theory/preferences_and_utility/cobb_douglas_utility_3d)
+## Cobb-Douglas
+
+<iframe src="https://www.econgraphs.org/graphs/micro/consumer_theory/preferences_and_utility/cobb_douglas_utility_3d" style="width: 120%; height: 120%; border: 0px solid #AAA"></iframe>
 
 ## Cobb-Douglas
 
@@ -61,7 +62,7 @@ def y(x, u, delta):
     return (u*x**(-delta))**(1/(1-delta))
 
 # Definindo os valores de x e delta
-x = np.linspace(0.1, 10, 100)
+x = np.linspace(0.1, 12, 100)
 delta = 0.5 
 u = np.linspace(1, 10, 5)
 
@@ -73,8 +74,8 @@ for i in u:
     ax.plot(x, y(x, i, delta), label=f'$U(x,y) = {i:.2f}$')
 
 # Definindo os limites dos eixos
-ax.set_xlim(0, 10)
-ax.set_ylim(0, 10)
+ax.set_xlim(0, 13)
+ax.set_ylim(0, 13)
 
 # Definindo os rótulos dos eixos
 ax.set_xlabel('$x$')
@@ -87,7 +88,7 @@ ax.set_title(f'Curvas de indiferença tipo Cobb-Douglas ($\delta = 0,5$)')
 ax.legend()
 
 # Mostrando o gráfico
-plt.show()
+# plt.show()
 ```
 
 
@@ -107,8 +108,9 @@ plt.show()
     constante e o princípio de taxa marginal de substituição decrescente
     não se aplica.
 
--   [Função utilidade para substitutos
-    perfeitos](https://www.econgraphs.org/graphs/micro/consumer_theory/preferences_and_utility/substitutes_utility_3d).
+## Substitutos perfeitos
+
+<iframe src="https://www.econgraphs.org/graphs/micro/consumer_theory/preferences_and_utility/substitutes_utility_3d" style="width: 120%; height: 120%; border: 0px solid #AAA"></iframe>
 
 ## Complementares perfeitos
 
@@ -123,8 +125,9 @@ plt.show()
     dos bens especificados na função utilidade será consumido de maneira
     supérflua quando $\alpha x= \beta y$.
 
--   [Função utilidade para bens complementares
-    perfeitos](https://www.econgraphs.org/graphs/micro/consumer_theory/preferences_and_utility/complements_utility_3d).
+## Complementares perfeitos
+
+<iframe src="https://www.econgraphs.org/graphs/micro/consumer_theory/preferences_and_utility/complements_utility_3d" style="width: 120%; height: 120%; border: 0px solid #AAA"></iframe>
 
 ## Elasticidade de substituição constante (CES)
 
@@ -151,6 +154,10 @@ plt.show()
     obter uma forma mais tratável:
     $$U(x,y) = \frac{x^\delta}{\delta} + \frac{y^\delta}{\delta}.$$
 
+## Elasticidade de substituição constante (CES)
+
+<iframe src="https://www.econgraphs.org/graphs/consumer/utility/ces_indifference" style="width: 120%; height: 120%; border: 0px solid #AAA"></iframe>
+
 ## Preferências homotéticas e não-homotéticas
 
 -   Uma função utilidade é [homotética]{style="color: red"} se sua taxa
@@ -169,6 +176,25 @@ plt.show()
     preferências homotéticas olhando apenas uma curva de indiferença (ou
     um número pequeno), sem nos preocupar que o resultado altere
     drasticamente para níveis diferentes de utilidade.
+
+## Preferências homotéticas e não-homotéticas
+
+```{python}
+#| echo: true
+#| output-location: column
+
+# Quando y=x então u=x e MRS = delta/(1-delta)
+mrs = (delta/(1-delta)) 
+slope = - mrs
+
+for i in range(len(u)):
+    ax.axline((u[i], u[i]), slope = slope, color='black', linestyle='--', linewidth=1)
+
+ax.plot([0,10], [0,10], color='black', linestyle='--', linewidth=1.5)
+
+fig
+ 
+```
 
 ## Exercício
 
@@ -201,9 +227,7 @@ plt.show()
     teorema da função implícita para obter a TMS:
     $$TMS = \left.-\frac{dx_2}{dx_1}\right|_{U(x_1, \dots, x_n) = k} = \frac{U_{x_1}(x_1, \dots, x_n)}{U_{x_2}(x_1, \dots, x_n)}.$$
 
--   A disposição de um indivíduo em trocar $x_1$ por $x_2$ depende não
-    só da quantidade desses bens mas, também, das quantidades de todos
-    os outros bens.
+-   A disposição de um indivíduo em trocar $x_1$ por $x_2$ depende não só da quantidade desses bens mas, também, das quantidades de todos os outros bens.
 
 # Maximização de utilidade e escolha
 
@@ -237,8 +261,7 @@ plt.show()
     à mesma conclusão geral: **para maximizar utilidade, os indivíduos escolherão cestas de bens de maneira a igualar a taxa de tradeoff entre quaisquer dois bens (a TMS) à razão entre os preços de mercado destes bens**.
 
 -   Portanto, os preços de mercado transmitem informações acerca dos
-    custos de oportunidade para os indivíduos, e essa informação tem um
-    papel fundamental nas escolhas que serão feitas.
+    custos de oportunidade para os indivíduos, e essa informação tem um papel fundamental nas escolhas que serão feitas.
 
 
 ## Resultados preliminares
@@ -265,6 +288,8 @@ plt.show()
 Condições de primeira ordem para um máximo
 
 ![Análise gráfica da maximização de utilidade. Fonte: Nicholson e Snyder (2019).](img/maxutil.JPG){#fig-fig1}
+
+## Análise gráfica
 
 Condições suficientes de segunda ordem para um máximo
 
@@ -441,6 +466,8 @@ $$\lambda = \frac{\partial U/\partial x_1}{p_1} = \frac{\partial U/\partial x_2}
     interpretado como a utilidade marginal de uma unidade monetária de
     dispêndio de consumo. Ou seja, a utilidade marginal da
     renda]{style="color: red"}.
+
+- Também referido como [preço-sombra]{style="color: red"}.
 
 
 ## Interpretação econômica do multiplicador de Lagrange

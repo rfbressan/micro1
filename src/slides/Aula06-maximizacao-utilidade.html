@@ -414,10 +414,14 @@ Rafael Bressan
 <li class="fragment"><p>Uma função utilidade comumente utilizada é a função do tipo Cobb-Douglas. A função utilidade do tipo Cobb-Douglas apresenta a seguinte forma funcional: <span class="math display">\[U(x,y) = x^\alpha y^\beta, \qquad 0&lt;\alpha, \beta &lt; 1.\]</span></p></li>
 <li class="fragment"><p>De forma geral, os parâmetros <span class="math inline">\(\alpha\)</span> e <span class="math inline">\(\beta\)</span> representam a importância relativa dos bens <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> para este indivíduo.</p></li>
 <li class="fragment"><p>Normalmente, é conveniente normalizar os parâmetros de forma com que <span class="math inline">\(\alpha + \beta = 1\)</span>. Neste caso, a função utilidade seria dada por: <span class="math display">\[U(x,y) = x^\delta y^{1-\delta},\]</span> onde <span class="math inline">\(\delta = \alpha/(\alpha + \beta)\)</span> e <span class="math inline">\(1-\delta = \beta/(\alpha + \beta)\)</span>.</p></li>
-<li class="fragment"><p><a href="https://www.econgraphs.org/graphs/micro/consumer_theory/preferences_and_utility/cobb_douglas_utility_3d">Função utilidade do tipo Cobb-Douglas.</a></p></li>
 </ul>
 </section>
 <section id="cobb-douglas-1" class="slide level2">
+<h2>Cobb-Douglas</h2>
+<iframe src="https://www.econgraphs.org/graphs/micro/consumer_theory/preferences_and_utility/cobb_douglas_utility_3d" style="width: 120%; height: 120%; border: 0px solid #AAA">
+</iframe>
+</section>
+<section id="cobb-douglas-2" class="slide level2">
 <h2>Cobb-Douglas</h2>
 <div class="cell columns column-output-location" data-execution_count="1">
 <div class="column">
@@ -434,7 +438,7 @@ Rafael Bressan
 <span id="cb1-9"><a href="#cb1-9"></a>    <span class="cf">return</span> (u<span class="op">*</span>x<span class="op">**</span>(<span class="op">-</span>delta))<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span>(<span class="dv">1</span><span class="op">-</span>delta))</span>
 <span id="cb1-10"><a href="#cb1-10"></a></span>
 <span id="cb1-11"><a href="#cb1-11"></a><span class="co"># Definindo os valores de x e delta</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a>x <span class="op">=</span> np.linspace(<span class="fl">0.1</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
+<span id="cb1-12"><a href="#cb1-12"></a>x <span class="op">=</span> np.linspace(<span class="fl">0.1</span>, <span class="dv">12</span>, <span class="dv">100</span>)</span>
 <span id="cb1-13"><a href="#cb1-13"></a>delta <span class="op">=</span> <span class="fl">0.5</span> </span>
 <span id="cb1-14"><a href="#cb1-14"></a>u <span class="op">=</span> np.linspace(<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">5</span>)</span>
 <span id="cb1-15"><a href="#cb1-15"></a></span>
@@ -446,8 +450,8 @@ Rafael Bressan
 <span id="cb1-21"><a href="#cb1-21"></a>    ax.plot(x, y(x, i, delta), label<span class="op">=</span><span class="ss">f'$U(x,y) = </span><span class="sc">{</span>i<span class="sc">:.2f}</span><span class="ss">$'</span>)</span>
 <span id="cb1-22"><a href="#cb1-22"></a></span>
 <span id="cb1-23"><a href="#cb1-23"></a><span class="co"># Definindo os limites dos eixos</span></span>
-<span id="cb1-24"><a href="#cb1-24"></a>ax.set_xlim(<span class="dv">0</span>, <span class="dv">10</span>)</span>
-<span id="cb1-25"><a href="#cb1-25"></a>ax.set_ylim(<span class="dv">0</span>, <span class="dv">10</span>)</span>
+<span id="cb1-24"><a href="#cb1-24"></a>ax.set_xlim(<span class="dv">0</span>, <span class="dv">13</span>)</span>
+<span id="cb1-25"><a href="#cb1-25"></a>ax.set_ylim(<span class="dv">0</span>, <span class="dv">13</span>)</span>
 <span id="cb1-26"><a href="#cb1-26"></a></span>
 <span id="cb1-27"><a href="#cb1-27"></a><span class="co"># Definindo os rótulos dos eixos</span></span>
 <span id="cb1-28"><a href="#cb1-28"></a>ax.set_xlabel(<span class="st">'$x$'</span>)</span>
@@ -460,11 +464,14 @@ Rafael Bressan
 <span id="cb1-35"><a href="#cb1-35"></a>ax.legend()</span>
 <span id="cb1-36"><a href="#cb1-36"></a></span>
 <span id="cb1-37"><a href="#cb1-37"></a><span class="co"># Mostrando o gráfico</span></span>
-<span id="cb1-38"><a href="#cb1-38"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-38"><a href="#cb1-38"></a><span class="co"># plt.show()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div><div class="column">
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code>&lt;matplotlib.legend.Legend at 0x7ff93061bfa0&gt;</code></pre>
+</div>
 <div class="cell-output cell-output-display">
-<p><img data-src="Aula06-maximizacao-utilidade_files/figure-revealjs/cell-2-output-1.png" width="668" height="524"></p>
+<p><img data-src="Aula06-maximizacao-utilidade_files/figure-revealjs/cell-2-output-2.png" width="659" height="524"></p>
 </div>
 </div>
 </div>
@@ -476,16 +483,24 @@ Rafael Bressan
 <li class="fragment"><p>Neste caso, as curvas de indiferença são lineares.</p></li>
 <li class="fragment"><p>A linearidade das curvas de indiferença motiva a denominação de bens substitutos perfeitos para descrever a relação entre <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span>.</p></li>
 <li class="fragment"><p>Uma pessoa com esse tipo de preferências está disposta a abrir mão da mesma quantidade do bem <span class="math inline">\(y\)</span> para adquirir uma unidade adicional de <span class="math inline">\(x\)</span>, não importa quanto de <span class="math inline">\(x\)</span> esteja sendo consumido - a TMS é constante e o princípio de taxa marginal de substituição decrescente não se aplica.</p></li>
-<li class="fragment"><p><a href="https://www.econgraphs.org/graphs/micro/consumer_theory/preferences_and_utility/substitutes_utility_3d">Função utilidade para substitutos perfeitos</a>.</p></li>
 </ul>
+</section>
+<section id="substitutos-perfeitos-1" class="slide level2">
+<h2>Substitutos perfeitos</h2>
+<iframe src="https://www.econgraphs.org/graphs/micro/consumer_theory/preferences_and_utility/substitutes_utility_3d" style="width: 120%; height: 120%; border: 0px solid #AAA">
+</iframe>
 </section>
 <section id="complementares-perfeitos" class="slide level2">
 <h2>Complementares perfeitos</h2>
 <ul>
 <li class="fragment"><p>Uma situação diretamente oposta à de substitutos perfeitos é ilustrada para o caso de bens complementares perfeitos, cuja função utilidade é da forma: <span class="math display">\[U(x,y) = \min\{\alpha x, \beta y\}, \qquad \alpha, \beta &gt; 0.\]</span></p></li>
 <li class="fragment"><p>Neste caso, as curvas de indiferença tem um formato de <span class="math inline">\(L\)</span> e a razão da quantidade consumida de <span class="math inline">\(y\)</span> com relação ao bem <span class="math inline">\(x\)</span> é constante e igual: <span class="math display">\[\frac{y}{x} = \frac{\alpha}{\beta}.\]</span> Indicando que nenhum dos bens especificados na função utilidade será consumido de maneira supérflua quando <span class="math inline">\(\alpha x= \beta y\)</span>.</p></li>
-<li class="fragment"><p><a href="https://www.econgraphs.org/graphs/micro/consumer_theory/preferences_and_utility/complements_utility_3d">Função utilidade para bens complementares perfeitos</a>.</p></li>
 </ul>
+</section>
+<section id="complementares-perfeitos-1" class="slide level2">
+<h2>Complementares perfeitos</h2>
+<iframe src="https://www.econgraphs.org/graphs/micro/consumer_theory/preferences_and_utility/complements_utility_3d" style="width: 120%; height: 120%; border: 0px solid #AAA">
+</iframe>
 </section>
 <section id="elasticidade-de-substituição-constante-ces" class="slide level2">
 <h2>Elasticidade de substituição constante (CES)</h2>
@@ -502,6 +517,11 @@ Rafael Bressan
 <li class="fragment"><p>Podemos fazer uma transformação monotônica <span class="math inline">\(U^* = U^\delta/\delta\)</span> e obter uma forma mais tratável: <span class="math display">\[U(x,y) = \frac{x^\delta}{\delta} + \frac{y^\delta}{\delta}.\]</span></p></li>
 </ul>
 </section>
+<section id="elasticidade-de-substituição-constante-ces-1" class="slide level2">
+<h2>Elasticidade de substituição constante (CES)</h2>
+<iframe src="https://www.econgraphs.org/graphs/consumer/utility/ces_indifference" style="width: 120%; height: 120%; border: 0px solid #AAA">
+</iframe>
+</section>
 <section id="preferências-homotéticas-e-não-homotéticas" class="slide level2">
 <h2>Preferências homotéticas e não-homotéticas</h2>
 <ul>
@@ -510,6 +530,30 @@ Rafael Bressan
 <li class="fragment"><p>As curvas de indiferença associadas a utilidades mais altas são cópias das de utilidades mais baixas.</p></li>
 <li class="fragment"><p>Portanto, podemos estudar o comportamento de um indivíduo que tenha preferências homotéticas olhando apenas uma curva de indiferença (ou um número pequeno), sem nos preocupar que o resultado altere drasticamente para níveis diferentes de utilidade.</p></li>
 </ul>
+</section>
+<section id="preferências-homotéticas-e-não-homotéticas-1" class="slide level2">
+<h2>Preferências homotéticas e não-homotéticas</h2>
+<div class="cell columns column-output-location" data-execution_count="2">
+<div class="column">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Quando y=x então u=x e MRS = delta/(1-delta)</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>mrs <span class="op">=</span> (delta<span class="op">/</span>(<span class="dv">1</span><span class="op">-</span>delta)) </span>
+<span id="cb3-3"><a href="#cb3-3"></a>slope <span class="op">=</span> <span class="op">-</span> mrs</span>
+<span id="cb3-4"><a href="#cb3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(u)):</span>
+<span id="cb3-6"><a href="#cb3-6"></a>    ax.axline((u[i], u[i]), slope <span class="op">=</span> slope, color<span class="op">=</span><span class="st">'black'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb3-7"><a href="#cb3-7"></a></span>
+<span id="cb3-8"><a href="#cb3-8"></a>ax.plot([<span class="dv">0</span>,<span class="dv">10</span>], [<span class="dv">0</span>,<span class="dv">10</span>], color<span class="op">=</span><span class="st">'black'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, linewidth<span class="op">=</span><span class="fl">1.5</span>)</span>
+<span id="cb3-9"><a href="#cb3-9"></a></span>
+<span id="cb3-10"><a href="#cb3-10"></a>fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div><div class="column">
+<div class="cell-output cell-output-display" data-execution_count="2">
+<p><img data-src="Aula06-maximizacao-utilidade_files/figure-revealjs/cell-3-output-1.png" width="659" height="524"></p>
+</div>
+</div>
+</div>
 </section>
 <section id="exercício" class="slide level2">
 <h2>Exercício</h2>
@@ -569,14 +613,17 @@ Rafael Bressan
 <h2>Análise gráfica</h2>
 <p>Condições de primeira ordem para um máximo</p>
 
-<img data-src="img/maxutil.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;1: Análise gráfica da maximização de utilidade. Fonte: Nicholson e Snyder (2019).</p><p>Condições suficientes de segunda ordem para um máximo</p>
+<img data-src="img/maxutil.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;1: Análise gráfica da maximização de utilidade. Fonte: Nicholson e Snyder (2019).</p></section>
+<section id="análise-gráfica-1" class="slide level2">
+<h2>Análise gráfica</h2>
+<p>Condições suficientes de segunda ordem para um máximo</p>
 <ul>
 <li class="fragment"><p>A condição de tangência vista anteriormente é apenas uma <span style="color: red">condição necessária</span> para o máximo.</p></li>
 <li class="fragment"><p>No entanto, não é uma <span style="color: red">condição suficiente</span>. Considere o caso em que as curvas de indiferença não obedecem a hipótese de TMS decrescente. Neste caso, nem todos os pontos de tangência são pontos que maximizam a utilidade.</p></li>
 <li class="fragment"><p><strong>Para que as condições necessárias de um máximo sejam também suficientes, devemos assumir que a TMS é decrescente. Isto é, que a função utilidade é estritamente quasi-côncava.</strong></p></li>
 </ul>
 </section>
-<section id="análise-gráfica-1" class="slide level2">
+<section id="análise-gráfica-2" class="slide level2">
 <h2>Análise gráfica</h2>
 <p>Condições suficientes de segunda ordem para um máximo</p>
 
@@ -687,6 +734,7 @@ Rafael Bressan
 <ul>
 <li class="fragment"><p>Se a utilidade marginal de uma unidade monetária gasta em um determinado bem não fosse igual à dos outros bens, a renda não estaria sendo alocada de maneira ótima. Já que o consumidor poderia realocar seus recursos para o bem que traz uma utilidade marginal maior para cada real gasto.</p></li>
 <li class="fragment"><p>Consequentemente, <span style="color: red">o multiplicador de Lagrange <span class="math inline">\(\lambda\)</span> pode ser interpretado como a utilidade marginal de uma unidade monetária de dispêndio de consumo. Ou seja, a utilidade marginal da renda</span>.</p></li>
+<li class="fragment"><p>Também referido como <span style="color: red">preço-sombra</span>.</p></li>
 </ul>
 </section>
 <section id="interpretação-econômica-do-multiplicador-de-lagrange-2" class="slide level2">
@@ -722,7 +770,6 @@ Rafael Bressan
 <h2><span class="emoji" data-emoji="books">📚</span> Bibliografia</h2>
 <p>NICHOLSON, W.; SNYDER C. Teoria microeconômica: Princípios básicos e aplicações. Cengage Learning Brasil, 2019. Disponível em: <a href="https://app.minhabiblioteca.com.br/#/books/9788522127030/">app.minhabiblioteca.com.br/#/books/9788522127030</a></p>
 <p>VARIAN, H. R. Microeconomia: uma abordagem moderna. 9.ed. Rio de Janeiro: Elsevier, 2015. Disponível em: <a href="https://app.minhabiblioteca.com.br/books/9788595155107">app.minhabiblioteca.com.br/books/9788595155107</a></p>
-<p><span class="blackbox"><span class="red">teste</span></span></p>
 
 <img src="img/UdescEsag.jpeg" class="slide-logo r-stretch"><div class="footer footer-default">
 

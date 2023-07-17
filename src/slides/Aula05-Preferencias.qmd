@@ -350,8 +350,6 @@ Indicando que nenhum dos bens especificados na função utilidade será consumid
 
 ## Elasticidade de substituição constante (CES)
 
-## Elasticidade de substituição constante (CES)
-
 - A função utilidade do tipo elasticidade de substituição constante (CES) é dada por:
 $$
 U(x,y) = \left[\alpha x^\rho + (1-\alpha)y^\rho\right]^{1/\rho},
