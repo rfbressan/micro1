@@ -285,9 +285,11 @@ fig
 
 ## Análise gráfica
 
-Condições de primeira ordem para um máximo
+<iframe src="https://www.econgraphs.org/graphs/consumer/optimization/gravitational_pull" width="120%" height="120%" style="border: 0px solid #AAA"></iframe>
 
-![Análise gráfica da maximização de utilidade. Fonte: Nicholson e Snyder (2019).](img/maxutil.JPG){#fig-fig1}
+<!-- Condições de primeira ordem para um máximo
+
+![Análise gráfica da maximização de utilidade. Fonte: Nicholson e Snyder (2019).](img/maxutil.JPG){#fig-fig1} -->
 
 ## Análise gráfica
 
@@ -313,7 +315,7 @@ Condições suficientes de segunda ordem para um máximo
 
 ## Soluções de canto
 
--   O problema primal do consumidor ilustrado anteriormente pela @fig-fig1 resultou em um
+-   O problema primal do consumidor ilustrado anteriormente resultou em um
     ponto crítico interior, no qual quantidades positivas de ambos os
     bens eram consumidos.
 

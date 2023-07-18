@@ -45,7 +45,6 @@ $$\begin{aligned}
 -   A este conjunto de [funções de demanda]{style="color: red"}
     ( @eq-eq1 ) damos o nome de [demandas Marshallianas](https://en.wikipedia.org/wiki/Marshallian_demand_function) em homenagem ao economista clássico [Alfred Marshall](https://pt.wikipedia.org/wiki/Alfred_Marshall).
 
--   Ambas serão estudadas em maior profundidade nas próximas aulas.
 
 ## Função de utilidade indireta
 
@@ -98,9 +97,23 @@ $$\begin{aligned}
     implicitamente incorporadas na solução e foram substituídas pelos
     seus preços e pela renda.
 
+## Identidade de Roy
+
+- A [identidade de Roy](https://www.youtube.com/watch?v=M5r65zzH7Gw), nomeada em homenagem ao economista francês [René Roy](https://en.wikipedia.org/wiki/Roy%27s_identity) é um resultado importante em microeconomia com aplicações na escolha do consumidor e na teoria da firma.
+
+- O lema relaciona a função de demanda ordinária (Marshalliana) às derivadas da função de utilidade indireta. A equação da identidade de Roy é:
+
+:::{.fragment}
+$$x_i(\boldsymbol{p},I) = -\frac{\partial V(\boldsymbol{p},I)/\partial p_i}{\partial V(\boldsymbol{p},I)/\partial I}$$
+
+onde $x_i$ é a demanda Marshalliana do bem $i$, $V$ é a função de utilidade indireta, $p$ é o vetor de preços dos bens e $I$ é a renda.
+:::
+
+- É possível recuperar as demandas Marshallianas a partir da função de utilidade indireta.
+
 ## Exemplos
 
-Cobb-Douglas 
+### Cobb-Douglas 
 
 Obtenha as funções de demanda Marshallianas
 e a função de utilidade indireta para a seguinte função utilidade do
@@ -113,9 +126,21 @@ considerando a restrição orçamentária: $p_xx + p_yy = I$.
 Calcule o nível de utilidade máximo quando $p_x = 1$, $p_y = 4$ e
 $I = 8$.
 
+## Solução
+
+- Para a função utilidade Cobb-Douglas $U(x,y) = x^{0,5}y^{0,5}$ e a restrição orçamentária $p_x x + p_y y = I$, as funções de demanda Marshallianas são:
+
+- $x(p_x,p_y,I) = \frac{I}{2p_x}$
+
+- $y(p_x,p_y,I) = \frac{I}{2p_y}$
+
+- A função de utilidade indireta é obtida substituindo as funções de demanda na função utilidade:
+
+- $V(p_x,p_y,I) = U(x(p_x,p_y,I),y(p_x,p_y,I)) = \left(\frac{I}{2p_x}\right)^{0,5}\left(\frac{I}{2p_y}\right)^{0,5} = \frac{I}{2}\left(\frac{1}{\sqrt{p_x p_y}}\right)$
+
 ## Exemplos
 
-Bens complementares 
+### Bens complementares 
 
 Obtenha as funções de demanda Marshallianas e a
 função de utilidade indireta para a seguinte função utilidade de bens
@@ -138,9 +163,7 @@ considerando a restrição orçamentária: $p_xx + p_yy = I$.
 Mostre que a fração da renda consumida em cada bem é constante.
 
 
-# Princípio do lump-sum
-
-## Princípio do lump-sum
+<!-- ## Princípio do lump-sum
 
 -   Muitos insights da análise econômica tem origem no reconhecimento de
     que a utilidade depende, em última instância, da renda dos
@@ -228,10 +251,10 @@ $I = 8$.
 
 Suponha, agora, um imposto de \$1 sobre $p_x$. Mostre que o nível de
 utilidade, neste caso, é igual à utilidade obtida sob um imposto de
-renda que preserve a quantidade total arrecadada. **Neste caso, o princípio lump-sum não é válido pois o consumidor consome proporções fixas dos dois bens e, portanto, o imposto não vai distorcer as escolhas deste agente.**
+renda que preserve a quantidade total arrecadada. **Neste caso, o princípio lump-sum não é válido pois o consumidor consome proporções fixas dos dois bens e, portanto, o imposto não vai distorcer as escolhas deste agente.** -->
 
 
-# Função dispêndio e dualidade
+# Função dispêndio e dualidade{.greenbackground}
 
 ## Problema dual do consumidor
 
@@ -337,10 +360,10 @@ Função dispêndio
 
 :::{.fragment}
 $$\begin{aligned}
-    x_1^h &=& x_1^h(p_1, p_2, \dots, p_n, \bar{U}), \nonumber \\
-    x_2^h &=& x_2^h(p_1, p_2, \dots, p_n, \bar{U}), \nonumber \\
+    x_1^c &=& x_1^c(p_1, p_2, \dots, p_n, \bar{U}), \nonumber \\
+    x_2^c &=& x_2^c(p_1, p_2, \dots, p_n, \bar{U}), \nonumber \\
     &\vdots& \nonumber \\
-    x_n^h &=& x_n^h(p_1, p_2, \dots, p_n, \bar{U}).                
+    x_n^c &=& x_n^c(p_1, p_2, \dots, p_n, \bar{U}).                
 \end{aligned}$$
 :::
 
@@ -372,7 +395,7 @@ $$\begin{aligned}
     a função dispêndio definida anteriormente:
 
 :::{.fragment}
-$$E(p_1, p_2, \dots, p_n, \bar{U}) = p_1 x_1^h(p_1, \dots, p_n, \bar{U}) + \dots + p_n x_n^h (p_1, \dots, p_n, \bar{U}).$$
+$$E(p_1, p_2, \dots, p_n, \bar{U}) = p_1 x_1^c(p_1, \dots, p_n, \bar{U}) + \dots + p_n x_n^c (p_1, \dots, p_n, \bar{U}).$$
 :::
 
 -   A função dispêndio mostra o gasto mínimo necessário para se alcançar
@@ -400,19 +423,49 @@ $$\mu = \frac{p_i}{U_i}, \qquad \lambda = \frac{U_i}{p_i} \Rightarrow \mu = \fra
 
 Dados $U(x,y) = x^{0,5}y^{0,5}$ e
 $I = p_xx + p_yy$, a função utilidade indireta é dada por:
-$V(p_x,p_y,I) = \frac{I}{2p_x^{0,5}p_y^{0,5}}$. Como a função dispêndio
+$V(p_x,p_y,I) = \frac{I}{2}\frac{1}{\sqrt{p_x p_y}}$. Como a função dispêndio
 é o inverso da utilidade indireta, temos:
-$$E(p_x,p_y,U) = 2p_x^{0,5}p_y^{0,5}U.$$
 
-Mostre que este resultado é o mesmo obtido quando resolvemos o problema
+:::{.fragment}
+$$E(p_x,p_y,U) = 2p_x^{0,5}p_y^{0,5}U.$$
+:::
+
+- Mostre que este resultado é o mesmo obtido quando resolvemos o problema
 de minimização.
 
-Mostre, também, que para $p_x = 1$, $p_y = 4$ e uma meta de utilidade
-$U = 2$, o nível mínimo de dispêndio é $I = 8$.
+- Mostre, também, que para $p_x = 1$, $p_y = 4$ e uma meta de utilidade
+$U = 2$, o nível mínimo de dispêndio é $E = 8$.
 
-Se o preço do bem $y$ aumentar de \$4 para \$5, qual a compensação
+- Se o preço do bem $y$ aumentar de \$4 para \$9, qual a compensação
 monetária o indivíduo necessita para manter o mesmo nível de utilidade?
 
+## Solução
+
+:::{.columns}
+::::{.column width="50%"}
+:::{.fragment}
+$$\begin{aligned}
+    &\min_{x, y}& p_x x + p_y y \nonumber \\
+    &\text{s.a.}& x^{0,5}y^{0,5} = \bar{U}.
+\end{aligned}$$
+:::
+
+- $y = \frac{\bar{U}^2}{x}$
+- $p_x x + p_y \frac{\bar{U}^2}{x}$
+- $p_x - p_y \bar{U}^{2}x^{-2} = 0$
+- $x = \left(\frac{p_y}{p_x}\right)^{0,5}\bar{U}$
+- $y = \left(\frac{p_x}{p_y}\right)^{0,5}\bar{U}$
+- $E = p_x x + p_y y = 2p_x^{0,5}p_y^{0,5}U.$
+:::
+
+::::{.column width="50%"}
+- $p_x = 1$, $p_y = 4$, $U = 2$ $\implies E = 2\cdot 1^{0,5}\cdot 4^{0,5}\cdot 2=8$
+
+- $p_y\rightarrow 5 \implies E = 2\cdot 1^{0,5}\cdot 9^{0,5}\cdot 2=12$
+
+- Logo, temos de compensar o consumidor com \$4 para manter o mesmo nível de utilidade.
+:::
+:::
 ## Exemplos
 
 Dada a função utilidade $U(x,y) = \min(x,4y)$,
@@ -425,7 +478,7 @@ $$E(p_x,p_y,U) = (p_x + 0,25p_y)U.$$
 Dados, $p_x = 1, p_y = 4$ e uma meta de utilidade $\bar{U} = 4$, obtemos
 o dispêndio total de \$8 como no exercício anterior.
 
-Neste caso, se o preço do bem $y$ aumentar de \$4 para \$5, os gastos
+Neste caso, se o preço do bem $y$ aumentar de \$4 para \$9, os gastos
 deste consumidor deveriam aumentar em quanto para manter o mesmo nível
 de utilidade?
 

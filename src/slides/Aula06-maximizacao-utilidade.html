@@ -467,8 +467,8 @@ Rafael Bressan
 <span id="cb1-38"><a href="#cb1-38"></a><span class="co"># plt.show()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div><div class="column">
-<div class="cell-output cell-output-display" data-execution_count="1">
-<pre><code>&lt;matplotlib.legend.Legend at 0x7ff93061bfa0&gt;</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="27">
+<pre><code>&lt;matplotlib.legend.Legend at 0x7f5e57bb2850&gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <p><img data-src="Aula06-maximizacao-utilidade_files/figure-revealjs/cell-2-output-2.png" width="659" height="524"></p>
@@ -549,7 +549,7 @@ Rafael Bressan
 <span id="cb3-10"><a href="#cb3-10"></a>fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div><div class="column">
-<div class="cell-output cell-output-display" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="28">
 <p><img data-src="Aula06-maximizacao-utilidade_files/figure-revealjs/cell-3-output-1.png" width="659" height="524"></p>
 </div>
 </div>
@@ -611,9 +611,12 @@ Rafael Bressan
 </section>
 <section id="análise-gráfica" class="slide level2">
 <h2>Análise gráfica</h2>
-<p>Condições de primeira ordem para um máximo</p>
+<iframe src="https://www.econgraphs.org/graphs/consumer/optimization/gravitational_pull" width="120%" height="120%" style="border: 0px solid #AAA">
+</iframe>
+<!-- Condições de primeira ordem para um máximo
 
-<img data-src="img/maxutil.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;1: Análise gráfica da maximização de utilidade. Fonte: Nicholson e Snyder (2019).</p></section>
+![Análise gráfica da maximização de utilidade. Fonte: Nicholson e Snyder (2019).](img/maxutil.JPG){#fig-fig1} -->
+</section>
 <section id="análise-gráfica-1" class="slide level2">
 <h2>Análise gráfica</h2>
 <p>Condições suficientes de segunda ordem para um máximo</p>
@@ -627,11 +630,11 @@ Rafael Bressan
 <h2>Análise gráfica</h2>
 <p>Condições suficientes de segunda ordem para um máximo</p>
 
-<img data-src="img/cso.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;2: Curvas de indiferença para as quais a CPO não é suficiente. Fonte: Nicholson e Snyder (2019).</p></section>
+<img data-src="img/cso.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;1: Curvas de indiferença para as quais a CPO não é suficiente. Fonte: Nicholson e Snyder (2019).</p></section>
 <section id="soluções-de-canto" class="slide level2">
 <h2>Soluções de canto</h2>
 <ul>
-<li class="fragment"><p>O problema primal do consumidor ilustrado anteriormente pela <a href="#/fig-fig1">Figura&nbsp;1</a> resultou em um ponto crítico interior, no qual quantidades positivas de ambos os bens eram consumidos.</p></li>
+<li class="fragment"><p>O problema primal do consumidor ilustrado anteriormente resultou em um ponto crítico interior, no qual quantidades positivas de ambos os bens eram consumidos.</p></li>
 <li class="fragment"><p>Em algumas situações, as preferências dos indivíduos podem ser tais que maximizarão utilidade ao escolherem consumir uma quantidade nula de um dos bens.</p></li>
 <li class="fragment"><p>Se alguém não gosta de hamburger, não há motivos para alocar parte de sua renda consumindo este bem.</p></li>
 <li class="fragment"><p>Neste caso temos uma <span style="color: red">solução de canto</span>.</p></li>
@@ -640,11 +643,11 @@ Rafael Bressan
 <section id="soluções-de-canto-1" class="slide level2">
 <h2>Soluções de canto</h2>
 
-<img data-src="img/canto.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;3: Soluções de canto. Fonte: Nicholson e Snyder (2019).</p></section>
+<img data-src="img/canto.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;2: Soluções de canto. Fonte: Nicholson e Snyder (2019).</p></section>
 <section id="soluções-de-canto-2" class="slide level2">
 <h2>Soluções de canto</h2>
 <ul>
-<li class="fragment"><p>Na <a href="#/fig-fig3">Figura&nbsp;3</a> vemos que a utilidade é maximizada no ponto <span class="math inline">\(E\)</span>, com <span class="math inline">\(x = x^*\)</span> e <span class="math inline">\(y = 0\)</span>.</p></li>
+<li class="fragment"><p>Na <a href="#/fig-fig3">Figura&nbsp;2</a> vemos que a utilidade é maximizada no ponto <span class="math inline">\(E\)</span>, com <span class="math inline">\(x = x^*\)</span> e <span class="math inline">\(y = 0\)</span>.</p></li>
 <li class="fragment"><p>Qualquer ponto da restrição orçamentária em que quantidades positivas de <span class="math inline">\(y\)</span> são consumidas produz uma utilidade menor que o ponto <span class="math inline">\(E\)</span>.</p></li>
 <li class="fragment"><p>Note que em <span class="math inline">\(E\)</span> a restrição orçamentária não é precisamente tangente à curva de indiferença <span class="math inline">\(U_2\)</span>.</p></li>
 <li class="fragment"><p>No ponto ótimo, a restrição orçamentária é mais plana que a curva de indiferença. Isso indica que a taxa em que <span class="math inline">\(x\)</span> pode ser trocado por <span class="math inline">\(y\)</span> no mercado é menos que a taxa marginal de substituição. Nos preços de mercado prevalecentes, o indivíduo está mais do que disposto a trocar <span class="math inline">\(y\)</span> para obter <span class="math inline">\(x\)</span> adicionais.</p></li>
