@@ -104,6 +104,17 @@ Mostre que as funções demanda associadas à função utilidade do
 tipo Cobb-Douglas: $$U(x,y) = x^{0,3}y^{0,7},$$ são homogêneas de grau
 0.
 
+## Solução
+
+As demandas de uma função Cobb-Douglas são dadas por:
+
+-   $x^* = \frac{0,3I}{p_x}$
+-   $y^* = \frac{0,7I}{p_y}$
+
+:::{.fragment}
+Logo, temos por exemplo que: $x(tp_x, tp_y, tI)=\frac{0,3tI}{t p_x}=x^*$
+:::
+
 ## Exemplos 
 
 Mostre que as funções demanda associadas à função utilidade do
@@ -117,7 +128,7 @@ tipo CES: $$U(x,y) = x^{0,5} + y^{0,5},$$ são homogêneas de grau 0.
     que a quantidade consumida de cada bem também aumente.
 
 :::{.fragment}
-![Efeito de um aumento na renda. Fonte: Nicholson e Snyder (2019).](img/renda.JPG){#fig-fig1}
+![Efeito de um aumento na renda. Fonte: Nicholson e Snyder (2019).](img/renda.JPG){#fig-fig1 height=600px}
 :::
 
 ## Efeitos de variações na renda
@@ -133,12 +144,11 @@ tipo CES: $$U(x,y) = x^{0,5} + y^{0,5},$$ são homogêneas de grau 0.
     mostrando que apenas a renda está variando, e não os preços
     relativos de $x$ e $y$.
 
--   Dado que a razão de preços relativos $p_x/p_y$ permanece constante,
-    as condições de maximização de utilidade requerem que a TMS também
-    permaneça constante à medida que o indivíduo se desloca para níveis
-    mais altos de satisfação.
+- Se conectarmos as cestas de consumo ótimas para cada nível de renda, obtemos a chamada **curva de renda-consumo**.
 
--   Portanto, a TMS é a mesma nos pontos $(x_1,y_1)$, $(x_2, y_2)$ e
+- Já a **curva de Engel** mostra a demanda de um bem em função da renda, mantendo os preços constantes.
+
+-   Dado que a razão de preços relativos $p_x/p_y$ permanece constante, a TMS é a mesma nos pontos $(x_1,y_1)$, $(x_2, y_2)$ e
     $(x_3, y_3)$.
 
 
@@ -204,7 +214,7 @@ Um bem $x_i$ para o qual $\partial x_i/\partial I \geq 0$ sobre algum intervalo 
     curva de indiferença mas, também, alterações em sua TMS.
 
 
-## Variações no preço de um bem
+<!-- ## Variações no preço de um bem
 
 -   Analiticamente, quando um preço é alterado, dois efeitos distintos
     entram em ação.
@@ -221,12 +231,16 @@ Um bem $x_i$ para o qual $\partial x_i/\partial I \geq 0$ sobre algum intervalo 
         nova.
 
 -   Vamos, inicialmente, estudar graficamente estes dois efeitos. Na
-    próxima aula daremos um tratamento mais formal.
+    próxima aula daremos um tratamento mais formal. -->
 
 
 ## Efeitos de uma redução no preço
 
-![Efeitos de uma redução em $p_x$. Fonte: Nicholson e Snyder (2019).](img/dec1.JPG){#fig-fig3}
+<iframe src="https://www.econgraphs.org/graphs/consumer/income_substitution/slutsky_decomposition" style="width: 120%; height: 120%; border: 0px solid #AAA"></iframe>
+
+## Efeitos de uma redução no preço
+
+![Efeitos de uma redução em $p_x$. Decomposição de Hicks. Fonte: Nicholson e Snyder (2019).](img/dec1.JPG){#fig-fig3}
 
 
 
@@ -307,6 +321,9 @@ Um bem $x_i$ para o qual $\partial x_i/\partial I \geq 0$ sobre algum intervalo 
     direção, fazendo com que a quantidade demandada de $x$ diminua em
     resposta a um aumento no seu preço.
 
+-  **A lei da demanda**. _Se a demanda de um bem aumenta quando a renda
+    aumenta, a demanda desse bem tem de diminuir quando o preço subir._
+
 
 ## Efeitos de variações nos preços para bens inferiores
 
@@ -320,11 +337,10 @@ Um bem $x_i$ para o qual $\partial x_i/\partial I \geq 0$ sobre algum intervalo 
     menor do bem seja demandada.
 
 -   Esta análise é válida para o caso de bens normais (não-inferiores).
-    No entanto, a possibilidade de bens inferiores complica a análise.
+    No entanto, a **possibilidade de bens inferiores complica a análise**.
 
 -   Neste caso, os efeitos renda e substituição funcionam em direções
-    contrárias e, consequentemente, o efeito total de uma variação de
-    preços é indeterminado.
+    contrárias e, consequentemente, o **efeito total de uma variação de preços é indeterminado**.
 
 ## Efeitos de variações nos preços para bens inferiores
 
@@ -407,29 +423,30 @@ Um bem $x_i$ para o qual $\partial x_i/\partial I \geq 0$ sobre algum intervalo 
 
 ## Resumo
 
+:::{.columns}
+:::{.column width="50%"}
 -   [Efeitos renda e substituição.]{style="color: red"} A hipótese de
-    maximização de utilidade sugere que, para bens normais, uma redução
-    no preço de um bem leva a um aumento em sua quantidade consumida
+    maximização de utilidade sugere que, para bens normais, um aumento
+    no preço de um bem leva a uma redução em sua quantidade consumida
     dado que:
 
     1.  o [efeito subsituição]{style="color: red"} faz com que uma
-        quantidade maior seja consumida à medida que o indivíduo se move
+        quantidade menor seja consumida à medida que o indivíduo se move
         ao longo de uma curva de indiferença.
 
     2.  o [efeito renda]{style="color: red"} faz com que uma quantidade
-        maior seja consumida dado que a redução no preço aumenta o poder
-        de compra do consumidor e, portanto, permite o deslocamento para
-        uma curva de indiferença associada a um nível de utilidade mais
-        alto.
-
--   Quando o preço de um bem normal aumenta, o argumento é similar e a
-    predição do modelo é que haja uma redução na quantidade demandada
-    deste bem.
+        menor seja consumida dado que o aumento no preço reduz o poder
+        de compra do consumidor.
 
 -   Por fim, para o caso de bens inferiores, os efeitos renda e
     substituição operam em direções opostas e o efeito total é
     indeterminado.
+:::
 
+:::{.column width="50%"}
+![Efeitos de uma redução em $p_x$. Decomposição de Hicks. Fonte: Nicholson e Snyder (2019).](img/dec1.JPG){height=700px}
+:::
+:::
 ## :books: Bibliografia
 
 NICHOLSON, W.; SNYDER C. Teoria microeconômica: Princípios básicos e

@@ -35,7 +35,9 @@ jupyter: python3
     traz a relação entre $x$ e $p_x$, enquanto $p_y$, $I$ e a relação de
     preferências são mantidas constantes. Matematicamente:
 
+:::{.fragment}
 $$x^* = x(p_x, \bar{p}_y, \bar{I}).$${#eq-eq1}
+:::
 
 ## Derivação da curva de demanda individual
 
@@ -50,16 +52,18 @@ $$x^* = x(p_x, \bar{p}_y, \bar{I}).$${#eq-eq1}
     exceção do caso observado pelo paradoxo de Giffen,
     $\partial x/\partial p_x$ é negativa.
 
+:::{.fragment}
 :::{.callout-tip title="Curva de demanda individual"}
 Uma [curva de demanda individual]{style="color: red"} mostra a relação entre o preço de um
 bem e a quantidade consumida deste mesmo bem por um indivíduo, assumindo
 que todos os outros determinantes da demanda sejam mantidos constantes.
 :::
+:::
 
 ## Deslocamentos da curva de demanda
 
 -   Na nossa derivação da curva de demanda, três fatores foram mantidos
-    constantes:
+    **constantes**:
 
     1.  a renda do indivíduo.
 
@@ -67,8 +71,8 @@ que todos os outros determinantes da demanda sejam mantidos constantes.
 
     3.  as preferências deste indivíduo.
 
--   Se qualquer um desses fatores for alterado, a curva de demanda será
-    deslocada para uma nova posição.
+-   **Se qualquer um desses fatores for alterado, a curva de demanda será
+    deslocada para uma nova posição**.
 
 -   Um aumento na renda deslocaria a curva de demanda para cima, no caso
     em que $\partial x/\partial I > 0$.
@@ -113,8 +117,8 @@ que todos os outros determinantes da demanda sejam mantidos constantes.
     (utilidade) para este indivíduo dado que seu poder de compra real
     aumenta.
 
--   Uma abordagem alternativa mantém a renda real (ou utilidade)
-    constante enquanto examina os efeitos de variações no preço $p_x$.
+<!-- -   Uma abordagem alternativa mantém a renda real (ou utilidade)
+    constante enquanto examina os efeitos de variações no preço $p_x$. -->
 
 
 ## Curva de demanda compensada
@@ -133,8 +137,7 @@ que todos os outros determinantes da demanda sejam mantidos constantes.
     compra são **compensados** para restringir o indivíduo a manter o
     mesmo nível de utilidade $U_2$.
 
--   Portanto, as [reações a mudanças de preços incluem apenas os efeitos
-    substituição]{style="color: red"}.
+-   Portanto, na curva de **demanda compensada** as [reações a mudanças de preços incluem apenas o efeito substituição]{style="color: red"}.
 
 -   No caso de aumentos do preço $p_x$, a compensação de renda seria
     positiva para manter o indivíduo sobre a mesma curva de indiferença
@@ -158,7 +161,7 @@ preços e a **utilidade** são mantidos constantes.
 gráfica bidimensional da [função de demanda compensada]{style="color: red"}: 
 
 :::{.fragment}
-$$x^h = x^h(p_x, p_y, U)$${#eq-eq2}
+$$x^c = x^c(p_x, p_y, U)$${#eq-eq2}
 :::
 
 :::
@@ -195,10 +198,10 @@ $$\mathcal{L} = p_x x + p_y y + \mu[U(x,y) - \bar{U}].$${#eq-eq3}
     temos:
 
 :::{.fragment}
-$$\frac{d E(p_x, p_y, U)}{d p_x} = \frac{\partial \mathcal{L}}{\partial p_x} = x^h(p_x, p_y, U).$${#eq-eq4}
+$$\frac{d E(p_x, p_y, U)}{d p_x} = \frac{\partial \mathcal{L}}{\partial p_x} = x^c(p_x, p_y, U).$${#eq-eq4}
 :::
 
--   Ou seja, a função de demanda compensada de um bem pode ser obtida
+-   Ou seja, a **função de demanda compensada** de um bem pode ser obtida
     diferenciando a função dispêndio com relação ao preço deste bem.
 
 -   A @eq-eq4 nos diz que variações no preço de um bem irão afetar os gastos
@@ -212,11 +215,11 @@ $$\frac{d E(p_x, p_y, U)}{d p_x} = \frac{\partial \mathcal{L}}{\partial p_x} = x
     $E(p_x, p_y, U)$ é côncava nos preços. Matematicamente, isso quer
     dizer que: $$\frac{\partial^2 E(p_x, p_y, U)}{\partial p_x^2} < 0.$$
 
--   Pelo lema de Shephard podemos, então, calcular a inclinação da curva
-    de demanda compensada:
+-   Pelo lema de Shephard podemos, então, calcular a **inclinação da curva
+    de demanda compensada**:
     $$\frac{\partial^2 E(p_x, p_y, V)}{\partial p_x^2} = \frac{\partial x^c(p_x, p_y, V)}{\partial p_x} < 0.$${#eq-eq5}
 
--   A @eq-eq5 nos diz que [a curva de demanda compensada é]{style="color: red"},
+-   A @eq-eq5 nos diz que a curva de **demanda compensada** é,
     necessariamente, [negativamente inclinada]{style="color: red"}.
 
 
@@ -285,8 +288,9 @@ $$U(x,y) = x^{0,5}y^{0,5}.$$
 
 # Análise formal da variação de preços{.greenbackground}
 
-## Abordagem Gráfica {background-iframe="https://www.econgraphs.org/graphs/consumer/income_substitution/slutsky_decomposition.html" background-interactive="true"}
+## Abordagem Gráfica 
 
+![Efeitos de uma redução em $p_x$. Decomposição de Hicks. Fonte: Nicholson e Snyder (2019).](img/dec1.JPG){#fig-fig6}
 
 ## Abordagem indireta
 
@@ -407,6 +411,18 @@ $$x^c(p_x,p_y,U) = p_x^{-0,5}p_y^{0,5}U.$$
 
 Mostre que o efeito total de uma variação de preços sobre a demanda
 Marshalliana é igual à soma dos dois componentes da equação de Slutsky.
+
+## Solução
+
+- $\frac{\partial x}{\partial p_x}= -\frac{0,5 I}{p_x^2}$  Encontrar este valor através da decomposição de **efeito substituição + efeito renda**.
+
+- Efeito Substituição: $\frac{\partial x^c}{\partial p_x} = -0,5 p_x^{-1,5}p_y^{0,5}U$
+  + Substituir $U$ por $V=\frac{0,5 I}{\sqrt{p_xp_y}}$ (utilidade indireta)
+  + Efeito Substituição: $-\frac{0,25I}{p_x^2}$
+
+- Efeito Renda: $-x\frac{\partial x}{\partial I} = -\frac{0,5I}{p_x}\frac{0,5}{p_x} = -\frac{0,25I}{p_x^2}$
+
+- Logo, efeito substituição + efeito renda = $-\frac{0,5I}{p_x^2}$
 
 # Apêndice: Teorema do envelope{.greenbackground}
 
