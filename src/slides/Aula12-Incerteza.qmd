@@ -1,0 +1,257 @@
+---
+title: "Escolha sob Incerteza"
+title-slide-attributes:
+  data-background-image: "img/UdescEsag.jpeg"
+  data-background-size: 50%
+  data-background-position: top left
+  # data-background-opacity: "0.7"
+center-title-slide: true
+author: "Rafael Bressan"
+logo: "img/UdescEsag.jpeg"
+format: 
+  revealjs:
+    theme: [default, udesc.scss] 
+    code-fold: true
+    chalkboard: true
+    incremental: true
+    width: 1600
+    height: 900
+from: markdown+emoji # list of emojis: https://gist.github.com/rxaviers/7360908
+fontsize: "2.2em"
+editor: source
+jupyter: python3
+---
+
+## Incerteza
+Incerteza está em toda parte
+
+- Quais serão os preços futuros?
+- Qual será a renda futura?
+- Como estará a disponibilidade de bens?
+- Quais são e serão as ações dos demais agentes econômicos?
+
+## Respostas racionais a incerteza
+
+- Aquisição de seguros (saúde, vida, automóveis, etc.) 
+- Diversificação
+
+## Loterias
+
+- Uma loteria é uma coleção de cestas de consumo e suas probabilidades de ocorrência em diferentes cenários.
+- Exemplo
+  + Você tem R\$ 10.000,00
+  + Sai cara com probabilidade 1/2 e você [perde]{.red} R\$ 5.000,00
+  + Sai coroa com probabilidade 1/2 e você **não perde** os R\$ 5.000,00
+  + Esta loteria é: L1 = {(R\$ 5.000,00, 1/2); (R\$ 10.000,00, 1/2)}
+- Outra loteria fictícia poderia ser L2 = {(R\$ 7.500,00, 1)}. **Certeza de ganhar R\$ 7.500,00**
+- Qual você prefere?
+
+## Consumo contingente
+
+- O consumo não é certo. Dependendo do estado da natureza (contingência), o consumo será diferente.
+- O consumidor enfrenta uma **distribuição de probabilidades** sobre os estados da natureza.
+- Teoria da **Escolha sob Incerteza**: consumidores escolhem loterias de consumo contingente.
+- Plano de consumo contingente: implementado apenas quando um determinado estado da natureza ocorre.
+
+## Seguros
+
+- O consumidor tem uma dotação inicial de ativos para consumo, $m$.
+- Suponha uma loteria dois dois estados da natureza: $g$ e $ng$. No estado $g$, o consumo é $m$ e no estado $ng$, o consumo é $m - L$.
+- O consumidor pode comprar seguro em montante $K$ por um prêmio de $\gamma K$
+- Ou seja, os consumos contigentes deste consumidor segurado são:
+  + $C_g = m - \gamma K$
+  + $C_{ng} = m - L - \gamma K + K = m - L + (1 - \gamma) K$
+
+- Se variarmos o montante segurado, $K$, qual mapa de consumo contingente obtemos?
+
+## Restrição orçamentária
+
+:::{.columns}
+:::{.column width=50%}
+![Linha orçamentária associada à compra de seguro. Fonte: Varian (2015).](img/incerteza_orcamento.png){#fig-incerteza_orcamento}
+:::
+
+:::{.column width=50%}
+- O seguro oferece uma forma de sair do ponto de dotação
+- Abre mão de $\gamma K$ de $C_g$, para em troca, receber $K(1-\gamma)$ de $C_{ng}$
+- A inclinação desta reta orçamentária é $\frac{\Delta C_g}{\Delta C_{ng}}=-\frac{\gamma K}{K(1-\gamma)}=-\frac{\gamma}{1-\gamma}$
+- A **reta orçamentária do seguro passa pelo ponto de dotação e tem inclinação $\frac{\gamma}{1-\gamma}$**
+- Se tivermos um modelo de preferências, podemos determinar o ponto de ótimo do consumidor utilizando as ferramentas já desenvolvidas.
+:::
+:::
+
+
+## Preferências sobre loterias
+
+- Preferências razoáveis com relação ao consumo em diferentes circunstâncias, poderemos usar a função de utilidade para descrever essas preferências
+
+- O consumo num estado em comparação a outro dependerá da probabilidade de que ocorra o estado em questão
+
+- Utilidade dependente das probabilidades e dos estados da natureza: $U(c_1, c_2, \pi_1,\pi_2)$
+
+- Exemplos de função utilidade
+  + **Substitutos perfeitos**. $U(c_1, c_2, \pi_1,\pi_2) = \pi_1 c_1 + \pi_2 c_2$
+  + **Cobb-Douglas**. $U(c_1, c_2, \pi_1,\pi_2) = c_1^{\pi_1} c_2^{\pi_2}$ 
+
+## Utilidade esperada
+
+- Forma particularmente conveniente que a função de utilidade pode adotar é
+$$U(c_1, c_2, \pi_1,\pi_2) = \pi_1 u(c_1) + \pi_2 u(c_2)$$
+- Utilidade pode ser escrita como uma soma ponderada de uma função do consumo em cada estado da natureza
+- Pesos são dados pelas probabilidades de ocorrência de cada estado da natureza
+- Uma função utilidade com essa forma é chamada de **função de utilidade esperada** ou de função de utilidade de **Von Neumann-Morgenstern**
+- A função $u(c)$ é chamada de **função de utilidade Bernoulli**
+
+- Os exemplos anteriores são casos particulares desta função de utilidade. No caso da Cobb-Douglas após uma transformação logarítmica (Mostrem isso :warning:)
+
+## Taxa Marginal de Substituição
+
+Dada a função de utilidade esperada $U(c_1, c_2, \pi_1,\pi_2) = \pi_1 u(c_1) + \pi_2 u(c_2)$
+
+- A taxa marginal de substituição entre os consumos $c_2$ e $c_1$ é:
+$$TMS_{c_2,c_1} = -\frac{\pi_1 u'(c_1)}{\pi_2 u'(c_2)}$$
+
+- E agora temos nossa teoria de preferências desenvolvida e portanto o problema do consumidor sob incerteza pode ser resolvido.
+
+## Aversão ao risco
+
+- Suponha dotação inicial de \$10 e uma aposta com 50% de chance de ganhar \$5 e 50% de chance de perder \$5.
+- O valor esperado da **riqueza** é \$10.
+- A utilidade esperada será $0.5 u(15) + 0.5 u(5)$
+  + Ou seja, o valor esperado da utilidade.
+- Temos também a utilidade do valor esperado da riqueza $u(10)$
+- Um consumidor é dito **avesso ao risco** se $u(10) > 0.5 u(15) + 0.5 u(5)$
+  + Ou seja, se a utilidade do valor esperado da riqueza é maior que a utilidade esperada desta.
+
+## Aversão ao risco
+
+:::{.columns}
+:::{.column width=70%}
+![**Aversão ao risco**. Para um consumidor avesso ao risco, a utilidade do valor esperado de riqueza, $u(10)$, é maior do que a utilidade esperada de riqueza, $0,5u(5) + 0,5u(15)$. Fonte: Varian (2015).](img/avesso_risco.png){#fig-avesso_risco}
+:::
+
+:::{.column width=30%}
+- Um consumidor **avesso ao risco** possui utilidade Bernoulli **côncava** :bulb:
+- De forma contrária, um consumidor **propenso ao risco** possui utilidade Bernoulli **convexa**
+- O caso intermediário é o da função de utilidade linear. Aqui, o consumidor é **neutro ao risco**
+:::
+:::
+
+## Seguro competitivo
+
+- Suponha que haja livre entrada na indústria de seguros.
+
+- Lucro econômico esperado é zero: $P=\gamma K - \pi_{ng}K - \pi_{g}0 = \gamma K - \pi_{ng}K=0$
+  + Logo $\gamma = \pi_{ng}$
+
+- O seguro com preço $\gamma = \pi_{ng}$ é chamado de **atuarialmente justo**.
+
+- Inserimos o preço justo na condição de maximização do consumidor, $TMS=-\gamma/(1-\gamma)$.
+$$\begin{aligned}
+TMS_{c_g,c_{ng}} &= -\frac{\pi_{ng} u'(c_{ng})}{(1-\pi_{ng}) u'(c_g)}=-\frac{\pi_{ng}}{(1-\pi_{ng})}\\
+&\implies u'(c_{ng}) = u'(c_g)\\
+&\implies c_{ng} = c_g
+\end{aligned}$$
+
+- O consumidor **avesso ao risco** compra **seguro completo** quando deparado com preço justo.
+
+- $C_g = m - \gamma K$ e $C_{ng} =  m - L + (1 - \gamma) K$. Logo $K=L$
+
+
+## Seguro não-competitivo
+
+- Lucro econômico esperado é positivo: $(\gamma - \pi_a )K > 0$ ⇒$\gamma > \pi_a$
+
+- Dessa forma, a condição de maximização de utilidade será:
+$$\begin{aligned}
+\frac{\pi}{1-\pi} < \frac{\gamma}{1-\gamma} &= \frac{\pi u'(c_{ng})}{(1-\pi) u'(c_g)}\\
+&\implies u'(c_{ng}) > u'(c_g)\\
+&\implies c_{ng} < c_g
+\end{aligned}$$
+
+- Se o consumidor é avesso ao risco, comprará apenas **seguro parcial**.
+
+## Exemplo
+
+- Riqueza inicial de \$35.000 e podia sofrer uma perda de \$10.000 com 1% de probabilidade.
+- Qual é o valor justo do seguro?
+- Qual o valor segurado?
+- Quais os consumos nos dois estados da natureza?
+
+## Equivalente de Certeza
+
+- Suponha que você tem uma loteria que paga:
+  + $K_1$ com probabilidade $\pi$
+  + $K_2$ com probabilidade $1-\pi$
+  + $K_1>K_2>0$
+
+- O **equivalente de certeza**, $EC$, é o valor que você estaria disposto a receber com certeza para evitar a loteria.
+$$u(EC)=\pi u(K_1) + (1-\pi) u(K_2)$$
+
+## Equivalente de Certeza
+
+![**Equivalente de certeza**. Um consumidor avesso ao risco terá um EC < valor esperado da riqueza.](img/equivalente_certeza.png){#fig-equivalente_certeza}
+
+## Coeficientes de Aveersão ao Risco Absoluto e Relativo
+
+- A função utilidade de Bernoulli nos diz se um consumidor é avesso ao risco ou não.
+- Se $u(c)$ for uma função côncava, o consumidor é avesso ao risco. Ou seja, $u''(c)<0$.
+  + Mas o quão avesso ao risco é este consumidor?
+
+- Duas medidas principais
+  + Coeficiente de aversão ao risco **absoluto**: $A(c)=-\frac{u''(c)}{u'(c)}$
+  + Coeficiente de aversão ao risco **relativo**: $R(c)=-\frac{cu''(c)}{u'(c)}$
+
+- Insensíveis a unidades de medida da riqueza.
+
+## Diversificação
+
+- Outra forma de mitigar risco é através da diversificação.
+
+- 2 firmas A e B com ações a preço \$10
+
+:::{.fragment}
+| estado da natureza | probabilidade | lucro A | lucro B |
+|--------------------|---------------|---------|---------|
+| 1                  | 1/ 2          | 100     | 20      |
+| 2                  | 1/ 2          | 20      | 100     |
+:::
+
+- Consumidor tem \$100. Como investir?
+
+## Diversificação
+
+Se comprar apenas ações da firma A: \$100/\$10=10 ações
+
+| estado da natureza | probabilidade | renda |
+|--------------------|---------------|-------|
+| 1                  | 1/2           | 1000  |
+| 2                  | 1/2           | 200   |
+
+Renda esperada: $E[w]=p_1 w_1 + p_2 w_2 = 500 + 100 = 600$
+
+## Diversificação
+
+Se comprar apenas ações da firma B: \$100/\$10=10 ações
+
+| estado da natureza | probabilidade | renda |
+|--------------------|---------------|-------|
+| 1                  | 1/2           | 200   |
+| 2                  | 1/2           | 1000  |
+
+Renda esperada: $E[w]=p_1 w_1 + p_2 w_2 = 100 + 500 = 600$
+
+## Diversificação
+
+Se comprar 5 ações da firma A e 5 ações da firma B
+
+| estado da natureza | probabilidade | renda |
+|--------------------|---------------|-------|
+| 1                  | 1/2           | 600   |
+| 2                  | 1/2           | 600   |
+
+Renda espera: $E[w]=p_1 w_1 + p_2 w_2 = 300 + 300 = 600$, **porém**
+
+:::{.fragment}
+Renda de \$600 em ambos os estados da natureza, ou seja, **sem risco**.
+:::
