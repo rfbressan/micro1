@@ -58,7 +58,7 @@ Observe que várias dessas aulas se estendem por duas ou mais sessões.
 | Aula 10: Elasticidades da Demanda | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula10-Elasticidade-Demanda.html) | |
 | Aula 11: Relações de Demanda entre Bens | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula11-Relacoes-Demanda.html) | |
 | Aula 12: Escolha sob Incerteza | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula12-Incerteza.html) | |
-| Aula 13:  | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula13-.html) | |
+| Aula 13: Escolha Intertemporal | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula13-Intertemporal.html) | |
 
 
 ## :books: Bibliografia 

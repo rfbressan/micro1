@@ -1,0 +1,158 @@
+---
+title: "Escolha Intertemporal"
+title-slide-attributes:
+  data-background-image: "img/UdescEsag.jpeg"
+  data-background-size: 50%
+  data-background-position: top left
+  # data-background-opacity: "0.7"
+center-title-slide: true
+author: "Rafael Bressan"
+logo: "img/UdescEsag.jpeg"
+format: 
+  revealjs:
+    theme: [default, udesc.scss] 
+    code-fold: true
+    chalkboard: true
+    incremental: true
+    width: 1600
+    height: 900
+from: markdown+emoji # list of emojis: https://gist.github.com/rxaviers/7360908
+fontsize: "2.2em"
+editor: source
+jupyter: python3
+---
+
+## Motivação
+
+- Frequentemente, renda e consumo ocorrem em momentos distintos.
+- Consumidores podem poupar para consumir em períodos subsequentes ou tomar emprestado para financiar consumo corrente com renda futura. 
+- Nesse caso, precisamos estender nossa análise, considerando preferências sobre cestas em diferentes momentos do tempo e uma restrição orçamentária intertemporal.
+- As escolhas de consumo ao longo do tempo são chamadas de **escolhas intertemporais**.
+
+## Valor presente e valor futuro
+
+- Se pudermos tomar empréstimos e emprestar a uma taxa de juros $r$, qual será o equivalente, no futuro, de \$m atual?
+  + **Valor futuro**: $m(1+r)$
+- E qual o valor presente de uma renda \$m que receberemos no futuro?
+  + **Valor presente**: $\frac{m}{1+r}$
+
+## Restrição orçamentária intertemporal
+
+:::{.columns}
+:::{.column width=50%}
+- Consumidor escolhe o quanto consumirá de certo bem composto em dois períodos de tempo.
+- A renda deste consumidor recebida em cada período de tempo é denotada por $m_1$ e $m_2$.
+- Suponhamos de início que este consumidor só possa fazer poupança. No período 2 ele poderá consumir sua renda $m_2$ mais o que poupou no período 1 **com juros**.
+- Então deve valer a seguinte **restrição orçamentária** para este poupador: $c_2=m_2+(1+r)(m_1-c_1)$. Que pode ser reescrita na forma de **valor futuro** da RO.
+$$(1+r)c_1+c_2=(1+r)m_1+m_2$${#eq-restricao-orcamentaria-intertemporal}
+- A inclinação da reta orçamentária é $-(1+r)$.
+:::
+
+:::{.column width=50%}
+:::{.fragment}
+![Restrição orçamentária intertemporal](img/ro-intertemporal.png){#fig-ro-intertemporal}
+:::
+:::
+:::
+
+## Restrição orçamentária intertemporal
+
+- O consumidor será tomador de empréstimos se $c_1 > m_1$ e terá de pagar juros no segundo período.
+- A RO será: $c_2=m_2-(1+r)(c_1-m_1)$. Que pode novamente ser apresentada na forma de **valor futuro** da RO.
+- Ou seja, desde que a taxa de remuneração da poupança seja igual à taxa de juros do empréstimo, a restrição orçamentária intertemporal será representada pela @fig-ro-intertemporal.
+- A RO intertemporal também pode ser apresentada na forma de **valor presente**
+$$c_1+\frac{c_2}{1+r}=m_1+\frac{m_2}{1+r}$$
+
+## Restrição orçamentária intertemporal
+
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| output-location: column
+import matplotlib.pyplot as plt
+
+# Definindo os parâmetros
+r = 0.05
+w1 = 100
+w2 = 120
+c1 = 60
+c2 = 80
+
+# Criando o gráfico
+fig, ax = plt.subplots(figsize=(10, 10))
+# ax.plot([0, w1+w2/(1+r)], [(1+r)*w1+w2, 0], label='Restrição Orçamentária')
+ax.plot([0, w1], [(1+r)*w1+w2, w2], color='green', linewidth=3)
+ax.plot([w1, w1+w2/(1+r)], [w2, 0], color='red', linewidth=3)
+ax.plot([w1], [w2], 'bo', label = 'Dotação')
+ax.annotate('Dotação', xy=(w1, w2), xytext=(w1 + 5, w2 + 5), ha='left', size=15)
+ax.annotate('Poupança', xy=(w1-50, w2+50), xytext=(w1, w2+100), ha='center', size = 15, arrowprops=dict(arrowstyle='->'))
+ax.annotate('Tomada de Empréstimo', xy=(w1+50, w2-50), xytext=(w1, w2-100), ha='center', size = 15, arrowprops=dict(arrowstyle='->'))
+ax.annotate('Inclinação = -(1+r)', xy=(w1, w2), xytext=(w1+40, w2+40), ha='center', size=15)
+ax.grid(True)
+ax.set_xlabel('Consumo 1')
+ax.set_ylabel('Consumo 2')
+plt.show()
+
+```
+
+## Preferências de consumo intertemporais
+
+- A **convexidade de preferências** é muito natural nesse contexto. 
+- Ela diz que o consumidor prefere ter uma quantidade “média” de consumo em cada período.
+- **Suavização do consumo**
+- Dada a RO intertemporal e as preferências convexas de consumo nos 2 períodos, podemos examinar a escolha ótima do consumidor.
+
+:::{.fragment}
+![Tomador de empréstimos e poupador. Fonte: Varian (2015)](img/tomador-poupador.png){#fig-tomador-poupador}
+:::
+
+## Estática comparativa
+
+- Como o consumidor reagiria a uma mudança da taxa de juros?
+- A inclinação da RO será alterada e um novo ponto de tangência será encontrado.
+- A **dotação é sempre acessível**, logo a nova RO "gira" em torno da dotação.
+- Existem **dois casos**, dependendo se inicialmente o consumidor ser emprestador ou tomador de empréstimos
+  + *Emprestador*: quando a taxa de juros **subir** o consumidor continuará sendo um emprestador, $c_1<m_1$
+  + *Tomador de empréstimos*: quando a taxa de juros **cair** o consumidor continuará sendo um tomador de empréstimos, $c_1>m_1$
+  + Nos outros dois casos (emprestador quando juros caem e tomador de empréstimos quando juros sobem), não podemos fazer afirmações.
+
+## Preferências reveladas
+
+:::{.columns}
+:::{.column width=50%}
+- Caso de aumento de juros para um emprestador.
+- Consumidor **começa como emprestador**, sua cesta de consumo está à esquerda do ponto de dotação.
+- Se a taxa de **juros aumentar**, o consumidor ***nunca*** irá escolher um ponto a direita do ponto de dotação.
+  + As escolhas à direita do ponto de dotação estavam disponíveis para o consumidor no conjunto orçamentário original, mas foram rejeitadas
+  + Pontos que agora estão abaixo da RO original não serão escolhidos, pois a própria escolha inicial continua disponível.
+  + O novo ponto de ótimo deve estar **fora** do conjunto orçamentário original.
+
+:::
+
+:::{.column width=50%}
+![Preferências reveladas. Fonte: Varian (2015)](img/preferencia-revelada.png){#fig-preferencias-reveladas}
+:::
+:::
+
+:::{.fragment}
+:::{.center}
+:bulb: Este é o **princípio da preferência revelada**.
+:::
+:::
+
+## Estatística comparativa
+
+:::{.columns}
+:::{.column width=50%}
+- Considere um tomador de empréstimos que se mantém nesta situação mesmo com um aumento da taxa de juros.
+- O aumento da taxa de juros gira a RO em torno da dotação.
+- **Caso o consumidor continue** na situação de tomador de empréstimos, ele estará **pior** que na situção original. :angry:
+- Caso semelhante ocorre com o **emprestador** que se mantém nesta situação mesmo com uma **queda da taxa de juros**.
+:::
+
+:::{.column width=50%}
+![Tomador de empréstimo piora com o aumento da taxa de juros. Fonte: Varian (2015)](img/tomador-emprestimos.png){#fig-tomador-emprestimos}
+:::
+:::
+
