@@ -1,0 +1,56 @@
+---
+title: "Excedente do Consumidor"
+title-slide-attributes:
+  data-background-image: "img/UdescEsag.jpeg"
+  data-background-size: 50%
+  data-background-position: top left
+  # data-background-opacity: "0.7"
+center-title-slide: true
+author: "Rafael Bressan"
+logo: "img/UdescEsag.jpeg"
+format: 
+  revealjs:
+    theme: [default, udesc.scss] 
+    code-fold: true
+    chalkboard: true
+    incremental: true
+    width: 1600
+    height: 900
+from: markdown+emoji # list of emojis: https://gist.github.com/rxaviers/7360908
+fontsize: "2.2em"
+editor: source
+jupyter: python3
+---
+
+## Motivação
+
+- Até agora vimos como derivar a função demanda a partir das preferências e da restrição orçamentária.
+- Desejamos agora estimar preferências ou **utilidade** a partir do comportamento de demanda observado.
+
+## Demanda de um bem discreto
+
+- Demanda de um bem discreto com utilidade quasi-linear: $u(x,y)=v(x)+y$.
+- $x$ é bem discreto com preço $p$ e $y$ é restante de renda para ser gasto em outros bens, $p_y=1$.
+- Definimos **preço de reserva** como $r_n=v(n)-v(n-1)$.
+- A relação entre preços de reserva e demanda é tal que: 
+  + se $n$ unidades do bem discreto forem demandadas, então $r_n \geq p \geq r_{n+1}$.
+- A lista dos **preços de reserva contém toda a informação necessária para descrever o
+comportamento da demanda**.
+
+## Demanda de um bem discreto
+
+:::{.columns}
+:::{.column width=50%}
+- Ao somarmos $n$ preços de reserva, obtemos $v(n)-v(0)$, onde normalizamos $v(0)=0$.
+- Portanto a soma de $n$ preços de reserva é igual ao excedente bruto do consumidor, associado ao consumo do bem $x$.
+- A utilidade de consumir os dois bens seria $v(n)+m-pn$, sendo que o **excedente líquido do consumidor** é $v(n)-pn$.
+- Ou seja, o excedente do consumidor é a **área sob a curva de demanda até o nível do preço de mercado**.
+:::
+
+:::{.column width=50%}
+![Preço de reserva e excedente do consumidor. Fonte: Varian (2015)](img/excedente-bem-discreto.png){#fig-excedente-bem-discreto}
+:::
+:::
+
+## Interpretações do excedente do consumidor
+
