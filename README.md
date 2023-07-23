@@ -48,17 +48,19 @@ Observe que várias dessas aulas se estendem por duas ou mais sessões.
 | Tópico                                                   | Slides                                                                                                              | Lista                                                                                                   |
 |----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Aula 1: Introdução a Microeconomia | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula01-Introducao.html)   | |
-| Aula 2: Matemática | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula03-matematica.html) | |
-| Aula 3: Restrição Orçamentária | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula04-RestricaoOrcamentaria.html) | |
-| Aula 4: Preferências | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula05-Preferencias.html) | |
-| Aula 5: Maximização de Utilidade | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula06-maximizacao-utilidade.html) | |
-| Aula 6: Demanda Marshalliana | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula07-demanda-marshalliana.html) | Lista 01|
-| Aula 7: Efeito Renda e Substituição | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula08-Efeito-Renda.html) | |
-| Aula 8: Equação de Slutsky | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula09-Slutsky.html) | |
-| Aula 9: Elasticidades da Demanda | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula10-Elasticidade-Demanda.html) | |
-| Aula 10: Relações de Demanda entre Bens | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula11-Relacoes-Demanda.html) | |
-| Aula 11: Escolha sob Incerteza | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula12-Incerteza.html) | |
-| Aula 12: Escolha Intertemporal | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula13-Intertemporal.html) | |
+| Aula 2: Matemática | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula02-matematica.html) | |
+| Aula 3: Restrição Orçamentária | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula03-RestricaoOrcamentaria.html) | |
+| Aula 4: Preferências | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula04-Preferencias.html) | |
+| Aula 5: Maximização de Utilidade | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula05-maximizacao-utilidade.html) | |
+| Aula 6: Demanda Marshalliana | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula06-demanda-marshalliana.html) | Lista 01|
+| Aula 7: Efeito Renda e Substituição | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula07-Efeito-Renda.html) | |
+| Aula 8: Equação de Slutsky | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula08-Slutsky.html) | |
+| Aula 9: Elasticidades da Demanda | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula09-Elasticidade-Demanda.html) | |
+| Aula 10: Relações de Demanda entre Bens | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula10-Relacoes-Demanda.html) | |
+| Aula 11: Escolha sob Incerteza | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula11-Incerteza.html) | |
+| Aula 12: Escolha Intertemporal | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula12-Intertemporal.html) | |
+| Aula 13: Excedente do Consumidor | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula13-Excedente.html) | |
+| Aula 14: Tecnologia de Produção | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula14-Tecnologia.html) | |
 
 
 ## :books: Bibliografia 

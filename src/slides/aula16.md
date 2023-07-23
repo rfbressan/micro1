@@ -6,352 +6,365 @@ author:
   **Disciplina:** 23MIC1 - Microeconomia I\
   **Universidade do Estado de Santa Catarina (UDESC)**\
   **Centro de Ciências da Administração e Socioeconômicas - ESAG**
-date: 12 de Dezembro, 2022
-title: "Microeconomia I: Maximização de lucros"
+date: 30 de Novembro, 2022
+title: "Microeconomia I: Minimização de custos"
 ---
 
 ::: frame
 Sumário
 :::
 
-# Introdução
+# Custo econômico $\times$ custo contábil
+
+## Definições
 
 ::: frame
-Introdução
+Definições
 
--   Nas aulas passadas desenvolvemos uma teoria dos custos que, como
-    vimos, apresenta um caso um pouco mais geral.
+-   Antes de discutirmos a teoria dos custos, algumas questões sobre a
+    definição adequada de "custos" devem ser esclarecidas.
 
--   Nossa teoria de custos aplica-se não apenas às firmas tomadoras de
+-   Especificamente, devemos fazer a distinção entre [custo
+    contábil]{style="color: red"} e [custo
+    econômico]{style="color: blue"}.
+
+-   [Custo contábil.]{style="color: red"} A visão de custo do contador
+    enfatiza as despesas pecuniárias, os custos históricos, a
+    depreciação e outros registros históricos.
+
+-   [Custo econômico.]{style="color: blue"} O custo econômico de
+    qualquer insumo é o pagamento exigido para manter esse insumo em seu
+    emprego atual. De maneira equivalente, o custo econômico de um
+    insumo é a remuneração que o insumo receberia em seu melhor emprego
+    alternativo.
+:::
+
+::: frame
+Definições
+
+-   Os dados contábeis geralmente estão facilmente disponíveis, enquanto
+    os conceitos econômicos correspondentes podem ser mais difíceis de
+    medir.
+
+-   Se a medida contábil não diferir muito de sua contraparte econômica,
+    ela pode ser uma boa aproximação para muitos propósitos práticos.
+
+-   Colocaremos as questões de mensuração de lado e utilizaremos os
+    conceitos relevantes para a decisão - custos econômicos - ao longo
+    da análise.
+:::
+
+## Hipóteses simplificadoras
+
+::: frame
+Hipóteses simplificadoras
+
+-   Estudaremos a minimização e as curvas de custo de uma firma que
+    produz apenas um tipo de produto $q$ (caso uniproduto) utilizando
+    apenas dois tipos de insumo: trabalho homogêneo ($l$, medido em
+    horas de trabalho) e capital homogêneo ($k$, medido em
+    horas-máquina).
+
+-   Ademais, admitiremos que a firma é tomadora de preços nos mercados
+    de fatores (i.e., os insumos são contratados em mercados
+    perfeitamente competitivos), ou seja, as empresas podem comprar (ou
+    vender) todos os serviços de mão de obra ou de capital que
+    desejarem, sob taxas de aluguel vigentes ($w$ e $v$).
+
+-   Portanto, a firma paga por unidades dos insumos trabalho e capital
+    os preços exógenos $w > 0$ e $v > 0$, respectivamente.
+:::
+
+::: frame
+Hipóteses simplificadoras
+
+-   Logo, com essas simplificações, o custo total $C$ para a firma
+    durante o período é dado por: $$\text{Custo total} = C = wl + vk,
+                \label{eq1}$$ em que $l$ e $k$ representam a utilização
+    dos insumos trabalho e capital, respectivamente, durante o insumo.
+:::
+
+# Relação entre maximização de lucro e minimização de custos
+
+## Maximização de lucro e minimização de custos
+
+::: frame
+Maximização de lucro e minimização de custos
+
+-   Os lucros econômicos ($\pi$) serão definidos como a diferença entre
+    a receita total ($R$) da firma e seus custos totais ($C$).
+
+-   Suponha que a firma adote o preço de mercado ($p$) para a sua
+    produção total ($q$) como dada e que sua função de produção é
+    $q = f(k,l)$. Formalmente, teremos:
+    $$\pi = R - C = pq - wl - vk = pf(k,l) - wl - vk.
+                \label{eq2}$$
+
+-   Ou seja, os lucros econômicos desta firma são uma função da
+    quantidade de capital e trabalho empregado.
+:::
+
+::: frame
+Maximização de lucro e minimização de custos
+
+-   Supondo que a firma tem como objetivo a maximização de lucros,
+    então, podemos estudar seu comportamento examinando como $k$ e $l$
+    são escolhidos de maneira a maximizar
+    ([\[eq2\]](#eq2){reference-type="ref" reference="eq2"}).
+
+-   Isso, por sua vez, levaria a uma teoria da oferta e uma teoria da
+    "demanda derivada" para os insumos de capital e mão de obra.
+
+-   Nosso objetivo, agora, é desenvolver uma teoria dos custos que seja
+    um pouco mais geral, aplicando-se não só às firmas tomadoras de
     preços no mercado de bens (concorrência perfeita) mas, também,
     àquelas cuja escolha de produção afeta o preço de mercado
     (monopólios e oligopólios).
-
--   Nosso objetivo, agora, é examinar como o nível de produto é
-    escolhido por firmas maximizadoras de lucros.
-
--   Para isso, estudaremos o modelo de maximização de lucros de uma
-    firma operando em um mercado perfeitamente competitivo.
-:::
-
-# Hipóteses do modelo de maximização de lucros
-
-::: frame
-Hipóteses do modelo
-
--   [Suposição comportamental.]{style="color: blue"} A firma é
-    maximizadora de lucro.
-
--   [Hipótese simplificadora.]{style="color: blue"} Estudaremos a
-    maximização de lucro de uma firma que produz apenas um tipo de
-    produto (caso uniproduto).
-
--   [Ambiente de mercado.]{style="color: blue"} A firma é [tomadora de
-    preços]{style="color: red"} (sem poder de mercado) no mercado de
-    bens. Mais precisamente, suporemos que a firma está vendendo seu
-    produto em um [mercado perfeitamente
-    competitivo]{style="color: red"} (concorrência pura), ou seja, em um
-    mercado composto por firmas que produzem um bem homogêneo (sem
-    diferenciação) e detêm individualmente uma parcela relativamente
-    pequena do mercado.
-:::
-
-# Maximização de lucro
-
-## Maximização de lucro no curto prazo
-
-::: frame
-Maximização de lucro no curto prazo
-
--   Dado que o preço de venda do produto da firma, denotado por $p$, é,
-    para ela, uma variável exógena, resta à firma escolher o nível de
-    produção $q$ de maneira a obter o maior lucro possível.
-
--   Mais formalmente, a decisão de uma firma perfeitamente competitiva
-    pode ser representada pelo seguinte problema de maximização de
-    lucro: $$\max_{q \geq 0} \pi_{CP}(q),
-                \label{eq1}$$ sendo $\pi_{CP}(q) = R(q) - C_{CP}(q)$ o
-    lucro total da firma no nível de produção $q$, $R(q) = pq$ a receita
-    total da firma no nível de produção (venda) $q$ e $C_{CP}(q)$ a
-    função custo total de curto prazo derivada do problema de
-    minimização de custos de cruto prazo da firma.
 :::
 
 ::: frame
-Maximização de lucro no curto prazo
+Maximização de lucro e minimização de custos
 
--   [Condição necessária de primeira ordem (solução
-    interior).]{style="color: blue"} Suponha que a escolha maximizadora
-    de lucro da firma seja $q^* = (0, \infty)$.
+-   A teoria mais geral se aplicará até mesmo a organizações sem fins
+    lucrativos (desde que estejam interessadas em operar de forma
+    eficiente).
 
--   Logo, a CPO para a maximização de lucro é obtida igualando o lucro
-    marginal, $\pi'_{CP}(q)$, a zero:
-    $$\pi'_{CP}(q) = R'(q) - C_{CP}'(q) = 0 = p - CMg_{CP}(q^*) = 0.
-            \label{eq2}$$
+-   Outra vantagem em analisar a minimização de custos separadamente da
+    maximização de lucros é que é mais simples analisar essa pequena
+    peça isoladamente e, só depois, adicionar os insights obtidos em uma
+    teoria mais geral das operações das firmas.
+:::
 
--   Então, a condição necessária de primeira ordem para maximização de
-    lucro no curto prazo é de que a receita marginal, $RMg = R'(q) = p$,
-    seja igual ao custo marginal de curto prazo, ou seja:
-    $$p = CMg_{CP}(q^*).
-                \label{eq3}$$
+## Suposição comportamental
+
+::: frame
+Suposição comportamental
+
+-   As condições derivadas para as opções de insumos minimizadores de
+    custo surgirão, novamente, como um subproduto da análise da
+    maximização de lucros na próxima seção dos nossos estudos.
+
+-   Para isso, iremos supor que a firma é maximizadora de lucros. Logo,
+    a combinação de insumos ótima ($k^*, l^*)$, associada ao plano de
+    produção maximizador de lucro $(-k^*, -l^*, q^*)$, deve ser
+    minimizadora de custos, pois se não fosse, haveria outro plano de
+    produção envolvendo um menor custo e, portanto, um maior lucro.
+
+-   Observação: a análise de maximização de lucros que veremos
+    posteriormente só é válida para firmas competitivas. A minimização
+    de custos, por sua vez, é válida não somente para firmas
+    competitivas mas, também, para firmas que possuem algum controle
+    sobre o preço do seu produto.
+:::
+
+# Minimização de custos
+
+## Análise formal
+
+::: frame
+Minimização de custos: análise formal
+
+-   [Isocusto.]{style="color: blue"} Isocusto é o conjunto
+    $\{(k,l) \in \mathbb{R}_+^2| vk + wl = C\}$ formado por todas as
+    combinações de insumos $(k,l)$ que geram o mesmo custo total
+    $C \geq 0$.
+
+-   A isocusto associada ao custo total $C$ pode ser descrita pela
+    equação da reta: $$k = \frac{C}{v} - \frac{w}{v}l,$$ cuja inclinação
+    (coeficiente angular) é o negativo da razão entre os preços dos
+    fatores de produção, $-w/v$.
 :::
 
 ::: frame
-Maximização de lucro no curto prazo
+Minimização de custos: análise formal
 
--   Se $p > CMg_{CP}(q^*)$, então $\pi'_{CP}(q^*) > 0$, de maneira que
-    $q^*$ não seria um nível maximizador de lucro, pois uma expansão da
-    produção geraria um aumento do lucro.
+-   [Problema da minimização de custos.]{style="color: blue"} A firma
+    deve escolher a combinação de insumos $(k^*, l^*)$ para atingir uma
+    meta de produção $q_0$ com o menor custo possível.
 
--   Se $p < CMg_{CP}(q^*)$, então $\pi'_{CP}(q^*) < 0$, de maneira que
-    $q^*$ não seria um nível maximizador de lucro, pois uma redução da
-    produção geraria um aumento do lucro.
+-   Ou seja, a firma deve resolver o seguinte problema de minimização de
+    custos: $$\begin{aligned}
+                \min_{(k,l)} & \quad wl + vk, \label{eq3} \\
+                \text{s.r.} & \quad f(k,l) = q_0. \nonumber
+            
+    \end{aligned}$$
 :::
 
 ::: frame
-Maximização de lucro no curto prazo
+Minimização de custos: análise formal
 
--   [Condição de encerramento no curto prazo (solução de
-    canto).]{style="color: blue"} Uma escolha possível para a firma é
-    não produzir, ou seja, escolher $q = 0$.
+-   A função Lagrangeana associada ao problema de otimização restrito
+    ([\[eq3\]](#eq3){reference-type="ref" reference="eq3"}) é dada por:
+    $$\mathcal{L} = wl + vk + \lambda[q_0 - f(k,l)].
+                \label{eq4}$$
 
--   Neste caso, o lucro da firma é igual ao negativo do custo fixo
-    total, ou seja, $\pi_{CP}(0) = -CF$.
-
--   Portanto, para uma firma perfeitamente competitiva será melhor
-    encerrar sua atividade quando o prejuízo de não operar for inferior
-    ao prejuízo de operar, ou seja:
-    $$\pi_{CP}(0) = -CF > pq^* - C_{CP}(q^*) = \pi_{CP}(q^*).$$
-
--   Como o custo total de curto prazo pode ser decomposto em custo fixo
-    e custo variável, a desigualdade anterior pode ser reescrita como
-    segue:
-    $$pq^* < CV_{CP}(q^*) \iff p < \frac{CV_{CP}(q^*)}{q^*} = CVMe_{CP}(q^*).$$
+-   As condições de primeira ordem para um ponto de mínimo restrito são
+    dadas por: $$\begin{aligned}
+                \frac{\partial \mathcal{L}}{\partial l} &\therefore& w - \lambda \frac{\partial f}{\partial l} = 0, \nonumber \\
+                \frac{\partial \mathcal{L}}{\partial k} &\therefore& v - \lambda \frac{\partial f}{\partial k} = 0, \label{eq5} \\
+                \frac{\partial \mathcal{L}}{\partial \lambda} &\therefore& q_0 - f(k,l) = 0. \nonumber
+            
+    \end{aligned}$$
 :::
 
 ::: frame
-Maximização de lucro no curto prazo
+Minimização de custos: análise formal
 
--   Em palavras, a firma perfeitamente competitiva não opera se o preço
-    de mercado for inferior ao custo variável médio no nível de produção
-    $q^*$ - Figura [1](#fig1){reference-type="ref" reference="fig1"}.
+-   Dividindo as duas primeiras equações do sistema
+    ([\[eq5\]](#eq5){reference-type="ref" reference="eq5"}), temos:
+    $$\frac{w}{v} = \frac{f_l}{f_k} = TTS(l,k).
+                \label{eq6}$$
 
-    <figure id="fig1">
-    <img src="fig232.JPG" style="width:60.0%" />
-    <figcaption>Custo marginal e oferta. Fonte: Varian (2015).</figcaption>
-    </figure>
+-   Ou seja, no caso padrão (tecnologia estritamente convexa e isoquanta
+    continuamente diferenciável), na escolha minimizadora de custos
+    $(k^*, l^*)$ a isocusto é tangente à isoquanta, de maneira que suas
+    inclinações são iguais.
+
+-   A firma minimizadora de custos deve igualar a TTS dos dois insumos à
+    razão de seus preços.
 :::
 
 ::: frame
-Maximização de lucro no curto prazo
+Minimização de custos: análise formal
 
--   Na Figura [1](#fig1){reference-type="ref" reference="fig1"}, embora
-    haja dois níveis de produção em que o preço se iguala ao custo
-    marginal, a quantidade ofertada que maximiza lucro só pode situar-se
-    na parte de inclinação ascendente da curva de custo marginal - pela
-    condição de segunda ordem para maximização de lucro.
-
--   A firma não operará nos pontos da curva de custo marginal situados
-    abaixo da curva de custo médio porque poderia obter maiores lucros
-    (menores perdas) se encerrasse suas atividades.
-:::
-
-::: frame
-Maximização de lucro no curto prazo
-
--   [Curva de oferta de curto prazo inversa de uma firma perfeitamente
-    competitiva.]{style="color: blue"} É a função que associa a cada
-    nível de produção $q > 0$ da firma o correspondente valor do preço
-    de mercado que tornaria $q$ a escolha maximizadora de lucro.
-    Formalmente: $$p = CMg_{CP}(q), \qquad \forall q \geq \bar{q},$$
-    sendo $\bar{q}$ o nível de produção no qual o custo variável médio
-    de curto prazo é mínimo, ou seja, o ponto definido implicitamente
-    pela condição $CMg_{CP}(\bar{q}) = CVMe_{CP}(\bar{q})$.
-:::
-
-::: frame
-Maximização de lucro no curto prazo
-
--   [Curva de oferta de curto prazo de uma firma perfeitamente
-    competitiva.]{style="color: blue"} É a função que associa a cada
-    nível de preço $p > CVMe(\bar{q})$ a quantidade $q$ do bem que uma
-    firma produz para maximizar seu lucro.
-
--   Em outras palavras, tal função oferta é a inversa da função custo
-    marginal de curto prazo, ou seja:
-    $$q^* = CMg_{CP}^{-1}(p), \qquad \forall p \geq CVMe(\bar{q}).$$
-:::
-
-::: frame
-Maximização de lucro no curto prazo
-
-<figure id="fig2">
-<img src="canto2.JPG" style="width:70.0%" />
-<figcaption>Custo variável médio e oferta. Fonte: Varian
-(2015).</figcaption>
+<figure id="fig1">
+<img src="custostangencia.JPG" style="width:70.0%" />
+<figcaption>Condição de tangência entre isoquanta e isocusto no ponto de
+minimização de custos. Fonte: Nicholson e Snyder (2019).</figcaption>
 </figure>
 :::
 
 ::: frame
-Maximização de lucro no curto prazo
+Minimização de custos: análise formal
 
--   A Figura [2](#fig2){reference-type="ref" reference="fig2"} mostra
-    que a curva de oferta é a parte ascendente da curva de custo
-    marginal que está acima da curva de custo variável médio.
-
--   A firma não operará nos pontos da curva de custo marginal situados
-    abaixo da curva de custo médio porque poderia obter maiores lucros
-    (menores perdas) se fechasse suas atividades.
-:::
-
-::: frame
-Exercício
-
--   Considere uma função de produção do tipo Cobb-Douglas, no curto
-    prazo, $q = f(\bar{k},l) = \bar{k}^\alpha l^\beta$.
-
--   A função custo de curto prazo é dada por:
-    $$C_{CP}(q) = v\bar{k} + wq^{1/\beta}\bar{k}^{-\alpha/\beta}.$$
-
--   Portanto, o problema de maximização de lucro da firma é dado por:
-    $$\max_{q} pq - v\bar{k} - wq^{1/\beta}\bar{k}^{-\alpha/\beta}.$$
-
--   A escolha ótima de quantidade produzida será, portanto:
-    $$q^* = \left(\frac{w}{\beta}\right)^{-\beta/(1-\beta)}\bar{k}^{\alpha/(1-\beta)}p^{\beta/(1-\beta)}.$$
-:::
-
-::: frame
-Exercício
-
--   A função de oferta apresenta algumas características familiares:
-
-    1.  A curva de oferta é positivamente inclinada - aumentos nos
-        preços $p$ faz com que a firma produza mais pois está disposta a
-        incorrer em um custo marginal mais alto.
-
-    2.  A curva de oferta é deslocada para a esquerda por aumentos na
-        taxa de salário, $w$ - ou seja, para um dado nível de preço de
-        produto, a quantidade ofertada é menor se a taxa salarial for
-        maior.
-
-    3.  A curva de oferta é deslocada para a direita se tivermos
-        aumentos no insumo capital $\bar{k}$ - com um estoque de capital
-        maior no curto prazo, a firma incorre em um nível determinado de
-        custo marginal de curto prazo a um nível de produção maior.
-
-    4.  A taxa de aluguel de capital, $v$, é irrelevante para as
-        decisões de oferta de curto prazo porque é somente um componente
-        de custos fixos.
-:::
-
-## Maximização de lucro no longo prazo
-
-::: frame
-Maximização de lucro no longo prazo
-
--   Dado o preço de venda do produto, uma firma perfeitamente
-    competitiva escolhe o nível de produção $q$ de maneira a obter o
-    maior lucro possível ajustando, se necessário, todos os fatores de
-    produção.
-
--   No caso do longo prazo, então, o problema de maximização de lucro é:
-    $$\max_{q \geq 0} \pi(q),
-                \label{eq4}$$ sendo $\pi(q) = R(q) - C(q)$ o lucro total
-    de longo prazo da firma no nível de produção $q$, $R(q) = pq$ é a
-    receita total da firma no nível de produção (venda) $q$ e $C(q)$ é a
-    função custo total de longo prazo derivada do problema de
-    minimização de custos de longo prazo da firma.
-:::
-
-::: frame
-Maximização de lucro no longo prazo
-
--   [Condição necessária de primeira ordem (solução
-    interior).]{style="color: blue"} Suponha que a escolha maximizadora
-    de lucro da firma seja $q^* = (0, \infty)$. Logo, a condição
-    necessária de primeira ordem para a maximização de lucro é obtida
-    igualando o lucro marginal, $\pi'(q)$, a zero:
-    $$\pi'(q^*) = R'(q^*) - C'(q^*) = p - CMg(q^*) = 0.
-                \label{eq5}$$
-
--   Então, a condição necessária para maximização do lucro no longo
-    prazo é de que a receita marginal seja igual ao custo marginal, ou
-    seja: $$p = CMg(q^*).
-                \label{eq6}$$
-:::
-
-::: frame
-Maximização de lucro no longo prazo
-
--   [Condição de encerramento no longo prazo (solução de
-    canto).]{style="color: blue"} No longo prazo uma firma pode sair do
-    mercado, ou seja, escolher $q = 0$.
-
--   Nesse caso, como não há custo fixo, o lucro da firma é nulo, ou
-    seja, $\pi(0) = 0$.
-
--   Portanto, para uma firma perfeitamente competitiva será melhor sair
-    do mercado se: $$\pi(q^*) = pq^* - C(q^*) < 0 = \pi(0).
+-   Note que a igualdade na equação
+    ([\[eq6\]](#eq6){reference-type="ref" reference="eq6"}) pode ser
+    expressa como segue: $$\frac{f_k}{v} = \frac{f_l}{w}.
                 \label{eq7}$$
 
--   A desigualdade em ([\[eq7\]](#eq7){reference-type="ref"
-    reference="eq7"}) pode ser reescrita como:
-    $$pq^* < C(q^*) \iff p < CMe(q^*).
+-   Ou seja, para que os custos sejam minimizados, a produtividade
+    marginal por cada unidade monetária dispendida deve ser a mesma para
+    todos os insumos.
+
+-   Qualquer insumo que não satisfazer essa razão custo-benefício comum
+    não deve ser selecionado.
+:::
+
+::: frame
+Minimização de custos: análise formal
+
+-   Alternativamente, podemos, ainda, escrever a condição de igualdade
+    da seguinte forma: $$\frac{w}{f_l} = \frac{v}{f_k} = \lambda.
                 \label{eq8}$$
+
+-   A equação ([\[eq8\]](#eq8){reference-type="ref" reference="eq8"})
+    mostra o custo extra de se obter uma unidade a mais de produção,
+    selecionando mão de obra ou entrada de capital adicional.
+
+-   Por causa da minimização de custos, esse custo marginal é o mesmo,
+    independentemente do insumo selecionado.
+
+-   Esse custo marginal comum também é medido pelo multiplicador de
+    Lagrange $\lambda$ do problema de minimização de custos.
+
+-   Como é o caso de todos os problemas de otimização restrita, o
+    multiplicador de Lagrange mostra o quanto se incorreria, em termos
+    de custos extras, caso a restrição de produção fosse relaxada
+    levemente.
+:::
+
+## Função demanda condicional de fatores
+
+::: frame
+Função demanda condicional de fatores
+
+-   [Função demanda condicional de fatores (ou demanda contingente de
+    insumos).]{style="color: blue"} Se a isoquanta é estritamente
+    convexa, existe uma, e somente uma, combinação de insumos ótima
+    $(k^*, l^*)$ que resolve o problema de minimização de custos, a qual
+    é uma função contínua dos preços $(v, w) \in \mathbb{R}_{++}^2$ e da
+    meta de produção $q \geq 0$, ou seja: $$\begin{aligned}
+                k &=& k^c(v, w, q), \label{eq9} \\
+                l &=& l^c(v, w, q). \label{eq10}
+            
+    \end{aligned}$$
+:::
+
+## Funções custo
+
+::: frame
+Funções custo
+
+-   [Função custo total.]{style="color: blue"} A função custo total mede
+    o custo total mínimo de produzir $q$ unidades de um bem quando os
+    preços dos fatores de produção são $(v, w) \in \mathbb{R}_{++}^2$ e
+    a tecnologia de produção é $f(k,l)$: $$C = C(v, w, q).
+                \label{eq11}$$
+
+-   A função custo é obtida substituindo a função demanda condicional de
+    fatores na função objetivo do problema de minimização de custos, ou
+    seja: $$C(v, w, q) = v k^c(v, w, q) + w l^c(v, w, q).
+                \label{eq12}$$
+:::
+
+## Custo médio e custo marginal
+
+::: frame
+Funções custo médio e marginal
+
+-   A [função custo médio]{style="color: blue"} (AC) é o custo mínimo
+    total por unidade produzida:
+    $$\text{Custo médio} = AC(v, w, q) = \frac{C(v, w, q)}{q}.
+                \label{eq13}$$
+
+-   A [função custo marginal]{style="color: blue"} (MC) é a variação do
+    custo total mínimo gerada pela variação de uma unidade de produção:
+    $$\text{Custo marginal} = MC(v, w, q) = \frac{\partial C(v, w, q)}{\partial q}.
+                \label{eq14}$$
+:::
+
+## Propriedades das funções custo
+
+::: frame
+Propriedades das funções custo
+
+-   A função custo total satisfaz as seguintes propriedades:
+
+    1.  $C(v, w, 0) = 0$.
+
+    2.  $C(v, w, q)$ é estritamente crescente em $q$.
+
+    3.  $C(v, w, q)$ é não-decrescente nos preços dos insumos $v$ e $w$.
+
+    4.  $C(v, w, q)$ é homogênea de grau 1 nos preços dos insumos $v$ e
+        $w$, isto é:
+        $$C(tv, tw, q) = tC(v, w, q), \forall t > 0. \label{eq15}$$
+
+    5.  A função custo total é côncava nos preços dos insumos $v$ e $w$.
+
+    6.  Lema de Shephard: $$\begin{aligned}
+                        \frac{\partial C(v, w, q)}{\partial v} &=& k^c(v, w, q), \label{eq16} \\
+                        \frac{\partial C(v, w, q)}{\partial w} &=& l^c(v, w, q). \label{eq17}
+                    
+        \end{aligned}$$
+:::
+
+# Exercícios
+
+::: frame
+Cobb-Douglas $$q = f(k,l) = k^\alpha l^\beta.$$
 :::
 
 ::: frame
-Maximização de lucro no longo prazo
-
--   Enfim, a firma perfeitamente competitiva sai do mercado se o preço
-    de mercado for inferior ao seu custo médio de longo prazo na escolha
-    $q^*$.
+Função CES $$q = f(k,l) = (k^\rho + l^\rho)^{\gamma/\rho}.$$
 :::
 
 ::: frame
-Maximização de lucro no longo prazo
-
--   [Curva de oferta de longo prazo inversa de uma firma perfeitamente
-    competitiva.]{style="color: blue"} É a função que associa a cada
-    nível de produção $q > 0$ da firma o correspondente valor do preço
-    de mercado que tornaria $q$ a escolha maximizadora de lucro.
-    Formalmente: $$p = CMg(q), \qquad \forall q \geq \tilde{q},$$ sendo
-    $\tilde{q}$ o nível de produção no qual o custo médio de longo prazo
-    (que é igual ao custo variável médio de longo prazo) é mínimo, ou
-    seja, o ponto definido implicitamente pela condição
-    $CMg(\tilde{q}) = CMe(\tilde{q})$.
+Tecnologia linear $$q = f(k,l) = \alpha k + \beta l.$$
 :::
 
 ::: frame
-Maximização de lucro no longo prazo
-
--   [Curva de oferta de longo prazo de uma firma perfeitamente
-    competitiva.]{style="color: blue"} É a função que associa a cada
-    nível de preço $p > CMe(\tilde{q})$ a quantidade $q$ do bem que uma
-    firma produz para maximizar seu lucro.
-
--   Em outros termos, tal função oferta é a inversa da função custo
-    marginal de longo prazo, ou seja:
-    $$S(p) = CMg^{-1}(p), \qquad \forall p \geq CMe(\tilde{q}).$$
-:::
-
-::: frame
-Maximização de lucro no longo prazo
-
-<figure id="fig3">
-<img src="ofertalp.JPG" style="width:60.0%" />
-<figcaption>Curva de oferta no longo prazo. Fonte: Varian
-(2015).</figcaption>
-</figure>
-:::
-
-::: frame
-Maximização de lucro no longo prazo
-
--   Como evidenciado na Figura [3](#fig3){reference-type="ref"
-    reference="fig3"}, a curva de oferta de longo prazo será a parte de
-    inclinação ascendente da curva de custo marginal de longo prazo que
-    se situa acima da curva de custo médio.
+Leontief $$q = f(k,l) = \min(\alpha k, \beta l).$$
 :::
 
 ::: thebibliography

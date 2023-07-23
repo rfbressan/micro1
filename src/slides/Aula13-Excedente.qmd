@@ -54,3 +54,101 @@ comportamento da demanda**.
 
 ## Interpretações do excedente do consumidor
 
+- Há outras formas de pensar no excedente do consumidor
+- Valor que o consumidor dá a primeira unidade de consumo desse bem será $r_1$, mas ele só tem de pagar $p$ por ela.
+- _"Excedente"_ de $r_1-p$ na primeira unidade. Na segunda unidade o excedente é $r_2-p$ e assim por diante.
+- O excedente total é a soma dos excedentes de cada unidade consumida.
+- Podemos interpretar o excedente do consumidor de outra forma.
+- Quanto dinheiro, $R$, seria necessário para compensar o consumidor por não poder consumir o bem?
+- $v(0)+m+R=v(n)+m-pn$, ou seja, $R=v(n)-pn$.
+- Assim, o **excedente do consumidor** mede quanto se teria de **pagar a um consumidor** para que ele **abrisse mão de todo o seu consumo** de determinado bem.
+
+
+## Utilidade quasi-linear
+
+- Em geral, o preço pelo qual o consumidor está disposto a comprar determinada quantidade do bem $x$ dependerá de quanto dinheiro ele dispuser para consumir outros bens.
+- No caso especial da utilidade **quasi-linear**, os **preços de reserva são independentes** da renda disponível para consumo de outros bens.
+- Dizemos que com utilidade quasi-linear, não há **efeito renda** sobre a demanda do bem $x$.
+
+:::{.fragment}
+:::{.callout-tip title="Ausência de efeito renda"}
+
+Faremos a prova para um utilidade quasi-linear com dois bens, $x$ e $y$ **contínuos**.
+
+$$\begin{align}
+\max_{x,y}&=v(x)+y\\
+\text{s.a.}&\quad px+y=m
+\end{align}$$
+
+A CPO é: $v'(x)=p$, que implica em uma função demanda $x^*=x(p)$.
+
+Veja como a **função demanda independe** da quantidade de **renda** $m$ disponível. $\blacksquare$
+:::
+:::
+
+## Variação Equivalente e Compensadora
+
+- Mesmo se a utilidade não for quase linear, o **excedente do consumidor** pode ainda ser uma medida razoável do **bem-estar** do consumidor.
+- No entanto, em algumas aplicações pode ser **conveniente usar medidas monetárias da utilidade**.
+- Por exemplo, quanto de dinheiro teríamos de dar ao consumidor para que ele ficasse tão bem quanto antes de um aumento de preço?
+  + Esta quantidade de dinheiro é uma medida em unidades monetárias de uma variação de utilidade
+
+## Variação Equivalente e Compensadora
+
+:::{.columns}
+:::{.column width=50%}
+- Preços iniciais $(p_1^*, 1)$ e cesta inicial $(x_1^*, x_2^*)$.
+- Aumento de preço do bem 1 para $\hat p_1$ e o consumo passa a ser $(\hat x_1, \hat x_2)$.
+- A variação de renda necessária para [levar o consumidor à sua curva de indiferença original]{.red} é chamada ***variação compensadora*** da renda.
+- ***Variação equivalente*** é o quanto de dinheiro [retirarado]{.red} do consumidor _antes_ da variação de preço para deixá-lo tão bem quanto estaria _depois_ da variação de preço.
+
+- Em geral, a quantidade de dinheiro que o consumidor estaria disposto a pagar para evitar uma variação de preço **(VE)** será [diferente]{.red} da quantidade de dinheiro que o consumidor teria de receber para ser compensado por uma variação de preço **(VC)**.
+:::
+
+:::{.column width=50%}
+![Variação Equivalente e Compensadora. O painel A mostra a variação compensadora (VC) e o painel B exibe a variação equivalente (VE). Fonte: Varian (2015)](img/variacao_eq_comp.png){#fig-variacao_eq_comp}
+:::
+:::
+
+## Variação Equivalente e Compensadora
+
+- **Variação compensadora**
+  + Quanto devemos compensar em termos de renda para que o consumidor fique exatamente tão bem quanto antes do aumento no preço.​
+  + Aumento na renda necessário para obter uma cesta ótima **na curva de indiferença original**, com a **relação de preços após** a mudança no preço​.
+
+- **Variação equivalente**
+  + Quanto dinheiro teríamos que tirar do consumidor antes da variação no preço pra deixá-lo tão bem quanto estaria após o aumento no preço.​
+  + Redução na renda necessária para obter uma cesta ótima na nova curva de indiferença com a relação de preços anterior à mudança no preço do bem​.
+
+## Exemplo de variação compensadora
+
+Seja a função utilidade do tipo Cobb-Douglas $u(x_1,x_2)=x_1^{0,5}x_2^{0,5}$, com preços $p_1=1$ e $p_2=1$ e renda $m=100$.
+
+- Demandas são $x_1^*=\frac{m}{2p_1}$ e $x_2^*=\frac{m}{2p_2}$.
+- Cesta ótima inicial é $x^*=(x_1^*, x_2^*)=(50,50)$, com nível de utilidade $u(x^*)=50$.
+- **Aumento no preço** do bem 1 para $\hat p_1=2$.
+  + Agora a cesta ótima é $(\hat x_1, \hat x_2)=(25,50)$, com nível de utilidade $\hat u(\hat x)=25\sqrt{2}$.
+  + Qual o valor de renda a ser dada ao consumidor para voltarmos ao nível de utilidade inicial?
+
+- $v(p_1, p_2, m)=\left(\frac{m}{2p_1}\right)^{0,5}\left(\frac{m}{2p_2}\right)^{0,5}=\frac{m}{2\sqrt{p_1p_2}}$.
+  + $50=\frac{m'}{2\sqrt{2\cdot 1}}\implies m'=100\sqrt{2}$.
+  + Logo, a **variação compensadora** é $m'-m=100\sqrt{2}-100\approx 41$.
+
+## Exemplo de variação equivalente
+
+- No exemplo anterior, quanto dinheiro seria necessário tirar do consumidor antes do aumento no preço para que ele ficasse tão bem quanto depois do aumento no preço?
+- Sabemos que $u(\hat x)=25\sqrt{2}$, portanto:
+  + $25\sqrt{2}=\frac{m'}{2\sqrt{1\cdot 1}}\implies m'=50\sqrt{2}$.
+  + Logo, a **variação equivalente** é $m-m'=100-50\sqrt{2}\approx 30$. 
+
+## Relação entre medidas de bem-estar
+
+- Em geral, para preferências bem-comportadas, temos a seguinte relação entre as medidas de bem-estar:
+  + $\text{Varição Equivalente} \leq \text{Variação Excedente Consumidor} \leq \text{Variação Compensadora}$.
+
+- No caso de **utilidade quasi-linear**, temos que:
+  + $\text{Variação Equivalente} = \text{Variação Excedente Consumidor} = \text{Variação Compensadora}$.
+
+:::{.fragment}
+![Nas preferências quasi-lineares a distância entre as curvas de indiferença independe da inclinação da RO. Fonte: Varian (2015)](img/vc-ve-quasi-linear.png){#fig-vc-ve-quasi-linear}
+:::
