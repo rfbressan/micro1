@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="Aula14-Tecnologia_files/libs/clipboard/clipboard.min.js"></script>
-<script src="Aula14-Tecnologia_files/libs/quarto-html/tabby.min.js"></script>
-<script src="Aula14-Tecnologia_files/libs/quarto-html/popper.min.js"></script>
-<script src="Aula14-Tecnologia_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="Aula14-Tecnologia_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="Aula14-Tecnologia_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="Aula14-Tecnologia_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="Aula14-Tecnologia_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="Aula16-Minimizacao-Custos_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Aula16-Minimizacao-Custos_files/libs/quarto-html/tabby.min.js"></script>
+<script src="Aula16-Minimizacao-Custos_files/libs/quarto-html/popper.min.js"></script>
+<script src="Aula16-Minimizacao-Custos_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="Aula16-Minimizacao-Custos_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Aula16-Minimizacao-Custos_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="Aula16-Minimizacao-Custos_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="Aula16-Minimizacao-Custos_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.361">
 
   <meta name="author" content="Rafael Bressan">
-  <title>Tecnologia de Produção</title>
+  <title>Minimização de custos</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="Aula14-Tecnologia_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="Aula14-Tecnologia_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="Aula16-Minimizacao-Custos_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="Aula16-Minimizacao-Custos_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -30,13 +30,13 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="Aula14-Tecnologia_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="Aula14-Tecnologia_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="Aula14-Tecnologia_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="Aula14-Tecnologia_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="Aula14-Tecnologia_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="Aula14-Tecnologia_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="Aula14-Tecnologia_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="Aula16-Minimizacao-Custos_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="Aula16-Minimizacao-Custos_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="Aula16-Minimizacao-Custos_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="Aula16-Minimizacao-Custos_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="Aula16-Minimizacao-Custos_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="Aula16-Minimizacao-Custos_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="Aula16-Minimizacao-Custos_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -327,7 +327,7 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="img/UdescEsag.jpeg" data-background-position="top left" data-background-size="50%" class="quarto-title-block center">
-  <h1 class="title">Tecnologia de Produção</h1>
+  <h1 class="title">Minimização de custos</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -339,247 +339,203 @@ Rafael Bressan
 
 </section>
 <section>
-<section id="introdução" class="title-slide slide level1 greenbackground center">
-<h1>Introdução</h1>
+<section id="custo-econômico-times-custo-contábil" class="title-slide slide level1 greenbackground center">
+<h1>Custo econômico <span class="math inline">\(\times\)</span> custo contábil</h1>
 
 </section>
-<section id="introdução-1" class="slide level2">
-<h2>Introdução</h2>
+<section id="definições" class="slide level2">
+<h2>Definições</h2>
 <ul>
-<li class="fragment"><p>Na primeira parte do nosso curso de Microeconomia I, estudamos o comportamento dos consumidores.</p></li>
-<li class="fragment"><p>Desse comportamento, obtivemos uma função de demanda por um bem que é, quase sempre, decrescente no seu preço.</p></li>
-<li class="fragment"><p>Nosso objetivo agora é estudar o processo de produção e oferta de bens econômicos e o comportamento das firmas.</p></li>
-<li class="fragment"><p>Desse comportamento, vamos obter a oferta de um bem econômico, que será crescente no seu preço.</p></li>
-<li class="fragment"><p>O comportamento desses dois agentes econômicos (consumidores e firmas) pode levar a uma situação de equilíbrio no mercado do bem considerado, onde a quantidade demandada iguala a quantidade produzida, por meio de preços flexíveis.</p></li>
+<li class="fragment"><p>Antes de discutirmos a teoria dos custos, algumas questões sobre a definição adequada de “custos” devem ser esclarecidas.</p></li>
+<li class="fragment"><p>Especificamente, devemos fazer a distinção entre <strong><span class="red">custo contábil</span></strong> e <strong>custo econômico</strong>.</p></li>
+<li class="fragment"><p><span style="color: red">Custo contábil.</span> A visão de custo do contador enfatiza as despesas pecuniárias, os custos históricos, a depreciação e outros registros históricos.</p></li>
+<li class="fragment"><p><span style="color: darkgreen">Custo econômico.</span> O custo econômico de qualquer insumo é o pagamento exigido para manter esse insumo em seu emprego atual. De maneira equivalente, o custo econômico de um insumo é a remuneração que o insumo receberia em seu melhor emprego alternativo.</p></li>
+<li class="fragment"><p>Colocaremos as questões de mensuração de lado e utilizaremos os conceitos relevantes para a decisão - custos econômicos - ao longo da análise.</p></li>
+</ul>
+<!-- ## Definições
+
+-   Os dados contábeis geralmente estão facilmente disponíveis, enquanto
+    os conceitos econômicos correspondentes podem ser mais difíceis de
+    medir.
+
+-   Se a medida contábil não diferir muito de sua contraparte econômica,
+    ela pode ser uma boa aproximação para muitos propósitos práticos. -->
+</section>
+<section id="hipóteses-simplificadoras" class="slide level2">
+<h2>Hipóteses simplificadoras</h2>
+<ul>
+<li class="fragment"><p>Estudaremos a minimização e as curvas de custo de uma firma que produz apenas um tipo de produto <span class="math inline">\(q\)</span> (caso uniproduto) utilizando apenas dois tipos de insumo: trabalho homogêneo (<span class="math inline">\(l\)</span>, medido em horas de trabalho) e capital homogêneo (<span class="math inline">\(k\)</span>, medido em horas-máquina).</p></li>
+<li class="fragment"><p>Ademais, admitiremos que a firma é tomadora de preços nos mercados de fatores (i.e., os insumos são contratados em mercados perfeitamente competitivos), ou seja, as empresas podem comprar (ou vender) todos os serviços de mão de obra ou de capital que desejarem, sob taxas de aluguel vigentes (<span class="math inline">\(w\)</span> e <span class="math inline">\(v\)</span>).</p></li>
+<li class="fragment"><p>Portanto, a firma paga por unidades dos insumos trabalho e capital os preços exógenos <span class="math inline">\(w &gt; 0\)</span> e <span class="math inline">\(v &gt; 0\)</span>, respectivamente.</p></li>
 </ul>
 </section>
-<section id="introdução-2" class="slide level2">
-<h2>Introdução</h2>
+<section id="hipóteses-simplificadoras-1" class="slide level2">
+<h2>Hipóteses simplificadoras</h2>
 <ul>
-<li class="fragment"><p>As instituições que coordenam o processo de transformação de insumos em produtos finais são chamadas <span style="color: red">firmas</span>.</p></li>
-<li class="fragment"><p>Estas instituições podem ser grandes - e.g., Google, Apple, Microsoft, etc. Ou instituições pequenas - e.g., trabalhadores autônomos, produtores locais.</p></li>
-<li class="fragment"><p>Embora essas instituições possam ter diferentes objetivos, todas as firmas devem tomar certas decisões básicas em seus processos produtivos.</p></li>
-<li class="fragment"><p>Nosso objetivo geral, agora, é desenvolver um conjunto de ferramentas que possibilitem a análise destes processos decisórios.</p></li>
-</ul>
-</section>
-<section id="introdução-3" class="slide level2">
-<h2>Introdução</h2>
-<ul>
-<li class="fragment"><p>Inicialmente estudaremos algumas maneiras de modelar a relação física entre insumos e produtos. Para isso, introduziremos o conceito de <span style="color: red">função de produção</span>, uma abstração útil das complexidades dos processos produtivos do mundo real.</p></li>
-<li class="fragment"><p>Dois aspectos mensuráveis da função de produção serão considerados: os retornos de escala (i.e., como o produto é expandido quando todos os insumos aumentam), e a elasticidade de substituição (i.e., o quão fácil um insumo pode ser substituído por outro enquanto mantemos o mesmo nível de produto).</p></li>
-</ul>
-</section>
-<section id="introdução-4" class="slide level2">
-<h2>Introdução</h2>
-<ul>
-<li class="fragment"><p>Posteriormente, utilizaremos o conceito de função de produção para discutir os <span style="color: red">custos de produção</span>.</p></li>
-<li class="fragment"><p>Assumiremos que todas as firmas tem por objetivo produzir seus produtos ao menor custo possível, uma hipótese que nos permitirá obter as <span style="color: red">funções custo</span> para uma firma.</p></li>
-<li class="fragment"><p>Discutiremos também, ainda que brevemente, como os custos podem diferir no curto e no longo prazo.</p></li>
-</ul>
-</section>
-<section id="introdução-5" class="slide level2">
-<h2>Introdução</h2>
-<ul>
-<li class="fragment"><p>Por fim, concluiremos esta seção com o estudo das decisões de oferta por parte de uma firma.</p></li>
-<li class="fragment"><p>Para tal, assumiremos que o gerente de uma firma fará decisões de insumos e produtos de maneira a maximizar os lucros.</p></li>
-<li class="fragment"><p>Com isso desenvolveremos o modelo fundamental do comportamento de oferta das firmas maximizadoras de lucro, um conceito que será muito utilizado em microeconomia e em outras áreas do curso.</p></li>
+<li class="fragment">Logo, com essas simplificações, o custo total <span class="math inline">\(C\)</span> para a firma durante o período é dado por: <span id="eq-eq1"><span class="math display">\[\text{Custo total} = C = wl + vk, \qquad(1)\]</span></span> em que <span class="math inline">\(l\)</span> e <span class="math inline">\(k\)</span> representam a utilização dos insumos trabalho e capital, respectivamente, durante o insumo.</li>
 </ul>
 </section></section>
 <section>
-<section id="funções-de-produção" class="title-slide slide level1 greenbackground center">
-<h1>Funções de produção</h1>
+<section id="relação-entre-maximização-de-lucro-e-minimização-de-custos" class="title-slide slide level1 greenbackground center">
+<h1>Relação entre maximização de lucro e minimização de custos</h1>
 
 </section>
-<section id="introdução-6" class="slide level2">
-<h2>Introdução</h2>
-<p>Tecnologias de produção: Introdução</p>
+<section id="maximização-de-lucro-e-minimização-de-custos" class="slide level2">
+<h2>Maximização de lucro e minimização de custos</h2>
 <ul>
-<li class="fragment"><p>A principal atividade de qualquer firma é transformar insumos em produtos.</p></li>
-<li class="fragment"><p>Como economistas, estamos interessados nas escolhas que as firmas tomam para atingir este objetivo, abstraindo das muitas complexidades envolvidas nas engenharias destes processos.</p></li>
-<li class="fragment"><p>Para isso, construímos um modelo abstrato do processo produtivo.</p></li>
-<li class="fragment"><p>Neste modelo, a relação entre insumos e produtos é formalizada por uma <span style="color: red">função de produção</span> (também chamada de tecnologia de produção) da forma: <span id="eq-eq1"><span class="math display">\[q = f(k, l, m, \dots), \qquad(1)\]</span></span> onde <span class="math inline">\(q\)</span> representa a produção de um bem específico para a firma durante um período especifico do tempo, <span class="math inline">\(k\)</span> representa as máquinas (i.e., capital) utilizadas durante este período, <span class="math inline">\(l\)</span> representa o insumo trabalho, <span class="math inline">\(m\)</span> representa a matéria-prima utilizada, e possibilitamos, ainda, a inclusão de outras variáveis que afetem o processo produtivo.</p></li>
+<li class="fragment"><p>Os lucros econômicos (<span class="math inline">\(\pi\)</span>) serão definidos como a diferença entre a receita total (<span class="math inline">\(R\)</span>) da firma e seus custos totais (<span class="math inline">\(C\)</span>).</p></li>
+<li class="fragment"><p>Suponha que a firma adote o preço de mercado (<span class="math inline">\(p\)</span>) para a sua produção total (<span class="math inline">\(q\)</span>) como dada e que sua função de produção é <span class="math inline">\(q = f(k,l)\)</span>. Formalmente, teremos: <span id="eq-eq2"><span class="math display">\[\pi = R - C = pq - wl - vk = pf(k,l) - wl - vk. \qquad(2)\]</span></span></p></li>
+<li class="fragment"><p>Ou seja, os lucros econômicos desta firma são uma função da quantidade de capital e trabalho empregado.</p></li>
 </ul>
 </section>
-<section id="tecnologias-de-produção" class="slide level2">
-<h2>Tecnologias de produção</h2>
+<section id="maximização-de-lucro-e-minimização-de-custos-1" class="slide level2">
+<h2>Maximização de lucro e minimização de custos</h2>
 <ul>
-<li class="fragment"><p>Assume-se que a <a href="#/introdução-6">Equação&nbsp;1</a> forneça, para qualquer conjunto concebível de insumos, a solução de engenharia para o problema de como melhor combinar esses insumos para obter produtos.</p></li>
-<li class="fragment"><p>Portanto, a tecnologia de uma firma descreve a sua capacidade de produzir bens usando insumos de produção (também chamados de fatores de produção).</p></li>
-<li class="fragment"><p>Note que tanto insumo quanto produto são medidos como fluxos no tempo. O importante é que todas estas variáveis sejam calculadas para o mesmo período de tempo.</p></li>
+<li class="fragment"><p>Supondo que a firma tem como objetivo a maximização de lucros, então, podemos estudar seu comportamento examinando como <span class="math inline">\(k\)</span> e <span class="math inline">\(l\)</span> são escolhidos de maneira a maximizar a <a href="#/maximização-de-lucro-e-minimização-de-custos">Equação&nbsp;2</a>.</p></li>
+<li class="fragment"><p>Isso, por sua vez, levaria a uma teoria da oferta e uma teoria da “demanda derivada” para os insumos de capital e mão de obra.</p></li>
+<li class="fragment"><p>Nosso objetivo, agora, é desenvolver uma teoria dos custos que seja um pouco mais geral, aplicando-se não só às firmas tomadoras de preços no mercado de bens (concorrência perfeita) mas, também, àquelas cuja escolha de produção afeta o preço de mercado (monopólios e oligopólios).</p></li>
 </ul>
-</section>
-<section id="considerações-iniciais" class="slide level2">
-<h2>Considerações iniciais</h2>
-<ul>
-<li class="fragment"><p><span style="color: red">Fatores de produção.</span> São os insumos utilizados em processos produtivos, podendo ser classificados em categorias amplas como terra, trabalho, bens de capital e matérias primas.</p></li>
-<li class="fragment"><p><span style="color: red">Bens de capital ou capital físico.</span> São bens produzidos e utilizados como insumos em processos produtivos como máquinas, computadores, tratores, prédios, etc.</p></li>
-<li class="fragment"><p><span style="color: red">Firma.</span> É qualquer organização que realiza a transformação de certos insumos (que possui e/ou compra) em produtos (que vende).</p></li>
-<li class="fragment"><p><span style="color: red">Restrições de uma firma.</span> Uma firma está sujeita a duas restrições básicas. Uma delas é a <em>restrição tecnológica</em>, pois somente algumas combinações de insumos constituem formas viáveis de produzir certa quantidade de um produto. A outra é a <em>restrição econômica</em>, ou seja, uma firma toma suas decisões de produção condicionada pelas estruturas dos mercados de fatores (nos quais demanda insumos) e de produtos (onde vende sua produção).</p></li>
-</ul>
-</section>
-<section id="considerações-iniciais-1" class="slide level2">
-<h2>Considerações iniciais</h2>
-<ul>
-<li class="fragment"><p><span style="color: red">Hipótese simplificadora.</span> Estudaremos a restrição tecnológica do caso <em>uniproduto</em>, ou seja, focaremos o caso em que a firma produz apenas um tipo de produto, cuja quantidade denotaremos por <span class="math inline">\(q\)</span>, utilizando uma combinação de insumos <span class="math inline">\((x_1, \dots, x_i, \dots, x_n)\)</span>, na qual <span class="math inline">\(x_i \geq 0\)</span> é a quantidade utilizada do fator de produção <span class="math inline">\(i = 1, 2, \dots, n\)</span>.</p></li>
-<li class="fragment"><p><span style="color: red">Plano de produção.</span> É uma lista que especifica as quantidades dos insumos utilizados para produzir uma determinada quantidade de produto. Um plano de produção pode ser representado como um vetor <span class="math inline">\((-x_1, -x_2, \dots, -x_i, \dots, -x_n, q) \in \mathbb{R}^{n+1}\)</span>, onde as coordenadas com valores estritamente negativos indicam os insumos utilizados e a coordenada estritamente positiva indica a quantidade produzida.</p></li>
-</ul>
-</section>
-<section id="considerações-iniciais-2" class="slide level2">
-<h2>Considerações iniciais</h2>
-<ul>
-<li class="fragment"><p><span style="color: red">Planos de produção factíveis.</span> São planos de produção tecnologicamente possíveis.</p></li>
-<li class="fragment"><p><span style="color: red">Conjunto de possibilidade de produção.</span> É o conjunto <span class="math inline">\(Q \subset \mathbb{R}^{n+1}\)</span> formado por todos os planos de produção factíveis, ou seja, por todas as listas de combinações de insumos e produto tecnologicamente viáveis. Este conjunto representa todas as escolhas tecnológicas que uma firma se defronta.</p></li>
-</ul>
-</section>
-<section id="considerações-iniciais-3" class="slide level2">
-<h2>Considerações iniciais</h2>
-<ul>
-<li class="fragment">A <a href="#/fig-fig1">Figura&nbsp;1</a> ilustra um exemplo de um conjunto de produção para o caso de apenas um insumo e um produto. Usando a convenção que adotamos anteriormente, o insumo é representado por um número negativo e o produto por um número positivo.</li>
-</ul>
+<!-- ## Maximização de lucro e minimização de custos
 
-<img data-src="img/prodset.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;1: Conjunto de produção. Fonte: Mas-Colell et al.&nbsp;(1995).</p></section>
-<section id="considerações-iniciais-4" class="slide level2">
-<h2>Considerações iniciais</h2>
-<ul>
-<li class="fragment">Poderíamos, alternativamente, mensurar os insumos por números positivos, neste caso uma representação possível para o conjunto de produção seria dado pela <a href="#/fig-fig2">Figura&nbsp;2</a>.</li>
-</ul>
+-   A teoria mais geral se aplicará até mesmo a organizações sem fins
+    lucrativos (desde que estejam interessadas em operar de forma
+    eficiente).
 
-<img data-src="img/prodset2.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;2: Conjunto de produção. Fonte: Varian (2006).</p></section>
-<section id="considerações-iniciais-5" class="slide level2">
-<h2>Considerações iniciais</h2>
+-   Outra vantagem em analisar a minimização de custos separadamente da
+    maximização de lucros é que é mais simples analisar essa pequena
+    peça isoladamente e, só depois, adicionar os insights obtidos em uma
+    teoria mais geral das operações das firmas. -->
+</section>
+<section id="suposição-comportamental" class="slide level2">
+<h2>Suposição comportamental</h2>
 <ul>
-<li class="fragment"><span style="color: red">Função de produção.</span> De maneira mais geral, uma função de produção é a função <span class="math inline">\(q = f(x_1, \dots, x_i, \dots, x_n)\)</span> que associa a cada combinação de insumos <span class="math inline">\((x_1, \dots, x_i, \dots, x_n) \in \mathbb{R}^n_+\)</span> a quantidade <em>máxima</em> <span class="math inline">\(q\)</span> que pode ser produzida. A função de produção <span class="math inline">\(f(x_1, \dots, x_n)\)</span> define a fronteira do conjunto de produção - ver <a href="#/fig-fig2">Figura&nbsp;2</a>.</li>
+<li class="fragment"><p>As condições derivadas para as opções de insumos minimizadores de custo surgirão, novamente, como um subproduto da análise da maximização de lucros na próxima seção dos nossos estudos.</p></li>
+<li class="fragment"><p>Para isso, iremos supor que a firma é maximizadora de lucros. Logo, a combinação de insumos ótima (<span class="math inline">\(k^*, l^*)\)</span>, associada ao plano de produção maximizador de lucro <span class="math inline">\((-k^*, -l^*, q^*)\)</span>, deve ser minimizadora de custos, pois se não fosse, haveria outro plano de produção envolvendo um menor custo e, portanto, um maior lucro.</p></li>
 </ul>
+<!-- -   Observação: a análise de maximização de lucros que veremos
+    posteriormente só é válida para firmas competitivas. A minimização
+    de custos, por sua vez, é válida não somente para firmas
+    competitivas mas, também, para firmas que possuem algum controle
+    sobre o preço do seu produto. -->
 </section></section>
 <section>
-<section id="produtividade-marginal" class="title-slide slide level1 greenbackground center">
-<h1>Produtividade marginal</h1>
+<section id="minimização-de-custos" class="title-slide slide level1 greenbackground center">
+<h1>Minimização de custos</h1>
 
 </section>
-<section id="produto-marginal" class="slide level2">
-<h2>Produto marginal</h2>
+<section id="análise-formal" class="slide level2">
+<h2>Análise formal</h2>
 <ul>
-<li class="fragment"><p>O <span style="color: red">produto físico marginal</span> do fator de produção <span class="math inline">\(i\)</span>, denotado por <span class="math inline">\(PM_i\)</span>, é a variação da produção gerada pela variação em uma unidade do insumo <span class="math inline">\(i\)</span>, <em>ceteris paribus</em>.</p></li>
-<li class="fragment"><p>Mais precisamente, em termos contínuos, pode ser definida como a derivada parcial da função de produção com relação ao insumo <span class="math inline">\(i\)</span>: <span id="eq-eq2"><span class="math display">\[PM_i \equiv \frac{\partial f(\mathbf{x})}{\partial x_i} = f_i(\mathbf{x}), \qquad i = 1, \dots, n. \qquad(2)\]</span></span></p></li>
-<li class="fragment"><p>Se o fator de produção <span class="math inline">\(i\)</span> contribui para a produção, então, <span class="math inline">\(PM_i&gt;0\)</span> para toda combinação de insumos factível <span class="math inline">\((x_1, \dots, x_i, \dots, x_n)\)</span>.</p></li>
+<li class="fragment"><p><strong>Isocusto</strong>. Isocusto é o conjunto <span class="math inline">\(\{(k,l) \in \mathbb{R}_+^2| vk + wl = C\}\)</span> formado por todas as combinações de insumos <span class="math inline">\((k,l)\)</span> que geram o mesmo custo total <span class="math inline">\(C \geq 0\)</span>.</p></li>
+<li class="fragment"><p>A isocusto associada ao custo total <span class="math inline">\(C\)</span> pode ser descrita pela equação da reta: <span class="math display">\[k = \frac{C}{v} - \frac{w}{v}l,\]</span> cuja inclinação (coeficiente angular) é o negativo da razão entre os preços dos fatores de produção, <span class="math inline">\(-w/v\)</span>.</p></li>
 </ul>
 </section>
-<section id="produto-marginal-1" class="slide level2">
-<h2>Produto marginal</h2>
+<section id="minimização-de-custos-análise-formal" class="slide level2">
+<h2>Minimização de custos: análise formal</h2>
 <ul>
-<li class="fragment"><p>No caso de apenas dois fatores de produção, capital e trabalho, temos então que:</p>
+<li class="fragment"><p><strong>Problema da minimização de custos</strong>. A firma deve escolher a combinação de insumos <span class="math inline">\((k^*, l^*)\)</span> para atingir uma meta de produção <span class="math inline">\(q_0\)</span> com o menor custo possível.</p></li>
+<li class="fragment"><p>Ou seja, a firma deve resolver o seguinte problema de minimização de custos: <span id="eq-eq3"><span class="math display">\[\begin{aligned}
+\min_{(k,l)} &amp; \quad wl + vk, \\
+\text{s.r.} &amp; \quad f(k,l) = q_0. \nonumber
+\end{aligned} \qquad(3)\]</span></span></p></li>
+</ul>
+</section>
+<section id="minimização-de-custos-análise-formal-1" class="slide level2">
+<h2>Minimização de custos: análise formal</h2>
+<ul>
+<li class="fragment"><p>A função Lagrangeana associada ao problema de otimização restrito <a href="#/minimização-de-custos-análise-formal">Equação&nbsp;3</a> é dada por: <span id="eq-eq4"><span class="math display">\[\mathcal{L} = wl + vk + \lambda[q_0 - f(k,l)]. \qquad(4)\]</span></span></p></li>
+<li class="fragment"><p>As condições de primeira ordem para um ponto de mínimo restrito são dadas por: <span id="eq-eq5"><span class="math display">\[\begin{aligned}
+\frac{\partial \mathcal{L}}{\partial l} &amp;\therefore&amp; w - \lambda \frac{\partial f}{\partial l} = 0, \nonumber \\
+\frac{\partial \mathcal{L}}{\partial k} &amp;\therefore&amp; v - \lambda \frac{\partial f}{\partial k} = 0, \\
+\frac{\partial \mathcal{L}}{\partial \lambda} &amp;\therefore&amp; q_0 - f(k,l) = 0. \nonumber
+\end{aligned} \qquad(5)\]</span></span></p></li>
+</ul>
+</section>
+<section id="minimização-de-custos-análise-formal-2" class="slide level2">
+<h2>Minimização de custos: análise formal</h2>
+<ul>
+<li class="fragment"><p>Dividindo as duas primeiras equações do sistema <a href="#/minimização-de-custos-análise-formal-1">Equação&nbsp;5</a>, temos: <span id="eq-eq6"><span class="math display">\[\frac{w}{v} = \frac{f_l}{f_k} = TTS(l,k). \qquad(6)\]</span></span></p></li>
+<li class="fragment"><p>Ou seja, no caso padrão (tecnologia estritamente convexa e isoquanta continuamente diferenciável), na escolha minimizadora de custos <span class="math inline">\((k^*, l^*)\)</span> a isocusto é tangente à isoquanta, de maneira que suas inclinações são iguais.</p></li>
+<li class="fragment"><p>A firma minimizadora de custos deve igualar a TTS dos dois insumos à razão de seus preços.</p></li>
+</ul>
+</section>
+<section id="minimização-de-custos-análise-formal-3" class="slide level2">
+<h2>Minimização de custos: análise formal</h2>
+
+<img data-src="img/custostangencia.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;1: Condição de tangência entre isoquanta e isocusto no ponto de minimização de custos. Fonte: Nicholson e Snyder (2019).</p></section>
+<section id="minimização-de-custos-análise-formal-4" class="slide level2">
+<h2>Minimização de custos: análise formal</h2>
+<ul>
+<li class="fragment"><p>Note que a igualdade na <a href="#/minimização-de-custos-análise-formal-2">Equação&nbsp;6</a> pode ser expressa como segue: <span id="eq-eq7"><span class="math display">\[\frac{f_k}{v} = \frac{f_l}{w}. \qquad(7)\]</span></span></p></li>
+<li class="fragment"><p>Ou seja, para que os custos sejam minimizados, a <strong>produtividade marginal por cada unidade monetária dispendida deve ser a mesma para todos os insumos</strong>.</p></li>
+<li class="fragment"><p>Qualquer insumo que não satisfazer essa razão custo-benefício comum não deve ser selecionado.</p></li>
+</ul>
+</section>
+<section id="minimização-de-custos-análise-formal-5" class="slide level2">
+<h2>Minimização de custos: análise formal</h2>
+<ul>
+<li class="fragment"><p>Alternativamente, podemos, ainda, escrever a condição de igualdade da seguinte forma: <span id="eq-eq8"><span class="math display">\[\frac{w}{f_l} = \frac{v}{f_k} = \lambda. \qquad(8)\]</span></span></p></li>
+<li class="fragment"><p>A <a href="#/minimização-de-custos-análise-formal-5">Equação&nbsp;8</a> mostra o custo extra de se obter uma unidade a mais de produção, selecionando mão de obra ou entrada de capital adicional.</p></li>
+<li class="fragment"><p>Por causa da minimização de custos, esse custo marginal é o mesmo, independentemente do insumo selecionado.</p></li>
+<li class="fragment"><p>Esse custo marginal comum também é medido pelo multiplicador de Lagrange <span class="math inline">\(\lambda\)</span> do problema de minimização de custos.</p></li>
+<li class="fragment"><p>Como é o caso de todos os problemas de otimização restrita, o multiplicador de Lagrange mostra o quanto se incorreria, em termos de custos extras, caso a restrição de produção fosse relaxada levemente.</p></li>
+</ul>
+</section>
+<section id="função-demanda-condicional-de-fatores" class="slide level2">
+<h2>Função demanda condicional de fatores</h2>
+<ul>
+<li class="fragment"><strong>Função demanda contingente de insumos</strong>. Se a isoquanta é estritamente convexa, existe uma, e somente uma, combinação de insumos ótima <span class="math inline">\((k^*, l^*)\)</span> que resolve o problema de minimização de custos, a qual é uma função contínua dos preços <span class="math inline">\((v, w) \in \mathbb{R}_{++}^2\)</span> e da meta de produção <span class="math inline">\(q \geq 0\)</span>, ou seja: <span id="eq-eq9"><span class="math display">\[\begin{aligned}
+k &amp;=&amp; k^c(v, w, q), \\
+l &amp;=&amp; l^c(v, w, q).
+\end{aligned} \qquad(9)\]</span></span></li>
+</ul>
+</section>
+<section id="funções-custo" class="slide level2">
+<h2>Funções custo</h2>
+<ul>
+<li class="fragment"><p><strong>Função custo total</strong>. A função custo total mede o custo total mínimo de produzir <span class="math inline">\(q\)</span> unidades de um bem quando os preços dos fatores de produção são <span class="math inline">\((v, w) \in \mathbb{R}_{++}^2\)</span> e a tecnologia de produção é <span class="math inline">\(f(k,l)\)</span>: <span id="eq-eq10"><span class="math display">\[C = C(v, w, q). \qquad(10)\]</span></span></p></li>
+<li class="fragment"><p>A função custo é obtida <strong>substituindo</strong> a função demanda contingente de insumos na função objetivo do problema de minimização de custos, ou seja: <span id="eq-eq11"><span class="math display">\[C(v, w, q) = v k^c(v, w, q) + w l^c(v, w, q). \qquad(11)\]</span></span></p></li>
+</ul>
+</section>
+<section id="custo-médio-e-custo-marginal" class="slide level2">
+<h2>Custo médio e custo marginal</h2>
+<ul>
+<li class="fragment"><p>A <strong>função custo médio</strong> (AC) é o custo mínimo total por unidade produzida: <span id="eq-eq12"><span class="math display">\[\text{Custo médio} = AC(v, w, q) = \frac{C(v, w, q)}{q}. \qquad(12)\]</span></span></p></li>
+<li class="fragment"><p>A <strong>função custo marginal</strong> (MC) é a variação do custo total mínimo gerada pela variação de uma unidade de produção: <span id="eq-eq13"><span class="math display">\[\text{Custo marginal} = MC(v, w, q) = \frac{\partial C(v, w, q)}{\partial q}. \qquad(13)\]</span></span></p></li>
+</ul>
+</section>
+<section id="propriedades-das-funções-custo" class="slide level2">
+<h2>Propriedades das funções custo</h2>
+<ul>
+<li class="fragment"><p>A função custo total satisfaz as seguintes propriedades:</p>
 <ol type="1">
-<li class="fragment"><p>O produto marginal do trabalho, <span class="math inline">\(PM_l = f_l\)</span>, mede o quanto a produção aumentará se aumentarmos (um pouco) a quantidade de trabalho usada, mantendo a quantidade de capital fixa.</p></li>
-<li class="fragment"><p>O produto marginal do capital, <span class="math inline">\(PM_k = f_k\)</span>, mede o quanto a produção aumentará se aumentarmos (um pouco) a quantidade de capital usada, mantendo a quantidade de trabalho fixa.</p></li>
+<li class="fragment"><p><span class="math inline">\(C(v, w, 0) = 0\)</span>.</p></li>
+<li class="fragment"><p><span class="math inline">\(C(v, w, q)\)</span> é estritamente crescente em <span class="math inline">\(q\)</span>.</p></li>
+<li class="fragment"><p><span class="math inline">\(C(v, w, q)\)</span> é não-decrescente nos preços dos insumos <span class="math inline">\(v\)</span> e <span class="math inline">\(w\)</span>.</p></li>
+<li class="fragment"><p><span class="math inline">\(C(v, w, q)\)</span> é homogênea de grau 1 nos preços dos insumos <span class="math inline">\(v\)</span> e <span class="math inline">\(w\)</span>, isto é: <span id="eq-eq14"><span class="math display">\[C(tv, tw, q) = tC(v, w, q), \forall t &gt; 0. \qquad(14)\]</span></span></p></li>
+<li class="fragment"><p>A função custo total é côncava nos preços dos insumos <span class="math inline">\(v\)</span> e <span class="math inline">\(w\)</span>.</p></li>
+<li class="fragment"><p>Lema de Shephard: <span id="eq-eq15"><span class="math display">\[\begin{aligned}
+\frac{\partial C(v, w, q)}{\partial v} &amp;=&amp; k^c(v, w, q), \\
+\frac{\partial C(v, w, q)}{\partial w} &amp;=&amp; l^c(v, w, q).
+\end{aligned} \qquad(15)\]</span></span></p></li>
 </ol></li>
 </ul>
 </section>
-<section id="princípio-das-produtividades-marginais-decrescentes" class="slide level2">
-<h2>Princípio das produtividades marginais decrescentes</h2>
+<section id="exercícios" class="slide level2">
+<h2>Exercícios</h2>
+<p>Encontre as funções de demanda contingente de insumos, e custo total das seguintes funções de produção:</p>
 <ul>
-<li class="fragment"><p><span style="color: red">Princípio dos rendimentos físicos (produtividades marginais) decrescentes.</span> Quanto mais se utiliza um fator de produção <span class="math inline">\(i\)</span>, <em>ceteris paribus</em>, a contribuição deste fator para o aumento da produção tende a ser cada vez menor, ou seja, o produto físico marginal do fator de produção <span class="math inline">\(i\)</span> é estritamente decrescente com relação à quantidade utilizada deste fator.</p></li>
-<li class="fragment"><p>Formalmente: <span class="math display">\[\frac{\partial PM_i(\mathbf{x})}{\partial x_i} = \frac{\partial^2 f(\mathbf{x})}{\partial x_i^2} = f_{ii} &lt; 0, \qquad \forall i = 1, \dots, n.\]</span></p></li>
+<li class="fragment">Cobb-Douglas <span class="math display">\[q = f(k,l) = k^\alpha l^\beta.\]</span></li>
+<li class="fragment">Função CES <span class="math display">\[q = f(k,l) = (k^\rho + l^\rho)^{\gamma/\rho}.\]</span></li>
+<li class="fragment">Tecnologia linear <span class="math display">\[q = f(k,l) = \alpha k + \beta l.\]</span></li>
+<li class="fragment">Leontief <span class="math display">\[q = f(k,l) = \min(\alpha k, \beta l).\]</span></li>
 </ul>
-</section>
-<section id="princípio-das-produtividades-marginais-decrescentes-1" class="slide level2">
-<h2>Princípio das produtividades marginais decrescentes</h2>
-<ul>
-<li class="fragment"><p>Considerando nossa função de produção com apenas dois fatores - capital e trabalho - temos: <span class="math display">\[\begin{aligned}
-\frac{\partial PM_k}{\partial k} &amp;=&amp; \frac{\partial^2 f(k,l)}{\partial k^2} = f_{kk} &lt; 0, \\
-\frac{\partial PM_l}{\partial l} &amp;=&amp; \frac{\partial^2 f(k,l)}{\partial l^2} = f_{ll} &lt; 0.
-\end{aligned}\]</span></p></li>
-<li class="fragment"><p>A hipótese de produtividade marginal decrescente foi originalmente proposta pelo economista do século XIX Thomas Malthus, que temia que o aumento rápido da população resultasse em uma menor produtividade do trabalho.</p></li>
-<li class="fragment"><p>Suas predições pessimistas para o futuro da humanidade fizeram com que a economia ficasse conhecida como “ciência sombria”.</p></li>
-</ul>
-</section>
-<section id="princípio-das-produtividades-marginais-decrescentes-2" class="slide level2">
-<h2>Princípio das produtividades marginais decrescentes</h2>
-
-<img data-src="img/malthus.jpg" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;3: Thomas Robert Malthus (1766 - 1834). Fonte: <a href="https://en.wikipedia.org/wiki/Thomas_Robert_Malthus">Wikipedia</a>.</p></section>
-<section id="princípio-das-produtividades-marginais-decrescentes-3" class="slide level2">
-<h2>Princípio das produtividades marginais decrescentes</h2>
-<ul>
-<li class="fragment"><p>Uma análise mais cuidadosa da função de produção sugere que tais predições pessimistas podem não ser corretas.</p></li>
-<li class="fragment"><p>Variações na produtividade marginal do trabalho ao longo do tempo dependem não só de como o fator de produção trabalho está crescendo mas, também, de mudanças nos outros insumos (e.g., capital).</p></li>
-<li class="fragment"><p>Ou seja, precisamos nos preocupar também com <span class="math inline">\(\partial PM_l/\partial k = f_{lk}\)</span>.</p></li>
-<li class="fragment"><p>Na maioria dos casos, <span class="math inline">\(f_{lk} &gt; 0\)</span>, portanto, a diminuição da produtividade do trabalho à medida que <em>ambos <span class="math inline">\(l\)</span> e <span class="math inline">\(k\)</span> aumentam</em> pode ser uma conclusão precipitada.</p></li>
-<li class="fragment"><p>De fato, a produtividade do trabalho parece ter aumentado significativamente desde a época de Malthus, principalmente porque os aumentos nos insumos de capital (combinado a melhorias tecnológicas) compensou o impacto do declínio da produtividade marginal.</p></li>
-</ul>
-</section>
-<section id="produto-médio" class="slide level2">
-<h2>Produto médio</h2>
-<ul>
-<li class="fragment"><p><span style="color: red">Produto físico médio (<span class="math inline">\(PMe_{i}\)</span>).</span> Quantidade produzida por unidade do insumo <span class="math inline">\(i\)</span>: <span class="math display">\[PMe_i = \frac{f(\mathbf{x})}{x_i}, \qquad x_i &gt; 0.
-            \label{eq4}\]</span></p></li>
-<li class="fragment"><p>De maneira geral, <em>produtividade do trabalho</em> significa <em>produtividade média</em>.</p></li>
-<li class="fragment"><p>Como a produtividade média é facilmente mensurável, é comumente utilizada como medida de eficiência - muito utilizada em trabalhos empíricos (e menos em teóricos).</p></li>
-<li class="fragment"><p>Para o caso de dois insumos, a produtividade média do trabalho é: <span class="math display">\[PMe_l = \frac{f(k,l)}{l}.\]</span></p></li>
-<li class="fragment"><p>Note que a produtividade média do trabalho depende do nível de capital utilizado.</p></li>
-</ul>
-</section>
-<section id="exercício" class="slide level2">
-<h2>Exercício</h2>
-<p>Suponha a seguinte função de produção: <span class="math display">\[q = f(k,l) = 600k^2l^2 - k^3l^3.\]</span></p>
-<p>Se o nível de capital utilizado é <span class="math inline">\(k = 10\)</span>, obtenha o seguinte:</p>
-<ol type="1">
-<li class="fragment"><p>Produtividade marginal do trabalho e o nível de trabalho utilizado para que o produto atinja seu valor máximo.</p></li>
-<li class="fragment"><p>Produto médio do trabalho e o nível de trabalho utilizado para que o produto médio do trabalho atinja seu valor máximo.</p></li>
-<li class="fragment"><p>Verifique que quando <span class="math inline">\(l\)</span> faz com que a produtividade média do trabalho atinja seu nível máximo, neste ponto, a produtividade média do trabalho é igual á produtividade marginal do trabalho.</p></li>
-<li class="fragment"><p>Mostre que a igualdade do item anterior é geral.</p></li>
-</ol>
-</section></section>
-<section>
-<section id="funções-de-produção-e-isoquantas" class="title-slide slide level1 greenbackground center">
-<h1>Funções de produção e isoquantas</h1>
-
-</section>
-<section id="isoquantas" class="slide level2">
-<h2>Isoquantas</h2>
-<ul>
-<li class="fragment"><p>Para ilustrar a possível substituição de um insumo por outro em uma função de produção, usamos o seu mapa de isoquanta.</p></li>
-<li class="fragment"><p><span style="color: red">Isoquanta.</span> Isoquanta é o conjunto <span class="math inline">\(Q(q) = \{(x_1, x_2) \in \mathbb{R}^2_+| f(x_1, x_2) = q\}\)</span> formado por todas as combinações de insumos <span class="math inline">\((x_1, x_2)\)</span> que geram o mesmo nível (máximo) de produção <span class="math inline">\(q\)</span>.</p></li>
-<li class="fragment"><p>Assim como no caso das curvas de indiferença, existem infinitas isoquantas no plano de <span class="math inline">\(k-l\)</span> (se considerarmos os insumos capital e trabalho).</p></li>
-<li class="fragment"><p>Cada isoquanta representa um nível distinto de produto.</p></li>
-<li class="fragment"><p>As isoquantas registram sucessivamente níveis mais altos de produto à medida que nos movemos na direção nordeste.</p></li>
-<li class="fragment"><p>A utilização de mais de cada um dos insumos possibilitará que a produção aumente.</p></li>
-</ul>
-</section>
-<section id="isoquantas-1" class="slide level2">
-<h2>Isoquantas</h2>
-
-<img data-src="img/isoquanta.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;4: Mapa de isoquanta. Fonte: Nicholson e Snyder (2019).</p></section>
-<section id="isoquantas-2" class="slide level2">
-<h2>Isoquantas</h2>
-<ul>
-<li class="fragment"><p>É possível notar a similaridade entre um mapa de isoquanta e o mapa de curva de indiferença de um indivíduo.</p></li>
-<li class="fragment"><p>São, de fato, conceitos similares pois representam os mapas de contorno de uma função em particular.</p></li>
-<li class="fragment"><p>No entanto, no caso das isoquantas, o rótulo das curvas é mensurável - uma produção de 10 unidades por período tem um significado quantificável.</p></li>
-<li class="fragment"><p>Por este motivo, os economistas estão mais interessados em estudar a forma das funções de produção do que das funções utilidade.</p></li>
-</ul>
-</section>
-<section id="propriedades-das-funções-de-produção" class="slide level2">
-<h2>Propriedades das funções de produção</h2>
-<ul>
-<li class="fragment"><p>Duas premissas comuns sobre as propriedades da tecnologia são <em>monotonicidade</em> ou <em>livre descarte</em> (<em>free disposal</em>) e <em>convexidade</em>.</p>
-<ol type="1">
-<li class="fragment"><p><span style="color: red">Monotonicidade</span>. Uma tecnologia apresenta monotonicidade ou livre descarte quando é sempre possível a absorção de quantidades adicionais de pelo menos um insumo sem que isto acarrete redução da produção. A função de produção é, sob tal suposição, não-decrescente com relação a cada um de seus fatores de produção (os produtos marginais são não-negativos) e, portanto, as isoquantas não são positivamente inclinadas.</p></li>
-<li class="fragment"><p><span style="color: red">Convexidade</span>. Uma tecnologia é convexa quando a média ponderada de duas combinações de insumos <span class="math inline">\((x_1, x_2)\)</span> e <span class="math inline">\((y_1, y_2)\)</span> que geram uma produção <span class="math inline">\(q\)</span>, gera uma produção maior ou igual a <span class="math inline">\(q\)</span>.</p></li>
-</ol></li>
-</ul>
-</section>
-<section id="exemplos-simples-de-funções-de-produção" class="slide level2">
-<h2>Exemplos simples de funções de produção</h2>
-<ol type="1">
-<li class="fragment"><p><span style="color: red">Tecnologia com fatores de produção substitutos (linear).</span> <span id="eq-eq5"><span class="math display">\[q = f(k,l) = \alpha k + \beta l, \qquad \alpha, \beta &gt; 0. \qquad(3)\]</span></span></p></li>
-<li class="fragment"><p><span style="color: red">Tecnologia com fatores de produção combinados em proporções fixas (Leontief).</span> <span id="eq-eq6"><span class="math display">\[q = f(k,l) = \min\{\alpha k, \beta l\}, \qquad \alpha, \beta &gt; 0. \qquad(4)\]</span></span></p></li>
-<li class="fragment"><p><span style="color: red">Tecnologia Cobb-Douglas.</span> <span id="eq-eq7"><span class="math display">\[q = f(k,l) = Ak^\alpha l^\beta, \qquad A, \alpha, \beta &gt; 0. \qquad(5)\]</span></span></p></li>
-<li class="fragment"><p><span style="color: red">Tecnologia CES.</span> <span id="eq-eq8"><span class="math display">\[q = f(k,l) = [\alpha k^\rho + (1-\alpha) l^\rho]^{\gamma/\rho}, \qquad \rho \leq 1, \rho \neq 0, \gamma &gt; 0, 0\leq \alpha \leq 1. \qquad(6)\]</span></span></p></li>
-</ol>
 </section>
 <section id="bibliografia" class="slide level2">
 <h2><span class="emoji" data-emoji="books">📚</span> Bibliografia</h2>
 <p>NICHOLSON, W.; SNYDER C. Teoria microeconômica: Princípios básicos e aplicações. Cengage Learning Brasil, 2019. Disponível em: <a href="https://app.minhabiblioteca.com.br/books/9788522127030/">app.minhabiblioteca.com.br/books/9788522127030</a></p>
 <p>VARIAN, H. R. Intermediate Microeconomics: A modern approach. 7.ed. New York: W.W. Norton &amp; Company, 2006.</p>
+<p>MAS-COLELL, A.; WHINSTON M.D.; GREEN, J.R. Microeconomic Theory. New York: Oxford University Press, 1995.</p>
 
 <img src="img/UdescEsag.jpeg" class="slide-logo r-stretch"><div class="footer footer-default">
 
@@ -589,20 +545,20 @@ Rafael Bressan
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="Aula14-Tecnologia_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="Aula16-Minimizacao-Custos_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="Aula14-Tecnologia_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="Aula14-Tecnologia_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="Aula14-Tecnologia_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="Aula14-Tecnologia_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="Aula14-Tecnologia_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="Aula14-Tecnologia_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="Aula16-Minimizacao-Custos_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="Aula16-Minimizacao-Custos_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="Aula16-Minimizacao-Custos_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="Aula16-Minimizacao-Custos_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="Aula16-Minimizacao-Custos_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="Aula16-Minimizacao-Custos_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="Aula14-Tecnologia_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="Aula14-Tecnologia_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="Aula14-Tecnologia_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="Aula14-Tecnologia_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="Aula16-Minimizacao-Custos_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="Aula16-Minimizacao-Custos_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="Aula16-Minimizacao-Custos_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="Aula16-Minimizacao-Custos_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

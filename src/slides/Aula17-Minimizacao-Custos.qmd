@@ -1,63 +1,62 @@
 ---
-author:
-- |
-  **Docente Responsável:** Paulo Victor da Fonseca\
-  **E-mail:** <paulo.fonseca@udesc.br>\
-  **Disciplina:** 23MIC1 - Microeconomia I\
-  **Universidade do Estado de Santa Catarina (UDESC)**\
-  **Centro de Ciências da Administração e Socioeconômicas - ESAG**
-date: 30 de Novembro, 2022
-title: "Microeconomia I: Minimização de custos"
+title: "Minimização de custos"
+title-slide-attributes:
+  data-background-image: "img/UdescEsag.jpeg"
+  data-background-size: 50%
+  data-background-position: top left
+  # data-background-opacity: "0.7"
+center-title-slide: true
+author: "Rafael Bressan"
+logo: "img/UdescEsag.jpeg"
+format: 
+  revealjs:
+    theme: [default, udesc.scss] 
+    code-fold: true
+    chalkboard: true
+    incremental: true
+    width: 1600
+    height: 900
+from: markdown+emoji # list of emojis: https://gist.github.com/rxaviers/7360908
+fontsize: "2.2em"
+editor: source
+jupyter: python3
 ---
 
-::: frame
-Sumário
-:::
-
-# Custo econômico $\times$ custo contábil
+# Custo econômico $\times$ custo contábil{.greenbackground}
 
 ## Definições
-
-::: frame
-Definições
 
 -   Antes de discutirmos a teoria dos custos, algumas questões sobre a
     definição adequada de "custos" devem ser esclarecidas.
 
--   Especificamente, devemos fazer a distinção entre [custo
-    contábil]{style="color: red"} e [custo
-    econômico]{style="color: blue"}.
+-   Especificamente, devemos fazer a distinção entre **[custo contábil]{.red}** e **custo econômico**.
 
 -   [Custo contábil.]{style="color: red"} A visão de custo do contador
     enfatiza as despesas pecuniárias, os custos históricos, a
     depreciação e outros registros históricos.
 
--   [Custo econômico.]{style="color: blue"} O custo econômico de
+-   [Custo econômico.]{style="color: darkgreen"} O custo econômico de
     qualquer insumo é o pagamento exigido para manter esse insumo em seu
     emprego atual. De maneira equivalente, o custo econômico de um
     insumo é a remuneração que o insumo receberia em seu melhor emprego
     alternativo.
-:::
 
-::: frame
-Definições
+-   Colocaremos as questões de mensuração de lado e utilizaremos os
+    conceitos relevantes para a decisão - custos econômicos - ao longo
+    da análise.
+
+<!-- ## Definições
 
 -   Os dados contábeis geralmente estão facilmente disponíveis, enquanto
     os conceitos econômicos correspondentes podem ser mais difíceis de
     medir.
 
 -   Se a medida contábil não diferir muito de sua contraparte econômica,
-    ela pode ser uma boa aproximação para muitos propósitos práticos.
+    ela pode ser uma boa aproximação para muitos propósitos práticos. -->
 
--   Colocaremos as questões de mensuração de lado e utilizaremos os
-    conceitos relevantes para a decisão - custos econômicos - ao longo
-    da análise.
-:::
 
 ## Hipóteses simplificadoras
 
-::: frame
-Hipóteses simplificadoras
 
 -   Estudaremos a minimização e as curvas de custo de uma firma que
     produz apenas um tipo de produto $q$ (caso uniproduto) utilizando
@@ -73,23 +72,19 @@ Hipóteses simplificadoras
 
 -   Portanto, a firma paga por unidades dos insumos trabalho e capital
     os preços exógenos $w > 0$ e $v > 0$, respectivamente.
-:::
 
-::: frame
-Hipóteses simplificadoras
+
+## Hipóteses simplificadoras
 
 -   Logo, com essas simplificações, o custo total $C$ para a firma
-    durante o período é dado por: $$\text{Custo total} = C = wl + vk,
-                \label{eq1}$$ em que $l$ e $k$ representam a utilização
+    durante o período é dado por: $$\text{Custo total} = C = wl + vk,$${#eq-eq1} 
+    em que $l$ e $k$ representam a utilização
     dos insumos trabalho e capital, respectivamente, durante o insumo.
-:::
 
-# Relação entre maximização de lucro e minimização de custos
+
+# Relação entre maximização de lucro e minimização de custos{.greenbackground}
 
 ## Maximização de lucro e minimização de custos
-
-::: frame
-Maximização de lucro e minimização de custos
 
 -   Os lucros econômicos ($\pi$) serão definidos como a diferença entre
     a receita total ($R$) da firma e seus custos totais ($C$).
@@ -97,20 +92,17 @@ Maximização de lucro e minimização de custos
 -   Suponha que a firma adote o preço de mercado ($p$) para a sua
     produção total ($q$) como dada e que sua função de produção é
     $q = f(k,l)$. Formalmente, teremos:
-    $$\pi = R - C = pq - wl - vk = pf(k,l) - wl - vk.
-                \label{eq2}$$
+    $$\pi = R - C = pq - wl - vk = pf(k,l) - wl - vk.$${#eq-eq2}
 
 -   Ou seja, os lucros econômicos desta firma são uma função da
     quantidade de capital e trabalho empregado.
-:::
 
-::: frame
-Maximização de lucro e minimização de custos
+
+## Maximização de lucro e minimização de custos
 
 -   Supondo que a firma tem como objetivo a maximização de lucros,
     então, podemos estudar seu comportamento examinando como $k$ e $l$
-    são escolhidos de maneira a maximizar
-    ([\[eq2\]](#eq2){reference-type="ref" reference="eq2"}).
+    são escolhidos de maneira a maximizar a @eq-eq2.
 
 -   Isso, por sua vez, levaria a uma teoria da oferta e uma teoria da
     "demanda derivada" para os insumos de capital e mão de obra.
@@ -120,10 +112,9 @@ Maximização de lucro e minimização de custos
     preços no mercado de bens (concorrência perfeita) mas, também,
     àquelas cuja escolha de produção afeta o preço de mercado
     (monopólios e oligopólios).
-:::
 
-::: frame
-Maximização de lucro e minimização de custos
+
+<!-- ## Maximização de lucro e minimização de custos
 
 -   A teoria mais geral se aplicará até mesmo a organizações sem fins
     lucrativos (desde que estejam interessadas em operar de forma
@@ -132,13 +123,11 @@ Maximização de lucro e minimização de custos
 -   Outra vantagem em analisar a minimização de custos separadamente da
     maximização de lucros é que é mais simples analisar essa pequena
     peça isoladamente e, só depois, adicionar os insights obtidos em uma
-    teoria mais geral das operações das firmas.
-:::
+    teoria mais geral das operações das firmas. -->
+
 
 ## Suposição comportamental
 
-::: frame
-Suposição comportamental
 
 -   As condições derivadas para as opções de insumos minimizadores de
     custo surgirão, novamente, como um subproduto da análise da
@@ -150,21 +139,18 @@ Suposição comportamental
     minimizadora de custos, pois se não fosse, haveria outro plano de
     produção envolvendo um menor custo e, portanto, um maior lucro.
 
--   Observação: a análise de maximização de lucros que veremos
+<!-- -   Observação: a análise de maximização de lucros que veremos
     posteriormente só é válida para firmas competitivas. A minimização
     de custos, por sua vez, é válida não somente para firmas
     competitivas mas, também, para firmas que possuem algum controle
-    sobre o preço do seu produto.
-:::
+    sobre o preço do seu produto. -->
 
-# Minimização de custos
+
+# Minimização de custos{.greenbackground}
 
 ## Análise formal
 
-::: frame
-Minimização de custos: análise formal
-
--   [Isocusto.]{style="color: blue"} Isocusto é o conjunto
+-   **Isocusto**. Isocusto é o conjunto
     $\{(k,l) \in \mathbb{R}_+^2| vk + wl = C\}$ formado por todas as
     combinações de insumos $(k,l)$ que geram o mesmo custo total
     $C \geq 0$.
@@ -173,47 +159,42 @@ Minimização de custos: análise formal
     equação da reta: $$k = \frac{C}{v} - \frac{w}{v}l,$$ cuja inclinação
     (coeficiente angular) é o negativo da razão entre os preços dos
     fatores de produção, $-w/v$.
-:::
 
-::: frame
-Minimização de custos: análise formal
 
--   [Problema da minimização de custos.]{style="color: blue"} A firma
+## Minimização de custos: análise formal
+
+-   **Problema da minimização de custos**. A firma
     deve escolher a combinação de insumos $(k^*, l^*)$ para atingir uma
     meta de produção $q_0$ com o menor custo possível.
 
 -   Ou seja, a firma deve resolver o seguinte problema de minimização de
-    custos: $$\begin{aligned}
-                \min_{(k,l)} & \quad wl + vk, \label{eq3} \\
-                \text{s.r.} & \quad f(k,l) = q_0. \nonumber
-            
-    \end{aligned}$$
-:::
+    custos: 
+$$\begin{aligned}
+\min_{(k,l)} & \quad wl + vk, \\
+\text{s.r.} & \quad f(k,l) = q_0. \nonumber
+\end{aligned}$${#eq-eq3}
 
-::: frame
-Minimização de custos: análise formal
+
+## Minimização de custos: análise formal
 
 -   A função Lagrangeana associada ao problema de otimização restrito
-    ([\[eq3\]](#eq3){reference-type="ref" reference="eq3"}) é dada por:
-    $$\mathcal{L} = wl + vk + \lambda[q_0 - f(k,l)].
-                \label{eq4}$$
+    @eq-eq3 é dada por:
+$$\mathcal{L} = wl + vk + \lambda[q_0 - f(k,l)].$${#eq-eq4}
 
 -   As condições de primeira ordem para um ponto de mínimo restrito são
-    dadas por: $$\begin{aligned}
-                \frac{\partial \mathcal{L}}{\partial l} &\therefore& w - \lambda \frac{\partial f}{\partial l} = 0, \nonumber \\
-                \frac{\partial \mathcal{L}}{\partial k} &\therefore& v - \lambda \frac{\partial f}{\partial k} = 0, \label{eq5} \\
-                \frac{\partial \mathcal{L}}{\partial \lambda} &\therefore& q_0 - f(k,l) = 0. \nonumber
-            
-    \end{aligned}$$
-:::
+    dadas por: 
+$$\begin{aligned}
+\frac{\partial \mathcal{L}}{\partial l} &\therefore& w - \lambda \frac{\partial f}{\partial l} = 0, \nonumber \\
+\frac{\partial \mathcal{L}}{\partial k} &\therefore& v - \lambda \frac{\partial f}{\partial k} = 0, \\
+\frac{\partial \mathcal{L}}{\partial \lambda} &\therefore& q_0 - f(k,l) = 0. \nonumber
+\end{aligned}$${#eq-eq5}
 
-::: frame
-Minimização de custos: análise formal
+
+## Minimização de custos: análise formal
 
 -   Dividindo as duas primeiras equações do sistema
-    ([\[eq5\]](#eq5){reference-type="ref" reference="eq5"}), temos:
-    $$\frac{w}{v} = \frac{f_l}{f_k} = TTS(l,k).
-                \label{eq6}$$
+    @eq-eq5, temos:
+$$\frac{w}{v} = \frac{f_l}{f_k} = TTS(l,k).$${#eq-eq6}
 
 -   Ou seja, no caso padrão (tecnologia estritamente convexa e isoquanta
     continuamente diferenciável), na escolha minimizadora de custos
@@ -222,43 +203,31 @@ Minimização de custos: análise formal
 
 -   A firma minimizadora de custos deve igualar a TTS dos dois insumos à
     razão de seus preços.
-:::
 
-::: frame
-Minimização de custos: análise formal
 
-<figure id="fig1">
-<img src="custostangencia.JPG" style="width:70.0%" />
-<figcaption>Condição de tangência entre isoquanta e isocusto no ponto de
-minimização de custos. Fonte: Nicholson e Snyder (2019).</figcaption>
-</figure>
-:::
+## Minimização de custos: análise formal
 
-::: frame
-Minimização de custos: análise formal
+![Condição de tangência entre isoquanta e isocusto no ponto de minimização de custos. Fonte: Nicholson e Snyder (2019).](img/custostangencia.JPG){#fig-fig1}
 
--   Note que a igualdade na equação
-    ([\[eq6\]](#eq6){reference-type="ref" reference="eq6"}) pode ser
-    expressa como segue: $$\frac{f_k}{v} = \frac{f_l}{w}.
-                \label{eq7}$$
+## Minimização de custos: análise formal
 
--   Ou seja, para que os custos sejam minimizados, a produtividade
-    marginal por cada unidade monetária dispendida deve ser a mesma para
-    todos os insumos.
+-   Note que a igualdade na @eq-eq6 pode ser
+    expressa como segue: 
+    $$\frac{f_k}{v} = \frac{f_l}{w}.$${#eq-eq7}
+
+-   Ou seja, para que os custos sejam minimizados, a **produtividade marginal por cada unidade monetária dispendida deve ser a mesma para todos os insumos**.
 
 -   Qualquer insumo que não satisfazer essa razão custo-benefício comum
     não deve ser selecionado.
-:::
 
-::: frame
-Minimização de custos: análise formal
+
+## Minimização de custos: análise formal
 
 -   Alternativamente, podemos, ainda, escrever a condição de igualdade
-    da seguinte forma: $$\frac{w}{f_l} = \frac{v}{f_k} = \lambda.
-                \label{eq8}$$
+    da seguinte forma: 
+    $$\frac{w}{f_l} = \frac{v}{f_k} = \lambda.$${#eq-eq8}
 
--   A equação ([\[eq8\]](#eq8){reference-type="ref" reference="eq8"})
-    mostra o custo extra de se obter uma unidade a mais de produção,
+-   A @eq-eq8 mostra o custo extra de se obter uma unidade a mais de produção,
     selecionando mão de obra ou entrada de capital adicional.
 
 -   Por causa da minimização de custos, esse custo marginal é o mesmo,
@@ -271,62 +240,47 @@ Minimização de custos: análise formal
     multiplicador de Lagrange mostra o quanto se incorreria, em termos
     de custos extras, caso a restrição de produção fosse relaxada
     levemente.
-:::
+
 
 ## Função demanda condicional de fatores
 
-::: frame
-Função demanda condicional de fatores
 
--   [Função demanda condicional de fatores (ou demanda contingente de
-    insumos).]{style="color: blue"} Se a isoquanta é estritamente
+-   **Função demanda contingente de insumos**. Se a isoquanta é estritamente
     convexa, existe uma, e somente uma, combinação de insumos ótima
     $(k^*, l^*)$ que resolve o problema de minimização de custos, a qual
     é uma função contínua dos preços $(v, w) \in \mathbb{R}_{++}^2$ e da
-    meta de produção $q \geq 0$, ou seja: $$\begin{aligned}
-                k &=& k^c(v, w, q), \label{eq9} \\
-                l &=& l^c(v, w, q). \label{eq10}
-            
-    \end{aligned}$$
-:::
+    meta de produção $q \geq 0$, ou seja: 
+$$\begin{aligned}
+k &=& k^c(v, w, q), \\
+l &=& l^c(v, w, q). 
+\end{aligned}$${#eq-eq9}
+
 
 ## Funções custo
 
-::: frame
-Funções custo
-
--   [Função custo total.]{style="color: blue"} A função custo total mede
+-   **Função custo total**. A função custo total mede
     o custo total mínimo de produzir $q$ unidades de um bem quando os
     preços dos fatores de produção são $(v, w) \in \mathbb{R}_{++}^2$ e
-    a tecnologia de produção é $f(k,l)$: $$C = C(v, w, q).
-                \label{eq11}$$
+    a tecnologia de produção é $f(k,l)$: 
+$$C = C(v, w, q).$${#eq-eq10}
 
--   A função custo é obtida substituindo a função demanda condicional de
-    fatores na função objetivo do problema de minimização de custos, ou
-    seja: $$C(v, w, q) = v k^c(v, w, q) + w l^c(v, w, q).
-                \label{eq12}$$
-:::
+-   A função custo é obtida **substituindo** a função demanda contingente de insumos na função objetivo do problema de minimização de custos, ou seja: 
+$$C(v, w, q) = v k^c(v, w, q) + w l^c(v, w, q).$${#eq-eq11}
+
 
 ## Custo médio e custo marginal
 
-::: frame
-Funções custo médio e marginal
 
--   A [função custo médio]{style="color: blue"} (AC) é o custo mínimo
+-   A **função custo médio** (AC) é o custo mínimo
     total por unidade produzida:
-    $$\text{Custo médio} = AC(v, w, q) = \frac{C(v, w, q)}{q}.
-                \label{eq13}$$
+$$\text{Custo médio} = AC(v, w, q) = \frac{C(v, w, q)}{q}.$${#eq-eq12}
 
--   A [função custo marginal]{style="color: blue"} (MC) é a variação do
+-   A **função custo marginal** (MC) é a variação do
     custo total mínimo gerada pela variação de uma unidade de produção:
-    $$\text{Custo marginal} = MC(v, w, q) = \frac{\partial C(v, w, q)}{\partial q}.
-                \label{eq14}$$
-:::
+$$\text{Custo marginal} = MC(v, w, q) = \frac{\partial C(v, w, q)}{\partial q}.$${#eq-eq13}
+
 
 ## Propriedades das funções custo
-
-::: frame
-Propriedades das funções custo
 
 -   A função custo total satisfaz as seguintes propriedades:
 
@@ -338,45 +292,33 @@ Propriedades das funções custo
 
     4.  $C(v, w, q)$ é homogênea de grau 1 nos preços dos insumos $v$ e
         $w$, isto é:
-        $$C(tv, tw, q) = tC(v, w, q), \forall t > 0. \label{eq15}$$
+$$C(tv, tw, q) = tC(v, w, q), \forall t > 0.$${#eq-eq14}
 
     5.  A função custo total é côncava nos preços dos insumos $v$ e $w$.
 
-    6.  Lema de Shephard: $$\begin{aligned}
-                        \frac{\partial C(v, w, q)}{\partial v} &=& k^c(v, w, q), \label{eq16} \\
-                        \frac{\partial C(v, w, q)}{\partial w} &=& l^c(v, w, q). \label{eq17}
-                    
-        \end{aligned}$$
-:::
+    6.  Lema de Shephard: 
+$$\begin{aligned}
+\frac{\partial C(v, w, q)}{\partial v} &=& k^c(v, w, q), \\
+\frac{\partial C(v, w, q)}{\partial w} &=& l^c(v, w, q).
+\end{aligned}$${#eq-eq15}
 
-# Exercícios
+## Exercícios
 
-::: frame
-Cobb-Douglas $$q = f(k,l) = k^\alpha l^\beta.$$
-:::
+Encontre as funções de demanda contingente de insumos, e custo total das seguintes funções de produção:
 
-::: frame
-Função CES $$q = f(k,l) = (k^\rho + l^\rho)^{\gamma/\rho}.$$
-:::
+- Cobb-Douglas $$q = f(k,l) = k^\alpha l^\beta.$$
+- Função CES $$q = f(k,l) = (k^\rho + l^\rho)^{\gamma/\rho}.$$
+- Tecnologia linear $$q = f(k,l) = \alpha k + \beta l.$$
+- Leontief $$q = f(k,l) = \min(\alpha k, \beta l).$$
 
-::: frame
-Tecnologia linear $$q = f(k,l) = \alpha k + \beta l.$$
-:::
-
-::: frame
-Leontief $$q = f(k,l) = \min(\alpha k, \beta l).$$
-:::
-
-::: thebibliography
-MAS-COLELL, A.; WHINSTON M.D.; GREEN, J.R. Microeconomic Theory. New
-York: Oxford University Press, 1995.
+## :books: Bibliografia
 
 NICHOLSON, W.; SNYDER C. Teoria microeconômica: Princípios básicos e
 aplicações. Cengage Learning Brasil, 2019. Disponível em:
 [app.minhabiblioteca.com.br/books/9788522127030](https://app.minhabiblioteca.com.br/books/9788522127030/)
 
-RESENDE, J. G. L. Microeconomia I: Notas de Aula.
-
 VARIAN, H. R. Intermediate Microeconomics: A modern approach. 7.ed. New
 York: W.W. Norton & Company, 2006.
-:::
+
+MAS-COLELL, A.; WHINSTON M.D.; GREEN, J.R. Microeconomic Theory. New
+York: Oxford University Press, 1995.

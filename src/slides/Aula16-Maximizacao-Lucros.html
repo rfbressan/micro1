@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="Aula14-Tecnologia_files/libs/clipboard/clipboard.min.js"></script>
-<script src="Aula14-Tecnologia_files/libs/quarto-html/tabby.min.js"></script>
-<script src="Aula14-Tecnologia_files/libs/quarto-html/popper.min.js"></script>
-<script src="Aula14-Tecnologia_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="Aula14-Tecnologia_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="Aula14-Tecnologia_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="Aula14-Tecnologia_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="Aula14-Tecnologia_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="Aula15-Maximizacao-Lucros_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Aula15-Maximizacao-Lucros_files/libs/quarto-html/tabby.min.js"></script>
+<script src="Aula15-Maximizacao-Lucros_files/libs/quarto-html/popper.min.js"></script>
+<script src="Aula15-Maximizacao-Lucros_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="Aula15-Maximizacao-Lucros_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Aula15-Maximizacao-Lucros_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="Aula15-Maximizacao-Lucros_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="Aula15-Maximizacao-Lucros_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.361">
 
   <meta name="author" content="Rafael Bressan">
-  <title>Tecnologia de Produção</title>
+  <title>Maximização de lucros</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="Aula14-Tecnologia_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="Aula14-Tecnologia_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="Aula15-Maximizacao-Lucros_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="Aula15-Maximizacao-Lucros_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -30,13 +30,13 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="Aula14-Tecnologia_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="Aula14-Tecnologia_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="Aula14-Tecnologia_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="Aula14-Tecnologia_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="Aula14-Tecnologia_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="Aula14-Tecnologia_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="Aula14-Tecnologia_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="Aula15-Maximizacao-Lucros_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="Aula15-Maximizacao-Lucros_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="Aula15-Maximizacao-Lucros_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="Aula15-Maximizacao-Lucros_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="Aula15-Maximizacao-Lucros_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="Aula15-Maximizacao-Lucros_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="Aula15-Maximizacao-Lucros_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -327,7 +327,7 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="img/UdescEsag.jpeg" data-background-position="top left" data-background-size="50%" class="quarto-title-block center">
-  <h1 class="title">Tecnologia de Produção</h1>
+  <h1 class="title">Maximização de lucros</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -339,247 +339,182 @@ Rafael Bressan
 
 </section>
 <section>
-<section id="introdução" class="title-slide slide level1 greenbackground center">
-<h1>Introdução</h1>
+<section id="o-problema-da-firma" class="title-slide slide level1 greenbackground center">
+<h1>O Problema da Firma</h1>
 
 </section>
-<section id="introdução-1" class="slide level2">
+<section id="introdução" class="slide level2">
 <h2>Introdução</h2>
 <ul>
-<li class="fragment"><p>Na primeira parte do nosso curso de Microeconomia I, estudamos o comportamento dos consumidores.</p></li>
-<li class="fragment"><p>Desse comportamento, obtivemos uma função de demanda por um bem que é, quase sempre, decrescente no seu preço.</p></li>
-<li class="fragment"><p>Nosso objetivo agora é estudar o processo de produção e oferta de bens econômicos e o comportamento das firmas.</p></li>
-<li class="fragment"><p>Desse comportamento, vamos obter a oferta de um bem econômico, que será crescente no seu preço.</p></li>
-<li class="fragment"><p>O comportamento desses dois agentes econômicos (consumidores e firmas) pode levar a uma situação de equilíbrio no mercado do bem considerado, onde a quantidade demandada iguala a quantidade produzida, por meio de preços flexíveis.</p></li>
+<li class="fragment"><p>Nas aulas passadas desenvolvemos uma teoria dos custos que, como vimos, apresenta um caso um pouco mais geral.</p></li>
+<li class="fragment"><p>Nossa teoria de custos aplica-se não apenas às firmas tomadoras de preços no mercado de bens (concorrência perfeita) mas, também, àquelas cuja escolha de produção afeta o preço de mercado (monopólios e oligopólios).</p></li>
+<li class="fragment"><p>Nosso objetivo, agora, é examinar como o nível de produto é escolhido por firmas maximizadoras de lucros.</p></li>
+<li class="fragment"><p>Para isso, estudaremos o modelo de maximização de lucros de uma firma operando em um mercado perfeitamente competitivo.</p></li>
 </ul>
 </section>
-<section id="introdução-2" class="slide level2">
-<h2>Introdução</h2>
+<section id="hipóteses-do-modelo-de-maximização-de-lucros" class="slide level2">
+<h2>Hipóteses do modelo de maximização de lucros</h2>
 <ul>
-<li class="fragment"><p>As instituições que coordenam o processo de transformação de insumos em produtos finais são chamadas <span style="color: red">firmas</span>.</p></li>
-<li class="fragment"><p>Estas instituições podem ser grandes - e.g., Google, Apple, Microsoft, etc. Ou instituições pequenas - e.g., trabalhadores autônomos, produtores locais.</p></li>
-<li class="fragment"><p>Embora essas instituições possam ter diferentes objetivos, todas as firmas devem tomar certas decisões básicas em seus processos produtivos.</p></li>
-<li class="fragment"><p>Nosso objetivo geral, agora, é desenvolver um conjunto de ferramentas que possibilitem a análise destes processos decisórios.</p></li>
-</ul>
-</section>
-<section id="introdução-3" class="slide level2">
-<h2>Introdução</h2>
-<ul>
-<li class="fragment"><p>Inicialmente estudaremos algumas maneiras de modelar a relação física entre insumos e produtos. Para isso, introduziremos o conceito de <span style="color: red">função de produção</span>, uma abstração útil das complexidades dos processos produtivos do mundo real.</p></li>
-<li class="fragment"><p>Dois aspectos mensuráveis da função de produção serão considerados: os retornos de escala (i.e., como o produto é expandido quando todos os insumos aumentam), e a elasticidade de substituição (i.e., o quão fácil um insumo pode ser substituído por outro enquanto mantemos o mesmo nível de produto).</p></li>
-</ul>
-</section>
-<section id="introdução-4" class="slide level2">
-<h2>Introdução</h2>
-<ul>
-<li class="fragment"><p>Posteriormente, utilizaremos o conceito de função de produção para discutir os <span style="color: red">custos de produção</span>.</p></li>
-<li class="fragment"><p>Assumiremos que todas as firmas tem por objetivo produzir seus produtos ao menor custo possível, uma hipótese que nos permitirá obter as <span style="color: red">funções custo</span> para uma firma.</p></li>
-<li class="fragment"><p>Discutiremos também, ainda que brevemente, como os custos podem diferir no curto e no longo prazo.</p></li>
-</ul>
-</section>
-<section id="introdução-5" class="slide level2">
-<h2>Introdução</h2>
-<ul>
-<li class="fragment"><p>Por fim, concluiremos esta seção com o estudo das decisões de oferta por parte de uma firma.</p></li>
-<li class="fragment"><p>Para tal, assumiremos que o gerente de uma firma fará decisões de insumos e produtos de maneira a maximizar os lucros.</p></li>
-<li class="fragment"><p>Com isso desenvolveremos o modelo fundamental do comportamento de oferta das firmas maximizadoras de lucro, um conceito que será muito utilizado em microeconomia e em outras áreas do curso.</p></li>
+<li class="fragment"><p><strong>Suposição comportamental</strong>. A firma é maximizadora de lucro.</p></li>
+<li class="fragment"><p><strong>Hipótese simplificadora</strong>. Estudaremos a maximização de lucro de uma firma que produz apenas um tipo de produto (caso uniproduto).</p></li>
+<li class="fragment"><p><strong>Ambiente de mercado</strong>. A firma é <span style="color: red">tomadora de preços</span> (sem poder de mercado) no mercado de bens. Mais precisamente, suporemos que a firma está vendendo seu produto em um <span style="color: red">mercado perfeitamente competitivo</span> (concorrência pura), ou seja, em um mercado composto por firmas que produzem um bem homogêneo (sem diferenciação) e detêm individualmente uma parcela relativamente pequena do mercado.</p></li>
 </ul>
 </section></section>
 <section>
-<section id="funções-de-produção" class="title-slide slide level1 greenbackground center">
-<h1>Funções de produção</h1>
+<section id="a-maximização-de-lucro" class="title-slide slide level1 greenbackground center">
+<h1>A Maximização de lucro</h1>
 
 </section>
-<section id="introdução-6" class="slide level2">
-<h2>Introdução</h2>
-<p>Tecnologias de produção: Introdução</p>
+<section id="maximização-de-lucro-no-curto-prazo" class="slide level2">
+<h2>Maximização de lucro no curto prazo</h2>
 <ul>
-<li class="fragment"><p>A principal atividade de qualquer firma é transformar insumos em produtos.</p></li>
-<li class="fragment"><p>Como economistas, estamos interessados nas escolhas que as firmas tomam para atingir este objetivo, abstraindo das muitas complexidades envolvidas nas engenharias destes processos.</p></li>
-<li class="fragment"><p>Para isso, construímos um modelo abstrato do processo produtivo.</p></li>
-<li class="fragment"><p>Neste modelo, a relação entre insumos e produtos é formalizada por uma <span style="color: red">função de produção</span> (também chamada de tecnologia de produção) da forma: <span id="eq-eq1"><span class="math display">\[q = f(k, l, m, \dots), \qquad(1)\]</span></span> onde <span class="math inline">\(q\)</span> representa a produção de um bem específico para a firma durante um período especifico do tempo, <span class="math inline">\(k\)</span> representa as máquinas (i.e., capital) utilizadas durante este período, <span class="math inline">\(l\)</span> representa o insumo trabalho, <span class="math inline">\(m\)</span> representa a matéria-prima utilizada, e possibilitamos, ainda, a inclusão de outras variáveis que afetem o processo produtivo.</p></li>
+<li class="fragment"><p>Dado que o preço de venda do produto da firma, denotado por <span class="math inline">\(p\)</span>, é, para ela, uma variável exógena, resta à firma escolher o nível de produção <span class="math inline">\(q\)</span> de maneira a obter o maior lucro possível.</p></li>
+<li class="fragment"><p>Mais formalmente, a decisão de uma firma perfeitamente competitiva pode ser representada pelo seguinte problema de maximização de lucro: <span id="eq-eq1"><span class="math display">\[\max_{q \geq 0} \pi_{CP}(q), \qquad(1)\]</span></span></p></li>
+</ul>
+<div class="fragment">
+<p>sendo <span class="math inline">\(\pi_{CP}(q) = R(q) - C_{CP}(q)\)</span> o lucro total da firma no nível de produção <span class="math inline">\(q\)</span>. <span class="math inline">\(R(q) = pq\)</span> a receita total da firma no nível de produção (venda) <span class="math inline">\(q\)</span> e <span class="math inline">\(C_{CP}(q)\)</span> a função custo total de curto prazo derivada do problema de minimização de custos de cruto prazo da firma.</p>
+</div>
+</section>
+<section id="maximização-de-lucro-no-curto-prazo-1" class="slide level2">
+<h2>Maximização de lucro no curto prazo</h2>
+<ul>
+<li class="fragment"><p><span style="color: red">Condição necessária de primeira ordem (solução interior).</span> Suponha que a escolha maximizadora de lucro da firma seja <span class="math inline">\(q^* = (0, \infty)\)</span>.</p></li>
+<li class="fragment"><p>Logo, a CPO para a maximização de lucro é obtida igualando o lucro marginal, <span class="math inline">\(\pi'_{CP}(q)\)</span>, a zero: <span id="eq-eq2"><span class="math display">\[\pi'_{CP}(q) = R'(q) - C_{CP}'(q) = 0 = p - CMg_{CP}(q^*) = 0. \qquad(2)\]</span></span></p></li>
+<li class="fragment"><p>Então, a condição necessária de primeira ordem para maximização de lucro no curto prazo é de que a receita marginal, <span class="math inline">\(RMg = R'(q) = p\)</span>, seja igual ao custo marginal de curto prazo, ou seja: <span id="eq-eq3"><span class="math display">\[p = CMg_{CP}(q^*). \qquad(3)\]</span></span></p></li>
 </ul>
 </section>
-<section id="tecnologias-de-produção" class="slide level2">
-<h2>Tecnologias de produção</h2>
+<section id="maximização-de-lucro-no-curto-prazo-2" class="slide level2">
+<h2>Maximização de lucro no curto prazo</h2>
 <ul>
-<li class="fragment"><p>Assume-se que a <a href="#/introdução-6">Equação&nbsp;1</a> forneça, para qualquer conjunto concebível de insumos, a solução de engenharia para o problema de como melhor combinar esses insumos para obter produtos.</p></li>
-<li class="fragment"><p>Portanto, a tecnologia de uma firma descreve a sua capacidade de produzir bens usando insumos de produção (também chamados de fatores de produção).</p></li>
-<li class="fragment"><p>Note que tanto insumo quanto produto são medidos como fluxos no tempo. O importante é que todas estas variáveis sejam calculadas para o mesmo período de tempo.</p></li>
+<li class="fragment"><p>Se <span class="math inline">\(p &gt; CMg_{CP}(q^*)\)</span>, então <span class="math inline">\(\pi'_{CP}(q^*) &gt; 0\)</span>, de maneira que <span class="math inline">\(q^*\)</span> não seria um nível maximizador de lucro, pois uma expansão da produção geraria um aumento do lucro.</p></li>
+<li class="fragment"><p>Se <span class="math inline">\(p &lt; CMg_{CP}(q^*)\)</span>, então <span class="math inline">\(\pi'_{CP}(q^*) &lt; 0\)</span>, de maneira que <span class="math inline">\(q^*\)</span> não seria um nível maximizador de lucro, pois uma redução da produção geraria um aumento do lucro.</p></li>
 </ul>
 </section>
-<section id="considerações-iniciais" class="slide level2">
-<h2>Considerações iniciais</h2>
+<section id="maximização-de-lucro-no-curto-prazo-3" class="slide level2">
+<h2>Maximização de lucro no curto prazo</h2>
 <ul>
-<li class="fragment"><p><span style="color: red">Fatores de produção.</span> São os insumos utilizados em processos produtivos, podendo ser classificados em categorias amplas como terra, trabalho, bens de capital e matérias primas.</p></li>
-<li class="fragment"><p><span style="color: red">Bens de capital ou capital físico.</span> São bens produzidos e utilizados como insumos em processos produtivos como máquinas, computadores, tratores, prédios, etc.</p></li>
-<li class="fragment"><p><span style="color: red">Firma.</span> É qualquer organização que realiza a transformação de certos insumos (que possui e/ou compra) em produtos (que vende).</p></li>
-<li class="fragment"><p><span style="color: red">Restrições de uma firma.</span> Uma firma está sujeita a duas restrições básicas. Uma delas é a <em>restrição tecnológica</em>, pois somente algumas combinações de insumos constituem formas viáveis de produzir certa quantidade de um produto. A outra é a <em>restrição econômica</em>, ou seja, uma firma toma suas decisões de produção condicionada pelas estruturas dos mercados de fatores (nos quais demanda insumos) e de produtos (onde vende sua produção).</p></li>
+<li class="fragment"><p><span style="color: red">Condição de encerramento no curto prazo (solução de canto).</span> Uma escolha possível para a firma é não produzir, ou seja, escolher <span class="math inline">\(q = 0\)</span>.</p></li>
+<li class="fragment"><p>Neste caso, o lucro da firma é igual ao negativo do custo fixo total, ou seja, <span class="math inline">\(\pi_{CP}(0) = -CF\)</span>.</p></li>
+<li class="fragment"><p>Portanto, para uma firma perfeitamente competitiva será melhor encerrar sua atividade quando o prejuízo de não operar for inferior ao prejuízo de operar, ou seja: <span class="math display">\[\pi_{CP}(0) = -CF &gt; pq^* - C_{CP}(q^*) = \pi_{CP}(q^*).\]</span></p></li>
+<li class="fragment"><p>Como o <strong>custo total</strong> de curto prazo pode ser <strong>decomposto</strong> em custo fixo e custo variável, a desigualdade anterior pode ser reescrita como segue: <span class="math display">\[pq^* &lt; CV_{CP}(q^*) \iff p &lt; \frac{CV_{CP}(q^*)}{q^*} = CVMe_{CP}(q^*).\]</span></p></li>
 </ul>
 </section>
-<section id="considerações-iniciais-1" class="slide level2">
-<h2>Considerações iniciais</h2>
+<section id="maximização-de-lucro-no-curto-prazo-4" class="slide level2">
+<h2>Maximização de lucro no curto prazo</h2>
 <ul>
-<li class="fragment"><p><span style="color: red">Hipótese simplificadora.</span> Estudaremos a restrição tecnológica do caso <em>uniproduto</em>, ou seja, focaremos o caso em que a firma produz apenas um tipo de produto, cuja quantidade denotaremos por <span class="math inline">\(q\)</span>, utilizando uma combinação de insumos <span class="math inline">\((x_1, \dots, x_i, \dots, x_n)\)</span>, na qual <span class="math inline">\(x_i \geq 0\)</span> é a quantidade utilizada do fator de produção <span class="math inline">\(i = 1, 2, \dots, n\)</span>.</p></li>
-<li class="fragment"><p><span style="color: red">Plano de produção.</span> É uma lista que especifica as quantidades dos insumos utilizados para produzir uma determinada quantidade de produto. Um plano de produção pode ser representado como um vetor <span class="math inline">\((-x_1, -x_2, \dots, -x_i, \dots, -x_n, q) \in \mathbb{R}^{n+1}\)</span>, onde as coordenadas com valores estritamente negativos indicam os insumos utilizados e a coordenada estritamente positiva indica a quantidade produzida.</p></li>
-</ul>
-</section>
-<section id="considerações-iniciais-2" class="slide level2">
-<h2>Considerações iniciais</h2>
-<ul>
-<li class="fragment"><p><span style="color: red">Planos de produção factíveis.</span> São planos de produção tecnologicamente possíveis.</p></li>
-<li class="fragment"><p><span style="color: red">Conjunto de possibilidade de produção.</span> É o conjunto <span class="math inline">\(Q \subset \mathbb{R}^{n+1}\)</span> formado por todos os planos de produção factíveis, ou seja, por todas as listas de combinações de insumos e produto tecnologicamente viáveis. Este conjunto representa todas as escolhas tecnológicas que uma firma se defronta.</p></li>
-</ul>
-</section>
-<section id="considerações-iniciais-3" class="slide level2">
-<h2>Considerações iniciais</h2>
-<ul>
-<li class="fragment">A <a href="#/fig-fig1">Figura&nbsp;1</a> ilustra um exemplo de um conjunto de produção para o caso de apenas um insumo e um produto. Usando a convenção que adotamos anteriormente, o insumo é representado por um número negativo e o produto por um número positivo.</li>
+<li class="fragment">Em palavras, a firma perfeitamente competitiva não opera se o preço de mercado for inferior ao custo variável médio no nível de produção <span class="math inline">\(q^*\)</span> - <a href="#/fig-fig1">Figura&nbsp;1</a>.</li>
 </ul>
 
-<img data-src="img/prodset.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;1: Conjunto de produção. Fonte: Mas-Colell et al.&nbsp;(1995).</p></section>
-<section id="considerações-iniciais-4" class="slide level2">
-<h2>Considerações iniciais</h2>
+<img data-src="img/fig232.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;1: Custo marginal e oferta. Fonte: Varian (2015).</p></section>
+<section id="maximização-de-lucro-no-curto-prazo-5" class="slide level2">
+<h2>Maximização de lucro no curto prazo</h2>
 <ul>
-<li class="fragment">Poderíamos, alternativamente, mensurar os insumos por números positivos, neste caso uma representação possível para o conjunto de produção seria dado pela <a href="#/fig-fig2">Figura&nbsp;2</a>.</li>
+<li class="fragment"><p>Na <a href="#/fig-fig1">Figura&nbsp;1</a>, embora haja dois níveis de produção em que o preço se iguala ao custo marginal, a quantidade ofertada que maximiza lucro só pode situar-se na parte de inclinação ascendente da curva de custo marginal - pela condição de segunda ordem para maximização de lucro.</p></li>
+<li class="fragment"><p>A firma não operará nos pontos da curva de custo marginal situados abaixo da curva de custo médio porque poderia obter maiores lucros (menores perdas) se encerrasse suas atividades.</p></li>
 </ul>
+</section>
+<section id="maximização-de-lucro-no-curto-prazo-6" class="slide level2">
+<h2>Maximização de lucro no curto prazo</h2>
+<ul>
+<li class="fragment"><p><span style="color: red">Curva de oferta de curto prazo inversa de uma firma perfeitamente competitiva.</span> É a função que associa a cada nível de produção <span class="math inline">\(q &gt; 0\)</span> da firma o correspondente valor do preço de mercado que tornaria <span class="math inline">\(q\)</span> a escolha maximizadora de lucro.</p></li>
+<li class="fragment"><p>Formalmente: <span class="math display">\[p = CMg_{CP}(q), \qquad \forall q \geq \bar{q},\]</span> sendo <span class="math inline">\(\bar{q}\)</span> o nível de produção no qual o custo variável médio de curto prazo é mínimo, ou seja, o ponto definido implicitamente pela condição <span class="math inline">\(CMg_{CP}(\bar{q}) = CVMe_{CP}(\bar{q})\)</span>.</p></li>
+</ul>
+</section>
+<section id="maximização-de-lucro-no-curto-prazo-7" class="slide level2">
+<h2>Maximização de lucro no curto prazo</h2>
+<ul>
+<li class="fragment"><p><span style="color: red">Curva de oferta de curto prazo de uma firma perfeitamente competitiva.</span> É a função que associa a cada nível de preço <span class="math inline">\(p &gt; CVMe(\bar{q})\)</span> a quantidade <span class="math inline">\(q\)</span> do bem que uma firma produz para maximizar seu lucro.</p></li>
+<li class="fragment"><p>Em outras palavras, tal função oferta é a <strong>inversa da função custo marginal</strong> de curto prazo, ou seja: <span class="math display">\[q^* = CMg_{CP}^{-1}(p), \qquad \forall p \geq CVMe(\bar{q}).\]</span></p></li>
+</ul>
+</section>
+<section id="maximização-de-lucro-no-curto-prazo-8" class="slide level2">
+<h2>Maximização de lucro no curto prazo</h2>
 
-<img data-src="img/prodset2.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;2: Conjunto de produção. Fonte: Varian (2006).</p></section>
-<section id="considerações-iniciais-5" class="slide level2">
-<h2>Considerações iniciais</h2>
+<img data-src="img/canto2.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;2: Custo variável médio e oferta. Fonte: Varian (2015).</p></section>
+<section id="maximização-de-lucro-no-curto-prazo-9" class="slide level2">
+<h2>Maximização de lucro no curto prazo</h2>
 <ul>
-<li class="fragment"><span style="color: red">Função de produção.</span> De maneira mais geral, uma função de produção é a função <span class="math inline">\(q = f(x_1, \dots, x_i, \dots, x_n)\)</span> que associa a cada combinação de insumos <span class="math inline">\((x_1, \dots, x_i, \dots, x_n) \in \mathbb{R}^n_+\)</span> a quantidade <em>máxima</em> <span class="math inline">\(q\)</span> que pode ser produzida. A função de produção <span class="math inline">\(f(x_1, \dots, x_n)\)</span> define a fronteira do conjunto de produção - ver <a href="#/fig-fig2">Figura&nbsp;2</a>.</li>
-</ul>
-</section></section>
-<section>
-<section id="produtividade-marginal" class="title-slide slide level1 greenbackground center">
-<h1>Produtividade marginal</h1>
-
-</section>
-<section id="produto-marginal" class="slide level2">
-<h2>Produto marginal</h2>
-<ul>
-<li class="fragment"><p>O <span style="color: red">produto físico marginal</span> do fator de produção <span class="math inline">\(i\)</span>, denotado por <span class="math inline">\(PM_i\)</span>, é a variação da produção gerada pela variação em uma unidade do insumo <span class="math inline">\(i\)</span>, <em>ceteris paribus</em>.</p></li>
-<li class="fragment"><p>Mais precisamente, em termos contínuos, pode ser definida como a derivada parcial da função de produção com relação ao insumo <span class="math inline">\(i\)</span>: <span id="eq-eq2"><span class="math display">\[PM_i \equiv \frac{\partial f(\mathbf{x})}{\partial x_i} = f_i(\mathbf{x}), \qquad i = 1, \dots, n. \qquad(2)\]</span></span></p></li>
-<li class="fragment"><p>Se o fator de produção <span class="math inline">\(i\)</span> contribui para a produção, então, <span class="math inline">\(PM_i&gt;0\)</span> para toda combinação de insumos factível <span class="math inline">\((x_1, \dots, x_i, \dots, x_n)\)</span>.</p></li>
-</ul>
-</section>
-<section id="produto-marginal-1" class="slide level2">
-<h2>Produto marginal</h2>
-<ul>
-<li class="fragment"><p>No caso de apenas dois fatores de produção, capital e trabalho, temos então que:</p>
-<ol type="1">
-<li class="fragment"><p>O produto marginal do trabalho, <span class="math inline">\(PM_l = f_l\)</span>, mede o quanto a produção aumentará se aumentarmos (um pouco) a quantidade de trabalho usada, mantendo a quantidade de capital fixa.</p></li>
-<li class="fragment"><p>O produto marginal do capital, <span class="math inline">\(PM_k = f_k\)</span>, mede o quanto a produção aumentará se aumentarmos (um pouco) a quantidade de capital usada, mantendo a quantidade de trabalho fixa.</p></li>
-</ol></li>
-</ul>
-</section>
-<section id="princípio-das-produtividades-marginais-decrescentes" class="slide level2">
-<h2>Princípio das produtividades marginais decrescentes</h2>
-<ul>
-<li class="fragment"><p><span style="color: red">Princípio dos rendimentos físicos (produtividades marginais) decrescentes.</span> Quanto mais se utiliza um fator de produção <span class="math inline">\(i\)</span>, <em>ceteris paribus</em>, a contribuição deste fator para o aumento da produção tende a ser cada vez menor, ou seja, o produto físico marginal do fator de produção <span class="math inline">\(i\)</span> é estritamente decrescente com relação à quantidade utilizada deste fator.</p></li>
-<li class="fragment"><p>Formalmente: <span class="math display">\[\frac{\partial PM_i(\mathbf{x})}{\partial x_i} = \frac{\partial^2 f(\mathbf{x})}{\partial x_i^2} = f_{ii} &lt; 0, \qquad \forall i = 1, \dots, n.\]</span></p></li>
-</ul>
-</section>
-<section id="princípio-das-produtividades-marginais-decrescentes-1" class="slide level2">
-<h2>Princípio das produtividades marginais decrescentes</h2>
-<ul>
-<li class="fragment"><p>Considerando nossa função de produção com apenas dois fatores - capital e trabalho - temos: <span class="math display">\[\begin{aligned}
-\frac{\partial PM_k}{\partial k} &amp;=&amp; \frac{\partial^2 f(k,l)}{\partial k^2} = f_{kk} &lt; 0, \\
-\frac{\partial PM_l}{\partial l} &amp;=&amp; \frac{\partial^2 f(k,l)}{\partial l^2} = f_{ll} &lt; 0.
-\end{aligned}\]</span></p></li>
-<li class="fragment"><p>A hipótese de produtividade marginal decrescente foi originalmente proposta pelo economista do século XIX Thomas Malthus, que temia que o aumento rápido da população resultasse em uma menor produtividade do trabalho.</p></li>
-<li class="fragment"><p>Suas predições pessimistas para o futuro da humanidade fizeram com que a economia ficasse conhecida como “ciência sombria”.</p></li>
-</ul>
-</section>
-<section id="princípio-das-produtividades-marginais-decrescentes-2" class="slide level2">
-<h2>Princípio das produtividades marginais decrescentes</h2>
-
-<img data-src="img/malthus.jpg" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;3: Thomas Robert Malthus (1766 - 1834). Fonte: <a href="https://en.wikipedia.org/wiki/Thomas_Robert_Malthus">Wikipedia</a>.</p></section>
-<section id="princípio-das-produtividades-marginais-decrescentes-3" class="slide level2">
-<h2>Princípio das produtividades marginais decrescentes</h2>
-<ul>
-<li class="fragment"><p>Uma análise mais cuidadosa da função de produção sugere que tais predições pessimistas podem não ser corretas.</p></li>
-<li class="fragment"><p>Variações na produtividade marginal do trabalho ao longo do tempo dependem não só de como o fator de produção trabalho está crescendo mas, também, de mudanças nos outros insumos (e.g., capital).</p></li>
-<li class="fragment"><p>Ou seja, precisamos nos preocupar também com <span class="math inline">\(\partial PM_l/\partial k = f_{lk}\)</span>.</p></li>
-<li class="fragment"><p>Na maioria dos casos, <span class="math inline">\(f_{lk} &gt; 0\)</span>, portanto, a diminuição da produtividade do trabalho à medida que <em>ambos <span class="math inline">\(l\)</span> e <span class="math inline">\(k\)</span> aumentam</em> pode ser uma conclusão precipitada.</p></li>
-<li class="fragment"><p>De fato, a produtividade do trabalho parece ter aumentado significativamente desde a época de Malthus, principalmente porque os aumentos nos insumos de capital (combinado a melhorias tecnológicas) compensou o impacto do declínio da produtividade marginal.</p></li>
-</ul>
-</section>
-<section id="produto-médio" class="slide level2">
-<h2>Produto médio</h2>
-<ul>
-<li class="fragment"><p><span style="color: red">Produto físico médio (<span class="math inline">\(PMe_{i}\)</span>).</span> Quantidade produzida por unidade do insumo <span class="math inline">\(i\)</span>: <span class="math display">\[PMe_i = \frac{f(\mathbf{x})}{x_i}, \qquad x_i &gt; 0.
-            \label{eq4}\]</span></p></li>
-<li class="fragment"><p>De maneira geral, <em>produtividade do trabalho</em> significa <em>produtividade média</em>.</p></li>
-<li class="fragment"><p>Como a produtividade média é facilmente mensurável, é comumente utilizada como medida de eficiência - muito utilizada em trabalhos empíricos (e menos em teóricos).</p></li>
-<li class="fragment"><p>Para o caso de dois insumos, a produtividade média do trabalho é: <span class="math display">\[PMe_l = \frac{f(k,l)}{l}.\]</span></p></li>
-<li class="fragment"><p>Note que a produtividade média do trabalho depende do nível de capital utilizado.</p></li>
+<li class="fragment"><p>A <a href="#/fig-fig2">Figura&nbsp;2</a> mostra que a curva de oferta é a parte ascendente da curva de custo marginal que está acima da curva de custo variável médio.</p></li>
+<li class="fragment"><p>A firma não operará nos pontos da curva de custo marginal situados abaixo da curva de custo médio porque poderia obter maiores lucros (menores perdas) se fechasse suas atividades.</p></li>
 </ul>
 </section>
 <section id="exercício" class="slide level2">
 <h2>Exercício</h2>
-<p>Suponha a seguinte função de produção: <span class="math display">\[q = f(k,l) = 600k^2l^2 - k^3l^3.\]</span></p>
-<p>Se o nível de capital utilizado é <span class="math inline">\(k = 10\)</span>, obtenha o seguinte:</p>
-<ol type="1">
-<li class="fragment"><p>Produtividade marginal do trabalho e o nível de trabalho utilizado para que o produto atinja seu valor máximo.</p></li>
-<li class="fragment"><p>Produto médio do trabalho e o nível de trabalho utilizado para que o produto médio do trabalho atinja seu valor máximo.</p></li>
-<li class="fragment"><p>Verifique que quando <span class="math inline">\(l\)</span> faz com que a produtividade média do trabalho atinja seu nível máximo, neste ponto, a produtividade média do trabalho é igual á produtividade marginal do trabalho.</p></li>
-<li class="fragment"><p>Mostre que a igualdade do item anterior é geral.</p></li>
-</ol>
-</section></section>
-<section>
-<section id="funções-de-produção-e-isoquantas" class="title-slide slide level1 greenbackground center">
-<h1>Funções de produção e isoquantas</h1>
-
-</section>
-<section id="isoquantas" class="slide level2">
-<h2>Isoquantas</h2>
 <ul>
-<li class="fragment"><p>Para ilustrar a possível substituição de um insumo por outro em uma função de produção, usamos o seu mapa de isoquanta.</p></li>
-<li class="fragment"><p><span style="color: red">Isoquanta.</span> Isoquanta é o conjunto <span class="math inline">\(Q(q) = \{(x_1, x_2) \in \mathbb{R}^2_+| f(x_1, x_2) = q\}\)</span> formado por todas as combinações de insumos <span class="math inline">\((x_1, x_2)\)</span> que geram o mesmo nível (máximo) de produção <span class="math inline">\(q\)</span>.</p></li>
-<li class="fragment"><p>Assim como no caso das curvas de indiferença, existem infinitas isoquantas no plano de <span class="math inline">\(k-l\)</span> (se considerarmos os insumos capital e trabalho).</p></li>
-<li class="fragment"><p>Cada isoquanta representa um nível distinto de produto.</p></li>
-<li class="fragment"><p>As isoquantas registram sucessivamente níveis mais altos de produto à medida que nos movemos na direção nordeste.</p></li>
-<li class="fragment"><p>A utilização de mais de cada um dos insumos possibilitará que a produção aumente.</p></li>
+<li class="fragment"><p>Considere uma função de produção do tipo Cobb-Douglas, no curto prazo, <span class="math inline">\(q = f(\bar{k},l) = \bar{k}^\alpha l^\beta\)</span>.</p></li>
+<li class="fragment"><p>A função custo de curto prazo é dada por: <span class="math display">\[C_{CP}(q) = v\bar{k} + wq^{1/\beta}\bar{k}^{-\alpha/\beta}.\]</span></p></li>
+<li class="fragment"><p>Portanto, o problema de maximização de lucro da firma é dado por: <span class="math display">\[\max_{q} pq - v\bar{k} - wq^{1/\beta}\bar{k}^{-\alpha/\beta}.\]</span></p></li>
+<li class="fragment"><p>A escolha ótima de quantidade produzida será, portanto: <span class="math display">\[q^* = \left(\frac{w}{\beta}\right)^{-\beta/(1-\beta)}\bar{k}^{\alpha/(1-\beta)}p^{\beta/(1-\beta)}.\]</span></p></li>
 </ul>
 </section>
-<section id="isoquantas-1" class="slide level2">
-<h2>Isoquantas</h2>
-
-<img data-src="img/isoquanta.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;4: Mapa de isoquanta. Fonte: Nicholson e Snyder (2019).</p></section>
-<section id="isoquantas-2" class="slide level2">
-<h2>Isoquantas</h2>
+<section id="exercício-1" class="slide level2">
+<h2>Exercício</h2>
 <ul>
-<li class="fragment"><p>É possível notar a similaridade entre um mapa de isoquanta e o mapa de curva de indiferença de um indivíduo.</p></li>
-<li class="fragment"><p>São, de fato, conceitos similares pois representam os mapas de contorno de uma função em particular.</p></li>
-<li class="fragment"><p>No entanto, no caso das isoquantas, o rótulo das curvas é mensurável - uma produção de 10 unidades por período tem um significado quantificável.</p></li>
-<li class="fragment"><p>Por este motivo, os economistas estão mais interessados em estudar a forma das funções de produção do que das funções utilidade.</p></li>
-</ul>
-</section>
-<section id="propriedades-das-funções-de-produção" class="slide level2">
-<h2>Propriedades das funções de produção</h2>
-<ul>
-<li class="fragment"><p>Duas premissas comuns sobre as propriedades da tecnologia são <em>monotonicidade</em> ou <em>livre descarte</em> (<em>free disposal</em>) e <em>convexidade</em>.</p>
+<li class="fragment"><p>A função de oferta apresenta algumas características familiares:</p>
 <ol type="1">
-<li class="fragment"><p><span style="color: red">Monotonicidade</span>. Uma tecnologia apresenta monotonicidade ou livre descarte quando é sempre possível a absorção de quantidades adicionais de pelo menos um insumo sem que isto acarrete redução da produção. A função de produção é, sob tal suposição, não-decrescente com relação a cada um de seus fatores de produção (os produtos marginais são não-negativos) e, portanto, as isoquantas não são positivamente inclinadas.</p></li>
-<li class="fragment"><p><span style="color: red">Convexidade</span>. Uma tecnologia é convexa quando a média ponderada de duas combinações de insumos <span class="math inline">\((x_1, x_2)\)</span> e <span class="math inline">\((y_1, y_2)\)</span> que geram uma produção <span class="math inline">\(q\)</span>, gera uma produção maior ou igual a <span class="math inline">\(q\)</span>.</p></li>
+<li class="fragment"><p>A curva de oferta é positivamente inclinada - aumentos nos preços <span class="math inline">\(p\)</span> faz com que a firma produza mais pois está disposta a incorrer em um custo marginal mais alto.</p></li>
+<li class="fragment"><p>A curva de oferta é deslocada para a esquerda por aumentos na taxa de salário, <span class="math inline">\(w\)</span> - ou seja, para um dado nível de preço de produto, a quantidade ofertada é menor se a taxa salarial for maior.</p></li>
+<li class="fragment"><p>A curva de oferta é deslocada para a direita se tivermos aumentos no insumo capital <span class="math inline">\(\bar{k}\)</span> - com um estoque de capital maior no curto prazo, a firma incorre em um nível determinado de custo marginal de curto prazo a um nível de produção maior.</p></li>
+<li class="fragment"><p>A taxa de aluguel de capital, <span class="math inline">\(v\)</span>, é irrelevante para as decisões de oferta de curto prazo porque é somente um componente de custos fixos.</p></li>
 </ol></li>
 </ul>
 </section>
-<section id="exemplos-simples-de-funções-de-produção" class="slide level2">
-<h2>Exemplos simples de funções de produção</h2>
-<ol type="1">
-<li class="fragment"><p><span style="color: red">Tecnologia com fatores de produção substitutos (linear).</span> <span id="eq-eq5"><span class="math display">\[q = f(k,l) = \alpha k + \beta l, \qquad \alpha, \beta &gt; 0. \qquad(3)\]</span></span></p></li>
-<li class="fragment"><p><span style="color: red">Tecnologia com fatores de produção combinados em proporções fixas (Leontief).</span> <span id="eq-eq6"><span class="math display">\[q = f(k,l) = \min\{\alpha k, \beta l\}, \qquad \alpha, \beta &gt; 0. \qquad(4)\]</span></span></p></li>
-<li class="fragment"><p><span style="color: red">Tecnologia Cobb-Douglas.</span> <span id="eq-eq7"><span class="math display">\[q = f(k,l) = Ak^\alpha l^\beta, \qquad A, \alpha, \beta &gt; 0. \qquad(5)\]</span></span></p></li>
-<li class="fragment"><p><span style="color: red">Tecnologia CES.</span> <span id="eq-eq8"><span class="math display">\[q = f(k,l) = [\alpha k^\rho + (1-\alpha) l^\rho]^{\gamma/\rho}, \qquad \rho \leq 1, \rho \neq 0, \gamma &gt; 0, 0\leq \alpha \leq 1. \qquad(6)\]</span></span></p></li>
-</ol>
+<section id="maximização-de-lucro-no-longo-prazo" class="slide level2">
+<h2>Maximização de lucro no longo prazo</h2>
+<ul>
+<li class="fragment"><p>Dado o preço de venda do produto, uma firma perfeitamente competitiva escolhe o nível de produção <span class="math inline">\(q\)</span> de maneira a obter o maior lucro possível ajustando, se necessário, todos os fatores de produção.</p></li>
+<li class="fragment"><p>No caso do longo prazo, então, o problema de maximização de lucro é: <span id="eq-eq4"><span class="math display">\[\max_{q \geq 0} \pi(q), \qquad(4)\]</span></span></p></li>
+</ul>
+<div class="fragment">
+<p>sendo <span class="math inline">\(\pi(q) = R(q) - C(q)\)</span> o lucro total de longo prazo da firma no nível de produção <span class="math inline">\(q\)</span>, <span class="math inline">\(R(q) = pq\)</span> é a receita total da firma no nível de produção (venda) <span class="math inline">\(q\)</span> e <span class="math inline">\(C(q)\)</span> é a função custo total de longo prazo derivada do problema de minimização de custos de longo prazo da firma.</p>
+</div>
+</section>
+<section id="maximização-de-lucro-no-longo-prazo-1" class="slide level2">
+<h2>Maximização de lucro no longo prazo</h2>
+<ul>
+<li class="fragment"><p><span style="color: red">Condição necessária de primeira ordem (solução interior).</span> Suponha que a escolha maximizadora de lucro da firma seja <span class="math inline">\(q^* = (0, \infty)\)</span>. Logo, a condição necessária de primeira ordem para a maximização de lucro é obtida igualando o lucro marginal, <span class="math inline">\(\pi'(q)\)</span>, a zero: <span id="eq-eq5"><span class="math display">\[\pi'(q^*) = R'(q^*) - C'(q^*) = p - CMg(q^*) = 0. \qquad(5)\]</span></span></p></li>
+<li class="fragment"><p>Então, a condição necessária para maximização do lucro no longo prazo é de que a <strong>receita marginal seja igual ao custo marginal</strong>, ou seja: <span id="eq-eq6"><span class="math display">\[p = CMg(q^*). \qquad(6)\]</span></span></p></li>
+</ul>
+</section>
+<section id="maximização-de-lucro-no-longo-prazo-2" class="slide level2">
+<h2>Maximização de lucro no longo prazo</h2>
+<ul>
+<li class="fragment"><p><span style="color: red">Condição de encerramento no longo prazo (solução de canto).</span> No longo prazo uma firma pode sair do mercado, ou seja, escolher <span class="math inline">\(q = 0\)</span>.</p></li>
+<li class="fragment"><p>Nesse caso, como não há custo fixo, o lucro da firma é nulo, ou seja, <span class="math inline">\(\pi(0) = 0\)</span>.</p></li>
+<li class="fragment"><p>Portanto, para uma firma perfeitamente competitiva será melhor sair do mercado se: <span id="eq-eq7"><span class="math display">\[\pi(q^*) = pq^* - C(q^*) &lt; 0 = \pi(0). \qquad(7)\]</span></span></p></li>
+<li class="fragment"><p>A desigualdade na <a href="#/maximização-de-lucro-no-longo-prazo-2">Equação&nbsp;7</a> pode ser reescrita como: <span id="eq-eq8"><span class="math display">\[pq^* &lt; C(q^*) \iff p &lt; CMe(q^*). \qquad(8)\]</span></span></p></li>
+<li class="fragment"><p>Enfim, a firma perfeitamente competitiva <strong>sai do mercado se o preço de mercado for inferior ao seu custo médio</strong> de longo prazo na escolha <span class="math inline">\(q^*\)</span>.</p></li>
+</ul>
+</section>
+<section id="maximização-de-lucro-no-longo-prazo-3" class="slide level2">
+<h2>Maximização de lucro no longo prazo</h2>
+<ul>
+<li class="fragment"><span style="color: red">Curva de oferta inversa de longo prazo de uma firma perfeitamente competitiva.</span> É a função que associa a cada nível de produção <span class="math inline">\(q &gt; 0\)</span> da firma o correspondente valor do preço de mercado que tornaria <span class="math inline">\(q\)</span> a escolha maximizadora de lucro.</li>
+<li class="fragment">Formalmente: <span class="math display">\[p = CMg(q), \qquad \forall q \geq \tilde{q},\]</span> sendo <span class="math inline">\(\tilde{q}\)</span> o nível de produção no qual o custo médio de longo prazo (que é igual ao custo variável médio de longo prazo) é mínimo, ou seja, o ponto definido implicitamente pela condição <span class="math inline">\(CMg(\tilde{q}) = CMe(\tilde{q})\)</span>.</li>
+</ul>
+</section>
+<section id="maximização-de-lucro-no-longo-prazo-4" class="slide level2">
+<h2>Maximização de lucro no longo prazo</h2>
+<ul>
+<li class="fragment"><p><span style="color: blue">Curva de oferta de longo prazo de uma firma perfeitamente competitiva.</span> É a função que associa a cada nível de preço <span class="math inline">\(p &gt; CMe(\tilde{q})\)</span> a quantidade <span class="math inline">\(q\)</span> do bem que uma firma produz para maximizar seu lucro.</p></li>
+<li class="fragment"><p>Em outros termos, tal função oferta é a inversa da função custo marginal de longo prazo, ou seja: <span class="math display">\[S(p) = CMg^{-1}(p), \qquad \forall p \geq CMe(\tilde{q}).\]</span></p></li>
+</ul>
+</section>
+<section id="maximização-de-lucro-no-longo-prazo-5" class="slide level2">
+<h2>Maximização de lucro no longo prazo</h2>
+
+<img data-src="img/ofertalp.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;3: Curva de oferta de longo prazo. Fonte: Varian (2015).</p></section>
+<section id="maximização-de-lucro-no-longo-prazo-6" class="slide level2">
+<h2>Maximização de lucro no longo prazo</h2>
+<ul>
+<li class="fragment">Como evidenciado na <a href="#/fig-fig3">Figura&nbsp;3</a>, a curva de oferta de longo prazo será a parte de inclinação ascendente da curva de custo marginal de longo prazo que se situa acima da curva de custo médio.</li>
+</ul>
 </section>
 <section id="bibliografia" class="slide level2">
 <h2><span class="emoji" data-emoji="books">📚</span> Bibliografia</h2>
 <p>NICHOLSON, W.; SNYDER C. Teoria microeconômica: Princípios básicos e aplicações. Cengage Learning Brasil, 2019. Disponível em: <a href="https://app.minhabiblioteca.com.br/books/9788522127030/">app.minhabiblioteca.com.br/books/9788522127030</a></p>
 <p>VARIAN, H. R. Intermediate Microeconomics: A modern approach. 7.ed. New York: W.W. Norton &amp; Company, 2006.</p>
+<p>MAS-COLELL, A.; WHINSTON M.D.; GREEN, J.R. Microeconomic Theory. New York: Oxford University Press, 1995.</p>
 
 <img src="img/UdescEsag.jpeg" class="slide-logo r-stretch"><div class="footer footer-default">
 
@@ -589,20 +524,20 @@ Rafael Bressan
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="Aula14-Tecnologia_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="Aula15-Maximizacao-Lucros_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="Aula14-Tecnologia_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="Aula14-Tecnologia_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="Aula14-Tecnologia_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="Aula14-Tecnologia_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="Aula14-Tecnologia_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="Aula14-Tecnologia_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="Aula15-Maximizacao-Lucros_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="Aula15-Maximizacao-Lucros_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="Aula15-Maximizacao-Lucros_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="Aula15-Maximizacao-Lucros_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="Aula15-Maximizacao-Lucros_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="Aula15-Maximizacao-Lucros_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="Aula14-Tecnologia_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="Aula14-Tecnologia_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="Aula14-Tecnologia_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="Aula14-Tecnologia_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="Aula15-Maximizacao-Lucros_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="Aula15-Maximizacao-Lucros_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="Aula15-Maximizacao-Lucros_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="Aula15-Maximizacao-Lucros_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
