@@ -61,9 +61,9 @@ Observe que várias dessas aulas se estendem por duas ou mais sessões.
 | Aula 12: Escolha Intertemporal | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula12-Intertemporal.html) | Lista 02 |
 | Aula 13: Excedente do Consumidor | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula13-Excedente.html) | |
 | Aula 14: Tecnologia de Produção | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula14-Tecnologia.html) | |
-| Aula 15: Curvas de Custos | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula17-Custos.html) | |
-| Aula 16: Maximização de Lucros | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula15-Maximizacao-Lucros.html) | |
-| Aula 17: Minimização de Custos | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula16-Minimizacao-Custos.html) | Lista 03 |
+| Aula 15: Curvas de Custos | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula15-Custos.html) | |
+| Aula 16: Maximização de Lucros | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula16-Maximizacao-Lucros.html) | |
+| Aula 17: Minimização de Custos | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula17-Minimizacao-Custos.html) | Lista 03 |
 
 
 
