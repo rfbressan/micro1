@@ -218,3 +218,6 @@ TSWLatexianTemp*
 micro1.Rproj
 micro1/
 .vscode
+
+# Ignore exams folder
+exams/
