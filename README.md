@@ -81,7 +81,7 @@ JEHLE, G. A.; RENY, P. J. Advanced microeconomic theory. 3.ed. Pearson Education
 
 ## Videos
 
-
+- [Simulando Oferta e Demanda](https://www.youtube.com/watch?v=PNtKXWNKGN8&list=FLVIGhwoNuZMQ2AhkfKZfJWg&index=1)
 
 ## Outros Recursos
 
