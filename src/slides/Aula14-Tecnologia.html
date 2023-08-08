@@ -575,6 +575,155 @@ Rafael Bressan
 <li class="fragment"><p><span style="color: red">Tecnologia Cobb-Douglas.</span> <span id="eq-eq7"><span class="math display">\[q = f(k,l) = Ak^\alpha l^\beta, \qquad A, \alpha, \beta &gt; 0. \qquad(5)\]</span></span></p></li>
 <li class="fragment"><p><span style="color: red">Tecnologia CES.</span> <span id="eq-eq8"><span class="math display">\[q = f(k,l) = [\alpha k^\rho + (1-\alpha) l^\rho]^{\gamma/\rho}, \qquad \rho \leq 1, \rho \neq 0, \gamma &gt; 0, 0\leq \alpha \leq 1. \qquad(6)\]</span></span></p></li>
 </ol>
+</section></section>
+<section>
+<section id="taxa-técnica-de-substituição" class="title-slide slide level1 greenbackground center">
+<h1>Taxa técnica de substituição</h1>
+
+</section>
+<section id="definição" class="slide level2">
+<h2>Definição</h2>
+<ul>
+<li class="fragment"><p><span style="color: red">Taxa técnica de substituição (TTS).</span> A taxa técnica de substituição (ou taxa marginal de substituição técnica) entre dois insumos mede o quanto a firma deve abrir mão de um desses insumos e acrescentar do outro insumo para continuar produzindo a mesma quantidade do bem final ao longo de uma isoquanta.</p></li>
+<li class="fragment"><p>Intuitivamente, a taxa técnica de substituição do insumo <span class="math inline">\(j\)</span> por insumo <span class="math inline">\(i\)</span>, denotada por <span class="math inline">\(TTS(x_i,x_j)\)</span>, é a quantidade de insumo <span class="math inline">\(j\)</span> que a firma pode reduzir por usar uma unidade adicional do insumo <span class="math inline">\(i\)</span> e manter sua produção constante ou, alternativamente, é a quantidade adicional de insumo <span class="math inline">\(j\)</span> que a firma deve usar para abrir mão de uma unidade do insumo <span class="math inline">\(i\)</span> e manter constante sua produção.</p></li>
+</ul>
+</section>
+<section id="taxa-técnica-de-substituição-1" class="slide level2">
+<h2>Taxa técnica de substituição</h2>
+<ul>
+<li class="fragment"><p>A TTS entre os insumos <span class="math inline">\(i\)</span> e <span class="math inline">\(j\)</span> pode ser obtida do seguinte modo: suponha que alteramos os insumos <span class="math inline">\(i\)</span> e <span class="math inline">\(j\)</span> em <span class="math inline">\(dx_i\)</span> e <span class="math inline">\(dx_j\)</span>, respectivamente, de modo a manter inalterado o nível de produção <span class="math inline">\((dq = 0)\)</span>.</p></li>
+<li class="fragment"><p>Usando o conceito de diferencial total, obtemos: <span class="math display">\[\begin{aligned}
+0 &amp;=&amp; dq = \frac{\partial f(x_1, \dots, x_n)}{\partial x_i}dx_i + \frac{\partial f(x_1, \dots, x_n)}{\partial x_j}dx_j \\
+&amp;\Rightarrow &amp; \left.\frac{dx_j}{dx_i}\right|_{q = f(\mathbf{x})} = -\frac{f_i}{f_j}.
+\end{aligned}\]</span></p></li>
+</ul>
+</section>
+<section id="taxa-técnica-de-substituição-2" class="slide level2">
+<h2>Taxa técnica de substituição</h2>
+<ul>
+<li class="fragment"><p>Portanto, a taxa técnica de substituição do insumo <span class="math inline">\(j\)</span> por insumo <span class="math inline">\(i\)</span>, <span class="math inline">\(TTS(x_i, x_j)\)</span> é dada por: <span id="eq-eq9"><span class="math display">\[TTS(x_i, x_j) = -\left.\frac{dx_j}{dx_i}\right|_{q = f(\mathbf{x})} = \frac{f_i}{f_j} = \frac{PM_i}{PM_j}. \qquad(7)\]</span></span></p></li>
+<li class="fragment"><p>Ou seja, a taxa técnica de substituição é dada pela razão entre as produtividades marginais dos insumos.</p></li>
+<li class="fragment"><p>A TTS é o análogo para a teoria da firma da taxa marginal de substituição da teoria do consumidor.</p></li>
+<li class="fragment"><p>Considerando nossa função de produção apenas com os insumos capital e trabalho temos que a TTS de trabalho por capital é dada por: <span class="math display">\[TTS(l,k) = \frac{PM_l}{PM_k}.\]</span></p></li>
+</ul>
+</section>
+<section id="implicações-das-propriedades-da-tecnologia" class="slide level2">
+<h2>Implicações das propriedades da tecnologia</h2>
+<ul>
+<li class="fragment"><p>A propriedade de <span style="color: red">livre descarte</span> torna a TTS positiva.</p></li>
+<li class="fragment"><p>A propriedade de convexidade implica que a TTS(l,k) é decrescente, ou seja, conforme aumenta-se a quantidade do insumo trabalho menor a quantidade do insumo capital que é possível reduzir para que o nível de produção mantenha-se constante.</p></li>
+</ul>
+</section>
+<section id="implicações-das-propriedades-da-tecnologia-1" class="slide level2">
+<h2>Implicações das propriedades da tecnologia</h2>
+
+<img data-src="img/isoquanta.JPG" class="r-stretch quarto-figure-center"><p class="caption">Figura&nbsp;5: Isoquantas e convexidade. Fonte: Nicholson e Snyder (2019)</p></section>
+<section id="exercícios" class="slide level2">
+<h2>Exercícios</h2>
+<ul>
+<li class="fragment"><p>Calcule a taxa técnica de substituição para cada uma das tecnologias de produção a seguir:</p>
+<ol type="1">
+<li class="fragment"><p><span style="color: red">Linear (Fatores de produção substitutos).</span> <span class="math inline">\(q = \alpha k + \beta l\)</span>.</p></li>
+<li class="fragment"><p><span style="color: red">Leontief (Fatores de produção em proporções fixas).</span> <span class="math inline">\(q = \min\{\alpha k, \beta l\}\)</span>.</p></li>
+<li class="fragment"><p><span style="color: red">Cobb-Douglas.</span> <span class="math inline">\(q = A k^\alpha l^\beta\)</span>.</p></li>
+<li class="fragment"><p><span style="color: red">Elasticidade de substituição constante.</span> <span class="math inline">\(q = (k^\rho + l^\rho)^{\gamma/\rho}\)</span>.</p></li>
+</ol></li>
+</ul>
+</section></section>
+<section>
+<section id="retornos-de-escala" class="title-slide slide level1 greenbackground center">
+<h1>Retornos de escala</h1>
+
+</section>
+<section id="introdução-7" class="slide level2">
+<h2>Introdução</h2>
+<ul>
+<li class="fragment"><p>Uma questão importante relacionada ao conceito de função de produção é o que acontece com a quantidade produzida quando há um aumento generalizado nos insumos utilizados pelo processo produtivo?</p></li>
+<li class="fragment"><p>Essa é uma questão de <span style="color: red">rendimentos de escala</span> que interessa os economistas de pelo menos desde a publicação de “A riqueza das nações” por Adam Smith em 1776.</p></li>
+<li class="fragment"><p>Smith identificou duas forças em ação quando realizamos um experimento de dobrar todos os insumos produtivos.</p></li>
+</ul>
+</section>
+<section id="retornos-de-escala-1" class="slide level2">
+<h2>Retornos de escala</h2>
+<ol type="1">
+<li class="fragment"><p>A duplicação de escala permite uma maior divisão do trabalho e a especialização da função. Por isso, pode-se argumentar que a eficiência pode aumentar - a produção pode aumentar mais do que o dobro.</p></li>
+<li class="fragment"><p>A duplicação dos insumos também implica alguma perda de eficiência, uma vez que a supervisão gerencial torna-se mais difícil, dada a maior escala da empresa.</p></li>
+</ol>
+<ul>
+<li class="fragment">Qual dessas duas tendências será prevalente é uma questão empírica de extrema relevância.</li>
+</ul>
+</section>
+<section id="retornos-de-escala-2" class="slide level2">
+<h2>Retornos de escala</h2>
+<ol type="1">
+<li class="fragment"><p><span style="color: red">Rendimentos decrescentes de escala.</span> Uma firma apresenta rendimentos decrescentes de escala se ao aumentarmos todas as quantidades dos insumos utilizados na mesma proporção, a quantidade produzida varia numa proporção menor que a variação das quantidades utilizadas dos insumos.</p></li>
+<li class="fragment"><p><span style="color: red">Rendimentos constantes de escala.</span> Uma firma apresenta rendimentos constantes de escala se ao aumentarmos todas as quantidades dos insumos utilizados na mesma proporção, a quantidade produzida varia na mesma proporção que a variação das quantidades utilizadas dos insumos.</p></li>
+<li class="fragment"><p><span style="color: red">Rendimentos crescentes de escala.</span> Uma firma apresenta rendimentos crescentes de escala se ao aumentarmos todas as quantidades dos insumos utilizados na mesma proporção, a quantidade produzida varia numa proporção maior que a variação das quantidades utilizadas dos insumos.</p></li>
+</ol>
+</section>
+<section id="retornos-de-escala-3" class="slide level2">
+<h2>Retornos de escala</h2>
+<ul>
+<li class="fragment"><p>Formalmente, temos as seguintes definições:</p>
+<ol type="1">
+<li class="fragment"><p>A função de produção <span class="math inline">\(f(x_1, \dots, x_n)\)</span> apresentará <span style="color: red">rendimentos decrescentes de escala</span> se: <span id="eq-eq10"><span class="math display">\[f(tx_1, \dots, tx_n) &lt; tf(x_1, \dots, x_n), \forall t&gt;1. \qquad(8)\]</span></span></p></li>
+<li class="fragment"><p>A função de produção <span class="math inline">\(f(x_1, \dots, x_n)\)</span> apresentará <span style="color: red">rendimentos constantes de escala</span> se: <span id="eq-eq11"><span class="math display">\[f(tx_1, \dots, tx_n) = tf(x_1, \dots, x_n), \forall t&gt;1. \qquad(9)\]</span></span></p></li>
+<li class="fragment"><p>A função de produção <span class="math inline">\(f(x_1, \dots, x_n)\)</span> apresentará <span style="color: red">rendimentos crescentes de escala</span> se: <span id="eq-eq12"><span class="math display">\[f(tx_1, \dots, tx_n) &gt; tf(x_1, \dots, x_n), \forall t&gt;1. \qquad(10)\]</span></span></p></li>
+</ol></li>
+</ul>
+</section>
+<section id="exercícios-1" class="slide level2">
+<h2>Exercícios</h2>
+<ul>
+<li class="fragment"><p>Para cada uma das tecnologias de produção a seguir, verifique os rendimentos de escala:</p>
+<ol type="1">
+<li class="fragment"><p><span style="color: red">Linear (Fatores de produção substitutos).</span> <span class="math inline">\(q = \alpha k + \beta l\)</span>.</p></li>
+<li class="fragment"><p><span style="color: red">Leontief (Fatores de produção em proporções fixas.</span> <span class="math inline">\(q = \min\{\alpha k, \beta l\}\)</span>.</p></li>
+<li class="fragment"><p><span style="color: red">Cobb-Douglas.</span> <span class="math inline">\(q = A k^\alpha l^\beta\)</span>.</p></li>
+<li class="fragment"><p><span style="color: red">Elasticidade de substituição constante.</span> <span class="math inline">\(q = (k^\rho + l^\rho)^{\gamma/\rho}\)</span>.</p></li>
+</ol></li>
+</ul>
+</section></section>
+<section>
+<section id="elasticidade-de-substituição" class="title-slide slide level1 greenbackground center">
+<h1>Elasticidade de substituição</h1>
+
+</section>
+<section id="introdução-8" class="slide level2">
+<h2>Introdução</h2>
+<ul>
+<li class="fragment"><p>Outra característica importante da função de produção é a facilidade de substituição de um insumo por outro.</p></li>
+<li class="fragment"><p>Essa é uma questão que diz respeito à forma de uma única isoquanta, em vez do mapa de isoquantas como um todo.</p></li>
+<li class="fragment"><p>Ao longo de uma isoquanta, a TTS diminuirá à medida que a relação capital-trabalho diminuir (supondo convexidade).</p></li>
+<li class="fragment"><p>Agora desejamos definir algum parâmetro que meça esse grau de capacidade de resposta.</p></li>
+</ul>
+</section>
+<section id="elasticidade-de-substituição-1" class="slide level2">
+<h2>Elasticidade de substituição</h2>
+<ul>
+<li class="fragment"><p>Se a TTS não se altera com as mudanças na razão capital-trabalho (<span class="math inline">\(k/l\)</span>), podemos dizer que a substituição é fácil, uma vez que a razão das produtividades marginais dos insumos não muda à medida que a combinação de insumos muda.</p></li>
+<li class="fragment"><p>Por outro lado, se a TTS muda rapidamente à medida que ocorrem pequenas mudanças em <span class="math inline">\(k/l\)</span>, diríamos que a substituição é difícil, já que pequenas variações na combinação de insumos terão um efeito substancial sobre as produtividades relativas do insumo.</p></li>
+<li class="fragment"><p>Uma medida sem escala dessa capacidade de resposta é proporcionada pela <span style="color: red">elasticidade de substituição</span>.</p></li>
+<li class="fragment"><p>Enquanto a TTS mede a inclinação de uma isoquanta, a elasticidade de substituição é uma medida da curvatura de uma isoquanta.</p></li>
+</ul>
+</section>
+<section id="definição-1" class="slide level2">
+<h2>Definição</h2>
+<ul>
+<li class="fragment"><span style="color: red">Elasticidade de substituição no ponto.</span> É uma aproximação da variação percentual média da razão entre os fatores de produção <span class="math inline">\(k/l\)</span> relativa à variação de um por cento (para cima ou para baixo) da <span class="math inline">\(TTS(l,k)\)</span>, quando esta variação é infinitesimal, ao longo de uma isoquanta. Ou seja: <span id="eq-eq13"><span class="math display">\[\sigma = \frac{d (k/l)/(k/l)}{d TTS(l,k)/TTS(l,k)} = \frac{d \ln (k/l)}{d \ln TTS(l,k)}. \qquad(11)\]</span></span></li>
+</ul>
+</section>
+<section id="exercícios-2" class="slide level2">
+<h2>Exercícios</h2>
+<ul>
+<li class="fragment"><p>Para cada uma das tecnologias de produção a seguir, verifique a elasticidade de substituição:</p>
+<ol type="1">
+<li class="fragment"><p><span style="color: red">Linear (Fatores de produção substitutos).</span> <span class="math inline">\(q = \alpha k + \beta l\)</span>.</p></li>
+<li class="fragment"><p><span style="color: red">Cobb-Douglas.</span> <span class="math inline">\(q = A k^\alpha l^\beta\)</span>.</p></li>
+<li class="fragment"><p><span style="color: red">Elasticidade de substituição constante.</span> <span class="math inline">\(q = (k^\rho + l^\rho)^{\gamma/\rho}\)</span>.</p></li>
+<li class="fragment"><p><span style="color: red">Leontief (Fatores de produção em proporções fixas.</span> <span class="math inline">\(q = \min\{\alpha k, \beta l\}\)</span>.</p></li>
+</ol></li>
+</ul>
 </section>
 <section id="bibliografia" class="slide level2">
 <h2><span class="emoji" data-emoji="books">📚</span> Bibliografia</h2>
