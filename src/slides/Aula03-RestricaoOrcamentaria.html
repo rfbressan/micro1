@@ -29,6 +29,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="Aula03-RestricaoOrcamentaria_files/libs/revealjs/dist/theme/quarto.css">
   <link href="Aula03-RestricaoOrcamentaria_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -359,7 +424,7 @@ Rafael Bressan
 <ul>
 <li class="fragment">As restrições impostas pela escassez são facilmente observáveis.</li>
 <li class="fragment">Se alguma mudança no comportamento do consumidor foi causada por alterações na sua restrição orçamentária, obtemos uma explicação objetiva e clara para essa mudança de comportamento.</li>
-<li class="fragment">Nesta aula estudaremos as restrições que o consumidor enfrenta quando maximiza sua função utilidade e que implicações sobre seu comportamento podemos derivar usando apenas as restrições de escassez.</li>
+<li class="fragment">Nesta aula estudaremos as <strong>restrições que o consumidor enfrenta</strong> quando maximiza sua função utilidade e que <strong>implicações</strong> sobre seu comportamento podemos derivar usando apenas as restrições de escassez.</li>
 </ul>
 </section>
 <section id="restrição-orçamentária" class="slide level2">
@@ -367,18 +432,18 @@ Rafael Bressan
 <ul>
 <li class="fragment">A <strong><em>restrição orçamentária</em></strong> representa a escassez no problema do consumidor.<br>
 </li>
-<li class="fragment">Cada consumidor dispõe de uma certa quantidade de renda para dispender em um determinado período do tempo.<br>
+<li class="fragment">Cada consumidor dispõe de uma certa quantidade de <strong>renda exógena</strong> para dispender em um determinado período do tempo.<br>
 </li>
-<li class="fragment">O consumidor escolhe quais bens consumir e o quanto consumir de acordo com suas preferências, mas o valor total dos bens não pode ultrapassar sua renda.</li>
+<li class="fragment">O <strong>consumidor escolhe</strong> quais bens consumir e o quanto consumir de acordo com suas preferências, mas o valor total dos bens não pode ultrapassar sua renda.</li>
 </ul>
 </section>
 <section id="restrição-orçamentária-1" class="slide level2">
 <h2>Restrição Orçamentária</h2>
 <div>
 <ul>
-<li>Vamos assumir que existam <span class="math inline">\(n\)</span> bens nessa economia, representados por <span class="math inline">\(x_1, x_2, \dots, x_n\)</span>.<br>
+<li>Vamos assumir que existam <span class="math inline">\(n\)</span> bens nessa economia, com <strong>quantidades</strong> representados por <span class="math inline">\(x_1, x_2, \dots, x_n\)</span>.<br>
 </li>
-<li>Vamos supor, ainda, que os respectivos preços destes bens são dados por <span class="math inline">\(p_1, p_2, \dots, p_n\)</span>.<br>
+<li>Vamos supor, ainda, que os respectivos <strong>preços</strong> destes bens são dados por <span class="math inline">\(p_1, p_2, \dots, p_n\)</span>.<br>
 </li>
 <li>Por hipótse, os consumidores são <strong>tomadores de preços</strong>. Ou seja, os preços são fixos para estes consumidores e eles não podem alterá-los (existem modelos que relaxam essa hipótese).</li>
 <li>A renda do consumidor é denotada por <span class="math inline">\(I\)</span>, e é exógena às ações do consumidor<sup>1</sup>.</li>
@@ -407,38 +472,32 @@ Rafael Bressan
 <section id="reta-orçamentária" class="slide level2">
 <h2>Reta orçamentária</h2>
 <ul>
-<li class="fragment">A expressão (<a href="#/restrição-e-reta-orçamentária">Equação&nbsp;1</a>) é uma restrição linear, que muitas vezes não é adequada.<br>
-</li>
-<li class="fragment">No entanto, ela é de fácil compreensão, especialmente no caso de dois bens, o que permite uma visualização gráfica da restrição orçamentária.</li>
+<li class="fragment">A expressão (<a href="#/restrição-e-reta-orçamentária">Equação&nbsp;1</a>) é uma restrição <strong>linear</strong>.</li>
+<li class="fragment">De fácil compreensão, especialmente no caso de dois bens, o que permite uma visualização gráfica da restrição orçamentária.</li>
 <li class="fragment">A hipótese de dois bens não é tão restritiva quanto parece - se nosso objetivo é estudar a demanda de um tipo qualquer de bem, podemos agregar todos os outros bens em um <strong>bem composto</strong>.</li>
 </ul>
 </section>
 <section id="representação-gráfica" class="slide level2">
 <h2>Representação gráfica</h2>
 <ul>
-<li class="fragment"><p>Vamos ilustrar a restrição e a reta orçamentárias para o caso de 2 bens em um gráfico onde os eixos representam a quantidade dos bens consumidos.</p></li>
+<li class="fragment"><p>Vamos ilustrar a restrição e a reta orçamentárias para o <strong>caso de 2 bens</strong> em um gráfico onde os eixos representam a quantidade dos bens consumidos.</p></li>
 <li class="fragment"><p>Assuma que o consumidor disponha de uma renda <span class="math inline">\(I\)</span> para alocar entre os bens <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span>.</p></li>
 <li class="fragment"><p>Se <span class="math inline">\(p_x\)</span> é o preço do bem <span class="math inline">\(x\)</span>, e <span class="math inline">\(p_y\)</span> é o preço do bem <span class="math inline">\(y\)</span>, a restrição orçamentária deste indivíduo será dada por: <span class="math display">\[p_x x + p_y y \leq I.\]</span></p></li>
-<li class="fragment"><p>Portanto, se o consumidor gastar toda sua renda no bem <span class="math inline">\(x\)</span>, ele pode comprar, no máximo, <span class="math inline">\(I/p_x\)</span> unidades deste bem.<br>
+<li class="fragment"><p>Portanto, se o consumidor <strong>gastar toda sua renda no bem <span class="math inline">\(x\)</span></strong>, ele pode comprar, no máximo, <strong><span class="math inline">\(I/p_x\)</span></strong> unidades deste bem.<br>
 </p></li>
 <li class="fragment"><p>De maneira similar, se toda a renda for alocada na aquisição do bem <span class="math inline">\(y\)</span>, ele poderá comprar, no máximo, <span class="math inline">\(I/p_y\)</span> unidades deste bem.</p></li>
 </ul>
 </section>
 <section id="representação-gráfica-1" class="slide level2">
 <h2>Representação gráfica</h2>
-<div id="fig-fig1" class="quarto-figure quarto-figure-center">
-<figure>
 <iframe src="https://www.econgraphs.org/graphs/consumer/budget/budget_set" style="border: 0px solid #AAA; width: 100%; height: 100%">
 </iframe>
-<figcaption>Figura&nbsp;1: Restrição Orçamentária</figcaption>
-</figure>
-</div>
 </section>
 <section id="representação-gráfica-2" class="slide level2">
 <h2>Representação gráfica</h2>
 <ul>
-<li class="fragment"><p>Como evidenciado pela <a href="#/representação-gráfica-1">Figura&nbsp;1</a>, os pontos <span class="math inline">\(I/p_x\)</span> e <span class="math inline">\(I/p_y\)</span> são os interceptos da reta orçamentária.</p></li>
-<li class="fragment"><p>A inclinação da reta orçamentária é igual à <span class="math inline">\(-p_x/p_y\)</span> e informa o valor de troca de mercado entre os dois bens: para se obter uma unidade adicional do bem <span class="math inline">\(x\)</span>, temos que abrir mão de <span class="math inline">\(-p_x/p_y\)</span> unidades do bem <span class="math inline">\(y\)</span>.</p></li>
+<li class="fragment"><p>Como evidenciado pelo gráfico, os pontos <span class="math inline">\(I/p_x\)</span> e <span class="math inline">\(I/p_y\)</span> são os <strong>interceptos</strong> da reta orçamentária.</p></li>
+<li class="fragment"><p>A <strong>inclinação da reta orçamentária</strong> é igual à <span class="math inline">\(-p_x/p_y\)</span> e informa o valor de troca de mercado entre os dois bens: para se obter uma unidade adicional do bem <span class="math inline">\(x\)</span>, temos que abrir mão de <span class="math inline">\(-p_x/p_y\)</span> unidades do bem <span class="math inline">\(y\)</span>.</p></li>
 <li class="fragment"><p>A inclinação da reta orçamentária é, portanto, <strong>o custo de oportunidade</strong> do bem <span class="math inline">\(y\)</span>, em termos do bem <span class="math inline">\(x\)</span>.</p></li>
 </ul>
 </section>
@@ -446,9 +505,9 @@ Rafael Bressan
 <h2>Representação gráfica</h2>
 <ul>
 <li class="fragment"><p>Suponha que o consumidor esteja consumindo <span class="math inline">\(x\)</span> unidades do primeiro bem, e <span class="math inline">\(y\)</span> unidades do segundo bem.</p></li>
-<li class="fragment"><p>Caso ele decida aumentar o consumo do bem <span class="math inline">\(x\)</span> em <span class="math inline">\(\Delta x\)</span>, deverá abrir mão de uma quantidade do bem <span class="math inline">\(y\)</span>, representada por <span class="math inline">\(\Delta y\)</span>, de modo que a reta orçamentária continue válida, ou seja: <span class="math display">\[p_x (x + \Delta x) + p_y (y + \Delta y) = I.\]</span></p></li>
+<li class="fragment"><p>Caso ele decida <strong>aumentar o consumo do bem <span class="math inline">\(x\)</span></strong> em <span class="math inline">\(\Delta x\)</span>, deverá <strong>abrir mão</strong> de uma quantidade do bem <span class="math inline">\(y\)</span>, representada por <span class="math inline">\(\Delta y\)</span>, de modo que a <strong>reta orçamentária continue válida</strong>, ou seja: <span class="math display">\[p_x (x + \Delta x) + p_y (y + \Delta y) = I.\]</span></p></li>
 <li class="fragment"><p>Subtraindo a expressão anterior da reta orçamentária original, dada por <span class="math inline">\(p_x x + p_y y = I\)</span>, obtemos: <span class="math display">\[p_x \Delta x + p_y \Delta y = 0 \implies \frac{\Delta y}{\Delta x} = -\frac{p_x}{p_y}.\]</span></p></li>
-<li class="fragment"><p>O sinal negativo indica que para consumir um pouco mais do bem <span class="math inline">\(x\)</span>, o consumidor deve abrir mão de uma certa quantidade de bem <span class="math inline">\(y\)</span>.</p></li>
+<li class="fragment"><p>O <strong>sinal negativo</strong> indica que para consumir um pouco <strong>mais do bem <span class="math inline">\(x\)</span></strong>, o consumidor deve <strong>abrir mão</strong> de uma certa quantidade de bem <span class="math inline">\(y\)</span>.</p></li>
 </ul>
 </section>
 <section id="variações-na-renda-e-preços" class="slide level2">
@@ -478,7 +537,7 @@ Rafael Bressan
 <section id="preços-absolutos-e-preços-relativos-1" class="slide level2">
 <h2>Preços absolutos e preços relativos</h2>
 <ul>
-<li class="fragment"><p>Intuitivamente, se todos os preços da economia aumentam (ou diminuem) na mesma proporção, incluindo salários, então, nada muda.</p></li>
+<li class="fragment"><p>Intuitivamente, se <strong>todos os preços da economia aumentam</strong> (ou diminuem) na mesma proporção, incluindo <strong>salários</strong>, então, <strong>nada muda</strong>.</p></li>
 <li class="fragment"><p>A restrição orçamentária continua a mesma, apenas expressa em valores diferentes.</p></li>
 <li class="fragment"><p>Então, o problema do consumidor não sofre alterações e ele escolherá a mesma cesta de bens que escolhia antes do aumento geral de preços.</p></li>
 <li class="fragment"><p>Portanto, <strong>mudanças nos preços absolutos não têm efeito real na economia</strong>. Dito de outra forma, os agentes econômicos não sofrem de ilusão monetária.</p></li>
@@ -491,20 +550,20 @@ Rafael Bressan
 <li class="fragment"><p>Podemos, então, transformar um dos preços da economia em numerário (o que significa normalizá-lo em 1).</p></li>
 <li class="fragment"><p>Por exemplo, se adotarmos o preço do bem <span class="math inline">\(x_1\)</span> como preço-numerário, a restrição orçamentária ajustada será dada por: <span class="math display">\[x_1 + \frac{p_2}{p_1} x_2 + \frac{p_3}{p_1} x_3 + \dots + \frac{p_n}{p_1} x_n \leq \frac{I}{p_1}.\]</span></p></li>
 </ul>
-</section>
-<section id="restrições-orçamentárias-não-lineares" class="slide level2">
-<h2>Restrições orçamentárias não-lineares</h2>
-<ul>
-<li class="fragment"><p>Muitas das vezes a restrição orçamentária não é linear.</p></li>
-<li class="fragment"><p>Situações importantes onde a restrição orçamentária dificilmente é linear são: as decisões de oferta de trabalho dos indivíduos e a escolha do quanto consumir ao longo do tempo (escolha intertemporal).</p></li>
-<li class="fragment"><p>Nesses casos, podem existir quebras causadas por diversos motivos como: racionamento, impostos, preços não-lineares, diferenças de preços para compra e venda de um produto, etc.</p></li>
-</ul>
+<!-- ## Restrições orçamentárias não-lineares
+    
+- Muitas das vezes a restrição orçamentária não é linear.
+
+- Situações importantes onde a restrição orçamentária dificilmente é linear são: as decisões de oferta de trabalho dos indivíduos e a escolha do quanto consumir ao longo do tempo (escolha intertemporal).
+
+- Nesses casos, podem existir quebras causadas por diversos motivos como: racionamento, impostos, preços não-lineares, diferenças de preços para compra e venda de um produto, etc.
+     -->
 </section>
 <section id="racionamento" class="slide level2">
 <h2>Racionamento</h2>
 <ul>
-<li class="fragment"><p>Suponha uma economia com dois bens onde o governo decide racionar o consumo de um dos bens (sem perda de generalidade, o bem <span class="math inline">\(x_1\)</span>).</p></li>
-<li class="fragment"><p>Cada consumidor pode comprar, no máximo, <span class="math inline">\(\bar{x}_1\)</span> unidades do bem 1, ainda pagando o preço <span class="math inline">\(p_1\)</span> para qualquer quantidade <span class="math inline">\(x_1 \leq \bar{x}_1\)</span>.</p></li>
+<li class="fragment"><p>Suponha uma economia com dois bens onde o governo decide <strong>racionar o consumo de um dos bens</strong> (sem perda de generalidade, o bem <span class="math inline">\(x_1\)</span>).</p></li>
+<li class="fragment"><p>Cada consumidor pode comprar, no <strong>máximo, <span class="math inline">\(\bar{x}_1\)</span> unidades do bem 1</strong>, ainda pagando o preço <span class="math inline">\(p_1\)</span> para qualquer quantidade <span class="math inline">\(x_1 \leq \bar{x}_1\)</span>.</p></li>
 <li class="fragment"><p>Acima da quantidade <span class="math inline">\(\bar{x}_1\)</span>, o consumidor não pode mais adquirir este bem.</p></li>
 </ul>
 </section>
@@ -512,22 +571,68 @@ Rafael Bressan
 <h2>Racionamento</h2>
 <ul>
 <li class="fragment"><p>Podem ocorrer duas situações:</p></li>
-<li class="fragment"><p><span class="math inline">\(\bar{x}_1 \geq I/p_1\)</span>: não há alteração na reta orçamentária. Esse caso é irrelevante, o governo está fixando um valor de racionamento muito alto, que não afeta a restrição orçamentária dos agentes (imagine o governo restringindo a compra de BMWs para no máximo 10 unidades por consumidor).</p></li>
-<li class="fragment"><p><span class="math inline">\(\bar{x}_1 \leq I/p_1\)</span>: nesse caso, o consumidor pode consumir o bem 1 normalmente até o nível <span class="math inline">\(\bar{x}_1\)</span>. A partir desse nível, não é mais possível consumir este bem. Portanto, ocorre uma quebra da reta orçamentária no nível <span class="math inline">\(\bar{x}_1\)</span> de consumo do bem 1.</p></li>
+<li class="fragment"><p><span class="math inline">\(\bar{x}_1 \geq I/p_1\)</span>: <strong>não há alteração na reta orçamentária</strong>. Esse caso é irrelevante, o governo está fixando um valor de racionamento muito alto, que não afeta a restrição orçamentária dos agentes (imagine o governo restringindo a compra de BMWs para no máximo 10 unidades por consumidor).</p></li>
+<li class="fragment"><p><span class="math inline">\(\bar{x}_1 \leq I/p_1\)</span>: nesse caso, o consumidor pode <strong>consumir o bem 1 normalmente até o nível <span class="math inline">\(\bar{x}_1\)</span></strong>. A partir desse nível, não é mais possível consumir este bem. Portanto, ocorre uma quebra da reta orçamentária no nível <span class="math inline">\(\bar{x}_1\)</span> de consumo do bem 1.</p></li>
 </ul>
+<!-- 
+## Racionamento
+
+![Restrição orçamentária na presença de racionamento](img/racionamento.JPG)     -->
 </section>
 <section id="racionamento-2" class="slide level2">
 <h2>Racionamento</h2>
-
-<img data-src="img/racionamento.JPG" class="r-stretch quarto-figure-center"><p class="caption">Restrição orçamentária na presença de racionamento</p></section>
+<div class="cell columns column-output-location" data-execution_count="1">
+<div class="column">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># Define the parameters</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>p1 <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>p2 <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a>I <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>x1bar <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="co"># Define the range of x2</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a>x2 <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
+<span id="cb1-12"><a href="#cb1-12"></a></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="co"># Define the budget line</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a>x1 <span class="op">=</span> (I <span class="op">-</span> p2<span class="op">*</span>x2)<span class="op">/</span>p1</span>
+<span id="cb1-15"><a href="#cb1-15"></a></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="co"># Define the rationed budget line</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a>x1_rationed <span class="op">=</span> np.minimum(x1, x1bar)</span>
+<span id="cb1-18"><a href="#cb1-18"></a></span>
+<span id="cb1-19"><a href="#cb1-19"></a><span class="co"># Plot the budget line and the rationed budget line</span></span>
+<span id="cb1-20"><a href="#cb1-20"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">6</span>))</span>
+<span id="cb1-21"><a href="#cb1-21"></a>ax.plot(x1, x2, linestyle<span class="op">=</span><span class="st">'--'</span>, label<span class="op">=</span><span class="st">'Reta Orçamentária'</span>)</span>
+<span id="cb1-22"><a href="#cb1-22"></a>ax.plot(x1_rationed, x2, color <span class="op">=</span> <span class="st">'darkgreen'</span>, label<span class="op">=</span><span class="st">'RO com Racionamento'</span>)</span>
+<span id="cb1-23"><a href="#cb1-23"></a>ax.fill_betweenx(x2, x1_rationed, <span class="dv">0</span>, where<span class="op">=</span>x1_rationed<span class="op">&gt;</span><span class="dv">0</span>, color<span class="op">=</span><span class="st">'darkgreen'</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb1-24"><a href="#cb1-24"></a>ax.set_xlabel(<span class="st">'$x_1$'</span>)</span>
+<span id="cb1-25"><a href="#cb1-25"></a>ax.set_ylabel(<span class="st">'$x_2$'</span>)</span>
+<span id="cb1-26"><a href="#cb1-26"></a>ax.legend()</span>
+<span id="cb1-27"><a href="#cb1-27"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div><div class="column">
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Aula03-RestricaoOrcamentaria_files/figure-revealjs/cell-2-output-1.png" width="808" height="503"></p>
+<figcaption>Restrição orçamentária na presença de racionamento</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
 <section id="tributação-por-nível-de-consumo" class="slide level2">
 <h2>Tributação por nível de consumo</h2>
 <ul>
-<li class="fragment"><p>Existem certos bens que possuem preços que variam de acordo com a quantidade consumida (e.g., energia elétrica, água)</p></li>
+<li class="fragment"><p>Existem certos bens que possuem <strong>preços que variam de acordo com a quantidade consumida</strong> (e.g., energia elétrica, água)</p></li>
 <li class="fragment"><p>Para um consumo pequeno de água, o governo cobra um preço menor por litro consumido do que o preço cobrado para consumos maiores.</p></li>
 <li class="fragment"><p>Motivação: evitar desperdício, beneficiar a parcela da população mais pobre que costuma consumir menos água na média, etc.</p></li>
 <li class="fragment"><p>Suponha, então, o seguinte cenário: se a quantidade consumida do bem <span class="math inline">\(x_1\)</span> está na faixa <span class="math inline">\([0,\bar{x}_1]\)</span>, então, cobra-se um preço igual a <span class="math inline">\(p_1\)</span>. Se a quantidade consumida for superior à <span class="math inline">\(\bar{x}_1\)</span>, cobra-se um preço <span class="math inline">\(p'_1\)</span>, sendo <span class="math inline">\(p'_1 &gt; p_1.\)</span></p></li>
-<li class="fragment"><p>Neste caso, há uma quebra da reta orçamentária em <span class="math inline">\(\bar{x}_1\)</span>, refletindo a mudança de preço a partir desse nível de consumo.</p></li>
+<li class="fragment"><p>Neste caso, há uma <strong>quebra da reta orçamentária em <span class="math inline">\(\bar{x}_1\)</span></strong>, refletindo a mudança de preço a partir desse nível de consumo.</p></li>
 </ul>
 </section>
 <section id="taxação-por-nível-de-consumo" class="slide level2">
