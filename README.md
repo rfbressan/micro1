@@ -20,6 +20,16 @@ Horários:
 
 * Quartas-feiras das 08:20 às 10:00
 * Sextas-feiras das 08:20 às 10:00
+
+## Monitoria
+
+Monitora: Luiza Angela Silva da Luz
+
+Local: Sala 145, ESAG/UDESC
+
+Horários: segunda a quarta, dás 13h às 17h. Quintas e sextas será on-line, das 13h30 às 17h30
+
+Contato: (48) 99852-8765
  
 ## Descrição do curso
 
