@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.361">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Oferta de Trabalho Intertemporal</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="oferta_trabalho_equilibrio_files/libs/clipboard/clipboard.min.js"></script>
+<script src="oferta_trabalho_equilibrio_files/libs/quarto-html/quarto.js"></script>
+<script src="oferta_trabalho_equilibrio_files/libs/quarto-html/popper.min.js"></script>
+<script src="oferta_trabalho_equilibrio_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="oferta_trabalho_equilibrio_files/libs/quarto-html/anchor.min.js"></script>
+<link href="oferta_trabalho_equilibrio_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="oferta_trabalho_equilibrio_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="oferta_trabalho_equilibrio_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="oferta_trabalho_equilibrio_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="oferta_trabalho_equilibrio_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#modelo-de-dois-períodos" id="toc-modelo-de-dois-períodos" class="nav-link active" data-scroll-target="#modelo-de-dois-períodos">Modelo de dois períodos</a></li>
+  <li><a href="#resolvendo-o-modelo" id="toc-resolvendo-o-modelo" class="nav-link" data-scroll-target="#resolvendo-o-modelo">Resolvendo o Modelo</a>
+  <ul class="collapse">
+  <li><a href="#o-problema-das-famílias" id="toc-o-problema-das-famílias" class="nav-link" data-scroll-target="#o-problema-das-famílias">O Problema das Famílias</a></li>
+  <li><a href="#o-problema-das-firmas" id="toc-o-problema-das-firmas" class="nav-link" data-scroll-target="#o-problema-das-firmas">O Problema das Firmas</a></li>
+  <li><a href="#equilíbrio-de-mercado" id="toc-equilíbrio-de-mercado" class="nav-link" data-scroll-target="#equilíbrio-de-mercado">Equilíbrio de Mercado</a></li>
+  </ul></li>
+  <li><a href="#simulando-o-equilíbrio" id="toc-simulando-o-equilíbrio" class="nav-link" data-scroll-target="#simulando-o-equilíbrio">Simulando o Equilíbrio</a>
+  <ul class="collapse">
+  <li><a href="#programa-em-python" id="toc-programa-em-python" class="nav-link" data-scroll-target="#programa-em-python">Programa em Python</a></li>
+  </ul></li>
+  <li><a href="#tarefa" id="toc-tarefa" class="nav-link" data-scroll-target="#tarefa">Tarefa</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Oferta de Trabalho Intertemporal</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="modelo-de-dois-períodos" class="level2">
+<h2 class="anchored" data-anchor-id="modelo-de-dois-períodos">Modelo de dois períodos</h2>
+<p>Considere a seguinte economia padrão de dois períodos <span class="math inline">\((t=0,1)\)</span>. Há um contínuo de agentes de medida <span class="math inline">\(1\)</span>. Cada agente é dotado de uma unidade de tempo em cada período, que pode ser usada para lazer <span class="math inline">\(l\)</span> ou horas trabalhadas <span class="math inline">\(h\)</span>. As preferências são sobre consumo <span class="math inline">\(c\)</span> e lazer <span class="math inline">\(l\)</span> e são representadas por:</p>
+<p><span class="math display">\[
+U=\sum_{t=0}^{1} \beta^{t}\left(u\left(c_{t}\right)+\gamma v\left(l_{t}\right)\right), \gamma&gt;0 \text { e } \beta \in(0,1)
+\]</span></p>
+<p>com <span class="math inline">\(u(c)=\frac{c^{1-\sigma}-1}{1-\sigma}\)</span> e <span class="math inline">\(v(l)=\frac{l^{1-\sigma}-1}{1-\sigma}\)</span> com <span class="math inline">\(\sigma&gt;0\)</span>.</p>
+<p>Do lado da produção, há um contínuo de empresas de medida 1, cada uma com acesso a uma tecnologia para produzir o bem de consumo:</p>
+<p><span class="math display">\[
+Y_{t}=A_{t} L_{t}^{\alpha}, A_{t}&gt;0 \text { e } \alpha \in(0,1)
+\]</span></p>
+<p>onde <span class="math inline">\(Y_{t}\)</span> é a produção, <span class="math inline">\(L_{t}\)</span> denota o insumo trabalho e <span class="math inline">\(A_{t}\)</span> é um fator de produtividade. Cada família tem direito a uma parcela igual dos dividendos das empresas. Suponha que existe um mercado de ativos em que os agentes podem negociar títulos de um período, de modo que as restrições orçamentárias possam ser escritas como:</p>
+<p><span class="math inline">\(c_{0}+a_{1}=w_{0} h_{0}+\pi_{0}\)</span> e <span class="math inline">\(c_{1}=w_{1} h_{1}+(1+r) a_{1}+\pi_{1}\)</span>, onde <span class="math inline">\(\pi_{t}\)</span> são os lucros e são tomados como dado pelas famílias.</p>
+<p>Existem três requisitos para um equilíbrio competitivo, correspondentes a:</p>
+<ol type="1">
+<li>As famílias maximizam a utilidade;</li>
+<li>as empresas maximizam seu lucro;</li>
+<li>os “mercados se equilibram” (<em>market clearing</em>) no preço de equilíbrio.</li>
+</ol>
+<p>Começamos com o problema das famílias, que é maximizar a utilidade sujeita a um orçamento.</p>
+<p><strong>Problema das Famílias</strong></p>
+<p><span class="math display">\[
+\begin{align*}
+    \max_{c_t,l_t,h_t,a_1}&amp;U = u(c_0) + \gamma v(l_0) + \beta \left[u(c_1) + \beta \gamma v(l_1)\right]\tag{HP}\\
+    s.t\quad &amp;c_0+a_1 = w_0h_0+\pi_0\\
+    &amp;c_1 = w_1h_1+\pi_1+(1+r)a_1\\
+    &amp;l_t+h_t=1
+\end{align*}
+\]</span></p>
+<p><strong>Problema das Firmas</strong></p>
+<p><span class="math display">\[
+\begin{align*}
+    \max_{L_t}\quad &amp;\pi_t = p_tA_tL_t^\alpha - w_tL_t\quad t=\{0,1\}\tag{FP}
+\end{align*}
+\]</span></p>
+<p><strong>Equilíbrio de Mercado</strong></p>
+<p>O consumo total mais a poupança deve ser igual à produção total mais o juro em um determinado período</p>
+<p>3.1 <span class="math inline">\(c_0+a_1=Y_0\)</span></p>
+<p>3.2 <span class="math inline">\(c_1=(1+r)a_1+Y_1\)</span></p>
+<p>e a oferta de trabalho corresponde à demanda</p>
+<p>3.3 <span class="math inline">\(h_t=L_t\)</span></p>
+</section>
+<section id="resolvendo-o-modelo" class="level2">
+<h2 class="anchored" data-anchor-id="resolvendo-o-modelo">Resolvendo o Modelo</h2>
+<p>Vamos derivar as condições de primeira ordem do problema de cada agente e ir o mais longe possível na resolução das condições de equilíbrio de mercado.</p>
+<section id="o-problema-das-famílias" class="level3">
+<h3 class="anchored" data-anchor-id="o-problema-das-famílias">O Problema das Famílias</h3>
+<p>As condições de primeira ordem (FOC) do problema das famílias são: <span class="math display">\[
+\begin{align*}
+    &amp;\mathcal{L} = u(c_0) + \gamma v(l_0) + \beta u(c_1) + \beta\gamma v(l_1) + \lambda_0 [w_0 h_0 + \pi_0 - c_0 - a_1] + \lambda_1[w_1 h_1 + \pi_1 + (1+r) a_1 - c_1]+\lambda_2[1-l_0-h_0]+\lambda_3[1-l_1-h_1]\\
+    &amp;c_0: u'(c_0) - \lambda_0 = 0\\
+    &amp;c_1: \beta u'(c_1) - \lambda_1= 0\\
+    &amp;l_0: \gamma v'(l_0) - \lambda_2 = 0\\
+    &amp;l_1: \beta\gamma v'(l_1) - \lambda_3 = 0\\
+    &amp;h_0: \lambda_0 w_0 - \lambda_2 = 0\\
+    &amp;h_1: \lambda_1 w_1 - \lambda_3 = 0\\
+    &amp;a_1: -\lambda_0 + \lambda_1(1+r) = 0
+\end{align*}
+\]</span></p>
+<p>E não nos esqueçamos das restrições do problema HP que também fazem parte do sistema de equações a ser resolvido.</p>
+<p>Resolvendo essas equações, chegamos à <strong>equação de Euler</strong> e a equação de <strong>substituição intertemporal da oferta de trabalho</strong> que caracterizam o problema.</p>
+<p><span class="math display">\[
+\begin{equation*}
+\left. \begin{aligned}
+u'(c_0)=\gamma\frac{v'(1-h_0)}{w_0}\\
+u'(c_1)=\gamma\frac{v'(1-h_1)}{w_1}
+\end{aligned}
+\right\rbrace \implies u'(c_0)=\beta(1+r)u'(c_1)\qquad\text{Equação de Euler}
+\end{equation*}
+\]</span></p>
+<p><span class="math display">\[
+\begin{equation*}
+v'(1-h_0) w_1 = \beta(1+r) v'(1-h_1)w_0 \qquad\text{Substituição intertemporal da oferta de trabalho}
+\end{equation*}
+\]</span></p>
+<p>Temos então 5 variáveis endógenas oriundas do problema das famílias: <span class="math inline">\(c_0\)</span>, <span class="math inline">\(c_1\)</span>, <span class="math inline">\(h_0\)</span>, <span class="math inline">\(h_1\)</span> e <span class="math inline">\(a_1\)</span>, sendo que temos 5 equações:</p>
+<p><span class="math display">\[
+\begin{align}
+c_0&amp;=w_0h_0+\pi_0-a_1\\
+c_1&amp;=[(1+r)\beta]^{1/\sigma}c_0\\
+h_0&amp;=1-(\gamma/w_0)^{1/\sigma}c_0\\
+h_1&amp;=1-(\gamma/w_1)^{1/\sigma}c_1\\
+a1&amp;=(c1-w_1h_1-\pi_1)/(1+r)\\
+\end{align}
+\]</span></p>
+<p>Esse sistema pode ser resolvido escrevendo todas as variáveis endógenas, <span class="math inline">\(c_1\)</span>, <span class="math inline">\(h_0\)</span>, <span class="math inline">\(h_1\)</span> e <span class="math inline">\(a_1\)</span> em função de <span class="math inline">\(c_0\)</span> e considerando que as famílias tomam como dado os salários e lucros distribuídos, <span class="math inline">\(w_t\)</span> e <span class="math inline">\(\pi_t\)</span>. Basta então substituir recursivamente para encontrar todas as outras variáveis endógenas. <strong>Ou, como faremos neste exercício, podemos utilizar métodos numéricos para encontrar as soluções.</strong></p>
+</section>
+<section id="o-problema-das-firmas" class="level3">
+<h3 class="anchored" data-anchor-id="o-problema-das-firmas">O Problema das Firmas</h3>
+<p>A condição de primeira ordem para FP é:</p>
+<p><span class="math display">\[
+\begin{equation}
+\frac{w_t}{p_t} = \alpha A_t L_t^{\alpha-1}  \quad t=\{0,1\}
+\end{equation}
+\]</span></p>
+<p>Aqui podemos ver que o FP é estático e estamos assumindo que as empresas são tomadoras de preço em qualquer período. Além disso, como há apenas um bem nesta economia, ele será o numerário, portanto <span class="math inline">\(p_t=1, \forall t\)</span>. Logo, os salários reais são dados pela produtividade marginal do trabalho. Esta expressão para os salários pode ser substituída novamente na função lucro para encontrarmos a relação:</p>
+<p><span class="math display">\[
+\begin{equation}
+\pi_t=(1-\alpha)A_tL_t^{\alpha}.
+\end{equation}
+\]</span></p>
+</section>
+<section id="equilíbrio-de-mercado" class="level3">
+<h3 class="anchored" data-anchor-id="equilíbrio-de-mercado">Equilíbrio de Mercado</h3>
+<p>Finalmente, o equilíbrio de mercado implica em outras três condições: i) a demanda por trabalho é igual à oferta de trabalho, ii) o consumo mais poupança é igual a produção no período 0, e iii) o consumo no período 1 é igual a produção no período 1 mais a poupança do período 0 acrescida da renda do capital. Essas condições são expressas pelas seguintes equações:</p>
+<p><span class="math display">\[
+\begin{align}
+    &amp;h_t=L_t\\
+    &amp;c_0+a_1=A_0 L_0^\alpha\\
+    &amp;c_1=(1+r)a_1 + A_1 L_1^\alpha\\
+\end{align}
+\]</span></p>
+</section>
+</section>
+<section id="simulando-o-equilíbrio" class="level2">
+<h2 class="anchored" data-anchor-id="simulando-o-equilíbrio">Simulando o Equilíbrio</h2>
+<p>Agora, deixe <span class="math inline">\(A_{0}=1, A_{1}=1, \alpha=2 / 3, \sigma=2, \beta=0.98^{25}\)</span> (taxa de desconto subjetiva de <span class="math inline">\(2 \%\)</span> ao ano, sendo um período do modelo equivalente a 25 anos) e <span class="math inline">\(\gamma=1 .\)</span></p>
+<p>Iremos encontrar todas as alocações (consumo, trabalho e ativos), os preços <span class="math inline">\(\left(w_{0}, w_{1}\right)\)</span> e os lucros <span class="math inline">\(\left(\pi_0, \pi_1\right)\)</span> para esta economia. Precisaremos fazer isso <strong>numericamente</strong>, ou seja, através da solução do sistema de equações não-lineares utilizando programação.</p>
+<p>Utilizando as 5 equação do HP, 4 do FP e as 3 condições de equilíbrio, após mais algumas manipulações algébricas chegamos em um total de 9 equações não lineares que o equilíbrio deve satisfazer. Neste modelo a <strong>taxa de juros, <span class="math inline">\(r\)</span>, é exógena</strong> (imagine que as famílias tem acesso a um grande mercado internacional de fundos), portanto, temos 9 variáveis endógenas e o mesmo número de equações para resolver o sistema. As variáveis endógenas são: <span class="math inline">\(c_0, c_1, h_0, h_1, a_1, w_0, w_1, \pi_0, \pi_1\)</span>, enquanto os parâmetros exógenos são: <span class="math inline">\(\alpha, \beta, \gamma, \sigma, r, A_0, A_1\)</span>.</p>
+<p>As 9 equações que esta economia deve satisfazer são:</p>
+<p><span class="math display">\[
+\begin{align}
+c_0&amp;=w_0h_0+\pi_0-a_1\\
+c_1&amp;=[(1+r)\beta]^{1/\sigma}c_0\\
+h_0&amp;=1-(\gamma/w_0)^{1/\sigma}c_0\\
+h_1&amp;=1-(\gamma/w_1)^{1/\sigma}c_1\\
+a1&amp;=(c1-w_1h_1-\pi_1)/(1+r)\\
+w_0&amp;=\alpha A_0 h_0^{\alpha-1}\\
+w_1&amp;=\alpha A_1 h_1^{\alpha-1}\\
+\pi_0&amp;=(1-\alpha)A_0h_0^\alpha\\
+\pi_1&amp;=(1-\alpha)A_1h_1^\alpha
+\end{align}
+\]</span></p>
+<section id="programa-em-python" class="level3">
+<h3 class="anchored" data-anchor-id="programa-em-python">Programa em Python</h3>
+<div class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pprint <span class="im">import</span> pprint <span class="co"># pretty print para visualizar melhor os dicionários</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> root</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> termcolor <span class="im">import</span> colored</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> twop_economy():</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, A0, A1, alpha, sigma, beta, gamma, r, tol<span class="op">=</span><span class="fl">1e-4</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.A0 <span class="op">=</span> A0 </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.A1 <span class="op">=</span> A1 </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.alpha <span class="op">=</span> alpha </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.sigma <span class="op">=</span> sigma</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.beta <span class="op">=</span> beta</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.gamma <span class="op">=</span> gamma</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.r <span class="op">=</span> r</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.tol <span class="op">=</span> tol</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.eq <span class="op">=</span> <span class="va">None</span> <span class="co"># Equilibrium values</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Métodos para calcular as funções de utilidade e seus gradientes</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> u(<span class="va">self</span>, c):</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> (c<span class="op">**</span>(<span class="dv">1</span><span class="op">-</span><span class="va">self</span>.sigma)<span class="op">-</span><span class="dv">1</span>)<span class="op">/</span>(<span class="dv">1</span><span class="op">-</span><span class="va">self</span>.sigma)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> v(<span class="va">self</span>, l):</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> (l<span class="op">**</span>(<span class="dv">1</span><span class="op">-</span><span class="va">self</span>.sigma)<span class="op">-</span><span class="dv">1</span>)<span class="op">/</span>(<span class="dv">1</span><span class="op">-</span><span class="va">self</span>.sigma)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> du(<span class="va">self</span>, c):</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> c<span class="op">**</span>(<span class="op">-</span><span class="va">self</span>.sigma)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> dv(<span class="va">self</span>, l):</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> l<span class="op">**</span>(<span class="op">-</span><span class="va">self</span>.sigma)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Método de resolução do equilíbrio</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> solve_eq(<span class="va">self</span>, x0) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""_Resolve o sistema de equações não lineares do modelo. A solução é armazenada no atributo eq_</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="co">        :param x0: _Estimativa inicial para as variáveis do modelo. Ordem das variáveis para x0 deve ser: c0, c1, h0, h1, a1, w0, w1, pi0, pi1_</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="co">        :type x0: _array_</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="co">        """</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> obj_fun(x):</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>            F <span class="op">=</span> np.empty(<span class="dv">9</span>)</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>            c0, c1, h0, h1, a1, w0, w1, pi0, pi1 <span class="op">=</span> x</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Solving the system of nonlinear equations</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>            F <span class="op">=</span> np.array([</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>                        <span class="co">#################################################</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>                        <span class="co"># Using one equation for each endogenous variable</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>                        c0 <span class="op">-</span> (w0<span class="op">*</span>h0<span class="op">+</span>pi0<span class="op">-</span>a1),</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>                        c1 <span class="op">-</span> (((<span class="dv">1</span><span class="op">+</span><span class="va">self</span>.r)<span class="op">*</span><span class="va">self</span>.beta)<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span><span class="va">self</span>.sigma)<span class="op">*</span>c0),</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>                        h0 <span class="op">-</span> (<span class="dv">1</span><span class="op">-</span>(<span class="va">self</span>.gamma<span class="op">/</span>w0)<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span><span class="va">self</span>.sigma)<span class="op">*</span>c0),</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>                        h1 <span class="op">-</span> (<span class="dv">1</span><span class="op">-</span>(<span class="va">self</span>.gamma<span class="op">/</span>w1)<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span><span class="va">self</span>.sigma)<span class="op">*</span>c1),</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>                        a1 <span class="op">-</span> (c1<span class="op">-</span>w1<span class="op">*</span>h1<span class="op">-</span>pi1)<span class="op">/</span>(<span class="dv">1</span><span class="op">+</span><span class="va">self</span>.r),</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>                        w0 <span class="op">-</span> (<span class="va">self</span>.alpha<span class="op">*</span><span class="va">self</span>.A0<span class="op">*</span>(h0)<span class="op">**</span>(<span class="va">self</span>.alpha<span class="op">-</span><span class="dv">1</span>)),</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>                        w1 <span class="op">-</span> (<span class="va">self</span>.alpha<span class="op">*</span><span class="va">self</span>.A1<span class="op">*</span>(h1)<span class="op">**</span>(<span class="va">self</span>.alpha<span class="op">-</span><span class="dv">1</span>)),</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>                        pi0 <span class="op">-</span> ((<span class="dv">1</span><span class="op">-</span><span class="va">self</span>.alpha)<span class="op">*</span><span class="va">self</span>.A0<span class="op">*</span>(h0)<span class="op">**</span><span class="va">self</span>.alpha),</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>                        pi1 <span class="op">-</span> ((<span class="dv">1</span><span class="op">-</span><span class="va">self</span>.alpha)<span class="op">*</span><span class="va">self</span>.A1<span class="op">*</span>(h1)<span class="op">**</span><span class="va">self</span>.alpha)</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>                        ])</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> F</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.eq <span class="op">=</span> root(obj_fun, x0, method<span class="op">=</span><span class="st">'hybr'</span>)</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Método para checar as restrições do equilíbrio</span></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> check_constraints(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>        c0, c1, h0, h1, a1, w0, w1, pi0, pi1 <span class="op">=</span> <span class="va">self</span>.eq.x</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(colored(<span class="st">"Checando o Equilíbrio!"</span>, <span class="st">"blue"</span>))</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Equação de Euler: </span><span class="sc">{</span><span class="bu">abs</span>(<span class="va">self</span>.du(c0)<span class="op">-</span>(<span class="dv">1</span><span class="op">+</span><span class="va">self</span>.r)<span class="op">*</span><span class="va">self</span>.beta<span class="op">*</span><span class="va">self</span>.du(c1)) <span class="op">&lt;</span> <span class="va">self</span><span class="sc">.</span>tol<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Restrição Orçamentária t0: </span><span class="sc">{</span><span class="bu">abs</span>(c0<span class="op">+</span>a1<span class="op">-</span>w0<span class="op">*</span>h0<span class="op">-</span>pi0 <span class="op">&lt;</span> <span class="va">self</span>.tol)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Restrição Orçamentária t1: </span><span class="sc">{</span><span class="bu">abs</span>(c1<span class="op">-</span>w1<span class="op">*</span>h1<span class="op">-</span>(<span class="dv">1</span><span class="op">+</span><span class="va">self</span>.r)<span class="op">*</span>a1 <span class="op">-</span> pi1 <span class="op">&lt;</span> <span class="va">self</span>.tol)<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Agora que temos o programa feito, vamos executá-lo com os parâmetros definidos anteriormente.</p>
+<div class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>parameters <span class="op">=</span> {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'A0'</span>:<span class="dv">1</span>, <span class="st">'A1'</span>:<span class="dv">1</span>, <span class="st">'alpha'</span>: <span class="dv">2</span><span class="op">/</span><span class="dv">3</span>, <span class="st">'sigma'</span>: <span class="dv">2</span>, <span class="st">'beta'</span>: <span class="fl">0.98</span><span class="op">**</span><span class="dv">25</span>, <span class="st">'gamma'</span>: <span class="dv">1</span>, <span class="st">'r'</span>: <span class="fl">1.05</span><span class="op">**</span><span class="dv">25</span><span class="op">-</span><span class="dv">1</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Instanciando a economia com os parâmetros definidos</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>econ <span class="op">=</span> twop_economy(<span class="op">**</span>parameters)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Definindo a estimativa inicial</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Ordem para x0: c0, c1, h0, h1, a1, w0, w1, pi0, pi1</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>x0 <span class="op">=</span> np.array([<span class="fl">0.5</span>, <span class="fl">0.9</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="fl">0.2</span>, <span class="fl">0.9</span>, <span class="fl">0.9</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>])</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcula o equilíbrio</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>econ.solve_eq(x0)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Verificando se o algoritmo convergiu</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(colored(<span class="ss">f"Algoritmo convergiu? </span><span class="sc">{</span>econ<span class="sc">.</span>eq<span class="sc">.</span>success<span class="sc">}</span><span class="ss">"</span>, <span class="st">"green"</span>))</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(colored(<span class="st">"Resultado do Equilíbrio:"</span>, <span class="st">"cyan"</span>))</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> <span class="bu">dict</span>(<span class="bu">zip</span>([<span class="st">"c0"</span>, <span class="st">"c1"</span>, <span class="st">"h0"</span>, <span class="st">"h1"</span>, <span class="st">"a1"</span>, <span class="st">"w0"</span>, <span class="st">"w1"</span>, <span class="st">"pi0"</span>, <span class="st">"pi1"</span>], econ.eq.x))</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># print("\n")</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>pprint(result, indent<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Checando as restrições</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>econ.check_constraints()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Algoritmo convergiu? True
+Resultado do Equilíbrio:
+{   'a1': 0.08653783165675656,
+    'c0': 0.506067279610891,
+    'c1': 0.7234365436457177,
+    'h0': 0.456192445867716,
+    'h1': 0.2823523037514032,
+    'pi0': 0.19753503708937253,
+    'pi1': 0.14346290994987504,
+    'w0': 0.8660162564198662,
+    'w1': 1.0161979061983475}
+
+
+Checando o Equilíbrio!
+Equação de Euler: True
+Restrição Orçamentária t0: True
+Restrição Orçamentária t1: True</code></pre>
+</div>
+</div>
+<p>Deixe <span class="math inline">\(A_0\)</span>​ diminuir de 1 para 0.90 e mantenha o valor de todos os outros parâmetros como antes. Refaça todos os seus cálculos e comente seus resultados.</p>
+<div class="cell" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>parameters[<span class="st">"A0"</span>] <span class="op">=</span> <span class="fl">0.9</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>econd <span class="op">=</span> twop_economy(<span class="op">**</span>parameters)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>econd.solve_eq(x0)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>resultd <span class="op">=</span> <span class="bu">dict</span>(<span class="bu">zip</span>([<span class="st">"c0"</span>, <span class="st">"c1"</span>, <span class="st">"h0"</span>, <span class="st">"h1"</span>, <span class="st">"a1"</span>, <span class="st">"w0"</span>, <span class="st">"w1"</span>, <span class="st">"pi0"</span>, <span class="st">"pi1"</span>], econd.eq.x))</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>pprint(resultd, indent<span class="op">=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>{   'a1': 0.06344992939885682,
+    'c0': 0.474224150763333,
+    'c1': 0.67791594984235,
+    'h0': 0.46175848762507804,
+    'h1': 0.31509724168732817,
+    'pi0': 0.1792246933729288,
+    'pi1': 0.1543506560384243,
+    'w0': 0.7762702719270494,
+    'w1': 0.979701726926152}</code></pre>
+</div>
+</div>
+<p>A redução da produtividade no período t=0 faz com que o salário nesse período caia, o que por sua vez aumenta a oferta de trabalho para compensar o consumo, embora não compense completamente. A poupança também é reduzida. No período t=1, o salário e o consumo são reduzidos, mesmo que a oferta de trabalho e o lucro sejam maiores.</p>
+<p>Agora, deixe <span class="math inline">\(A_1\)</span>​ diminuir de 1 para 0.90 e retorne <span class="math inline">\(A_0\)</span>​ ao seu valor original. Mantenha o valor de todos os outros parâmetros como antes. Refaça todos os seus cálculos e comente seus resultados.</p>
+<div class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>parameters[<span class="st">"A1"</span>] <span class="op">=</span> <span class="fl">0.9</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>parameters[<span class="st">"A0"</span>] <span class="op">=</span> <span class="fl">1.0</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>econe <span class="op">=</span> twop_economy(<span class="op">**</span>parameters)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>econe.solve_eq(x0)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>resulte <span class="op">=</span> <span class="bu">dict</span>(<span class="bu">zip</span>([<span class="st">"c0"</span>, <span class="st">"c1"</span>, <span class="st">"h0"</span>, <span class="st">"h1"</span>, <span class="st">"a1"</span>, <span class="st">"w0"</span>, <span class="st">"w1"</span>, <span class="st">"pi0"</span>, <span class="st">"pi1"</span>], econe.eq.x))</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>pprint(resulte, indent<span class="op">=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>{   'a1': 0.10087542783698347,
+    'c0': 0.4979997498073686,
+    'c1': 0.7119037966929674,
+    'h0': 0.4634516887900684,
+    'h1': 0.2639207137291082,
+    'pi0': 0.19962505921324936,
+    'pi1': 0.1234345976670139,
+    'w0': 0.8614708460446086,
+    'w1': 0.9353915128952682}</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="tarefa" class="level2">
+<h2 class="anchored" data-anchor-id="tarefa">Tarefa</h2>
+<p>Agora retorne <span class="math inline">\(A_1\)</span> igual a 1 e faça <span class="math inline">\(\sigma = 1.5\)</span> e resolva o novo equilíbrio. Compare os resultados com o equilíbrio inicial. O parâmetro <span class="math inline">\(\sigma\)</span> é uma medida de aversão ao risco no consumo futuro. Valores maiores de <span class="math inline">\(\sigma\)</span> indicam maior aversão ao risco. O que acontece com o consumo e a poupança quando reduzimos a aversão ao risco de 2 para 1.5?</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
