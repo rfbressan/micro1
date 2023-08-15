@@ -224,7 +224,7 @@ onde a notação indica que a inclinação é calculada ao longo da curva de ind
 
 - Pelo axioma da **convexidade estrita**, vimos que o conjunto fracamente preferido $\succeq(\textbf{x})$ é **estritamente convexo**. 
 
-- Combinando ambos, equivale a dizer que a **taxa marginal de substituição é decrescente**. Ou seja, a taxa à qual um indivíduo com preferências estritamente convexas deseja trocar um bem $x$ por $y$ diminui à medida que aumentamos a quantidade do bem $y$.
+- Combinando ambos, equivale a dizer que a **taxa marginal de substituição é decrescente**. Ou seja, a taxa à qual um indivíduo com preferências estritamente convexas deseja trocar um bem $y$ por $x$ diminui à medida que aumentamos a quantidade do bem $x$.
     
 
 
