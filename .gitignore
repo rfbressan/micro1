@@ -222,3 +222,6 @@ micro1/
 # Ignore exams folder
 exams/
 test.r
+
+# Ignore virtual environment
+env/
