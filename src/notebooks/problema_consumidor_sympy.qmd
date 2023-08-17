@@ -1,0 +1,119 @@
+---
+title: "Maximização da Utilidade em Python"
+author: "Rafael Bressan"
+logo: "img/UdescEsag.jpeg"
+format: 
+  html:
+    theme: [default, udesc.scss] 
+    code-fold: false
+    embed-resources: true
+from: markdown+emoji # list of emojis: https://gist.github.com/rxaviers/7360908
+# fontsize: "2.2em"
+editor: source
+jupyter: python3
+---
+
+# Resolvendo o problema do consumidor com Python
+
+## Introdução
+
+O problema do consumidor é assim definido:
+
+$$
+\begin{aligned}
+\max_{x_1, x_2} &\quad u(x_1, x_2) \\
+\text{s.a.} &\quad p_1 x_1 + p_2 x_2 \leq m \\
+\end{aligned}
+$$
+
+Neste exercício utilizaremos a função utilidade Cobb-Douglas: $u(x_1, x_2) = x_1^\alpha x_2^{1-\alpha}$.
+
+## Utilizando o Sympy
+
+O Sympy é uma biblioteca de **computação simbólica** para Python. Com ela podemos resolver o problema do consumidor de forma analítica. O sympy irá resolver o lagrangiano do problema e encontrar a demanda marshalliana dos bens 1 e 2.
+
+```{python}
+from __future__ import division
+from sympy import *
+
+```
+
+```{python}
+# Definindo os simbolos
+x1, x2, p1, p2 = symbols("x1 x2 p1 p2", positive=True)
+alpha, mu = symbols("alpha mu", Real=True)  # alpha, multiplicador de lagrange
+u, m, e, v = symbols("u m e v")  # utilidade, renda, despesa, utilidade indireta
+```
+
+```{python} 
+# Definindo a função utilidade
+utilidade = x1**alpha * x2 ** (1 - alpha)
+utilidade
+```
+
+```{python}
+# Definindo a restrição orçamentária
+ro = p1 * x1 + p2 * x2
+ro
+```
+
+```{python}
+# Definindo o lagrangiano
+L=utilidade + mu * (m - ro)
+L
+```
+
+```{python}
+# Condicoes de primeira ordem
+foc1 = diff(L, x1)
+foc2 = diff(L, x2)
+foc3 = diff(L, mu)
+```
+
+```{python}
+# Resolvendo o sistema de equações
+solucao = solve([foc1, foc2, foc3], [x1, x2, mu], dict=True)
+solucao
+```
+
+```{python}
+# Extraindo as demandas marshallianas
+x1_mar = solucao[0][x1]
+x1_mar
+```
+
+```{python}
+x2_mar = solucao[0][x2]
+x2_mar
+```
+
+```{python}
+utilidade_indireta = utilidade.subs({x1: x1_mar, x2: x2_mar})
+utilidade_indireta
+```
+
+Qual a maior utilidade que o consumidor pode obter com renda $m=100$ e os preços $p_1=1$ e $p_2=2$? Considere $\alpha=0.8$.
+
+```{python}
+utilidade_indireta.subs({m: 100, p1: 1, p2: 2, alpha: 0.8})
+```
+
+Nas condições acima, qual o consumo dos bens 1 e 2?
+
+```{python}
+x1_sol = x1_mar.subs({m: 100, p1: 1, p2: 2, alpha: 0.8})
+x1_sol
+```
+
+```{python}
+x2_sol = x2_mar.subs({m: 100, p1: 1, p2: 2, alpha: 0.8})
+x2_sol
+```
+
+Confira que a utilidade gerada pelo consumo destas quantidades dos bens 1 e 2 é igual à utilidade indireta.
+
+```{python}
+utilidade.subs({x1: x1_sol, x2: x2_sol, alpha: 0.8})
+```
+
+
