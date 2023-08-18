@@ -162,6 +162,13 @@ considerando a restrição orçamentária: $p_xx + p_yy = I$.
 
 Mostre que a fração da renda consumida em cada bem é constante.
 
+## Computação Simbólica
+
+-   A computação simbólica é uma ferramenta poderosa para a solução de problemas de otimização
+-  A ideia é utilizar um **software para realizar as manipulações algébricas** necessárias para obter a solução analítica do problema.
+- Podemos utilizar ferramentas de computação simbólica para **obter as funções de demanda Marshallianas e utilidade indireta** para uma gama de funções utilidade
+
+- [notebook](https://raw.githack.com/rfbressan/micro1/master/src/notebooks/problema_consumidor_sympy.html)
 
 <!-- ## Princípio do lump-sum
 
