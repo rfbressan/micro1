@@ -1,0 +1,127 @@
+---
+title: "Equilíbrio Parcial em Mercados Competitivos"
+title-slide-attributes:
+  data-background-image: "img/UdescEsag.jpeg"
+  data-background-size: 50%
+  data-background-position: top left
+  # data-background-opacity: "0.7"
+center-title-slide: true
+author: "Rafael Bressan"
+logo: "img/UdescEsag.jpeg"
+format: 
+  revealjs:
+    theme: [default, udesc.scss] 
+    code-fold: true
+    chalkboard: true
+    incremental: true
+    width: 1600
+    height: 900
+from: markdown+emoji # list of emojis: https://gist.github.com/rxaviers/7360908
+fontsize: "2.2em"
+editor: source
+jupyter: python3
+---
+
+## Introdução
+
+**Mercados Competitivos**
+
+- Consumidores: buscam maximizar sua Utilidade
+- Firmas: buscam maximizar seu lucro
+- Produtores não influenciam o preço, são tomadores de preços
+- Homogeneidade de produtos
+- Livre entrada das firmas no mercado
+- Muitas empresas operando no mercado
+
+## Mercados Competitivos - Demanda
+- Demanda individual e de mercado
+- Mercado com apenas dois produtos, x e y:
+
+- Demanda individual do bem x pelor consumidor $i$ $dx_i = x_i(p_x, p_y, I)$
+- Demanda de mercado $D_x = \sum_{i=1}^n dx_i = x(p_x, p_y, I)$
+
+## Demanda de Mercado
+
+![](img/demanda_mercado.png)
+
+
+## Demanda de Mercado
+
+- É negativamente inclinada, alterações no preço próprio resultam em variações na **quantidade demandada** (ao longo da curva de demanda)
+- Alterações em seus outros determinantes $\left(p_y \text{ e } I\right)$, **deslocam a curva de Demanda**.
+
+## Mercados Competitivos - Oferta
+
+Oferta (S)
+
+- ***Curtíssimo prazo***: período de tempo em que não se pode aumentar a produção, a [oferta é fixa]{.red}
+
+- ***Curto prazo***: as firmas que já operam no mercado podem aumentar sua produção, mas [novas firmas não conseguem entrar]{.red} no mercado;
+
+- ***Longo prazo***: novas firmas podem entrar na indústria.
+
+## Oferta no Curto Prazo
+
+- Oferta da firma e de mercado
+- Oferta da firma individual $i$, $s_i = s_i(p, r, w)$
+- Quantidade ofertada no mercado $S = \sum_{i=1}^{n_f} s_i(p, r, w) = S(p, r, w)$
+
+## Oferta no Curto Prazo
+
+- A solução do problema de maximização do lucro da firma resulta em:
+
+- $\pi(q)=R(q)-C(q)$
+
+- CPO: $\frac{\partial \pi}{\partial q} = \frac{\partial R}{\partial q} - \frac{\partial C}{\partial q} = 0$
+
+- $Rmg = Cmg$
+
+:::{.fragment}
+Em mercados competitivos
+- $Rmg = p$
+
+- Logo, a oferta da firma é $p = Cmg$, sempre que $p \geq Cme$
+:::
+
+
+## Oferta no Curto Prazo
+
+![](img/oferta_mercado.png)
+
+## Determinação do preço de equilíbrio
+
+**Curtíssimo Prazo**
+
+![](img/oferta_demanda_curtissimo.png)
+
+## Determinação do preço de equilíbrio
+
+**Curto Prazo**
+
+![](img/oferta_demanda_curto.png)
+
+
+## Determinação do preço de equilíbrio
+
+- Fatores que deslocam a Demanda:
+    + Alterações na **renda**
+    + Alterações nos **preços dos bens substitutos e complementares**
+    + Mudanças nas **preferências** dos consumidores
+
+- Fatores que deslocam a Oferta:
+    + Alterações nos **preços dos insumos**
+    + Mudanças na **tecnologia** de produção
+    + Alterações no número de ofertantes
+
+
+# Modelando uma Economia Competitiva
+
+## Oferta de Trabalho Intertemporal
+
+[notebook](https://raw.githack.com/rfbressan/micro1/master/src/notebooks/oferta_trabalho_equilibrio.html)
+
+## :books: Bibliografia
+
+NICHOLSON, W.; SNYDER C. Teoria microeconômica: Princípios básicos e aplicações. Cengage Learning Brasil, 2019. Disponível em: [https://app.minhabiblioteca.com.br/#/books/9788522127030/](app.minhabiblioteca.com.br/#/books/9788522127030)
+
+VARIAN, H. R. Microeconomia: uma abordagem moderna. 9.ed. Rio de Janeiro: Elsevier, 2015. Disponível em: [https://app.minhabiblioteca.com.br/books/9788595155107](app.minhabiblioteca.com.br/books/9788595155107)

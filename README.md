@@ -74,6 +74,7 @@ Observe que várias dessas aulas se estendem por duas ou mais sessões.
 | Aula 15: Curvas de Custos | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula15-Custos.html) | |
 | Aula 16: Maximização de Lucros | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula16-Maximizacao-Lucros.html) | |
 | Aula 17: Minimização de Custos | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula17-Minimizacao-Custos.html) | Lista 03 |
+| Aula 18: Equilíbrio Parcial | [HTML](https://raw.githack.com/rfbressan/micro1/master/src/slides/Aula18-Equilibrio-Parcial.html) |  |
 
 
 
