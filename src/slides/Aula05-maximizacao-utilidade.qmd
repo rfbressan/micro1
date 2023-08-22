@@ -48,22 +48,24 @@ jupyter: python3
 ## Cobb-Douglas
 
 ```{python}
-#| echo: true
-#| output-location: column
+# | echo: true
+# | output-location: column
 
-# Importando bibliotecas. Vamos simular as curvas de indiferença de uma função utilidade do tipo Cobb-Douglas com dois argumentos, x e y. 
+# Importando bibliotecas. Vamos simular as curvas de indiferença de uma função utilidade do tipo Cobb-Douglas com dois argumentos, x e y.
 # selecionando apenas um parâmetro (delta), sendo o outro parâmetro (1-delta) definido como complementar.
 # A utilidade será dada para 10 valores diferentes, sendo que o argumento y é que será calculado em função de x e desta utilidade
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 # Calculando o valor y
 def y(x, u, delta):
-    return (u*x**(-delta))**(1/(1-delta))
+    return (u * x ** (-delta)) ** (1 / (1 - delta))
+
 
 # Definindo os valores de x e delta
 x = np.linspace(0.1, 12, 100)
-delta = 0.5 
+delta = 0.5
 u = np.linspace(1, 10, 5)
 
 # Criando a figura usando sintaxe orientada a objetos
@@ -71,18 +73,18 @@ fig, ax = plt.subplots(figsize=(8, 6))
 
 # Plotando as curvas de indiferença
 for i in u:
-    ax.plot(x, y(x, i, delta), label=f'$U(x,y) = {i:.2f}$')
+    ax.plot(x, y(x, i, delta), label=f"$U(x,y) = {i:.2f}$")
 
 # Definindo os limites dos eixos
 ax.set_xlim(0, 13)
 ax.set_ylim(0, 13)
 
 # Definindo os rótulos dos eixos
-ax.set_xlabel('$x$')
-ax.set_ylabel('$y$')
+ax.set_xlabel("$x$")
+ax.set_ylabel("$y$")
 
 # Definindo o título do gráfico
-ax.set_title(f'Curvas de indiferença tipo Cobb-Douglas ($\delta = 0,5$)')
+ax.set_title(f"Curvas de indiferença tipo Cobb-Douglas ($\delta = 0,5$)")
 
 # Definindo a legenda
 ax.legend()
@@ -180,20 +182,20 @@ ax.legend()
 ## Preferências homotéticas e não-homotéticas
 
 ```{python}
-#| echo: true
-#| output-location: column
+# | echo: true
+# | output-location: column
 
 # Quando y=x então u=x e MRS = delta/(1-delta)
-mrs = (delta/(1-delta)) 
-slope = - mrs
+mrs = delta / (1 - delta)
+slope = -mrs
 
 for i in range(len(u)):
-    ax.axline((u[i], u[i]), slope = slope, color='black', linestyle='--', linewidth=1)
+    ax.axline((u[i], u[i]), slope=slope, color="black", linestyle="--", linewidth=1)
 
-ax.plot([0,10], [0,10], color='black', linestyle='--', linewidth=1.5)
+ax.plot([0, 10], [0, 10], color="black", linestyle="--", linewidth=1.5)
 
 fig
- 
+
 ```
 
 ## Exercício
@@ -520,6 +522,21 @@ $p_y = 6$. A renda, também exógena, é igual a \$300. Quais as
 quantidades consumidas ótimas para este problema de maximização de
 utilidade?
 
+:::{.fragment}
+**Solução**
+$$\begin{aligned}
+    & \underset{\textbf{x, y}\in \mathbb{R}_+^n}{\text{maximizar}}
+    & & x + \ln y, \\
+    & \text{sujeito a}
+    & & p_x x + p_y y = m.
+\end{aligned}$$
+:::
+
+- $\frac{d}{dy}\left(\frac{m-p_y y}{p_x}+\ln y\right) = 0$
+
+- $-\frac{p_y}{p_x}+\frac{1}{y^*} = 0\implies y^*=p_x/p_y$
+
+- $x^*=\frac{m}{p_x}-1$
 
 ## :books: Bibliografia
 

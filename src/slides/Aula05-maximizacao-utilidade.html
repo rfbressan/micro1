@@ -427,48 +427,50 @@ Rafael Bressan
 <div class="column">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Importando bibliotecas. Vamos simular as curvas de indiferença de uma função utilidade do tipo Cobb-Douglas com dois argumentos, x e y. </span></span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Importando bibliotecas. Vamos simular as curvas de indiferença de uma função utilidade do tipo Cobb-Douglas com dois argumentos, x e y.</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="co"># selecionando apenas um parâmetro (delta), sendo o outro parâmetro (1-delta) definido como complementar.</span></span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="co"># A utilidade será dada para 10 valores diferentes, sendo que o argumento y é que será calculado em função de x e desta utilidade</span></span>
 <span id="cb1-4"><a href="#cb1-4"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-5"><a href="#cb1-5"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-6"><a href="#cb1-6"></a></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="co"># Calculando o valor y</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="kw">def</span> y(x, u, delta):</span>
-<span id="cb1-9"><a href="#cb1-9"></a>    <span class="cf">return</span> (u<span class="op">*</span>x<span class="op">**</span>(<span class="op">-</span>delta))<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span>(<span class="dv">1</span><span class="op">-</span>delta))</span>
-<span id="cb1-10"><a href="#cb1-10"></a></span>
-<span id="cb1-11"><a href="#cb1-11"></a><span class="co"># Definindo os valores de x e delta</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a>x <span class="op">=</span> np.linspace(<span class="fl">0.1</span>, <span class="dv">12</span>, <span class="dv">100</span>)</span>
-<span id="cb1-13"><a href="#cb1-13"></a>delta <span class="op">=</span> <span class="fl">0.5</span> </span>
-<span id="cb1-14"><a href="#cb1-14"></a>u <span class="op">=</span> np.linspace(<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">5</span>)</span>
-<span id="cb1-15"><a href="#cb1-15"></a></span>
-<span id="cb1-16"><a href="#cb1-16"></a><span class="co"># Criando a figura usando sintaxe orientada a objetos</span></span>
-<span id="cb1-17"><a href="#cb1-17"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
-<span id="cb1-18"><a href="#cb1-18"></a></span>
-<span id="cb1-19"><a href="#cb1-19"></a><span class="co"># Plotando as curvas de indiferença</span></span>
-<span id="cb1-20"><a href="#cb1-20"></a><span class="cf">for</span> i <span class="kw">in</span> u:</span>
-<span id="cb1-21"><a href="#cb1-21"></a>    ax.plot(x, y(x, i, delta), label<span class="op">=</span><span class="ss">f'$U(x,y) = </span><span class="sc">{</span>i<span class="sc">:.2f}</span><span class="ss">$'</span>)</span>
-<span id="cb1-22"><a href="#cb1-22"></a></span>
-<span id="cb1-23"><a href="#cb1-23"></a><span class="co"># Definindo os limites dos eixos</span></span>
-<span id="cb1-24"><a href="#cb1-24"></a>ax.set_xlim(<span class="dv">0</span>, <span class="dv">13</span>)</span>
-<span id="cb1-25"><a href="#cb1-25"></a>ax.set_ylim(<span class="dv">0</span>, <span class="dv">13</span>)</span>
-<span id="cb1-26"><a href="#cb1-26"></a></span>
-<span id="cb1-27"><a href="#cb1-27"></a><span class="co"># Definindo os rótulos dos eixos</span></span>
-<span id="cb1-28"><a href="#cb1-28"></a>ax.set_xlabel(<span class="st">'$x$'</span>)</span>
-<span id="cb1-29"><a href="#cb1-29"></a>ax.set_ylabel(<span class="st">'$y$'</span>)</span>
-<span id="cb1-30"><a href="#cb1-30"></a></span>
-<span id="cb1-31"><a href="#cb1-31"></a><span class="co"># Definindo o título do gráfico</span></span>
-<span id="cb1-32"><a href="#cb1-32"></a>ax.set_title(<span class="ss">f'Curvas de indiferença tipo Cobb-Douglas ($\delta = 0,5$)'</span>)</span>
-<span id="cb1-33"><a href="#cb1-33"></a></span>
-<span id="cb1-34"><a href="#cb1-34"></a><span class="co"># Definindo a legenda</span></span>
-<span id="cb1-35"><a href="#cb1-35"></a>ax.legend()</span>
-<span id="cb1-36"><a href="#cb1-36"></a></span>
-<span id="cb1-37"><a href="#cb1-37"></a><span class="co"># Mostrando o gráfico</span></span>
-<span id="cb1-38"><a href="#cb1-38"></a><span class="co"># plt.show()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-7"><a href="#cb1-7"></a></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co"># Calculando o valor y</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="kw">def</span> y(x, u, delta):</span>
+<span id="cb1-10"><a href="#cb1-10"></a>    <span class="cf">return</span> (u <span class="op">*</span> x <span class="op">**</span> (<span class="op">-</span>delta)) <span class="op">**</span> (<span class="dv">1</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">-</span> delta))</span>
+<span id="cb1-11"><a href="#cb1-11"></a></span>
+<span id="cb1-12"><a href="#cb1-12"></a></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="co"># Definindo os valores de x e delta</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a>x <span class="op">=</span> np.linspace(<span class="fl">0.1</span>, <span class="dv">12</span>, <span class="dv">100</span>)</span>
+<span id="cb1-15"><a href="#cb1-15"></a>delta <span class="op">=</span> <span class="fl">0.5</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a>u <span class="op">=</span> np.linspace(<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">5</span>)</span>
+<span id="cb1-17"><a href="#cb1-17"></a></span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="co"># Criando a figura usando sintaxe orientada a objetos</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb1-20"><a href="#cb1-20"></a></span>
+<span id="cb1-21"><a href="#cb1-21"></a><span class="co"># Plotando as curvas de indiferença</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a><span class="cf">for</span> i <span class="kw">in</span> u:</span>
+<span id="cb1-23"><a href="#cb1-23"></a>    ax.plot(x, y(x, i, delta), label<span class="op">=</span><span class="ss">f"$U(x,y) = </span><span class="sc">{</span>i<span class="sc">:.2f}</span><span class="ss">$"</span>)</span>
+<span id="cb1-24"><a href="#cb1-24"></a></span>
+<span id="cb1-25"><a href="#cb1-25"></a><span class="co"># Definindo os limites dos eixos</span></span>
+<span id="cb1-26"><a href="#cb1-26"></a>ax.set_xlim(<span class="dv">0</span>, <span class="dv">13</span>)</span>
+<span id="cb1-27"><a href="#cb1-27"></a>ax.set_ylim(<span class="dv">0</span>, <span class="dv">13</span>)</span>
+<span id="cb1-28"><a href="#cb1-28"></a></span>
+<span id="cb1-29"><a href="#cb1-29"></a><span class="co"># Definindo os rótulos dos eixos</span></span>
+<span id="cb1-30"><a href="#cb1-30"></a>ax.set_xlabel(<span class="st">"$x$"</span>)</span>
+<span id="cb1-31"><a href="#cb1-31"></a>ax.set_ylabel(<span class="st">"$y$"</span>)</span>
+<span id="cb1-32"><a href="#cb1-32"></a></span>
+<span id="cb1-33"><a href="#cb1-33"></a><span class="co"># Definindo o título do gráfico</span></span>
+<span id="cb1-34"><a href="#cb1-34"></a>ax.set_title(<span class="ss">f"Curvas de indiferença tipo Cobb-Douglas ($\delta = 0,5$)"</span>)</span>
+<span id="cb1-35"><a href="#cb1-35"></a></span>
+<span id="cb1-36"><a href="#cb1-36"></a><span class="co"># Definindo a legenda</span></span>
+<span id="cb1-37"><a href="#cb1-37"></a>ax.legend()</span>
+<span id="cb1-38"><a href="#cb1-38"></a></span>
+<span id="cb1-39"><a href="#cb1-39"></a><span class="co"># Mostrando o gráfico</span></span>
+<span id="cb1-40"><a href="#cb1-40"></a><span class="co"># plt.show()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div><div class="column">
-<div class="cell-output cell-output-display" data-execution_count="1">
-<pre><code>&lt;matplotlib.legend.Legend at 0x7f753a185f40&gt;</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="11">
+<pre><code>&lt;matplotlib.legend.Legend at 0x7f55aafccfd0&gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <p><img data-src="Aula05-maximizacao-utilidade_files/figure-revealjs/cell-2-output-2.png" width="659" height="524"></p>
@@ -538,18 +540,18 @@ Rafael Bressan
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Quando y=x então u=x e MRS = delta/(1-delta)</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>mrs <span class="op">=</span> (delta<span class="op">/</span>(<span class="dv">1</span><span class="op">-</span>delta)) </span>
-<span id="cb3-3"><a href="#cb3-3"></a>slope <span class="op">=</span> <span class="op">-</span> mrs</span>
+<span id="cb3-2"><a href="#cb3-2"></a>mrs <span class="op">=</span> delta <span class="op">/</span> (<span class="dv">1</span> <span class="op">-</span> delta)</span>
+<span id="cb3-3"><a href="#cb3-3"></a>slope <span class="op">=</span> <span class="op">-</span>mrs</span>
 <span id="cb3-4"><a href="#cb3-4"></a></span>
 <span id="cb3-5"><a href="#cb3-5"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(u)):</span>
-<span id="cb3-6"><a href="#cb3-6"></a>    ax.axline((u[i], u[i]), slope <span class="op">=</span> slope, color<span class="op">=</span><span class="st">'black'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb3-6"><a href="#cb3-6"></a>    ax.axline((u[i], u[i]), slope<span class="op">=</span>slope, color<span class="op">=</span><span class="st">"black"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb3-7"><a href="#cb3-7"></a></span>
-<span id="cb3-8"><a href="#cb3-8"></a>ax.plot([<span class="dv">0</span>,<span class="dv">10</span>], [<span class="dv">0</span>,<span class="dv">10</span>], color<span class="op">=</span><span class="st">'black'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, linewidth<span class="op">=</span><span class="fl">1.5</span>)</span>
+<span id="cb3-8"><a href="#cb3-8"></a>ax.plot([<span class="dv">0</span>, <span class="dv">10</span>], [<span class="dv">0</span>, <span class="dv">10</span>], color<span class="op">=</span><span class="st">"black"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, linewidth<span class="op">=</span><span class="fl">1.5</span>)</span>
 <span id="cb3-9"><a href="#cb3-9"></a></span>
 <span id="cb3-10"><a href="#cb3-10"></a>fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div><div class="column">
-<div class="cell-output cell-output-display" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="12">
 <p><img data-src="Aula05-maximizacao-utilidade_files/figure-revealjs/cell-3-output-1.png" width="659" height="524"></p>
 </div>
 </div>
@@ -768,6 +770,19 @@ Rafael Bressan
 <h2>Exercício 3</h2>
 <p>A relação de preferência de um consumidor é representada pela seguinte função utilidade: <span class="math display">\[U(x,y) = x + \ln y.\]</span></p>
 <p>Os preços unitários, exogenamente determinados, são <span class="math inline">\(p_x = 12\)</span> e <span class="math inline">\(p_y = 6\)</span>. A renda, também exógena, é igual a $300. Quais as quantidades consumidas ótimas para este problema de maximização de utilidade?</p>
+<div class="fragment">
+<p><strong>Solução</strong> <span class="math display">\[\begin{aligned}
+    &amp; \underset{\textbf{x, y}\in \mathbb{R}_+^n}{\text{maximizar}}
+    &amp; &amp; x + \ln y, \\
+    &amp; \text{sujeito a}
+    &amp; &amp; p_x x + p_y y = m.
+\end{aligned}\]</span></p>
+</div>
+<ul>
+<li class="fragment"><p><span class="math inline">\(\frac{d}{dy}\left(\frac{m-p_y y}{p_x}+\ln y\right) = 0\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(-\frac{p_y}{p_x}+\frac{1}{y^*} = 0\implies y^*=p_x/p_y\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(x^*=\frac{m}{p_x}-1\)</span></p></li>
+</ul>
 </section>
 <section id="bibliografia" class="slide level2">
 <h2><span class="emoji" data-emoji="books">📚</span> Bibliografia</h2>
