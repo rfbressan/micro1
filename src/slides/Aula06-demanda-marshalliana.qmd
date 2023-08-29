@@ -144,15 +144,31 @@ $I = 8$.
 
 Obtenha as funções de demanda Marshallianas e a
 função de utilidade indireta para a seguinte função utilidade de bens
-complementares: $$U(x,y) = \min(x,4y)$$ considerando a restrição
+complementares: $$U(x,y) = \min\{x,4y\}$$ considerando a restrição
 orçamentária: $p_xx + p_yy = I$.
 
 Calcule o nível de utilidade máximo quando $p_x = 1$, $p_y = 4$ e
 $I = 8$.
 
+## Solução
+
+- Sabemos que a condição $TMS=p_x/p_y$ ***não vale*** para bens complementares.
+- O consumo será sempre na "quina" da curva de indiferença, onde $x=4y$.
+- Substituindo de volta na restrição orçametária temos que:
+
+:::{.fragment}
+$$p_x 4y + p_y y = I \Rightarrow y^* = \frac{I}{4p_x + p_y}$$
+
+$$x^* = \frac{I}{4p_x + p_y}$$
+:::
+
+- A função de utilidade indireta é obtida substituindo as funções de demanda na função utilidade:
+$$V(p_x, p_y, I)=\frac{I}{4p_x + p_y}$$
+- O nível de utilidade máximo obtido quando $p_x = 1$, $p_y = 4$ e $I = 8$ será $V(1,4,8)=\frac{8}{4+4}=1$.
+
 ## Exemplos
 
-Função Cobb-Douglas 
+### Função Cobb-Douglas 
 
 Obtenha as funções de demanda Marshallianas e a
 função de utilidade indireta para a seguinte função utilidade do tipo
@@ -160,7 +176,7 @@ Cobb-Douglas:
 $$U(x,y) = x^{\alpha}y^{1-\alpha}, \qquad \alpha \in (0,1)$$
 considerando a restrição orçamentária: $p_xx + p_yy = I$.
 
-Mostre que a fração da renda consumida em cada bem é constante.
+Mostre que a fração da renda consumida em cada bem é constante. Ou seja, $x^*=\frac{\alpha I}{p_x}$ e $y^*=\frac{(1-\alpha) I}{p_y}$.
 
 ## Computação Simbólica
 
@@ -468,14 +484,14 @@ $$\begin{aligned}
 ::::{.column width="50%"}
 - $p_x = 1$, $p_y = 4$, $U = 2$ $\implies E = 2\cdot 1^{0,5}\cdot 4^{0,5}\cdot 2=8$
 
-- $p_y\rightarrow 5 \implies E = 2\cdot 1^{0,5}\cdot 9^{0,5}\cdot 2=12$
+- $p_y\rightarrow 9 \implies E = 2\cdot 1^{0,5}\cdot 9^{0,5}\cdot 2=12$
 
 - Logo, temos de compensar o consumidor com \$4 para manter o mesmo nível de utilidade.
 :::
 :::
 ## Exemplos
 
-Dada a função utilidade $U(x,y) = \min(x,4y)$,
+Dada a função utilidade $U(x,y) = \min\{x,4y\}$,
 podemos calcular a função utilidade indireta:
 $$V(p_x,p_y,I) = \frac{I}{p_x + 0,25p_y}.$$
 
@@ -549,7 +565,7 @@ $$\frac{\partial E(p_1, \dots, p_i, \dots, p_n, U)}{\partial p_i} \geq 0, \qquad
     custava antes.
 
 -   No entanto, $B$ antes do aumento de preços custava mais que a cesta
-    $A$ - pois $A$ é a cesta ótima de minimiza o dispêndio do consumidor
+    $A$ - pois $A$ é a cesta ótima que minimiza o dispêndio do consumidor
     para um dado nível de utilidade.
 
 -   Portanto: a cesta de consumo $A$ custa menos que a cesta de consumo

@@ -419,21 +419,37 @@ Rafael Bressan
 <section id="exemplos-1" class="slide level2">
 <h2>Exemplos</h2>
 <h3 id="bens-complementares">Bens complementares</h3>
-<p>Obtenha as funções de demanda Marshallianas e a função de utilidade indireta para a seguinte função utilidade de bens complementares: <span class="math display">\[U(x,y) = \min(x,4y)\]</span> considerando a restrição orçamentária: <span class="math inline">\(p_xx + p_yy = I\)</span>.</p>
+<p>Obtenha as funções de demanda Marshallianas e a função de utilidade indireta para a seguinte função utilidade de bens complementares: <span class="math display">\[U(x,y) = \min\{x,4y\}\]</span> considerando a restrição orçamentária: <span class="math inline">\(p_xx + p_yy = I\)</span>.</p>
 <p>Calcule o nível de utilidade máximo quando <span class="math inline">\(p_x = 1\)</span>, <span class="math inline">\(p_y = 4\)</span> e <span class="math inline">\(I = 8\)</span>.</p>
+</section>
+<section id="solução-1" class="slide level2">
+<h2>Solução</h2>
+<ul>
+<li class="fragment">Sabemos que a condição <span class="math inline">\(TMS=p_x/p_y\)</span> <strong><em>não vale</em></strong> para bens complementares.</li>
+<li class="fragment">O consumo será sempre na “quina” da curva de indiferença, onde <span class="math inline">\(x=4y\)</span>.</li>
+<li class="fragment">Substituindo de volta na restrição orçametária temos que:</li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[p_x 4y + p_y y = I \Rightarrow y^* = \frac{I}{4p_x + p_y}\]</span></p>
+<p><span class="math display">\[x^* = \frac{I}{4p_x + p_y}\]</span></p>
+</div>
+<ul>
+<li class="fragment">A função de utilidade indireta é obtida substituindo as funções de demanda na função utilidade: <span class="math display">\[V(p_x, p_y, I)=\frac{I}{4p_x + p_y}\]</span></li>
+<li class="fragment">O nível de utilidade máximo obtido quando <span class="math inline">\(p_x = 1\)</span>, <span class="math inline">\(p_y = 4\)</span> e <span class="math inline">\(I = 8\)</span> será <span class="math inline">\(V(1,4,8)=\frac{8}{4+4}=1\)</span>.</li>
+</ul>
 </section>
 <section id="exemplos-2" class="slide level2">
 <h2>Exemplos</h2>
-<p>Função Cobb-Douglas</p>
+<h3 id="função-cobb-douglas">Função Cobb-Douglas</h3>
 <p>Obtenha as funções de demanda Marshallianas e a função de utilidade indireta para a seguinte função utilidade do tipo Cobb-Douglas: <span class="math display">\[U(x,y) = x^{\alpha}y^{1-\alpha}, \qquad \alpha \in (0,1)\]</span> considerando a restrição orçamentária: <span class="math inline">\(p_xx + p_yy = I\)</span>.</p>
-<p>Mostre que a fração da renda consumida em cada bem é constante.</p>
+<p>Mostre que a fração da renda consumida em cada bem é constante. Ou seja, <span class="math inline">\(x^*=\frac{\alpha I}{p_x}\)</span> e <span class="math inline">\(y^*=\frac{(1-\alpha) I}{p_y}\)</span>.</p>
 </section>
 <section id="computação-simbólica" class="slide level2">
 <h2>Computação Simbólica</h2>
 <ul>
 <li class="fragment"><p>A computação simbólica é uma ferramenta poderosa para a solução de problemas de otimização</p></li>
-<li class="fragment"><p>A ideia é utilizar um software para realizar as manipulações algébricas necessárias para obter a solução analítica do problema.</p></li>
-<li class="fragment"><p>Podemos utilizar ferramentas de computação simbólica para obter as funções de demanda Marshallianas e utilidade indireta para uma gama de funções utilidade</p></li>
+<li class="fragment"><p>A ideia é utilizar um <strong>software para realizar as manipulações algébricas</strong> necessárias para obter a solução analítica do problema.</p></li>
+<li class="fragment"><p>Podemos utilizar ferramentas de computação simbólica para <strong>obter as funções de demanda Marshallianas e utilidade indireta</strong> para uma gama de funções utilidade</p></li>
 <li class="fragment"><p><a href="https://raw.githack.com/rfbressan/micro1/master/src/notebooks/problema_consumidor_sympy.html">notebook</a></p></li>
 </ul>
 <!-- ## Princípio do lump-sum
@@ -671,7 +687,7 @@ renda que preserve a quantidade total arrecadada. **Neste caso, o princípio lum
 <li class="fragment"><p>Se o preço do bem <span class="math inline">\(y\)</span> aumentar de $4 para $9, qual a compensação monetária o indivíduo necessita para manter o mesmo nível de utilidade?</p></li>
 </ul>
 </section>
-<section id="solução-1" class="slide level2">
+<section id="solução-2" class="slide level2">
 <h2>Solução</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -692,7 +708,7 @@ renda que preserve a quantidade total arrecadada. **Neste caso, o princípio lum
 </div><div class="column" style="width:50%;">
 <ul>
 <li class="fragment"><p><span class="math inline">\(p_x = 1\)</span>, <span class="math inline">\(p_y = 4\)</span>, <span class="math inline">\(U = 2\)</span> <span class="math inline">\(\implies E = 2\cdot 1^{0,5}\cdot 4^{0,5}\cdot 2=8\)</span></p></li>
-<li class="fragment"><p><span class="math inline">\(p_y\rightarrow 5 \implies E = 2\cdot 1^{0,5}\cdot 9^{0,5}\cdot 2=12\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(p_y\rightarrow 9 \implies E = 2\cdot 1^{0,5}\cdot 9^{0,5}\cdot 2=12\)</span></p></li>
 <li class="fragment"><p>Logo, temos de compensar o consumidor com $4 para manter o mesmo nível de utilidade.</p></li>
 </ul>
 </div>
@@ -700,7 +716,7 @@ renda que preserve a quantidade total arrecadada. **Neste caso, o princípio lum
 </section>
 <section id="exemplos-4" class="slide level2">
 <h2>Exemplos</h2>
-<p>Dada a função utilidade <span class="math inline">\(U(x,y) = \min(x,4y)\)</span>, podemos calcular a função utilidade indireta: <span class="math display">\[V(p_x,p_y,I) = \frac{I}{p_x + 0,25p_y}.\]</span></p>
+<p>Dada a função utilidade <span class="math inline">\(U(x,y) = \min\{x,4y\}\)</span>, podemos calcular a função utilidade indireta: <span class="math display">\[V(p_x,p_y,I) = \frac{I}{p_x + 0,25p_y}.\]</span></p>
 <p>Portanto, a função dispêndio é dada por: <span class="math display">\[E(p_x,p_y,U) = (p_x + 0,25p_y)U.\]</span></p>
 <p>Dados, <span class="math inline">\(p_x = 1, p_y = 4\)</span> e uma meta de utilidade <span class="math inline">\(\bar{U} = 4\)</span>, obtemos o dispêndio total de $8 como no exercício anterior.</p>
 <p>Neste caso, se o preço do bem <span class="math inline">\(y\)</span> aumentar de $4 para $9, os gastos deste consumidor deveriam aumentar em quanto para manter o mesmo nível de utilidade?</p>
@@ -757,7 +773,7 @@ renda que preserve a quantidade total arrecadada. **Neste caso, o princípio lum
 <li class="fragment"><p>Suponha que o preço de um bem aumente e dos outros permaneçam constante.</p></li>
 <li class="fragment"><p>Seja <span class="math inline">\(A\)</span> a cesta de consumos adquirida antes do aumento de preços, e <span class="math inline">\(B\)</span> a cesta de consumos adquirida após o aumento de preços.</p></li>
 <li class="fragment"><p>Claramente a cesta <span class="math inline">\(B\)</span> custa mais após o aumento de preços do que custava antes.</p></li>
-<li class="fragment"><p>No entanto, <span class="math inline">\(B\)</span> antes do aumento de preços custava mais que a cesta <span class="math inline">\(A\)</span> - pois <span class="math inline">\(A\)</span> é a cesta ótima de minimiza o dispêndio do consumidor para um dado nível de utilidade.</p></li>
+<li class="fragment"><p>No entanto, <span class="math inline">\(B\)</span> antes do aumento de preços custava mais que a cesta <span class="math inline">\(A\)</span> - pois <span class="math inline">\(A\)</span> é a cesta ótima que minimiza o dispêndio do consumidor para um dado nível de utilidade.</p></li>
 <li class="fragment"><p>Portanto: a cesta de consumo <span class="math inline">\(A\)</span> custa menos que a cesta de consumo <span class="math inline">\(B\)</span> antes do aumento de preços que, por sua vez, custa menos que a cesta de consumo <span class="math inline">\(A\)</span> após o aumento de preços.</p></li>
 <li class="fragment"><p>Logo, a cesta de consumo escolhida após o aumento de preços (<span class="math inline">\(B\)</span>) custa mais que a cesta escolhida antes do aumento de preços (<span class="math inline">\(A\)</span>) - função dispêndio é não decrescente nos preços.</p></li>
 </ul>
