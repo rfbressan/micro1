@@ -118,7 +118,14 @@ Logo, temos por exemplo que: $x(tp_x, tp_y, tI)=\frac{0,3tI}{t p_x}=x^*$
 ## Exemplos 
 
 Mostre que as funções demanda associadas à função utilidade do
-tipo CES: $$U(x,y) = x^{0,5} + y^{0,5},$$ são homogêneas de grau 0.
+tipo CES: $$U(x,y) = \left(x^{0,5} + y^{0,5}\right)^2,$$ são homogêneas de grau 0.
+
+:::{.fragment}
+![.](https://media.giphy.com/media/Jlirxn597uSeW7kPAQ/giphy.gif){height=250px align=center}
+:::
+
+- **Sorteio de um aluno(a) para apresentar este exercício na próxima aula.**
+
 
 # Variações na renda {.greenbackground}
 
