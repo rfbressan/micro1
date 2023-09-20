@@ -285,6 +285,13 @@ $$U(x,y) = x^{0,5}y^{0,5}.$$
 4.  Suponha que $p_x$ aumente para 4, compare as demandas Hicksianas e
     Marshallianas neste caso.
 
+:::{.fragment}
+![](https://media.giphy.com/media/3o6MboNFtQ3bUIAgVi/giphy.gif){width="20%"}
+
+**Sorteio na próxima aula!**
+:::
+
+
 
 # Análise formal da variação de preços{.greenbackground}
 
