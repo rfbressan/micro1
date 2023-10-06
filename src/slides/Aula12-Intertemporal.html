@@ -511,6 +511,56 @@ Rafael Bressan
 </div>
 </div>
 </section>
+<section id="preferências-intertemporais" class="slide level2">
+<h2>Preferências intertemporais</h2>
+<ul>
+<li class="fragment">Preferências serão representadas por uma função de utilidade <span class="math inline">\(U(c_1,c_2)\)</span>
+<ul>
+<li class="fragment"><span class="math inline">\(U(c_1, c_2)=u(c_1)+\beta u(c_2)\)</span>. Onde <span class="math inline">\(\beta\)</span> é um parâmetro de desconto.</li>
+<li class="fragment"><span class="math inline">\(U(c)=\sum_{t=0}^T\beta^{t}u(c_t)\)</span>, onde <span class="math inline">\(T\)</span> é o número de períodos.</li>
+</ul></li>
+<li class="fragment">Para termos preferências convexas, a função utilidade <strong>instantânea</strong> <span class="math inline">\(u(c_t)\)</span> deve ser <strong>côncava</strong>.
+<ul>
+<li class="fragment"><span class="math inline">\(u''(c_t)&lt;0\)</span> para todo <span class="math inline">\(t\)</span>.</li>
+</ul></li>
+<li class="fragment">O parâmetro de desconto <span class="math inline">\(\beta\)</span> deve ser tal que <span class="math inline">\(0&lt;\beta&lt;1\)</span>.
+<ul>
+<li class="fragment"><span class="math inline">\(\beta\)</span> mede a importância relativa do consumo no presente em relação ao consumo no futuro. <strong>Paciência do consumidor</strong>.</li>
+<li class="fragment"><span class="math inline">\(\beta\)</span> menor implica em consumidor mais impaciente.</li>
+</ul></li>
+</ul>
+</section>
+<section id="exemplo" class="slide level2">
+<h2>Exemplo</h2>
+<ul>
+<li class="fragment">Considera uma função de utilidade instantânea logarítmica <span class="math inline">\(u(c_t)=\ln(c_t)\)</span>.</li>
+<li class="fragment">O problema do consumidor, em dois períodos, é:</li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[
+\begin{align}
+\max_{c_1,c_2} \quad &amp; \ln(c_1)+\beta\ln(c_2)\\
+\text{s.a.} \quad &amp; (1+r)c_1+c_2=(1+r)m_1+m_2
+\end{align}
+\]</span></p>
+</div>
+<ul>
+<li class="fragment">Qual o valor do parâmetro de desconto intertemporal que torna o consumidor indiferente entre ser um poupador ou um tomador de empréstimos?</li>
+</ul>
+</section>
+<section id="solução" class="slide level2">
+<h2>Solução</h2>
+<ul>
+<li class="fragment"><p>Como a função utilidade instantânea é côncava, podemos aplicar a condição de tangência.</p></li>
+<li class="fragment"><p><span class="math inline">\(TMS=1+r\)</span>. Logo <span class="math inline">\(c_2=(1+r)\beta c_1\)</span>.</p></li>
+<li class="fragment"><p>Como desejamos <span class="math inline">\(c_1=m_1\)</span> e <span class="math inline">\(c_2=m_2\)</span>, então <span class="math inline">\(\beta=\frac{m_2}{(1+r)m_1}\)</span>.</p></li>
+<li class="fragment"><p>Podemos continuar a resolução dos consumos ótimos e obter:</p>
+<ul>
+<li class="fragment"><span class="math inline">\(c_1^*=\frac{m_1}{1+\beta}+\frac{m_2}{(1+r)(1+\beta)}\)</span> e <span class="math inline">\(c_2^*=\frac{\beta m_2}{1+\beta}+\frac{\beta m_1}{(1+r)(1+\beta)}\)</span></li>
+</ul></li>
+<li class="fragment"><p>É possível conferir que <span class="math inline">\(c_1^*=m_1 \implies \beta = \frac{m_2}{(1+r)m_1}\)</span>, como encontrado anteriormente.</p></li>
+</ul>
+</section>
 <section id="estática-comparativa" class="slide level2">
 <h2>Estática comparativa</h2>
 <ul>

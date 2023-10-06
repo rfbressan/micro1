@@ -107,22 +107,63 @@ plt.show()
 ![Tomador de empréstimos e poupador. Fonte: Varian (2015)](img/tomador-poupador.png){#fig-tomador-poupador}
 :::
 
+## Preferências intertemporais
+
+- Preferências serão representadas por uma função de utilidade $U(c_1,c_2)$
+  + $U(c_1, c_2)=u(c_1)+\beta u(c_2)$. Onde $\beta$ é um parâmetro de desconto.
+  + $U(c)=\sum_{t=0}^T\beta^{t}u(c_t)$, onde $T$ é o número de períodos.
+
+- Para termos preferências convexas, a função utilidade **instantânea** $u(c_t)$ deve ser **côncava**.
+  + $u''(c_t)<0$ para todo $t$.
+
+- O parâmetro de desconto $\beta$ deve ser tal que $0<\beta<1$.
+  + $\beta$ mede a importância relativa do consumo no presente em relação ao consumo no futuro. **Paciência do consumidor**.
+  + $\beta$ menor implica em consumidor mais impaciente.
+
+## Exemplo
+
+- Considera uma função de utilidade instantânea logarítmica $u(c_t)=\ln(c_t)$.
+- O problema do consumidor, em dois períodos, é:
+
+:::{.fragment}
+$$
+\begin{align}
+\max_{c_1,c_2} \quad & \ln(c_1)+\beta\ln(c_2)\\
+\text{s.a.} \quad & (1+r)c_1+c_2=(1+r)m_1+m_2
+\end{align}
+$$
+:::
+
+- Qual o valor do parâmetro de desconto intertemporal que torna o consumidor indiferente entre ser um poupador ou um tomador de empréstimos?
+
+## Solução
+
+- Como a função utilidade instantânea é côncava, podemos aplicar a condição de tangência.
+- $TMS=1+r$. Logo $c_2=(1+r)\beta c_1$.
+- Como desejamos $c_1=m_1$ e $c_2=m_2$, então $\beta=\frac{m_2}{(1+r)m_1}$.
+
+- Podemos continuar a resolução dos consumos ótimos e obter:
+  + $c_1^*=\frac{m_1}{1+\beta}+\frac{m_2}{(1+r)(1+\beta)}$ e $c_2^*=\frac{\beta m_2}{1+\beta}+\frac{\beta m_1}{(1+r)(1+\beta)}$
+
+- É possível conferir que $c_1^*=m_1 \implies \beta = \frac{m_2}{(1+r)m_1}$, como encontrado anteriormente.
+
+
 ## Estática comparativa
 
 - Como o consumidor reagiria a uma mudança da taxa de juros?
 - A inclinação da RO será alterada e um novo ponto de tangência será encontrado.
 - A **dotação é sempre acessível**, logo a nova RO "gira" em torno da dotação.
-- Existem **dois casos**, dependendo se inicialmente o consumidor ser emprestador ou tomador de empréstimos
-  + *Emprestador*: quando a taxa de juros **subir** o consumidor continuará sendo um emprestador, $c_1<m_1$
+- Existem **dois casos**, dependendo se inicialmente o consumidor ser poupador ou tomador de empréstimos
+  + *Poupador*: quando a taxa de juros **subir** o consumidor continuará sendo um poupador, $c_1<m_1$
   + *Tomador de empréstimos*: quando a taxa de juros **cair** o consumidor continuará sendo um tomador de empréstimos, $c_1>m_1$
-  + Nos outros dois casos (emprestador quando juros caem e tomador de empréstimos quando juros sobem), não podemos fazer afirmações.
+  + Nos outros dois casos (poupador quando juros caem e tomador de empréstimos quando juros sobem), não podemos fazer afirmações.
 
 ## Preferências reveladas
 
 :::{.columns}
 :::{.column width=50%}
-- Caso de aumento de juros para um emprestador.
-- Consumidor **começa como emprestador**, sua cesta de consumo está à esquerda do ponto de dotação.
+- Caso de aumento de juros para um poupador.
+- Consumidor **começa como poupador**, sua cesta de consumo está à esquerda do ponto de dotação.
 - Se a taxa de **juros aumentar**, o consumidor ***nunca*** irá escolher um ponto a direita do ponto de dotação.
   + As escolhas à direita do ponto de dotação estavam disponíveis para o consumidor no conjunto orçamentário original, mas foram rejeitadas
   + Pontos que agora estão abaixo da RO original não serão escolhidos, pois a própria escolha inicial continua disponível.
@@ -148,7 +189,7 @@ plt.show()
 - Considere um tomador de empréstimos que se mantém nesta situação mesmo com um aumento da taxa de juros.
 - O aumento da taxa de juros gira a RO em torno da dotação.
 - **Caso o consumidor continue** na situação de tomador de empréstimos, ele estará **pior** que na situção original. :angry:
-- Caso semelhante ocorre com o **emprestador** que se mantém nesta situação mesmo com uma **queda da taxa de juros**.
+- Caso semelhante ocorre com o **poupador** que se mantém nesta situação mesmo com uma **queda da taxa de juros**.
 :::
 
 :::{.column width=50%}
@@ -156,3 +197,8 @@ plt.show()
 :::
 :::
 
+## :books: Bibliografia
+
+VARIAN, H. R. Microeconomia: uma abordagem moderna. 9.ed. Rio de
+Janeiro: Elsevier, 2015. Disponível em:
+[app.minhabiblioteca.com.br/books/9788595155107](https://app.minhabiblioteca.com.br/books/9788595155107)
