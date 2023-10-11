@@ -143,7 +143,7 @@ $$
 - Como desejamos $c_1=m_1$ e $c_2=m_2$, então $\beta=\frac{m_2}{(1+r)m_1}$.
 
 - Podemos continuar a resolução dos consumos ótimos e obter:
-  + $c_1^*=\frac{m_1}{1+\beta}+\frac{m_2}{(1+r)(1+\beta)}$ e $c_2^*=\frac{\beta m_2}{1+\beta}+\frac{\beta m_1}{(1+r)(1+\beta)}$
+  + $c_1^*=\frac{m_1}{1+\beta}+\frac{m_2}{(1+r)(1+\beta)}$ e $c_2^*=\frac{\beta m_2}{1+\beta}+\frac{(1+r)\beta m_1}{(1+\beta)}$
 
 - É possível conferir que $c_1^*=m_1 \implies \beta = \frac{m_2}{(1+r)m_1}$, como encontrado anteriormente.
 
